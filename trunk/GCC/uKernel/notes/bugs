@@ -1,0 +1,23 @@
+BUG #0
+------
+Overview Description:
+After approx 5 ms of execution, HardFault exception raises. The exception always comes from the same code.
+primes[250] was finally the problem, because the size was bigger than the task's stack. Aka:
+============================================================================================
+SRAM
+============================================================================================
+0x10000000  		    	     	     	      	  	      	  0x1000004b0
+   /--------Stack1 ( 150 )-----------/----------Stack2( 150 )---------------/
+   
+	         primes[250] OR Stack1[50]                                primes[0]
+		  /-----------------------primes[250]-----------------------/
+============================================================================================
+
+Steps to Reproduce:
+1)declare an array in task body, with size bigger than task's stack
+2)populate it's highest index
+3) Start rtos
+
+Actual Results:
+you'll definitely have an overflow -> hardfault
+

@@ -1,0 +1,848 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\hlias\Desktop\projects\workspace\uKernel\uKernel.uvproj
+Project File Date:  11/07/2013
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+main.c(43): warning:  #177-D: variable "tmp" was declared but never referenced
+main.c(98): warning:  #550-D: variable "primes" was set but never used
+compiling task.c...
+compiling kernel.c...
+compiling time.c...
+time.c(78): warning:  #1-D: last line of file ends without a newline
+compiling wait_queue.c...
+wait_queue.c(6): warning:  #177-D: variable "tasktmp" was declared but never referenced
+compiling message_queue.c...
+compiling sem.c...
+linking...
+Program Size: Code=4728 RO-data=224 RW-data=84 ZI-data=17492  
+FromELF: creating hex file...
+"uKernel.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling wait_queue.c...
+linking...
+Program Size: Code=4728 RO-data=224 RW-data=84 ZI-data=17492  
+FromELF: creating hex file...
+"uKernel.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+task.h(10): error:  #20: identifier "OSStackType" is undefined
+task.h(11): error:  #20: identifier "uint_16" is undefined
+task.h(12): error:  #20: identifier "state_t" is undefined
+task.h(13): error:  #20: identifier "event_state_t" is undefined
+task.h(14): error:  #20: identifier "uint_32" is undefined
+task.h(15): error:  #70: incomplete type is not allowed
+task.h(16): error:  #70: incomplete type is not allowed
+task.h(27): error:  #20: identifier "MAX_TASKS" is undefined
+task.h(40): error:  #20: identifier "err_t" is undefined
+task.h(40): error:  #20: identifier "uint_8" is undefined
+task.h(40): error:  #20: identifier "task" is undefined
+task.h(40): error:  #20: identifier "OSStackType" is undefined
+task.h(40): error:  #20: identifier "OSStackType" is undefined
+task.h(41): error:  #20: identifier "err_t" is undefined
+task.h(41): error:  #20: identifier "uint_16" is undefined
+task.h(43): error:  #20: identifier "uint_8" is undefined
+task.h(43): error:  #20: identifier "uint_32" is undefined
+wait_queue.h(5): error:  #20: identifier "err_t" is undefined
+wait_queue.h(7): error:  #20: identifier "uint_32" is undefined
+time.h(6): error:  #20: identifier "uint_32" is undefined
+time.h(7): error:  #20: identifier "uint_32" is undefined
+message_queue.h(14): error:  #70: incomplete type is not allowed
+message_queue.h(15): error:  #70: incomplete type is not allowed
+message_queue.h(19): error:  #20: identifier "err_t" is undefined
+message_queue.h(21): error:  #20: identifier "err_t" is undefined
+sem.h(7): error:  #20: identifier "uint_32" is undefined
+sem.h(8): error:  #70: incomplete type is not allowed
+sem.h(11): error:  #20: identifier "uint_32" is undefined
+sem.h(13): error:  #20: identifier "err_t" is undefined
+sem.h(13): error:  #20: identifier "uint_32" is undefined
+compiling task.c...
+task.h(10): error:  #20: identifier "OSStackType" is undefined
+task.h(11): error:  #20: identifier "uint_16" is undefined
+task.h(12): error:  #20: identifier "state_t" is undefined
+task.h(13): error:  #20: identifier "event_state_t" is undefined
+task.h(14): error:  #20: identifier "uint_32" is undefined
+task.h(15): error:  #70: incomplete type is not allowed
+task.h(16): error:  #70: incomplete type is not allowed
+task.h(27): error:  #20: identifier "MAX_TASKS" is undefined
+task.h(40): error:  #20: identifier "err_t" is undefined
+task.h(40): error:  #20: identifier "uint_8" is undefined
+task.h(40): error:  #20: identifier "task" is undefined
+task.h(40): error:  #20: identifier "OSStackType" is undefined
+task.h(40): error:  #20: identifier "OSStackType" is undefined
+task.h(41): error:  #20: identifier "err_t" is undefined
+task.h(41): error:  #20: identifier "uint_16" is undefined
+task.h(43): error:  #20: identifier "uint_8" is undefined
+task.h(43): error:  #20: identifier "uint_32" is undefined
+compiling kernel.c...
+task.h(15): error:  #70: incomplete type is not allowed
+task.h(16): error:  #70: incomplete type is not allowed
+kernel.c(67): error:  #20: identifier "NULL" is undefined
+compiling time.c...
+task.h(10): error:  #20: identifier "OSStackType" is undefined
+task.h(11): error:  #20: identifier "uint_16" is undefined
+task.h(12): error:  #20: identifier "state_t" is undefined
+task.h(13): error:  #20: identifier "event_state_t" is undefined
+task.h(14): error:  #20: identifier "uint_32" is undefined
+task.h(15): error:  #70: incomplete type is not allowed
+task.h(16): error:  #70: incomplete type is not allowed
+task.h(27): error:  #20: identifier "MAX_TASKS" is undefined
+task.h(40): error:  #20: identifier "err_t" is undefined
+task.h(40): error:  #20: identifier "uint_8" is undefined
+task.h(40): error:  #20: identifier "task" is undefined
+task.h(40): error:  #20: identifier "OSStackType" is undefined
+task.h(40): error:  #20: identifier "OSStackType" is undefined
+task.h(41): error:  #20: identifier "err_t" is undefined
+task.h(41): error:  #20: identifier "uint_16" is undefined
+task.h(43): error:  #20: identifier "uint_8" is undefined
+task.h(43): error:  #20: identifier "uint_32" is undefined
+time.h(6): error:  #20: identifier "uint_32" is undefined
+time.h(7): error:  #20: identifier "uint_32" is undefined
+time.c(10): warning:  #223-D: function "interruptEnter" declared implicitly
+time.c(15): warning:  #223-D: function "ENTER_CRITICAL" declared implicitly
+time.c(16): warning:  #223-D: function "list_for_each" declared implicitly
+time.c(16): error:  #65: expected a ";"
+time.c(42): warning:  #12-D: parsing restarts here after previous syntax error
+time.c(8): warning:  #177-D: variable "tmp" was declared but never referenced
+time.c(43): warning:  #1295-D: Deprecated declaration EXIT_CRITICAL - give arg types
+time.c(43): warning:  #77-D: this declaration has no storage class or type specifier
+time.c(44): error:  #169: expected a declaration
+time.c(46): error:  #169: expected a declaration
+time.c(78): warning:  #1-D: last line of file ends without a newline
+time.c(78): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+compiling wait_queue.c...
+wait_queue.h(5): error:  #20: identifier "err_t" is undefined
+wait_queue.h(5): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(5): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "TCB" is undefined
+wait_queue.h(7): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "uint_32" is undefined
+task.h(10): error:  #20: identifier "OSStackType" is undefined
+task.h(11): error:  #20: identifier "uint_16" is undefined
+task.h(12): error:  #20: identifier "state_t" is undefined
+task.h(13): error:  #20: identifier "event_state_t" is undefined
+task.h(14): error:  #20: identifier "uint_32" is undefined
+task.h(15): error:  #70: incomplete type is not allowed
+task.h(16): error:  #70: incomplete type is not allowed
+task.h(27): error:  #20: identifier "MAX_TASKS" is undefined
+task.h(40): error:  #20: identifier "err_t" is undefined
+task.h(40): error:  #20: identifier "uint_8" is undefined
+task.h(40): error:  #20: identifier "task" is undefined
+task.h(40): error:  #20: identifier "OSStackType" is undefined
+task.h(40): error:  #20: identifier "OSStackType" is undefined
+task.h(41): error:  #20: identifier "err_t" is undefined
+task.h(41): error:  #20: identifier "uint_16" is undefined
+task.h(43): error:  #20: identifier "uint_8" is undefined
+task.h(43): error:  #20: identifier "uint_32" is undefined
+wait_queue.c(4): error:  #20: identifier "err_t" is undefined
+wait_queue.c(4): error:  #147-D: declaration is incompatible with "<error-type> addTaskToWaitQueue(struct list_head *, <error-type> *)" (declared at line 5 of "wait_queue.h")
+wait_queue.c(22): error:  #20: identifier "ERR_OK" is undefined
+wait_queue.c(25): error:  #20: identifier "uint_32" is undefined
+wait_queue.c(25): error:  #147-D: declaration is incompatible with "<error-type> *removeTaskFromWaitQueue(struct list_head *, <error-type>)" (declared at line 7 of "wait_queue.h")
+wait_queue.c(47): warning:  #940-D: missing return statement at end of non-void function "removeTaskFromWaitQueue"
+wait_queue.c(50): error:  #147-D: declaration is incompatible with "<error-type> *removeHeadFromWaitQueue(struct list_head *)" (declared at line 6 of "wait_queue.h")
+wait_queue.c(67): warning:  #940-D: missing return statement at end of non-void function "removeHeadFromWaitQueue"
+compiling message_queue.c...
+wait_queue.h(5): error:  #20: identifier "err_t" is undefined
+wait_queue.h(5): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(5): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "TCB" is undefined
+wait_queue.h(7): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "uint_32" is undefined
+task.h(10): error:  #20: identifier "OSStackType" is undefined
+task.h(11): error:  #20: identifier "uint_16" is undefined
+task.h(12): error:  #20: identifier "state_t" is undefined
+task.h(13): error:  #20: identifier "event_state_t" is undefined
+task.h(14): error:  #20: identifier "uint_32" is undefined
+task.h(15): error:  #70: incomplete type is not allowed
+task.h(16): error:  #70: incomplete type is not allowed
+task.h(27): error:  #20: identifier "MAX_TASKS" is undefined
+task.h(40): error:  #20: identifier "err_t" is undefined
+task.h(40): error:  #20: identifier "uint_8" is undefined
+task.h(40): error:  #20: identifier "task" is undefined
+task.h(40): error:  #20: identifier "OSStackType" is undefined
+task.h(40): error:  #20: identifier "OSStackType" is undefined
+task.h(41): error:  #20: identifier "err_t" is undefined
+task.h(41): error:  #20: identifier "uint_16" is undefined
+task.h(43): error:  #20: identifier "uint_8" is undefined
+task.h(43): error:  #20: identifier "uint_32" is undefined
+time.h(6): error:  #20: identifier "uint_32" is undefined
+time.h(7): error:  #20: identifier "uint_32" is undefined
+message_queue.h(14): error:  #70: incomplete type is not allowed
+message_queue.h(15): error:  #70: incomplete type is not allowed
+message_queue.h(19): error:  #20: identifier "err_t" is undefined
+message_queue.h(21): error:  #20: identifier "err_t" is undefined
+message_queue.c(6): warning:  #223-D: function "malloc" declared implicitly
+message_queue.c(10): error:  #513: a value of type "int" cannot be assigned to an entity of type "unsigned char *"
+message_queue.c(20): warning:  #223-D: function "INIT_LIST_HEAD" declared implicitly
+message_queue.c(25): error:  #20: identifier "err_t" is undefined
+compiling sem.c...
+wait_queue.h(5): error:  #20: identifier "err_t" is undefined
+wait_queue.h(5): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(5): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "TCB" is undefined
+wait_queue.h(7): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "uint_32" is undefined
+task.h(10): error:  #20: identifier "OSStackType" is undefined
+task.h(11): error:  #20: identifier "uint_16" is undefined
+task.h(12): error:  #20: identifier "state_t" is undefined
+task.h(13): error:  #20: identifier "event_state_t" is undefined
+task.h(14): error:  #20: identifier "uint_32" is undefined
+task.h(15): error:  #70: incomplete type is not allowed
+task.h(16): error:  #70: incomplete type is not allowed
+task.h(27): error:  #20: identifier "MAX_TASKS" is undefined
+task.h(40): error:  #20: identifier "err_t" is undefined
+task.h(40): error:  #20: identifier "uint_8" is undefined
+task.h(40): error:  #20: identifier "task" is undefined
+task.h(40): error:  #20: identifier "OSStackType" is undefined
+task.h(40): error:  #20: identifier "OSStackType" is undefined
+task.h(41): error:  #20: identifier "err_t" is undefined
+task.h(41): error:  #20: identifier "uint_16" is undefined
+task.h(43): error:  #20: identifier "uint_8" is undefined
+task.h(43): error:  #20: identifier "uint_32" is undefined
+time.h(6): error:  #20: identifier "uint_32" is undefined
+time.h(7): error:  #20: identifier "uint_32" is undefined
+sem.h(7): error:  #20: identifier "uint_32" is undefined
+sem.h(8): error:  #70: incomplete type is not allowed
+sem.h(11): error:  #20: identifier "uint_32" is undefined
+sem.h(13): error:  #20: identifier "err_t" is undefined
+sem.h(13): error:  #20: identifier "uint_32" is undefined
+sem.c(4): error:  #20: identifier "uint_32" is undefined
+Target not created
+Build target 'Target 1'
+compiling main.c...
+task.h(16): error:  #70: incomplete type is not allowed
+task.h(17): error:  #70: incomplete type is not allowed
+message_queue.h(14): error:  #70: incomplete type is not allowed
+message_queue.h(15): error:  #70: incomplete type is not allowed
+sem.h(8): error:  #70: incomplete type is not allowed
+main.c(39): warning:  #77-D: this declaration has no storage class or type specifier
+main.c(39): error:  #92: identifier-list parameters may only be used in a function definition
+main.c(49): warning:  #223-D: function "uKern_Init" declared implicitly
+main.c(71): warning:  #223-D: function "StartOS" declared implicitly
+main.c(43): warning:  #177-D: variable "tmp" was declared but never referenced
+main.c(98): warning:  #550-D: variable "primes" was set but never used
+compiling task.c...
+task.h(16): error:  #70: incomplete type is not allowed
+task.h(17): error:  #70: incomplete type is not allowed
+compiling kernel.c...
+task.h(16): error:  #70: incomplete type is not allowed
+task.h(17): error:  #70: incomplete type is not allowed
+kernel.c(67): error:  #20: identifier "NULL" is undefined
+compiling time.c...
+task.h(16): error:  #70: incomplete type is not allowed
+task.h(17): error:  #70: incomplete type is not allowed
+time.c(10): warning:  #223-D: function "interruptEnter" declared implicitly
+time.c(15): warning:  #223-D: function "ENTER_CRITICAL" declared implicitly
+time.c(16): warning:  #223-D: function "list_for_each" declared implicitly
+time.c(16): error:  #65: expected a ";"
+time.c(42): warning:  #12-D: parsing restarts here after previous syntax error
+time.c(8): warning:  #177-D: variable "tmp" was declared but never referenced
+time.c(43): warning:  #1295-D: Deprecated declaration EXIT_CRITICAL - give arg types
+time.c(43): warning:  #77-D: this declaration has no storage class or type specifier
+time.c(44): error:  #169: expected a declaration
+time.c(46): error:  #169: expected a declaration
+time.c(78): warning:  #1-D: last line of file ends without a newline
+time.c(78): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+compiling wait_queue.c...
+wait_queue.h(5): error:  #20: identifier "err_t" is undefined
+wait_queue.h(5): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(5): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "TCB" is undefined
+wait_queue.h(7): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "uint_32" is undefined
+task.h(16): error:  #70: incomplete type is not allowed
+task.h(17): error:  #70: incomplete type is not allowed
+wait_queue.c(4): error:  #147-D: declaration is incompatible with "<error-type> addTaskToWaitQueue(struct list_head *, <error-type> *)" (declared at line 5 of "wait_queue.h")
+wait_queue.c(9): warning:  #223-D: function "ENTER_CRITICAL" declared implicitly
+wait_queue.c(10): warning:  #223-D: function "list_empty" declared implicitly
+wait_queue.c(11): warning:  #223-D: function "list_add" declared implicitly
+wait_queue.c(13): warning:  #223-D: function "list_entry" declared implicitly
+wait_queue.c(13): error:  #393: pointer to incomplete class type is not allowed
+wait_queue.c(13): error:  #254: type name is not allowed
+wait_queue.c(13): error:  #20: identifier "event_list" is undefined
+wait_queue.c(13): error:  #44: expression must have pointer type
+wait_queue.c(13): error:  #393: pointer to incomplete class type is not allowed
+wait_queue.c(16): warning:  #223-D: function "list_add_tail" declared implicitly
+wait_queue.c(18): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+wait_queue.c(25): error:  #147-D: declaration is incompatible with "<error-type> *removeTaskFromWaitQueue(struct list_head *, <error-type>)" (declared at line 7 of "wait_queue.h")
+wait_queue.c(30): warning:  #223-D: function "ENTER_CRITICAL" declared implicitly
+wait_queue.c(31): warning:  #223-D: function "list_empty" declared implicitly
+wait_queue.c(32): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+wait_queue.c(33): error:  #20: identifier "NULL" is undefined
+wait_queue.c(35): warning:  #223-D: function "list_for_each" declared implicitly
+wait_queue.c(35): error:  #65: expected a ";"
+wait_queue.c(41): warning:  #12-D: parsing restarts here after previous syntax error
+wait_queue.c(50): error:  #147-D: declaration is incompatible with "<error-type> *removeHeadFromWaitQueue(struct list_head *)" (declared at line 6 of "wait_queue.h")
+wait_queue.c(55): warning:  #223-D: function "ENTER_CRITICAL" declared implicitly
+wait_queue.c(56): warning:  #223-D: function "list_empty" declared implicitly
+wait_queue.c(57): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+wait_queue.c(58): error:  #20: identifier "NULL" is undefined
+wait_queue.c(60): warning:  #223-D: function "list_entry" declared implicitly
+wait_queue.c(60): error:  #393: pointer to incomplete class type is not allowed
+wait_queue.c(60): error:  #254: type name is not allowed
+wait_queue.c(60): error:  #20: identifier "event_list" is undefined
+wait_queue.c(60): error:  #513: a value of type "int" cannot be assigned to an entity of type "TCB *"
+wait_queue.c(61): warning:  #223-D: function "list_del" declared implicitly
+wait_queue.c(61): error:  #393: pointer to incomplete class type is not allowed
+wait_queue.c(62): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+compiling message_queue.c...
+wait_queue.h(5): error:  #20: identifier "err_t" is undefined
+wait_queue.h(5): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(5): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "TCB" is undefined
+wait_queue.h(7): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "uint_32" is undefined
+task.h(16): error:  #70: incomplete type is not allowed
+task.h(17): error:  #70: incomplete type is not allowed
+message_queue.h(14): error:  #70: incomplete type is not allowed
+message_queue.h(15): error:  #70: incomplete type is not allowed
+message_queue.c(6): warning:  #223-D: function "malloc" declared implicitly
+message_queue.c(10): error:  #513: a value of type "int" cannot be assigned to an entity of type "unsigned char *"
+message_queue.c(20): warning:  #223-D: function "INIT_LIST_HEAD" declared implicitly
+message_queue.c(28): warning:  #223-D: function "ENTER_CRITICAL" declared implicitly
+message_queue.c(30): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+message_queue.c(39): warning:  #223-D: function "list_empty" declared implicitly
+message_queue.c(48): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+message_queue.c(54): warning:  #223-D: function "ENTER_CRITICAL" declared implicitly
+message_queue.c(60): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+message_queue.c(71): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+message_queue.c(79): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+message_queue.c(87): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+compiling sem.c...
+wait_queue.h(5): error:  #20: identifier "err_t" is undefined
+wait_queue.h(5): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(5): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "TCB" is undefined
+wait_queue.h(7): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "uint_32" is undefined
+task.h(16): error:  #70: incomplete type is not allowed
+task.h(17): error:  #70: incomplete type is not allowed
+sem.h(8): error:  #70: incomplete type is not allowed
+sem.c(6): warning:  #223-D: function "malloc" declared implicitly
+sem.c(8): warning:  #223-D: function "INIT_LIST_HEAD" declared implicitly
+sem.c(14): warning:  #223-D: function "ENTER_CRITICAL" declared implicitly
+sem.c(17): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+sem.c(24): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+sem.c(34): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+sem.c(48): warning:  #223-D: function "ENTER_CRITICAL" declared implicitly
+sem.c(49): warning:  #223-D: function "list_empty" declared implicitly
+sem.c(59): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+Target not created
+Build target 'Target 1'
+compiling main.c...
+task.h(17): error:  #70: incomplete type is not allowed
+task.h(18): error:  #70: incomplete type is not allowed
+message_queue.h(14): error:  #70: incomplete type is not allowed
+message_queue.h(15): error:  #70: incomplete type is not allowed
+sem.h(8): error:  #70: incomplete type is not allowed
+main.c(39): warning:  #77-D: this declaration has no storage class or type specifier
+main.c(39): error:  #92: identifier-list parameters may only be used in a function definition
+main.c(43): warning:  #177-D: variable "tmp" was declared but never referenced
+main.c(98): warning:  #550-D: variable "primes" was set but never used
+compiling task.c...
+task.h(17): error:  #70: incomplete type is not allowed
+task.h(18): error:  #70: incomplete type is not allowed
+compiling kernel.c...
+task.h(17): error:  #70: incomplete type is not allowed
+task.h(18): error:  #70: incomplete type is not allowed
+kernel.c(67): error:  #20: identifier "NULL" is undefined
+compiling time.c...
+task.h(17): error:  #70: incomplete type is not allowed
+task.h(18): error:  #70: incomplete type is not allowed
+time.c(16): warning:  #223-D: function "list_for_each" declared implicitly
+time.c(16): error:  #65: expected a ";"
+time.c(42): warning:  #12-D: parsing restarts here after previous syntax error
+time.c(8): warning:  #177-D: variable "tmp" was declared but never referenced
+time.c(43): warning:  #1295-D: Deprecated declaration exitCritical - give arg types
+time.c(43): warning:  #77-D: this declaration has no storage class or type specifier
+time.c(43): error:  #147: declaration is incompatible with "void exitCritical()" (declared at line 29 of "kernel.h")
+time.c(44): error:  #169: expected a declaration
+time.c(46): error:  #169: expected a declaration
+time.c(78): warning:  #1-D: last line of file ends without a newline
+time.c(78): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+compiling wait_queue.c...
+wait_queue.h(5): error:  #20: identifier "err_t" is undefined
+wait_queue.h(5): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(5): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "TCB" is undefined
+wait_queue.h(7): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "uint_32" is undefined
+task.h(17): error:  #70: incomplete type is not allowed
+task.h(18): error:  #70: incomplete type is not allowed
+wait_queue.c(4): error:  #147-D: declaration is incompatible with "<error-type> addTaskToWaitQueue(struct list_head *, <error-type> *)" (declared at line 5 of "wait_queue.h")
+wait_queue.c(10): warning:  #223-D: function "list_empty" declared implicitly
+wait_queue.c(11): warning:  #223-D: function "list_add" declared implicitly
+wait_queue.c(13): warning:  #223-D: function "list_entry" declared implicitly
+wait_queue.c(13): error:  #393: pointer to incomplete class type is not allowed
+wait_queue.c(13): error:  #254: type name is not allowed
+wait_queue.c(13): error:  #20: identifier "event_list" is undefined
+wait_queue.c(13): error:  #44: expression must have pointer type
+wait_queue.c(13): error:  #393: pointer to incomplete class type is not allowed
+wait_queue.c(16): warning:  #223-D: function "list_add_tail" declared implicitly
+wait_queue.c(25): error:  #147-D: declaration is incompatible with "<error-type> *removeTaskFromWaitQueue(struct list_head *, <error-type>)" (declared at line 7 of "wait_queue.h")
+wait_queue.c(31): warning:  #223-D: function "list_empty" declared implicitly
+wait_queue.c(33): error:  #20: identifier "NULL" is undefined
+wait_queue.c(35): warning:  #223-D: function "list_for_each" declared implicitly
+wait_queue.c(35): error:  #65: expected a ";"
+wait_queue.c(41): warning:  #12-D: parsing restarts here after previous syntax error
+wait_queue.c(50): error:  #147-D: declaration is incompatible with "<error-type> *removeHeadFromWaitQueue(struct list_head *)" (declared at line 6 of "wait_queue.h")
+wait_queue.c(56): warning:  #223-D: function "list_empty" declared implicitly
+wait_queue.c(58): error:  #20: identifier "NULL" is undefined
+wait_queue.c(60): warning:  #223-D: function "list_entry" declared implicitly
+wait_queue.c(60): error:  #393: pointer to incomplete class type is not allowed
+wait_queue.c(60): error:  #254: type name is not allowed
+wait_queue.c(60): error:  #20: identifier "event_list" is undefined
+wait_queue.c(60): error:  #513: a value of type "int" cannot be assigned to an entity of type "TCB *"
+wait_queue.c(61): warning:  #223-D: function "list_del" declared implicitly
+wait_queue.c(61): error:  #393: pointer to incomplete class type is not allowed
+compiling message_queue.c...
+wait_queue.h(5): error:  #20: identifier "err_t" is undefined
+wait_queue.h(5): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(5): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "TCB" is undefined
+wait_queue.h(7): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "uint_32" is undefined
+task.h(17): error:  #70: incomplete type is not allowed
+task.h(18): error:  #70: incomplete type is not allowed
+message_queue.h(14): error:  #70: incomplete type is not allowed
+message_queue.h(15): error:  #70: incomplete type is not allowed
+message_queue.c(6): warning:  #223-D: function "malloc" declared implicitly
+message_queue.c(10): error:  #513: a value of type "int" cannot be assigned to an entity of type "unsigned char *"
+message_queue.c(20): warning:  #223-D: function "INIT_LIST_HEAD" declared implicitly
+message_queue.c(39): warning:  #223-D: function "list_empty" declared implicitly
+compiling sem.c...
+wait_queue.h(5): error:  #20: identifier "err_t" is undefined
+wait_queue.h(5): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(5): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "TCB" is undefined
+wait_queue.h(7): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "uint_32" is undefined
+task.h(17): error:  #70: incomplete type is not allowed
+task.h(18): error:  #70: incomplete type is not allowed
+sem.h(8): error:  #70: incomplete type is not allowed
+sem.c(6): warning:  #223-D: function "malloc" declared implicitly
+sem.c(8): warning:  #223-D: function "INIT_LIST_HEAD" declared implicitly
+sem.c(49): warning:  #223-D: function "list_empty" declared implicitly
+Target not created
+Build target 'Target 1'
+compiling main.c...
+task.h(20): error:  #70: incomplete type is not allowed
+task.h(21): error:  #70: incomplete type is not allowed
+message_queue.h(14): error:  #70: incomplete type is not allowed
+message_queue.h(15): error:  #70: incomplete type is not allowed
+sem.h(8): error:  #70: incomplete type is not allowed
+main.c(39): warning:  #77-D: this declaration has no storage class or type specifier
+main.c(39): error:  #92: identifier-list parameters may only be used in a function definition
+main.c(43): warning:  #177-D: variable "tmp" was declared but never referenced
+main.c(98): warning:  #550-D: variable "primes" was set but never used
+compiling task.c...
+task.h(20): error:  #70: incomplete type is not allowed
+task.h(21): error:  #70: incomplete type is not allowed
+compiling kernel.c...
+task.h(20): error:  #70: incomplete type is not allowed
+task.h(21): error:  #70: incomplete type is not allowed
+kernel.c(67): error:  #20: identifier "NULL" is undefined
+compiling time.c...
+task.h(20): error:  #70: incomplete type is not allowed
+task.h(21): error:  #70: incomplete type is not allowed
+time.c(16): warning:  #223-D: function "list_for_each" declared implicitly
+time.c(16): error:  #65: expected a ";"
+time.c(42): warning:  #12-D: parsing restarts here after previous syntax error
+time.c(8): warning:  #177-D: variable "tmp" was declared but never referenced
+time.c(43): warning:  #1295-D: Deprecated declaration exitCritical - give arg types
+time.c(43): warning:  #77-D: this declaration has no storage class or type specifier
+time.c(43): error:  #147: declaration is incompatible with "void exitCritical()" (declared at line 29 of "kernel.h")
+time.c(44): error:  #169: expected a declaration
+time.c(46): error:  #169: expected a declaration
+time.c(78): warning:  #1-D: last line of file ends without a newline
+time.c(78): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+compiling wait_queue.c...
+wait_queue.h(5): error:  #20: identifier "err_t" is undefined
+wait_queue.h(5): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(5): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "TCB" is undefined
+wait_queue.h(7): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "uint_32" is undefined
+task.h(20): error:  #70: incomplete type is not allowed
+task.h(21): error:  #70: incomplete type is not allowed
+wait_queue.c(4): error:  #147-D: declaration is incompatible with "<error-type> addTaskToWaitQueue(struct list_head *, <error-type> *)" (declared at line 5 of "wait_queue.h")
+wait_queue.c(10): warning:  #223-D: function "list_empty" declared implicitly
+wait_queue.c(11): warning:  #223-D: function "list_add" declared implicitly
+wait_queue.c(13): warning:  #223-D: function "list_entry" declared implicitly
+wait_queue.c(13): error:  #393: pointer to incomplete class type is not allowed
+wait_queue.c(13): error:  #254: type name is not allowed
+wait_queue.c(13): error:  #20: identifier "event_list" is undefined
+wait_queue.c(13): error:  #44: expression must have pointer type
+wait_queue.c(13): error:  #393: pointer to incomplete class type is not allowed
+wait_queue.c(16): warning:  #223-D: function "list_add_tail" declared implicitly
+wait_queue.c(25): error:  #147-D: declaration is incompatible with "<error-type> *removeTaskFromWaitQueue(struct list_head *, <error-type>)" (declared at line 7 of "wait_queue.h")
+wait_queue.c(31): warning:  #223-D: function "list_empty" declared implicitly
+wait_queue.c(33): error:  #20: identifier "NULL" is undefined
+wait_queue.c(35): warning:  #223-D: function "list_for_each" declared implicitly
+wait_queue.c(35): error:  #65: expected a ";"
+wait_queue.c(41): warning:  #12-D: parsing restarts here after previous syntax error
+wait_queue.c(50): error:  #147-D: declaration is incompatible with "<error-type> *removeHeadFromWaitQueue(struct list_head *)" (declared at line 6 of "wait_queue.h")
+wait_queue.c(56): warning:  #223-D: function "list_empty" declared implicitly
+wait_queue.c(58): error:  #20: identifier "NULL" is undefined
+wait_queue.c(60): warning:  #223-D: function "list_entry" declared implicitly
+wait_queue.c(60): error:  #393: pointer to incomplete class type is not allowed
+wait_queue.c(60): error:  #254: type name is not allowed
+wait_queue.c(60): error:  #20: identifier "event_list" is undefined
+wait_queue.c(60): error:  #513: a value of type "int" cannot be assigned to an entity of type "TCB *"
+wait_queue.c(61): warning:  #223-D: function "list_del" declared implicitly
+wait_queue.c(61): error:  #393: pointer to incomplete class type is not allowed
+compiling message_queue.c...
+wait_queue.h(5): error:  #20: identifier "err_t" is undefined
+wait_queue.h(5): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(5): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "TCB" is undefined
+wait_queue.h(7): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "uint_32" is undefined
+task.h(20): error:  #70: incomplete type is not allowed
+task.h(21): error:  #70: incomplete type is not allowed
+message_queue.h(14): error:  #70: incomplete type is not allowed
+message_queue.h(15): error:  #70: incomplete type is not allowed
+message_queue.c(6): warning:  #223-D: function "malloc" declared implicitly
+message_queue.c(10): error:  #513: a value of type "int" cannot be assigned to an entity of type "unsigned char *"
+message_queue.c(20): warning:  #223-D: function "INIT_LIST_HEAD" declared implicitly
+message_queue.c(39): warning:  #223-D: function "list_empty" declared implicitly
+compiling sem.c...
+wait_queue.h(5): error:  #20: identifier "err_t" is undefined
+wait_queue.h(5): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(5): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "TCB" is undefined
+wait_queue.h(7): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "uint_32" is undefined
+task.h(20): error:  #70: incomplete type is not allowed
+task.h(21): error:  #70: incomplete type is not allowed
+sem.h(8): error:  #70: incomplete type is not allowed
+sem.c(6): warning:  #223-D: function "malloc" declared implicitly
+sem.c(8): warning:  #223-D: function "INIT_LIST_HEAD" declared implicitly
+sem.c(49): warning:  #223-D: function "list_empty" declared implicitly
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(43): warning:  #177-D: variable "tmp" was declared but never referenced
+main.c(98): warning:  #550-D: variable "primes" was set but never used
+compiling task.c...
+compiling kernel.c...
+kernel.c(67): error:  #20: identifier "NULL" is undefined
+compiling time.c...
+time.c(64): error:  #20: identifier "NULL" is undefined
+time.c(78): warning:  #1-D: last line of file ends without a newline
+compiling wait_queue.c...
+wait_queue.h(5): error:  #20: identifier "err_t" is undefined
+wait_queue.h(5): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(5): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "TCB" is undefined
+wait_queue.h(7): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "uint_32" is undefined
+wait_queue.c(4): error:  #147-D: declaration is incompatible with "<error-type> addTaskToWaitQueue(struct list_head *, <error-type> *)" (declared at line 5 of "wait_queue.h")
+wait_queue.c(25): error:  #147-D: declaration is incompatible with "<error-type> *removeTaskFromWaitQueue(struct list_head *, <error-type>)" (declared at line 7 of "wait_queue.h")
+wait_queue.c(33): error:  #20: identifier "NULL" is undefined
+wait_queue.c(50): error:  #147-D: declaration is incompatible with "<error-type> *removeHeadFromWaitQueue(struct list_head *)" (declared at line 6 of "wait_queue.h")
+wait_queue.c(58): error:  #20: identifier "NULL" is undefined
+compiling message_queue.c...
+wait_queue.h(5): error:  #20: identifier "err_t" is undefined
+wait_queue.h(5): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(5): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "TCB" is undefined
+wait_queue.h(7): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "uint_32" is undefined
+message_queue.c(6): warning:  #223-D: function "malloc" declared implicitly
+message_queue.c(10): error:  #513: a value of type "int" cannot be assigned to an entity of type "unsigned char *"
+message_queue.c(40): error:  #167: argument of type "struct list_head *" is incompatible with parameter of type "struct list_head *"
+message_queue.c(64): error:  #167: argument of type "struct list_head *" is incompatible with parameter of type "struct list_head *"
+message_queue.c(75): error:  #167: argument of type "struct list_head *" is incompatible with parameter of type "struct list_head *"
+compiling sem.c...
+wait_queue.h(5): error:  #20: identifier "err_t" is undefined
+wait_queue.h(5): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(5): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "TCB" is undefined
+wait_queue.h(7): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "uint_32" is undefined
+sem.c(6): warning:  #223-D: function "malloc" declared implicitly
+sem.c(21): error:  #167: argument of type "struct list_head *" is incompatible with parameter of type "struct list_head *"
+sem.c(29): error:  #167: argument of type "struct list_head *" is incompatible with parameter of type "struct list_head *"
+sem.c(53): error:  #167: argument of type "struct list_head *" is incompatible with parameter of type "struct list_head *"
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(43): warning:  #177-D: variable "tmp" was declared but never referenced
+main.c(98): warning:  #550-D: variable "primes" was set but never used
+compiling task.c...
+compiling kernel.c...
+compiling time.c...
+time.c(78): warning:  #1-D: last line of file ends without a newline
+compiling wait_queue.c...
+wait_queue.h(5): error:  #20: identifier "err_t" is undefined
+wait_queue.h(5): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(5): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "TCB" is undefined
+wait_queue.h(7): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "uint_32" is undefined
+wait_queue.c(4): error:  #147-D: declaration is incompatible with "<error-type> addTaskToWaitQueue(struct list_head *, <error-type> *)" (declared at line 5 of "wait_queue.h")
+wait_queue.c(25): error:  #147-D: declaration is incompatible with "<error-type> *removeTaskFromWaitQueue(struct list_head *, <error-type>)" (declared at line 7 of "wait_queue.h")
+wait_queue.c(50): error:  #147-D: declaration is incompatible with "<error-type> *removeHeadFromWaitQueue(struct list_head *)" (declared at line 6 of "wait_queue.h")
+compiling message_queue.c...
+wait_queue.h(5): error:  #20: identifier "err_t" is undefined
+wait_queue.h(5): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(5): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "TCB" is undefined
+wait_queue.h(7): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "uint_32" is undefined
+message_queue.c(40): error:  #167: argument of type "struct list_head *" is incompatible with parameter of type "struct list_head *"
+message_queue.c(64): error:  #167: argument of type "struct list_head *" is incompatible with parameter of type "struct list_head *"
+message_queue.c(75): error:  #167: argument of type "struct list_head *" is incompatible with parameter of type "struct list_head *"
+compiling sem.c...
+wait_queue.h(5): error:  #20: identifier "err_t" is undefined
+wait_queue.h(5): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(5): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "TCB" is undefined
+wait_queue.h(7): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "uint_32" is undefined
+sem.c(21): error:  #167: argument of type "struct list_head *" is incompatible with parameter of type "struct list_head *"
+sem.c(29): error:  #167: argument of type "struct list_head *" is incompatible with parameter of type "struct list_head *"
+sem.c(53): error:  #167: argument of type "struct list_head *" is incompatible with parameter of type "struct list_head *"
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(43): warning:  #177-D: variable "tmp" was declared but never referenced
+main.c(98): warning:  #550-D: variable "primes" was set but never used
+compiling wait_queue.c...
+compiling message_queue.c...
+compiling sem.c...
+linking...
+Program Size: Code=4728 RO-data=224 RW-data=84 ZI-data=17492  
+FromELF: creating hex file...
+"uKernel.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(43): warning:  #177-D: variable "tmp" was declared but never referenced
+main.c(98): warning:  #550-D: variable "primes" was set but never used
+compiling wait_queue.c...
+compiling message_queue.c...
+wait_queue.h(5): error:  #20: identifier "err_t" is undefined
+wait_queue.h(5): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(5): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "TCB" is undefined
+wait_queue.h(7): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "uint_32" is undefined
+message_queue.c(40): error:  #167: argument of type "struct list_head *" is incompatible with parameter of type "struct list_head *"
+message_queue.c(64): error:  #167: argument of type "struct list_head *" is incompatible with parameter of type "struct list_head *"
+message_queue.c(75): error:  #167: argument of type "struct list_head *" is incompatible with parameter of type "struct list_head *"
+compiling sem.c...
+wait_queue.h(5): error:  #20: identifier "err_t" is undefined
+wait_queue.h(5): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(5): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "TCB" is undefined
+wait_queue.h(7): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "uint_32" is undefined
+sem.c(21): error:  #167: argument of type "struct list_head *" is incompatible with parameter of type "struct list_head *"
+sem.c(29): error:  #167: argument of type "struct list_head *" is incompatible with parameter of type "struct list_head *"
+sem.c(53): error:  #167: argument of type "struct list_head *" is incompatible with parameter of type "struct list_head *"
+Target not created
+Build target 'Target 1'
+compiling message_queue.c...
+wait_queue.h(5): error:  #20: identifier "err_t" is undefined
+wait_queue.h(5): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(5): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "TCB" is undefined
+wait_queue.h(7): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "uint_32" is undefined
+message_queue.c(40): error:  #167: argument of type "struct list_head *" is incompatible with parameter of type "struct list_head *"
+message_queue.c(64): error:  #167: argument of type "struct list_head *" is incompatible with parameter of type "struct list_head *"
+message_queue.c(75): error:  #167: argument of type "struct list_head *" is incompatible with parameter of type "struct list_head *"
+compiling sem.c...
+wait_queue.h(5): error:  #20: identifier "err_t" is undefined
+wait_queue.h(5): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(5): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): error:  #20: identifier "TCB" is undefined
+wait_queue.h(6): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "TCB" is undefined
+wait_queue.h(7): warning:  #231-D: declaration is not visible outside of function
+wait_queue.h(7): error:  #20: identifier "uint_32" is undefined
+sem.c(21): error:  #167: argument of type "struct list_head *" is incompatible with parameter of type "struct list_head *"
+sem.c(29): error:  #167: argument of type "struct list_head *" is incompatible with parameter of type "struct list_head *"
+sem.c(53): error:  #167: argument of type "struct list_head *" is incompatible with parameter of type "struct list_head *"
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(43): warning:  #177-D: variable "tmp" was declared but never referenced
+main.c(98): warning:  #550-D: variable "primes" was set but never used
+compiling wait_queue.c...
+compiling message_queue.c...
+compiling sem.c...
+linking...
+Program Size: Code=4728 RO-data=224 RW-data=84 ZI-data=17492  
+FromELF: creating hex file...
+"uKernel.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(43): warning:  #177-D: variable "tmp" was declared but never referenced
+main.c(98): warning:  #550-D: variable "primes" was set but never used
+compiling task.c...
+compiling kernel.c...
+kernel.c(67): error:  #20: identifier "NULL" is undefined
+compiling time.c...
+time.c(64): error:  #20: identifier "NULL" is undefined
+time.c(78): warning:  #1-D: last line of file ends without a newline
+compiling wait_queue.c...
+wait_queue.c(33): error:  #20: identifier "NULL" is undefined
+wait_queue.c(58): error:  #20: identifier "NULL" is undefined
+compiling message_queue.c...
+message_queue.c(6): warning:  #223-D: function "malloc" declared implicitly
+message_queue.c(10): error:  #513: a value of type "int" cannot be assigned to an entity of type "unsigned char *"
+compiling sem.c...
+sem.c(6): warning:  #223-D: function "malloc" declared implicitly
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(43): warning:  #177-D: variable "tmp" was declared but never referenced
+main.c(98): warning:  #550-D: variable "primes" was set but never used
+compiling task.c...
+compiling kernel.c...
+compiling time.c...
+time.c(78): warning:  #1-D: last line of file ends without a newline
+compiling wait_queue.c...
+compiling message_queue.c...
+compiling sem.c...
+linking...
+Program Size: Code=4728 RO-data=224 RW-data=84 ZI-data=17492  
+FromELF: creating hex file...
+"uKernel.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(49): warning:  #223-D: function "uKern_Init" declared implicitly
+main.c(71): warning:  #223-D: function "StartOS" declared implicitly
+main.c(43): warning:  #177-D: variable "tmp" was declared but never referenced
+main.c(98): warning:  #550-D: variable "primes" was set but never used
+compiling task.c...
+compiling kernel.c...
+compiling time.c...
+time.c(10): warning:  #223-D: function "interruptEnter" declared implicitly
+time.c(15): warning:  #223-D: function "ENTER_CRITICAL" declared implicitly
+time.c(43): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+time.c(45): warning:  #223-D: function "interruptExit" declared implicitly
+time.c(58): warning:  #223-D: function "ENTER_CRITICAL" declared implicitly
+time.c(71): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+time.c(78): warning:  #1-D: last line of file ends without a newline
+compiling wait_queue.c...
+wait_queue.c(9): warning:  #223-D: function "ENTER_CRITICAL" declared implicitly
+wait_queue.c(18): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+wait_queue.c(30): warning:  #223-D: function "ENTER_CRITICAL" declared implicitly
+wait_queue.c(32): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+wait_queue.c(41): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+wait_queue.c(55): warning:  #223-D: function "ENTER_CRITICAL" declared implicitly
+wait_queue.c(57): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+wait_queue.c(62): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+compiling message_queue.c...
+message_queue.c(28): warning:  #223-D: function "ENTER_CRITICAL" declared implicitly
+message_queue.c(30): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+message_queue.c(48): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+message_queue.c(54): warning:  #223-D: function "ENTER_CRITICAL" declared implicitly
+message_queue.c(60): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+message_queue.c(71): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+message_queue.c(79): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+message_queue.c(87): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+compiling sem.c...
+sem.c(14): warning:  #223-D: function "ENTER_CRITICAL" declared implicitly
+sem.c(17): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+sem.c(24): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+sem.c(34): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+sem.c(48): warning:  #223-D: function "ENTER_CRITICAL" declared implicitly
+sem.c(59): warning:  #223-D: function "EXIT_CRITICAL" declared implicitly
+linking...
+uKernel.axf: Error: L6218E: Undefined symbol ENTER_CRITICAL (referred from time.o).
+uKernel.axf: Error: L6218E: Undefined symbol EXIT_CRITICAL (referred from time.o).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(43): warning:  #177-D: variable "tmp" was declared but never referenced
+main.c(98): warning:  #550-D: variable "primes" was set but never used
+linking...
+uKernel.axf: Error: L6218E: Undefined symbol ENTER_CRITICAL (referred from time.o).
+uKernel.axf: Error: L6218E: Undefined symbol EXIT_CRITICAL (referred from time.o).
+Target not created
+Build target 'Target 1'
+compiling time.c...
+time.c(79): warning:  #1-D: last line of file ends without a newline
+linking...
+uKernel.axf: Error: L6218E: Undefined symbol ENTER_CRITICAL (referred from wait_queue.o).
+uKernel.axf: Error: L6218E: Undefined symbol EXIT_CRITICAL (referred from wait_queue.o).
+Target not created
+Build target 'Target 1'
+compiling wait_queue.c...
+linking...
+uKernel.axf: Error: L6218E: Undefined symbol ENTER_CRITICAL (referred from message_queue.o).
+uKernel.axf: Error: L6218E: Undefined symbol EXIT_CRITICAL (referred from message_queue.o).
+Target not created
+Build target 'Target 1'
+compiling message_queue.c...
+message_queue.c(2): error:  #5: cannot open source input file "message.h": No such file or directory
+Target not created
+Build target 'Target 1'
+compiling message_queue.c...
+linking...
+uKernel.axf: Error: L6218E: Undefined symbol ENTER_CRITICAL (referred from sem.o).
+uKernel.axf: Error: L6218E: Undefined symbol EXIT_CRITICAL (referred from sem.o).
+Target not created
+Build target 'Target 1'
+compiling sem.c...
+linking...
+Program Size: Code=4728 RO-data=224 RW-data=84 ZI-data=17492  
+FromELF: creating hex file...
+"uKernel.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=4728 RO-data=224 RW-data=84 ZI-data=17492  
+FromELF: creating hex file...
+"uKernel.axf" - 0 Error(s), 0 Warning(s).

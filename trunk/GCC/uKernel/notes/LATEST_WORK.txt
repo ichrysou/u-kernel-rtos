@@ -1,0 +1,7 @@
+Try to initialize 2 tasks and then execute context switch..
+Remember, Context restore part needs to be implemented. We left in the place were the SP is returned from new task stack
+1) added svc 0 and svc handler for jumping indirectly to context_switch
+2) use different names for context_switch that raises the exception and switch that handles the context switch
+3) look for link register to jump to after the stack is restored..
+
+almost there....

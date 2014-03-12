@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project version="2G - 1.7.2" name="uKernel">
+  <Target name="uKernel" isCurrent="1">
+    <Device manufacturerId="7" manufacturerName="NXP" chipId="165" chipName="LPC1768" boardId="" boardName=""/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="0"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value=""/>
+        <Includepaths>
+          <Includepath path="src/ukernel"/>
+        </Includepaths>
+        <DefinedSymbols>
+          <Define name="LPC1768"/>
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="0"/>
+        <Option name="UserEditLinkder" value=""/>
+        <Option name="UseMemoryLayout" value="1"/>
+        <Option name="LTO" value="1"/>
+        <Option name="IsNewStartupCode" value="1"/>
+        <Option name="Library" value="Not use C Library"/>
+        <Option name="UserEditLinker" value=""/>
+        <Option name="nostartfiles" value="1"/>
+        <Option name="DiscardUnusedSections" value="1"/>
+        <LinkedLibraries/>
+        <MemoryAreas debugInFlashNotRAM="1">
+          <Memory name="IROM1" type="ReadOnly" size="0x00080000" startValue="0x00000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00008000" startValue="0x10000000"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="0x00008000" startValue="0x2007C000"/>
+        </MemoryAreas>
+        <LocateLinkFile path="../../../../../../../coocox/coide/configuration/programdata/ukernel/arm-gcc-link.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="./"/>
+        <Option name="Name" value="uKernel"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="CMSIS-DAP"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="1M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="SYSRESETREQ"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2009"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Full Chip"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="./lpc17xx_512.elf"/>
+      <Option name="org.coocox.codebugger.gdbjtag.coredebugInRamInitCommands" value="cd C:/Users/hlias/Desktop/projects/workspace/GCC/uKernel/uKernel/Debug/bin restore uKernel.elf set {unsigned int*}0xE000ED08 = 0x10000000 set $sp = {unsigned int*}0x10000000 set $pc = {unsigned int*}0x10000004 "/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Components path="./">
+    <Component id="30" name="C Library" path="" type="2"/>
+    <Component id="50" name="CMSIS core" path="" type="2"/>
+    <Component id="253" name="CMSIS_boot" path="" type="2"/>
+  </Components>
+  <Files>
+    <File name="Src/uKernel/hooks.c" path="src/uKernel/hooks.c" type="1"/>
+    <File name="Src/uKernel/time.h" path="src/uKernel/time.h" type="1"/>
+    <File name="Src/uKernel/heap.c" path="src/uKernel/heap.c" type="1"/>
+    <File name="Src/lpc17xx_lib/source/lpc17xx_pinsel.c" path="src/lpc17xx_lib/source/lpc17xx_pinsel.c" type="1"/>
+    <File name="Src/uKernel/list.h" path="src/uKernel/list.h" type="1"/>
+    <File name="Src/uKernel/message_queue.c" path="src/uKernel/message_queue.c" type="1"/>
+    <File name="Src/cmsis_boot/LPC17xx.h" path="src/cmsis_boot/LPC17xx.h" type="1"/>
+    <File name="Src/uKernel/sem.c" path="src/uKernel/sem.c" type="1"/>
+    <File name="Src/uKernel/core_cm3.h" path="src/uKernel/core_cm3.h" type="1"/>
+    <File name="Src/cmsis_boot/startup" path="" type="2"/>
+    <File name="Src/uKernel" path="" type="2"/>
+    <File name="Src/uKernel/kernel.c" path="src/uKernel/kernel.c" type="1"/>
+    <File name="Src/uKernel/task.c" path="src/uKernel/task.c" type="1"/>
+    <File name="Src/uKernel/hooks.h" path="src/uKernel/hooks.h" type="1"/>
+    <File name="Src/uKernel/wait_queue.c" path="src/uKernel/wait_queue.c" type="1"/>
+    <File name="Src/uKernel/message_queue.h" path="src/uKernel/message_queue.h" type="1"/>
+    <File name="Src/cmsis_boot/startup/cr_startup_lpc17.c" path="src/cmsis_boot/startup/cr_startup_lpc17.c" type="1"/>
+    <File name="Src/uKernel/types.h" path="src/uKernel/types.h" type="1"/>
+    <File name="Src/uKernel/main.c" path="src/uKernel/main.c" type="1"/>
+    <File name="Src/cmsis/core_cm3.h" path="src/cmsis/core_cm3.h" type="1"/>
+    <File name="Src/lpc17xx_lib/source/lpc17xx_clkpwr.c" path="src/lpc17xx_lib/source/lpc17xx_clkpwr.c" type="1"/>
+    <File name="Src/lpc17xx_lib/include/lpc17xx_clkpwr.h" path="src/lpc17xx_lib/include/lpc17xx_clkpwr.h" type="1"/>
+    <File name="Src/lpc17xx_lib/include" path="" type="2"/>
+    <File name="Src/lpc17xx_lib/source" path="" type="2"/>
+    <File name="Src/uKernel/kernel.h" path="src/uKernel/kernel.h" type="1"/>
+    <File name="Src/uKernel/sem.h" path="src/uKernel/sem.h" type="1"/>
+    <File name="Src/lpc17xx_lib/source/lpc17xx_libcfg_default.c" path="src/lpc17xx_lib/source/lpc17xx_libcfg_default.c" type="1"/>
+    <File name="Src/lpc17xx_lib" path="" type="2"/>
+    <File name="Src/uKernel/LPC17xx.h" path="src/uKernel/LPC17xx.h" type="1"/>
+    <File name="Src/uKernel/task_types.h" path="src/uKernel/task_types.h" type="1"/>
+    <File name="Src/cmsis/core_cm3.c" path="src/cmsis/core_cm3.c" type="1"/>
+    <File name="Src/lpc17xx_lib/include/lpc_types.h" path="src/lpc17xx_lib/include/lpc_types.h" type="1"/>
+    <File name="Src/uKernel/task.h" path="src/uKernel/task.h" type="1"/>
+    <File name="Src/uKernel/port.h" path="src/uKernel/port.h" type="1"/>
+    <File name="Src/lpc17xx_lib/include/lpc17xx_pinsel.h" path="src/lpc17xx_lib/include/lpc17xx_pinsel.h" type="1"/>
+    <File name="Src/cmsis_boot/system_LPC17xx.h" path="src/cmsis_boot/system_LPC17xx.h" type="1"/>
+    <File name="Src/uKernel/port.c" path="src/uKernel/port.c" type="1"/>
+    <File name="Src/cmsis_boot/system_LPC17xx.c" path="src/cmsis_boot/system_LPC17xx.c" type="1"/>
+    <File name="Src/syscalls/syscalls.c" path="src/syscalls/syscalls.c" type="1"/>
+    <File name="Src/uKernel/kern_conf.h" path="src/uKernel/kern_conf.h" type="1"/>
+    <File name="Src/uKernel/heap.h" path="src/uKernel/heap.h" type="1"/>
+    <File name="Src/uKernel/port_types.h" path="src/uKernel/port_types.h" type="1"/>
+    <File name="Src/cmsis" path="" type="2"/>
+    <File name="Src/cmsis_boot" path="" type="2"/>
+    <File name="Src/uKernel/time.c" path="src/uKernel/time.c" type="1"/>
+    <File name="Src/uKernel/wait_queue.h" path="src/uKernel/wait_queue.h" type="1"/>
+    <File name="Src" path="" type="2"/>
+    <File name="Src/syscalls" path="" type="2"/>
+    <File name="Src/lpc17xx_lib/include/lpc17xx_libcfg_default.h" path="src/lpc17xx_lib/include/lpc17xx_libcfg_default.h" type="1"/>
+  </Files>
+</Project>

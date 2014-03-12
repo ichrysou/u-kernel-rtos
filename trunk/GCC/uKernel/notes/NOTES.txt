@@ -1,0 +1,113 @@
+stack overview:
+
+
+|  Lower memory (0xFF00)		
+|
+|	   ^
+|         / \
+|          |
+|          |
+|	   |
+|	 stack 
+|	 growth
+|	   |
+|
+|
+|
+|
+|
+|
+|  Higher memory (0xFFEE)
+
+Stack pointer:
+
+Link Register:
+
+
+1)
+2)
+3)
+
+
+Micrium Stack Init:
+
+stk = ptos       // load stack poitner (to pairnei apo tin taskcreate. Einai to telos tou uint array pou exei gia stack)
+*--stk = pdata   // asxeta data   
+*--stk = task  	 // to function pointer tou task  (to pairnei apo tin ostaskcreate)
+
+
+Micrium TCB->StkPtr (for TOS) is of type (uint *)
+
+Freertos TCB->StkPtr (for TOS) is of type (
+
+
+
+Stack of a suspended task:
+
+|SP							  | <----- Edw deixnei o TCB->StackPointer
+|LR,SR,PC,  -- define according to assembly isntructions  |
+|GPRS  -- define according to assembly instructions       |
+|
+|
+|
+|
+
+1) save the processor registers to the stack
+2) save the stack pointer in TCB->StackPointer
+3) Find HighestPrioTask (HPT)
+4) Find HPTs -> StackPoitner
+5) use it to restore the registers
+6) context switch.
+
+TCBs arena:
+FreeRTOS vs uCOS-II:
+
+uCOS-II:
+    ...
+    OS_STK          *OSTCBStkPtr;           /* Pointer to current top of stack                         */
+
+    struct os_tcb   *OSTCBNext;             /* Pointer to next     TCB in the TCB list                 */
+    struct os_tcb   *OSTCBPrev;             /* Pointer to previous TCB in the TCB list                 */
+
+    INT16U           OSTCBDly;              /* Nbr ticks to delay task or, timeout waiting for event   */
+    INT8U            OSTCBStat;             /* Task      status                                        */
+    INT8U            OSTCBStatPend;         /* Task PEND status                                        */
+    INT8U            OSTCBPrio;             /* Task priority (0 == highest)                            */
+    ...
+
+FreeRTOS: 
+        volatile portSTACK_TYPE *pxTopOfStack;          /*< Points to the location of the last item placed on the tasks stack.  THIS MUST BE THE FIRST MEMBER OF THE STRUCT. */
+
+        xListItem                               xGenericListItem;       /*< List item used to place the TCB in ready and blocked queues. */
+        xListItem                               xEventListItem;         /*< List item used to place the TCB in event lists. */
+        unsigned portBASE_TYPE    uxPriority;                     /*< The priority of the task where 0 is the lowest priority. */
+        portSTACK_TYPE                  *pxStack;                       /*< Points to the start of the stack. */
+        signed char                             pcTaskName[ configMAX_TASK_NAME_LEN ];/*< Descriptive name given to the task when created.  Facilitates debugging only. */
+
+        #if ( portSTACK_GROWTH > 0 )
+                portSTACK_TYPE *pxEndOfStack;                   /*< Used for stack overflow checking on architectures where the stack grows up from low memory. */
+        #endif
+} tskTCB;
+
+
+--DONT FORGET TO SET THE HEAP SIZE IN THE startup file's configuration tool
+
+
+-- The function parameters are passed through R0!!
+
+-- r14 is the link register. bx LR to return from function.
+
+-- See what happens in function call (which registers are stored to stack and how they are popped)
+
+-- Na ton vrasw ton PC..den ton 8elw stin stiva
+
+
+cost of currentTCB = hihgestTCB in c:
+
+0x000001D2 4608      MOV      r0,r1
+0x000001D4 6800      LDR      r0,[r0,#0x00]
+0x000001D6 4908      LDR      r1,[pc,#32]  ; @0x000001F8
+0x000001D8 6008      STR      r0,[r1,#0x00]
+
+
+also this [] is dereferencing

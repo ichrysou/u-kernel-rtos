@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc 4.7.3 x86_64-w64-mingw32 -mcpu=cortex-m3 -mthumb -Wall -ffunction-sections -g -O0 -c -DLPC1768 -I..\..\..\..\..\Users\hlias\Desktop\projects\workspace\GCC\uKernel\src\lpc17xx_lib -I..\..\..\..\..\Users\hlias\Desktop\projects\workspace\GCC\uKernel\src\cmsis_boot -I..\..\..\..\..\Users\hlias\Desktop\projects\workspace\GCC\uKernel\src\lpc17xx_lib\include -I..\..\..\..\..\Users\hlias\Desktop\projects\workspace\GCC\uKernel\src -I..\..\..\..\..\Users\hlias\Desktop\projects\workspace\GCC\uKernel\src\uKernel -I..\..\..\..\..\Users\hlias\Desktop\projects\workspace\GCC\uKernel -I..\..\..\..\..\Users\hlias\Desktop\projects\workspace\GCC\uKernel\src\cmsis">
+      <target file="syscalls.o" lastModified="144b7cf975d">
+         <source file="..\..\..\src\syscalls\syscalls.c" lastModified="142b57734cb"/>
+      </target>
+      <target file="hooks.o" lastModified="144b7c7cb09">
+         <source file="..\..\..\src\uKernel\hooks.c" lastModified="144b7ad7dd5"/>
+      </target>
+      <target file="time.o" lastModified="144b7d647ea">
+         <source file="..\..\..\src\uKernel\time.c" lastModified="144b7ad7de6"/>
+      </target>
+      <target file="wait_queue.o" lastModified="144b7d6475b">
+         <source file="..\..\..\src\uKernel\wait_queue.c" lastModified="144b7ad7de9"/>
+      </target>
+      <target file="heap.o" lastModified="144b7c7cb97">
+         <source file="..\..\..\src\uKernel\heap.c" lastModified="144b7ad7dd3"/>
+      </target>
+      <target file="port.o" lastModified="144b7c7ceca">
+         <source file="..\..\..\src\uKernel\port.c" lastModified="144b7ad7dde"/>
+      </target>
+      <target file="system_LPC17xx.o" lastModified="144b7c7c90d">
+         <source file="..\..\..\src\cmsis_boot\system_LPC17xx.c" lastModified="142858b6c20"/>
+      </target>
+      <target file="kernel.o" lastModified="144b7d648e4">
+         <source file="..\..\..\src\uKernel\kernel.c" lastModified="144b7ad7dd7"/>
+      </target>
+      <target file="core_cm3.o" lastModified="144b7c7c77b">
+         <source file="..\..\..\src\cmsis\core_cm3.c" lastModified="142858b6c8c"/>
+      </target>
+      <target file="sem.o" lastModified="144b7d6497f">
+         <source file="..\..\..\src\uKernel\sem.c" lastModified="144b7ad7de1"/>
+      </target>
+      <target file="task.o" lastModified="144b7d6462c">
+         <source file="..\..\..\src\uKernel\task.c" lastModified="144b7ad7de4"/>
+      </target>
+      <target file="main.o" lastModified="144b7d646d1">
+         <source file="..\..\..\src\uKernel\main.c" lastModified="144b7ad7ddc"/>
+      </target>
+      <target file="lpc17xx_libcfg_default.o" lastModified="144b7c7cc3f">
+         <source file="..\..\..\src\lpc17xx_lib\source\lpc17xx_libcfg_default.c" lastModified="142f266af04"/>
+      </target>
+      <target file="cr_startup_lpc17.o" lastModified="144b7c7c9ea">
+         <source file="..\..\..\src\cmsis_boot\startup\cr_startup_lpc17.c" lastModified="142f28d28d2"/>
+      </target>
+      <target file="message_queue.o" lastModified="144b7d64a1b">
+         <source file="..\..\..\src\uKernel\message_queue.c" lastModified="144b7ad7ddd"/>
+      </target>
+      <target file="lpc17xx_clkpwr.o" lastModified="144b7c7c8a6">
+         <source file="..\..\..\src\lpc17xx_lib\source\lpc17xx_clkpwr.c" lastModified="142f266aec6"/>
+      </target>
+      <target file="lpc17xx_pinsel.o" lastModified="144b7c7cd5b">
+         <source file="..\..\..\src\lpc17xx_lib\source\lpc17xx_pinsel.c" lastModified="142f266af97"/>
+      </target>
+   </processor>
+</history>

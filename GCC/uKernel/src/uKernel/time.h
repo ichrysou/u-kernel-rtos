@@ -1,6 +1,6 @@
 #ifndef __TIME_H__
 #define __TIME_H__
-#include "task.h"
+#include "types.h"
 
 void OSTick(void);
 void TickTasks(void);

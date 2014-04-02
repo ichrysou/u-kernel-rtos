@@ -84,8 +84,8 @@
     <File name="Src/uKernel/core_cm3.h" path="src/uKernel/core_cm3.h" type="1"/>
     <File name="Src/cmsis_boot/startup" path="" type="2"/>
     <File name="Src/uKernel" path="" type="2"/>
-    <File name="Src/uKernel/kernel.c" path="src/uKernel/kernel.c" type="1"/>
     <File name="Src/uKernel/task.c" path="src/uKernel/task.c" type="1"/>
+    <File name="Src/uKernel/kernel.c" path="src/uKernel/kernel.c" type="1"/>
     <File name="Src/uKernel/hooks.h" path="src/uKernel/hooks.h" type="1"/>
     <File name="Src/uKernel/wait_queue.c" path="src/uKernel/wait_queue.c" type="1"/>
     <File name="Src/uKernel/message_queue.h" path="src/uKernel/message_queue.h" type="1"/>
@@ -96,8 +96,8 @@
     <File name="Src/lpc17xx_lib/source/lpc17xx_clkpwr.c" path="src/lpc17xx_lib/source/lpc17xx_clkpwr.c" type="1"/>
     <File name="Src/lpc17xx_lib/include/lpc17xx_clkpwr.h" path="src/lpc17xx_lib/include/lpc17xx_clkpwr.h" type="1"/>
     <File name="Src/lpc17xx_lib/include" path="" type="2"/>
-    <File name="Src/lpc17xx_lib/source" path="" type="2"/>
     <File name="Src/uKernel/kernel.h" path="src/uKernel/kernel.h" type="1"/>
+    <File name="Src/lpc17xx_lib/source" path="" type="2"/>
     <File name="Src/uKernel/sem.h" path="src/uKernel/sem.h" type="1"/>
     <File name="Src/lpc17xx_lib/source/lpc17xx_libcfg_default.c" path="src/lpc17xx_lib/source/lpc17xx_libcfg_default.c" type="1"/>
     <File name="Src/lpc17xx_lib" path="" type="2"/>
@@ -115,8 +115,8 @@
     <File name="Src/uKernel/kern_conf.h" path="src/uKernel/kern_conf.h" type="1"/>
     <File name="Src/uKernel/heap.h" path="src/uKernel/heap.h" type="1"/>
     <File name="Src/uKernel/port_types.h" path="src/uKernel/port_types.h" type="1"/>
-    <File name="Src/cmsis" path="" type="2"/>
     <File name="Src/cmsis_boot" path="" type="2"/>
+    <File name="Src/cmsis" path="" type="2"/>
     <File name="Src/uKernel/time.c" path="src/uKernel/time.c" type="1"/>
     <File name="Src/uKernel/wait_queue.h" path="src/uKernel/wait_queue.h" type="1"/>
     <File name="Src" path="" type="2"/>

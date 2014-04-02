@@ -1,6 +1,7 @@
 #include "kernel.h"
 #include "heap.h"
 
+
 //#include "LPC17xx.h"
 
 OSStackType IdleStack[IDLE_STACK_SIZE];
@@ -29,7 +30,25 @@ void StartOS(void){
 	
 }
 
-
+void schedule(void)
+{
+	ENTER_CRITICAL();
+	/* if we are in interrupt context, perform no Context Switch.
+	 * interruptExit() will handle it */
+	if(!interruptNesting){
+		FindHighestPriorityTask();
+		if (currentTCB == highestTCB){
+			EXIT_CRITICAL();
+			return;
+		}else{
+			EXIT_CRITICAL();
+			SWITCH_CONTEXT();
+		}
+	}else{
+		EXIT_CRITICAL();
+		return;
+	}
+}
 void IdleTask(void *args)
 {
 	while(1){
@@ -46,11 +65,35 @@ void IdleTask(void *args)
 	}
 }
 
-void idleTaskInit()
+
+
+void yield()
 {
-#if STACK_GROWTH == 1
-	task_create(IDLE_TASK_PRIO, IdleTask, NULL, IDLE_STACK_SIZE, &IdleStack[IDLE_STACK_SIZE - 1], NULL);
-#else 
-	task_create(IDLE_TASK_PRIO, IdleTask, NULL, IDLE_STACK_SIZE, &ildeStack[0], NULL);
+	ENTER_CRITICAL();
+	currentTCB->state = BLOCKED;
+//TODO: you need to think this through.
+//  	We need to delete the tsk from somewhere,
+//		even for PRIO_ALT 2, 3.
+#if MULTIPLE_TASKS_PER_PRIORITY
+	if (list_empty(&(currentTCB->same_prio_tasks))){
 #endif
+	ReadyArray[currentTCB->prio] = NULL;
+#if HIGHEST_PRIO_ALT == 2
+	ReadyTaskBitmap[(currentTCB->prio >> 5)] &=  ~(1 << (currentTCB->prio & 0x1F)) ;
+	ReadyTaskIndex &= ~(1 << (currentTCB->prio >> 5));
+#elif HIGHEST_PRIO_ALT == 3
+	ReadyTaskBitmap &=  ~(1 << (currentTCB->prio & 0x1F));
+#endif
+
+#if MULTIPLE_TASKS_PER_PRIORITY
+	}else{
+		//TODO: check if this is correct, I mean if the correct TCB is removed from the list
+		ReadyArray[currentTCB->prio] = list_entry(currentTCB->same_prio_tasks.next, TCB, same_prio_tasks);
+		//TODO: this can be for all three alternatives
+		list_del(&currentTCB->same_prio_tasks);
+	}
+#endif
+
+	EXIT_CRITICAL();
+	schedule();
 }

@@ -31,30 +31,31 @@ extern struct list_head allTasksLinked;
 extern TCB *currentTCB;
 extern TCB *highestTCB;
 
-/* ======================================*/
-/* -------------- Functions -------------*/
-/* ======================================*/
-/* public interface */
+/* ==========================================================*/
+/* -------------- Global Function Declarations -------------*/
+/* ========================================================*/
+void tasksInit(void);
 err_t task_create(uint_8 prio, task function, void *args, OSStackType stack_size, OSStackType *tos, TCB *handler);
+TCB *getTCBbyPrio(unsigned int prio);
 
-#if !MULTIPLE_TASKS_PER_PRIORITY
 err_t prioEnable(uint_16 prio);
 err_t prioDisable(uint_16 prio);
-#endif
-
 err_t taskEnable(TCB *tsk);
 err_t taskDisable(TCB *tsk);
 
-/* RTOS-private functions */
-TCB * TCBAlloc(void);
-void TCBInit(TCB *newTCB, uint_8 prio, uint_32 stk_size);
-void tasksInit(void);
-TCB *getTCBbyPrio(unsigned int prio);
+void idleTaskInit(void);
+/* ==========================================================*/
+/* ------------- Private Function Declarations -------------*/
+/* ========================================================*/
+static TCB * task_lTCBAlloc(void);
+static void task_lTCBInit(TCB *newTCB, uint_8 prio, uint_32 stk_size);
+
 #if HIGHEST_PRIO_ALT != 3
 void FindHighestPriorityTask(void);
 #endif
 
-void schedule(void);
-void yield(void);
+
+//void schedule(void);
+//void yield(void);
 
 #endif

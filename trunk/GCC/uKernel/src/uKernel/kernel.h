@@ -2,7 +2,6 @@
 #define __KERNEL_C__
 
 #include "port.h"
-//#include "task.h"
 #include <stdio.h>
 #include "task_types.h"
 
@@ -12,6 +11,7 @@ extern TCB *currentTCB;
 
 extern TCB *TaskArray[MAX_TASKS];
 extern TCB *ReadyArray[MAX_TASKS];
+OSStackType IdleStack[IDLE_STACK_SIZE];
 
 #if HIGHEST_PRIO_ALT == 2
 extern uint_32 ReadyTaskBitmap[(MAX_TASKS >> 5) + 1];
@@ -73,6 +73,9 @@ static __inline void interruptExit(void)
 }
 void uKern_Init(void);
 void StartOS(void);
+
 void IdleTask(void *args);
-void idleTaskInit(void);
+
+void schedule(void);
+void yield(void);
 #endif

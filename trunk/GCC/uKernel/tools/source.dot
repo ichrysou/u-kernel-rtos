@@ -5,20 +5,45 @@ digraph "source tree" {
     fontsize="16";
     fontname="Helvetica";
 	clusterrank="local";
-}
-digraph "source tree" {
-    overlap=scale;
-    size="8,10";
-    ratio="fill";
-    fontsize="16";
-    fontname="Helvetica";
-	clusterrank="local";
-}
-digraph "source tree" {
-    overlap=scale;
-    size="8,10";
-    ratio="fill";
-    fontsize="16";
-    fontname="Helvetica";
-	clusterrank="local";
+	"heap" -> "types"
+	"task_types" -> "list"
+	"sem" -> "list"
+	"task" -> "list"
+	"task" -> "kernel"
+	"kernel" -> "port"
+	"task" -> "task_types"
+	"task" -> "kern_conf"
+	"lpc17xx_clkpwr" -> "lpc_types"
+	"sem" -> "kernel"
+	"kernel" -> "hooks"
+	"sem" -> "time"
+	"time" -> "task"
+	"task" -> "heap"
+	"port" -> "types"
+	"system_LPC17xx" -> "LPC17xx"
+	"heap" -> "kern_conf"
+	"wait_queue" -> "task"
+	"port" -> "kern_conf"
+	"main" -> "hooks"
+	"lpc17xx_libcfg_default" -> "lpc_types"
+	"task" -> "types"
+	"sem" -> "types"
+	"sem" -> "heap"
+	"kernel" -> "heap"
+	"main" -> "heap"
+	"message_queue" -> "time"
+	"message_queue" -> "kernel"
+	"kernel" -> "task_types"
+	"wait_queue" -> "kernel"
+	"sem" -> "wait_queue"
+	"types" -> "port_types"
+	"message_queue" -> "heap"
+	"message_queue" -> "wait_queue"
+	"main" -> "kernel"
+	"main" -> "task"
+	"time" -> "kernel"
+	"main" -> "message_queue"
+	"LPC17xx" -> "system_LPC17xx"
+	"lpc17xx_pinsel" -> "lpc_types"
+	"main" -> "sem"
 }

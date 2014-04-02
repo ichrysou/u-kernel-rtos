@@ -1,5 +1,6 @@
 #include "time.h"
 #include "kernel.h"
+#include "task.h"
 //Time.c
 /* Sys Tick counter */
 static volatile unsigned int OSTicks = 0;

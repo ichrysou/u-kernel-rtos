@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "task.h"
-//#include "port.h"
 #include "kernel.h"
 #include "heap.h"
 
@@ -9,7 +8,7 @@
 /* ---------------- Globals ------------- */
 /* ========================================*/
 
-//TODO: Resolve: Memory overhead because of using!!!!!!!!!!!!!!!
+//TODO: Resolve: Memory overhead because of using
 //		2 different structures to keep the same thing
 
 /* Global array to hold each and every created task */
@@ -18,7 +17,6 @@ TCB *TaskArray[MAX_TASKS];
 struct list_head allTasksLinked;
 
 /* Declarations depend on the way we get the highest priority task.*/
-
 TCB *ReadyArray[MAX_TASKS];
 //TODO: PRIO_ALT 2 does not work.. Please fix it
 #if HIGHEST_PRIO_ALT == 2
@@ -99,7 +97,7 @@ err_t task_create(uint_8 prio, task function, void *args, uint_32 stk_size, uint
 
 	/* Initialize TCB and Stack */
  	newTCB = (TCB *)portMalloc(sizeof(TCB));//TCBAlloc();
-	TCBInit(newTCB, prio, stk_size);
+	task_lTCBInit(newTCB, prio, stk_size);
 
 	/* StkInit is in port */
 	newTCB->TopOfStkPtr = StkInit(tos, function, args, stk_size);
@@ -149,7 +147,7 @@ err_t task_create(uint_8 prio, task function, void *args, uint_32 stk_size, uint
 }
 
 
-TCB * TCBAlloc(void)
+static TCB * task_lTCBAlloc(void)
 {
 	/* depends on mem mang scheme*/
 	//TODO: MEM_MANG change
@@ -159,7 +157,7 @@ TCB * TCBAlloc(void)
 	return tmpTCB;
 }
 
-void TCBInit(TCB *newTCB, uint_8 prio, uint_32 stk_size)
+static void task_lTCBInit(TCB *newTCB, uint_8 prio, uint_32 stk_size)
 {
 	newTCB->prio = prio;
 	newTCB->state = READY;
@@ -175,7 +173,6 @@ void TCBInit(TCB *newTCB, uint_8 prio, uint_32 stk_size)
 
 TCB *getTCBbyPrio(unsigned int prio)
 {
-	
 	if (prio < MAX_TASKS)
 		return TaskArray[prio];
 	else 
@@ -230,56 +227,9 @@ void FindHighestPriorityTask()
 /* Better alternative? */
 #endif
 
-void schedule(void)
-{
-	ENTER_CRITICAL();
-	/* if we are in interrupt context, perform no Context Switch.
-	 * interruptExit() will handle it */
-	if(!interruptNesting){
-		FindHighestPriorityTask();
-		if (currentTCB == highestTCB){
-			EXIT_CRITICAL();
-			return;
-		}else{
-			EXIT_CRITICAL();
-			SWITCH_CONTEXT();
-		}
-	}else{
-		EXIT_CRITICAL();
-		return;
-	}
-}
+
 //TODO: changes for MULTIPLE_TASKS_PER_PRIORITY DONE, verify
-void yield()
-{
-	ENTER_CRITICAL();
-	currentTCB->state = BLOCKED;
-//TODO: you need to think this through.
-//  	We need to delete the tsk from somewhere,
-//		even for PRIO_ALT 2, 3.
-#if MULTIPLE_TASKS_PER_PRIORITY
-	if (list_empty(&(currentTCB->same_prio_tasks))){
-#endif
-	ReadyArray[currentTCB->prio] = NULL;
-#if HIGHEST_PRIO_ALT == 2
-	ReadyTaskBitmap[(currentTCB->prio >> 5)] &=  ~(1 << (currentTCB->prio & 0x1F)) ;	
-	ReadyTaskIndex &= ~(1 << (currentTCB->prio >> 5));
-#elif HIGHEST_PRIO_ALT == 3
-	ReadyTaskBitmap &=  ~(1 << (currentTCB->prio & 0x1F));	
-#endif
 
-#if MULTIPLE_TASKS_PER_PRIORITY
-	}else{
-		//TODO: check if this is correct, I mean if the correct TCB is removed from the list
-		ReadyArray[currentTCB->prio] = list_entry(currentTCB->same_prio_tasks.next, TCB, same_prio_tasks);
-		//TODO: this can be for all three alternatives
-		list_del(&currentTCB->same_prio_tasks);
-	}
-#endif
-
-	EXIT_CRITICAL();
-	schedule();
-}
 /*
  *TODO: needs changes for multiple tasks per priority.
  * PrioEnabled should be a better name for this
@@ -293,6 +243,7 @@ void yield()
  */
 err_t prioEnable(uint_16 prio)
 {
+#if !MULTIPLE_TASKS_PER_PRIORITY
 	ENTER_CRITICAL();
 		if (TaskArray[prio] == NULL){
 			EXIT_CRITICAL();
@@ -311,6 +262,9 @@ err_t prioEnable(uint_16 prio)
 		EXIT_CRITICAL();
 		schedule();
 		return ERR_OK;
+#else
+		return ERR_UNKNOWN;
+#endif
 }
 
 err_t taskEnable(TCB *tsk)
@@ -356,6 +310,7 @@ err_t taskEnable(TCB *tsk)
 
 err_t prioDisable(uint_16 prio)
 {
+#if !(MULTIPLE_TASKS_PER_PRIORITY)
 	if (TaskArray[prio] == NULL)
 			return ERR_INVALID_PRIO;
 		if (prio == currentTCB->prio){
@@ -374,6 +329,18 @@ err_t prioDisable(uint_16 prio)
 			EXIT_CRITICAL();
 			return ERR_OK;
 		}
+#else
+		return ERR_UNKNOWN;
+#endif
+}
+
+void idleTaskInit()
+{
+#if STACK_GROWTH == 1
+	task_create(IDLE_TASK_PRIO, IdleTask, NULL, IDLE_STACK_SIZE, &IdleStack[IDLE_STACK_SIZE - 1], NULL);
+#else
+	task_create(IDLE_TASK_PRIO, IdleTask, NULL, IDLE_STACK_SIZE, &ildeStack[0], NULL);
+#endif
 }
 /**
  * TODO: the same as TaskEnable

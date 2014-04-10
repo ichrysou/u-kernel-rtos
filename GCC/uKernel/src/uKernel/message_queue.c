@@ -47,13 +47,12 @@ err_t queueSendToTail(queue *q, void *msg)
         q->length++;
         if (!list_empty(&(q->tasksPend))){
                 tmp = removeHeadFromWaitQueue(&(q->tasksPend));
-				if (tmp->delay){
-					tmp->delay = 0;
-					
-					/* remove also from delayed list */
-				}
-				//TODO: Use code instead of TaskEnable funciton
-				prioEnable(tmp->prio);
+                if (tmp->delay){
+                       tmp->delay = 0;
+					             /* remove also from delayed list */
+                }
+                      //TODO: Use code instead of TaskEnable funciton
+                      prioEnable(tmp->prio);
         }
         EXIT_CRITICAL();
         return ERR_OK;

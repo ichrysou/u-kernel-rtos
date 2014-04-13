@@ -39,6 +39,7 @@ err_t queueSendToTail(queue *q, void *msg)
 			EXIT_CRITICAL();
                 return ERR_Q_FULL;
         }
+
         if (q->tail + q->elementSize >= q->end){
                 q->tail = q->start;
         }
@@ -52,7 +53,8 @@ err_t queueSendToTail(queue *q, void *msg)
 					             /* remove also from delayed list */
                 }
                       //TODO: Use code instead of TaskEnable funciton
-                      prioEnable(tmp->prio);
+                      //prioEnable(tmp->prio);
+                taskEnable(tmp);
         }
         EXIT_CRITICAL();
         return ERR_OK;

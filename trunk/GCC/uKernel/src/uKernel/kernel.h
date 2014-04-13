@@ -6,6 +6,8 @@
 #include "task_types.h"
 
 /*********************GLOBALS*******************************/
+extern volatile uint_32 idleCounter;
+extern uint_8 kernel_running; /*flag*/
 extern TCB *highestTCB;
 extern TCB *currentTCB;
 

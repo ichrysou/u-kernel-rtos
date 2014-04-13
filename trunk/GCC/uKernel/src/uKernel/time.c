@@ -1,15 +1,37 @@
 #include "time.h"
 #include "kernel.h"
 #include "task.h"
+#if STATS_ENABLED
+#include "stats.h"
+#endif
 //Time.c
 /* Sys Tick counter */
 static volatile unsigned int OSTicks = 0;
 
 
 void OSTick(void){
+
+
 	TCB *tmp;
 	struct list_head *iter1, *iter2;
+/* TODO:here we should have OS_TICK_HOOK in general.
+ *  in that hook an if the stats were enabled then
+ *  we would have the stats_hook*/
+#if STATS_ENABLED
+	/* this is for initializing the stats counter*/
+	if (!kernel_running){
+		stat_flag ^= 1;
+		return;
+	}
+#endif
+
     interruptEnter();
+
+#if STATS_ENABLED
+    /*idle counter snapshot and reset*/
+    idleCounterStats = idleCounter;
+    idleCounter = 0;
+#endif
 	/* increase tick counter*/
 	//LPC_GPIO1->FIOPIN |= 1 << 18;
 	//LPC_GPIO1->FIOPIN &= ~(1 << 20);

@@ -24,6 +24,7 @@ OSStackType *StkInit(OSStackType *tos, task function, void *args, OSStackType st
 }
 
 void OSStartFirstTask(){
+
 	__asm volatile(
 					 " ldr r0, =0xE000ED08   \n" /* Use the NVIC offset register to locate the stack. */
 					 " ldr r0, [r0]                  \n"
@@ -56,6 +57,10 @@ void OSTickStart(void){
   SysTick->CTRL  = SysTick_CTRL_CLKSOURCE_Msk | 
                    SysTick_CTRL_TICKINT_Msk   | 
                    SysTick_CTRL_ENABLE_Msk;                    /* Enable SysTick IRQ and SysTick Timer */
+}
+
+void OSTickStop(void){
+	SysTick->CTRL  &= ~(SysTick_CTRL_ENABLE_Msk);                    /* Disable SysTick IRQ and SysTick Timer */
 }
 
 uint_32 OSTickConfig(void){
@@ -144,15 +149,18 @@ void context_switch(void)
 
 
 
-
-void init_service(void)
-{
+void hw_init(){
 #ifdef __DEBUG__
 	SCB->VTOR = 0x10000000;
 #endif
     /* Make PendSV, CallSV and SysTick the same priroity as the kernel. */
     *(portNVIC_SYSPRI2) |= portNVIC_PENDSV_PRI;
     *(portNVIC_SYSPRI2) |= portNVIC_SYSTICK_PRI;
+
+}
+void init_service(void)
+{
+
     OSStartFirstTask();
 }
 

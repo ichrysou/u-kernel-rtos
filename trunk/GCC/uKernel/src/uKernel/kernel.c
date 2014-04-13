@@ -1,33 +1,42 @@
 #include "kernel.h"
 #include "heap.h"
-
-
+#if STATS_ENABLED
+volatile uint_8 fake_flag = 1;
+#endif
 //#include "LPC17xx.h"
 
 OSStackType IdleStack[IDLE_STACK_SIZE];
 
 uint_32 criticalNesting = 0; 
 uint_32 interruptNesting = 0;
-uint_32 idleCounter = 0;
-
+volatile uint_32 idleCounter = 0;
+uint_8 kernel_running = 0;
+/*early startup, must be the first thing to do in main*/
 void uKern_Init(void)
 {
 
 	heapInit();
 	tasksInit();
 
-
 	OSTickConfig();
 }
-
+/*this is  always last call in main function. It should
+ * not be expected to ever return.*/
 void StartOS(void){
 
+	hw_init();
+#if STATS_ENABLED
+	statsInit();
+	OSTickConfig();
+#endif
 	FindHighestPriorityTask();
 	currentTCB = highestTCB;
+	/*enable interrupts*/
 	OSTickStart();
+	kernel_running = 1;
 	init_service();
-	//start_os();
-	
+
+
 }
 
 void schedule(void)
@@ -51,13 +60,20 @@ void schedule(void)
 }
 void IdleTask(void *args)
 {
-	while(1){
+#if STATS_ENABLED
+	while(fake_flag){
+#else
+		while(1){
+#endif
 
-		idleCounter++;
+
 
 #if IDLE_TASK_SLEEP
+		idleCounter++;
 		LPC_SC->PCON = 0x00;
 		__WFI();
+#else
+		idleCounter++;
 #endif
 #if HOOKS_ENABLED && IDLE_TASK_HOOK 
 		idleTaskHook();

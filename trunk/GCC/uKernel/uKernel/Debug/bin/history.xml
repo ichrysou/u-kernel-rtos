@@ -1,24 +1,26 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <history>
    <processor signature="4.6.2 -mcpu=cortex-m3 -mthumb -g -nostartfiles -Map=uKernel.map -O0 --gc-sections -LC:\CooCox\CoIDE\configuration\ProgramData\uKernel -TC:\CooCox\CoIDE\configuration\ProgramData\uKernel/arm-gcc-link.ld -g">
-      <target file="uKernel.elf" lastModified="14523bd1c6f">
-         <source file="..\obj\core_cm3.o" lastModified="1452396c08f"/>
-         <source file="..\obj\lpc17xx_clkpwr.o" lastModified="1452396c250"/>
-         <source file="..\obj\system_LPC17xx.o" lastModified="1452396c2b3"/>
-         <source file="..\obj\cr_startup_lpc17.o" lastModified="1452396c310"/>
-         <source file="..\obj\task.o" lastModified="14523bd1a14"/>
-         <source file="..\obj\main.o" lastModified="14523bb2ee9"/>
-         <source file="..\obj\hooks.o" lastModified="1452396c538"/>
-         <source file="..\obj\heap.o" lastModified="1452396c591"/>
-         <source file="..\obj\wait_queue.o" lastModified="14523bb2fa7"/>
-         <source file="..\obj\lpc17xx_libcfg_default.o" lastModified="1452396c671"/>
-         <source file="..\obj\time.o" lastModified="14523bb3087"/>
-         <source file="..\obj\lpc17xx_pinsel.o" lastModified="1452396c762"/>
-         <source file="..\obj\syscalls.o" lastModified="1452396c7f4"/>
-         <source file="..\obj\port.o" lastModified="1452396c879"/>
-         <source file="..\obj\kernel.o" lastModified="14523b6ad74"/>
-         <source file="..\obj\sem.o" lastModified="14523bb3120"/>
-         <source file="..\obj\message_queue.o" lastModified="14523bb31cc"/>
+      <target file="uKernel.elf" lastModified="1455cfc9204">
+         <source file="..\obj\core_cm3.o" lastModified="1453935a73e"/>
+         <source file="..\obj\lpc17xx_clkpwr.o" lastModified="1453935a7a2"/>
+         <source file="..\obj\system_LPC17xx.o" lastModified="1453935a7fc"/>
+         <source file="..\obj\cr_startup_lpc17.o" lastModified="1453935a853"/>
+         <source file="..\obj\task.o" lastModified="1455cfc87f9"/>
+         <source file="..\obj\main.o" lastModified="1455cfc89d7"/>
+         <source file="..\obj\hooks.o" lastModified="1453935aa19"/>
+         <source file="..\obj\heap.o" lastModified="1455cfc8a4a"/>
+         <source file="..\obj\lpc17xx_gpio.o" lastModified="1453935ab15"/>
+         <source file="..\obj\wait_queue.o" lastModified="1455cfc8af6"/>
+         <source file="..\obj\stats.o" lastModified="1455cfc8baa"/>
+         <source file="..\obj\lpc17xx_libcfg_default.o" lastModified="1453935abcf"/>
+         <source file="..\obj\time.o" lastModified="1455cfc8ccd"/>
+         <source file="..\obj\syscalls.o" lastModified="1453935ad1d"/>
+         <source file="..\obj\port.o" lastModified="1455cfc8d62"/>
+         <source file="..\obj\kernel.o" lastModified="1455cfc8e07"/>
+         <source file="..\obj\dotmatgl.o" lastModified="1455c9e21b2"/>
+         <source file="..\obj\sem.o" lastModified="1455cfc8eaf"/>
+         <source file="..\obj\message_queue.o" lastModified="1455cfc8f80"/>
       </target>
    </processor>
 </history>

@@ -58,7 +58,7 @@ __attribute__( ( always_inline ) ) static unsigned char __clz( ulBitmap )
 
 void context_switch(void) __attribute__(( naked ));
 void start_first_task(void);
-
+void hw_init(void);
 
 
 #ifdef DEBUG

@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "task.h"
 #include "lpc17xx.h"
+#include "dotmatgl.h"
 #include "kernel.h"
 #include "heap.h"
 #include "message_queue.h"
@@ -16,7 +17,7 @@ void Task3(void *args);
 void Task4(void *args);
 void Task5(void *args);
 void Task6(void *args);
-
+void TaskMatrix(void *args);
 const int j = 1;
 #define is_little_endian() ((*(char *) &j) == 1)
 /* prios increase from 0 to 32*/
@@ -26,6 +27,7 @@ const int j = 1;
 #define TASK4_PRIO 4
 #define TASK5_PRIO 5 //MOD: prio changed to 6
 #define TASK6_PRIO 6
+#define TASKMAT_PRIO 7
 
 OSStackType Stack1[STACK_SIZE];
 OSStackType Stack2[STACK_SIZE];
@@ -33,9 +35,10 @@ OSStackType Stack3[STACK_SIZE];
 OSStackType Stack4[STACK_SIZE];
 OSStackType Stack5[STACK_SIZE];
 OSStackType Stack6[STACK_SIZE];
-
+OSStackType StackMatrix[STACK_SIZE];
 
 queue *task6Q;
+queue *taskMatrixQueue;
 
 sem *s;
 
@@ -62,7 +65,7 @@ int main()
 	task_create(TASK4_PRIO, Task4, NULL, STACK_SIZE, &Stack4[STACK_SIZE - 1], NULL);
 	task_create(TASK5_PRIO, Task5, NULL, STACK_SIZE, &Stack5[STACK_SIZE - 1], NULL);
 	task_create(TASK6_PRIO, Task6, NULL, STACK_SIZE, &Stack6[STACK_SIZE - 1], NULL);
-
+	task_create(TASKMAT_PRIO, TaskMatrix, NULL, STACK_SIZE, &StackMatrix[STACK_SIZE - 1], NULL);
 
 	/* buggy method. dynamic task allocation causes bugs, since we don't have heap reserved space */
 	//task_create(TASK1_PRIO, Task1, NULL, STACK_MIN_SIZE);
@@ -71,10 +74,11 @@ int main()
 	/*init other services*/
 
 	task6Q = queueCreate(10, sizeof(uint_32));
+
+	taskMatrixQueue = queueCreate(10, sizeof(uint_32));
 	s = sem_init(1);
 
 	StartOS();
-	
 	/* We actually do not expect to ever reach here */
 }
 
@@ -97,12 +101,40 @@ void Task1(void *args)
 	}
 }
 
+
+void TaskMatrix(void *args)
+{
+	unsigned char message[] = {0, 0, 0, 0, 0, 0x1F, 0x8, 0x4, 0x8, 0x1F, 0, 0x10, 0x8,\
+			0x7, 0x8, 0x10, 0x0, 0x0, 0x0, 0x1F, 0x1, 0x1 , 0x0, 0x1F, 0x11, 0x1F, 0x0, 0x18, 0x6, 0x1, 0x6, 0x18, 0x0, 0x1F, 0x15, 0x15};
+
+
+	int meslen = sizeof(message);
+	unsigned short int phase = 0;
+	dotmat_init();
+	int cntr = 0;
+	int fast = 0;
+	uint_8 temp;
+
+	while(1){
+
+		unplot_col(fast);
+		fast = (++fast) % MAT_MAX_COL;
+		plot_col(fast);
+		temp =  message[(fast + phase) % meslen] ;
+		plot_val(temp);
+		if((cntr++ % 250) == 0)
+					phase = (phase + 1) % meslen;
+		timeDelay(1);
+	}
+
+}
 //prime numbas (stop after 10 first)
 void Task2(void *args)
 {
 	int i,j;
 	uint_32 primes[100];
 	uint_8 found = 0;
+	uint_8 CpuUtil = 0;
 	int cntr = 0;
 	while(1){
 		
@@ -122,6 +154,9 @@ void Task2(void *args)
 		}
 
 		LPC_GPIO1->FIOPIN ^= 1 << 20;
+
+		CpuUtil = getCpuUtilization();
+
 		timeDelay( 200);
 	}
 }
@@ -139,8 +174,8 @@ void Task3(void *args)
 			fibonacci[i] = fibonacci[i - 1] + fibonacci[(i - 2)];
 
 		queueSendToTail(task6Q, (void *)&fibonacci[3]);
-		sem_release(s);
-		timeDelay(300);
+		//sem_release(s);
+		timeDelay(100);
 	}
 }
 
@@ -148,7 +183,7 @@ void Task4(void *args){
 	while(1){
 		sem_get(s, 1000);
 		LPC_GPIO1->FIOPIN ^= 1 << 21;
-		//timeDelay(1000);
+		/*timeDelay(1000);*/
 	}
 }
 
@@ -161,12 +196,12 @@ void Task5(void *args){
 
 void Task6(void *args){
 	uint_32 *buff = portMalloc(sizeof(uint_32));
-	sem_get(s, 0);
+
 	while(1){
 
 		queueReceive(task6Q, buff, 0);
 		LPC_GPIO1->FIOPIN ^= 1 << 23;
-		timeDelay(100);
+		/*timeDelay(100);*/
 	}
 }
 

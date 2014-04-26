@@ -5,7 +5,7 @@ extern volatile uint_8 stat_flag;
 extern uint_32 idleCounterStats;
 
 void statsInit();
-uint_8 getCpuUtilization();
+uint_32 getCpuUtilization();
 void stats_hook();
 
 

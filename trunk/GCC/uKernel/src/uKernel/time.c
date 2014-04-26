@@ -23,15 +23,14 @@ void OSTick(void){
 		stat_flag ^= 1;
 		return;
 	}
+	/*idle counter snapshot and reset*/
+	idleCounterStats = idleCounter;
+	idleCounter = 0;
 #endif
 
     interruptEnter();
 
-#if STATS_ENABLED
-    /*idle counter snapshot and reset*/
-    idleCounterStats = idleCounter;
-    idleCounter = 0;
-#endif
+
 	/* increase tick counter*/
 	//LPC_GPIO1->FIOPIN |= 1 << 18;
 	//LPC_GPIO1->FIOPIN &= ~(1 << 20);

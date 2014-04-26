@@ -1,9 +1,5 @@
 #include "kernel.h"
 #include "heap.h"
-#if STATS_ENABLED
-volatile uint_8 fake_flag = 1;
-#endif
-//#include "LPC17xx.h"
 
 OSStackType IdleStack[IDLE_STACK_SIZE];
 
@@ -18,20 +14,23 @@ void uKern_Init(void)
 	heapInit();
 	tasksInit();
 
-	OSTickConfig();
+	hw_init();
+
+#if STATS_ENABLED
+	statsInit();
+#endif
+
 }
 /*this is  always last call in main function. It should
  * not be expected to ever return.*/
 void StartOS(void){
 
-	hw_init();
-#if STATS_ENABLED
-	statsInit();
-	OSTickConfig();
-#endif
+
+	/* Find first task to start*/
 	FindHighestPriorityTask();
 	currentTCB = highestTCB;
 	/*enable interrupts*/
+	OSTickConfig();
 	OSTickStart();
 	kernel_running = 1;
 	init_service();
@@ -58,10 +57,12 @@ void schedule(void)
 		return;
 	}
 }
+
 void IdleTask(void *args)
 {
 #if STATS_ENABLED
-	while(fake_flag){
+	const uint_8 always_true = 1;
+	while(always_true){
 #else
 		while(1){
 #endif

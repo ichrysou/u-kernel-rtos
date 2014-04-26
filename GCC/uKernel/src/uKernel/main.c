@@ -7,6 +7,7 @@
 #include "heap.h"
 #include "message_queue.h"
 #include "sem.h"
+#include "lpc17xx_adc.h"
 #if HOOKS_ENABLED
 #include "hooks.h"
 #endif
@@ -18,6 +19,7 @@ void Task4(void *args);
 void Task5(void *args);
 void Task6(void *args);
 void TaskMatrix(void *args);
+void ADC_Task(void *args);
 const int j = 1;
 #define is_little_endian() ((*(char *) &j) == 1)
 /* prios increase from 0 to 32*/
@@ -28,6 +30,7 @@ const int j = 1;
 #define TASK5_PRIO 5 //MOD: prio changed to 6
 #define TASK6_PRIO 6
 #define TASKMAT_PRIO 7
+#define ADC_TASK_PRIO 8
 
 OSStackType Stack1[STACK_SIZE];
 OSStackType Stack2[STACK_SIZE];
@@ -36,6 +39,7 @@ OSStackType Stack4[STACK_SIZE];
 OSStackType Stack5[STACK_SIZE];
 OSStackType Stack6[STACK_SIZE];
 OSStackType StackMatrix[STACK_SIZE];
+OSStackType StackADC[STACK_SIZE];
 
 queue *task6Q;
 queue *taskMatrixQueue;
@@ -66,6 +70,7 @@ int main()
 	task_create(TASK5_PRIO, Task5, NULL, STACK_SIZE, &Stack5[STACK_SIZE - 1], NULL);
 	task_create(TASK6_PRIO, Task6, NULL, STACK_SIZE, &Stack6[STACK_SIZE - 1], NULL);
 	task_create(TASKMAT_PRIO, TaskMatrix, NULL, STACK_SIZE, &StackMatrix[STACK_SIZE - 1], NULL);
+	task_create(ADC_TASK_PRIO, ADC_Task, NULL, STACK_SIZE, &StackADC[STACK_SIZE - 1], NULL);
 
 	/* buggy method. dynamic task allocation causes bugs, since we don't have heap reserved space */
 	//task_create(TASK1_PRIO, Task1, NULL, STACK_MIN_SIZE);
@@ -100,8 +105,41 @@ void Task1(void *args)
 		timeDelay(100);
 	}
 }
+ADC_IRQHandler()
+{
+	uint_32 adcValue;
+
+	interruptEnter();
+
+	if (ADC_ChannelGetStatus(LPC_ADC,ADC_CHANNEL_0, ADC_DATA_DONE))
+	{
+		//adcValue = ADC_ChannelGetData(LPC_ADC,ADC_CHANNEL_0);
+		adcValue = ADC_GlobalGetData(LPC_ADC);
+	}
+
+	interruptExit();
+}
 
 
+
+void ADC_Task(void *args)
+{
+	/*ADC init*/
+	ADC_Init(LPC_ADC, 2000);
+	ADC_ChannelCmd(LPC_ADC, ADC_CHANNEL_0, ENABLE);
+
+	ADC_IntConfig(LPC_ADC, ADC_ADINTEN0, ENABLE);
+	ADC_BurstCmd(LPC_ADC, ENABLE);
+	NVIC_EnableIRQ(ADC_IRQn);
+	while(1){
+
+		LPC_GPIO1->FIOPIN ^= 1 << 20;
+
+		timeDelay(1000);
+
+	}
+
+}
 void TaskMatrix(void *args)
 {
 	unsigned char message[] = {0, 0, 0, 0, 0, 0x1F, 0x8, 0x4, 0x8, 0x1F, 0, 0x10, 0x8,\
@@ -134,8 +172,8 @@ void Task2(void *args)
 	int i,j;
 	uint_32 primes[100];
 	uint_8 found = 0;
-	uint_8 CpuUtil = 0;
-	int cntr = 0;
+	uint_32 CpuUtil[20];
+	int cntr = 0, cntr2 = 0;
 	while(1){
 		
 		for (i = 0; i < 100 ; i++){
@@ -155,7 +193,7 @@ void Task2(void *args)
 
 		LPC_GPIO1->FIOPIN ^= 1 << 20;
 
-		CpuUtil = getCpuUtilization();
+		CpuUtil[cntr2++ % 20] = getCpuUtilization();
 
 		timeDelay( 200);
 	}

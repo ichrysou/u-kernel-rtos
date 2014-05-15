@@ -10,6 +10,8 @@ uint_8 *heap;
 void heapInit()
 {
 	uint_32 i;
+   if (HEAP_ALIGN % 2 != 0)
+     return;
 	/* force heap alignment */
 	/* There is a better way using union, like in FreeRTOS, but that would be copying. */
 	heap =(uint_8 *) (((uint_32)heap1 + HEAP_ALIGN - 1) & ~(HEAP_ALIGN - 1));

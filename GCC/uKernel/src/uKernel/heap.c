@@ -22,6 +22,7 @@ void heapInit()
 
 void *portMalloc(uint_32 sizeRequested)
 {
+#error "portMalloc is not thread safe! Critical region should be introduced here"
 	void *ret;
 	if (heap_end + sizeRequested > HEAP_SIZE) {
 		//if ((heap_end + sizeRequested*/) % HEAP_SIZE > heap_start)//MOD1:

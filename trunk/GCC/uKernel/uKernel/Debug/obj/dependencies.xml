@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dependencies>
-   <includePath signature="/I..\..\..\..\..\Users\hlias\Desktop\uKernelRTOS backup\GCC\uKernel\src /I..\..\..\..\..\Users\hlias\Desktop\uKernelRTOS backup\GCC /I..\..\..\..\..\Users\hlias\Desktop\uKernelRTOS backup\GCC\uKernel\lpc17xx_lib\include /I..\..\..\..\..\Users\hlias\Desktop\uKernelRTOS backup\GCC\uKernel\src\cmsis_boot /I..\..\..\..\..\Users\hlias\Desktop\uKernelRTOS backup\GCC\uKernel\src\uKernel /I..\..\..\..\..\Users\hlias\Desktop\uKernelRTOS backup\GCC\uKernel\lpc17xx_lib /I..\..\..\..\..\Users\hlias\Desktop\uKernelRTOS backup\GCC\uKernel\src\cmsis /I..\..\..\..\..\Users\hlias\Desktop\uKernelRTOS backup\GCC\uKernel">
-      <source file="..\..\..\src\uKernel\kernel.c" lastModified="1459f5c94f6">
+   <includePath signature="/I..\..\..\..\..\Users\hlias\Desktop\rtos-variant\GCC\uKernel\lpc17xx_lib\include /I..\..\..\..\..\Users\hlias\Desktop\rtos-variant\GCC /I..\..\..\..\..\Users\hlias\Desktop\rtos-variant\GCC\uKernel\src\cmsis_boot /I..\..\..\..\..\Users\hlias\Desktop\rtos-variant\GCC\uKernel\lpc17xx_lib /I..\..\..\..\..\Users\hlias\Desktop\rtos-variant\GCC\uKernel\src\uKernel /I..\..\..\..\..\Users\hlias\Desktop\rtos-variant\GCC\uKernel /I..\..\..\..\..\Users\hlias\Desktop\rtos-variant\GCC\uKernel\src\cmsis /I..\..\..\..\..\Users\hlias\Desktop\rtos-variant\GCC\uKernel\src">
+      <source file="..\..\..\src\uKernel\kernel.c" lastModified="14761b3640d">
          <include file="..\..\..\src\uKernel\kernel.h"/>
          <include file="..\..\..\src\uKernel\heap.h"/>
       </source>
-      <source file="..\..\..\src\uKernel\main.c" lastModified="1459f629a34">
+      <source file="..\..\..\src\uKernel\main.c" lastModified="14761b36c12">
          <include file="..\..\..\src\uKernel\task.h"/>
          <include file="..\..\..\src\cmsis_boot\LPC17xx.h"/>
          <include file="..\..\..\src\dotmatgl.h"/>
@@ -16,162 +16,159 @@
          <include file="..\..\..\lpc17xx_lib\include\lpc17xx_adc.h"/>
          <include file="..\..\..\src\uKernel\hooks.h"/>
       </source>
-      <source file="..\..\..\lpc17xx_lib\source\lpc17xx_adc.c" lastModified="1459f2c675b">
+      <source file="..\..\..\lpc17xx_lib\source\lpc17xx_adc.c" lastModified="14761b3742e">
          <include file="..\..\..\lpc17xx_lib\include\lpc17xx_adc.h"/>
          <include file="..\..\..\lpc17xx_lib\include\lpc17xx_clkpwr.h"/>
          <include file="..\..\..\lpc17xx_lib\include\lpc17xx_libcfg_default.h"/>
       </source>
-      <source file="..\..\..\src\uKernel\task.h" lastModified="1459f01094c">
+      <source file="..\..\..\src\uKernel\task.h" lastModified="14761b363f4">
          <include file="..\..\..\src\uKernel\types.h"/>
          <include file="..\..\..\src\uKernel\kern_conf.h"/>
          <include file="..\..\..\src\uKernel\list.h"/>
          <include file="..\..\..\src\uKernel\task_types.h"/>
       </source>
-      <source file="..\..\..\src\cmsis\core_cm3.c" lastModified="1459f011579">
+      <source file="..\..\..\src\cmsis\core_cm3.c" lastModified="14761b36db3">
       </source>
-      <source file="..\..\..\src\uKernel\time.h" lastModified="1459f010560">
+      <source file="..\..\..\src\uKernel\time.h" lastModified="14761b35f5a">
          <include file="..\..\..\src\uKernel\types.h"/>
       </source>
-      <source file="..\..\..\src\uKernel\task.c" lastModified="1459f010d2d">
+      <source file="..\..\..\src\uKernel\task.c" lastModified="14761b36722">
          <include file="..\..\..\src\uKernel\task.h"/>
          <include file="..\..\..\src\uKernel\kernel.h"/>
          <include file="..\..\..\src\uKernel\heap.h"/>
       </source>
-      <source file="..\..\..\lpc17xx_lib\include\lpc17xx_libcfg_default.h" lastModified="1459f05a560">
+      <source file="..\..\..\lpc17xx_lib\include\lpc17xx_libcfg_default.h" lastModified="14761b3706f">
          <include file="..\..\..\lpc17xx_lib\include\lpc_types.h"/>
       </source>
-      <source file="..\..\..\src\uKernel\time.c" lastModified="1459f480bcc">
+      <source file="..\..\..\src\uKernel\time.c" lastModified="14761b35eeb">
          <include file="..\..\..\src\uKernel\time.h"/>
          <include file="..\..\..\src\uKernel\kernel.h"/>
          <include file="..\..\..\src\uKernel\task.h"/>
          <include file="..\..\..\src\uKernel\stats.h"/>
       </source>
-      <source file="..\..\..\src\dotmatgl.h" lastModified="1459f010556">
+      <source file="..\..\..\src\dotmatgl.h" lastModified="14761b35ee9">
          <include file="..\..\..\lpc17xx_lib\include\lpc17xx_clkpwr.h"/>
          <include file="..\..\..\lpc17xx_lib\include\lpc17xx_gpio.h"/>
       </source>
-      <source file="..\..\..\lpc17xx_lib\include\lpc17xx_gpio.h" lastModified="1459f05a56a">
+      <source file="..\..\..\lpc17xx_lib\include\lpc17xx_gpio.h" lastModified="14761b370a4">
          <include file="..\..\..\src\cmsis_boot\LPC17xx.h"/>
          <include file="..\..\..\lpc17xx_lib\include\lpc_types.h"/>
       </source>
-      <source file="..\..\..\src\dotmatgl.c" lastModified="1459f01091b">
+      <source file="..\..\..\src\dotmatgl.c" lastModified="14761b364ff">
          <include file="..\..\..\lpc17xx_lib\include\lpc17xx_gpio.h"/>
          <include file="..\..\..\src\dotmatgl.h"/>
       </source>
-      <source file="..\..\..\src\uKernel\message_queue.h" lastModified="1459f01084a">
+      <source file="..\..\..\src\uKernel\message_queue.h" lastModified="14761b36487">
          <include file="..\..\..\src\uKernel\wait_queue.h"/>
          <include file="..\..\..\src\uKernel\time.h"/>
       </source>
-      <source file="..\..\..\src\uKernel\message_queue.c" lastModified="1459f010bf2">
+      <source file="..\..\..\src\uKernel\message_queue.c" lastModified="14761b36844">
          <include file="..\..\..\src\uKernel\message_queue.h"/>
          <include file="..\..\..\src\uKernel\kernel.h"/>
          <include file="..\..\..\src\uKernel\heap.h"/>
       </source>
-      <source file="..\..\..\src\uKernel\kern_conf.h" lastModified="1459f64e835">
+      <source file="..\..\..\src\uKernel\kern_conf.h" lastModified="14761b36021">
       </source>
-      <source file="..\..\..\src\cmsis_boot\startup\cr_startup_lpc17.c" lastModified="1459f00fb13">
+      <source file="..\..\..\src\cmsis_boot\startup\cr_startup_lpc17.c" lastModified="14761b35655">
          <include file="..\..\..\src\cmsis_boot\system_LPC17xx.h"/>
          <include file="..\..\..\src\cmsis_boot\LPC17xx.h"/>
       </source>
-      <source file="..\..\..\src\uKernel\wait_queue.h" lastModified="1459f010575">
+      <source file="..\..\..\src\uKernel\wait_queue.h" lastModified="14761b362d1">
          <include file="..\..\..\src\uKernel\task.h"/>
       </source>
-      <source file="..\..\..\src\cmsis_boot\system_LPC17xx.h" lastModified="1459f00fe6a">
+      <source file="..\..\..\src\cmsis_boot\system_LPC17xx.h" lastModified="14761b35a39">
       </source>
-      <source file="..\..\..\src\uKernel\wait_queue.c" lastModified="1459f010567">
+      <source file="..\..\..\src\uKernel\wait_queue.c" lastModified="14761b36010">
          <include file="..\..\..\src\uKernel\wait_queue.h"/>
          <include file="..\..\..\src\uKernel\kernel.h"/>
       </source>
-      <source file="..\..\..\src\uKernel\port_types.h" lastModified="1459f0105ba">
+      <source file="..\..\..\src\uKernel\port_types.h" lastModified="14761b36406">
       </source>
-      <source file="..\..\..\src\cmsis_boot\system_LPC17xx.c" lastModified="1459f00ff09">
+      <source file="..\..\..\src\cmsis_boot\system_LPC17xx.c" lastModified="14761b35a4d">
          <include file="..\..\..\src\cmsis_boot\LPC17xx.h"/>
       </source>
-      <source file="..\..\..\lpc17xx_lib\source\lpc17xx_libcfg_default.c" lastModified="1459f05a4f0">
+      <source file="..\..\..\lpc17xx_lib\source\lpc17xx_libcfg_default.c" lastModified="14761b37022">
          <include file="..\..\..\lpc17xx_lib\include\lpc17xx_libcfg_default.h"/>
       </source>
-      <source file="..\..\..\src\uKernel\hooks.h" lastModified="1459f01080f">
+      <source file="..\..\..\src\uKernel\hooks.h" lastModified="14761b36460">
       </source>
-      <source file="..\..\..\src\uKernel\sem.h" lastModified="1459f010843">
+      <source file="..\..\..\src\uKernel\sem.h" lastModified="14761b36482">
          <include file="..\..\..\src\uKernel\types.h"/>
          <include file="..\..\..\src\uKernel\list.h"/>
       </source>
-      <source file="..\..\..\src\uKernel\hooks.c" lastModified="1459f010758">
+      <source file="..\..\..\src\uKernel\hooks.c" lastModified="14761b3643c">
       </source>
-      <source file="..\..\..\src\uKernel\sem.c" lastModified="1459f01075a">
+      <source file="..\..\..\src\uKernel\sem.c" lastModified="14761b3643e">
          <include file="..\..\..\src\uKernel\sem.h"/>
          <include file="..\..\..\src\uKernel\kernel.h"/>
          <include file="..\..\..\src\uKernel\heap.h"/>
          <include file="..\..\..\src\uKernel\wait_queue.h"/>
          <include file="..\..\..\src\uKernel\time.h"/>
       </source>
-      <source file="..\..\..\src\uKernel\stats.h" lastModified="1459f63687d">
+      <source file="..\..\..\src\uKernel\stats.h" lastModified="14761b36007">
          <include file="..\..\..\src\uKernel\port_types.h"/>
       </source>
-      <source file="..\..\..\lpc17xx_lib\include\lpc17xx_clkpwr.h" lastModified="1459f05a56e">
+      <source file="..\..\..\lpc17xx_lib\include\lpc17xx_clkpwr.h" lastModified="14761b370a8">
          <include file="..\..\..\src\cmsis_boot\LPC17xx.h"/>
          <include file="..\..\..\lpc17xx_lib\include\lpc_types.h"/>
       </source>
-      <source file="..\..\..\src\cmsis_boot\LPC17xx.h" lastModified="1459f00fb24">
+      <source file="..\..\..\src\cmsis_boot\LPC17xx.h" lastModified="14761b3567d">
          <include file="..\..\..\src\cmsis\core_cm3.h"/>
          <include file="..\..\..\src\cmsis_boot\system_LPC17xx.h"/>
       </source>
-      <source file="..\..\..\src\uKernel\stats.c" lastModified="1459f63d5a7">
+      <source file="..\..\..\src\uKernel\stats.c" lastModified="14761b35f4d">
          <include file="..\..\..\src\uKernel\stats.h"/>
          <include file="..\..\..\src\uKernel\kernel.h"/>
          <include file="..\..\..\src\uKernel\port.h"/>
       </source>
-      <source file="..\..\..\lpc17xx_lib\source\lpc17xx_clkpwr.c" lastModified="1459f05a4fb">
+      <source file="..\..\..\lpc17xx_lib\source\lpc17xx_clkpwr.c" lastModified="14761b37041">
          <include file="..\..\..\lpc17xx_lib\include\lpc17xx_clkpwr.h"/>
       </source>
-      <source file="..\..\..\lpc17xx_lib\include\lpc17xx_pinsel.h" lastModified="1459f2c5e34">
+      <source file="..\..\..\lpc17xx_lib\include\lpc17xx_pinsel.h" lastModified="14761b37072">
          <include file="..\..\..\src\cmsis_boot\LPC17xx.h"/>
          <include file="..\..\..\lpc17xx_lib\include\lpc_types.h"/>
       </source>
-      <source file="..\..\..\lpc17xx_lib\source\lpc17xx_pinsel.c" lastModified="1459f2c5e45">
+      <source file="..\..\..\lpc17xx_lib\source\lpc17xx_pinsel.c" lastModified="14761b37025">
          <include file="..\..\..\lpc17xx_lib\include\lpc17xx_pinsel.h"/>
       </source>
-      <source file="..\..\..\src\uKernel\list.h" lastModified="1459f0105bd">
+      <source file="..\..\..\src\uKernel\list.h" lastModified="14761b3640a">
       </source>
-      <source file="..\..\..\src\uKernel\port.h" lastModified="1459f010812">
+      <source file="..\..\..\src\uKernel\port.h" lastModified="14761b36480">
          <include file="..\..\..\src\uKernel\kern_conf.h"/>
          <include file="..\..\..\src\uKernel\types.h"/>
          <include file="..\..\..\src\cmsis_boot\LPC17xx.h"/>
       </source>
-      <source file="..\..\..\lpc17xx_lib\include\lpc_types.h" lastModified="1459f05a94f">
+      <source file="..\..\..\lpc17xx_lib\include\lpc_types.h" lastModified="14761b37469">
       </source>
-      <source file="..\..\..\lpc17xx_lib\source\lpc17xx_gpio.c" lastModified="1459f05a8df">
+      <source file="..\..\..\lpc17xx_lib\source\lpc17xx_gpio.c" lastModified="14761b3740f">
          <include file="..\..\..\lpc17xx_lib\include\lpc17xx_gpio.h"/>
          <include file="..\..\..\lpc17xx_lib\include\lpc17xx_libcfg_default.h"/>
       </source>
-      <source file="..\..\..\src\uKernel\port.c" lastModified="1459f578fd5">
+      <source file="..\..\..\src\uKernel\port.c" lastModified="14761b36454">
          <include file="..\..\..\src\uKernel\port.h"/>
       </source>
-      <source file="..\..\..\src\syscalls\syscalls.c" lastModified="1459f0120e5">
+      <source file="..\..\..\src\syscalls\syscalls.c" lastModified="14761b3792f">
       </source>
-      <source file="..\..\..\src\uKernel\heap.h" lastModified="1459f0105c4">
+      <source file="..\..\..\src\uKernel\heap.h" lastModified="14761b3643a">
          <include file="..\..\..\src\uKernel\kern_conf.h"/>
          <include file="..\..\..\src\uKernel\types.h"/>
       </source>
-      <source file="..\..\..\lpc17xx_lib\include\lpc17xx_adc.h" lastModified="1459f2c6369">
+      <source file="..\..\..\lpc17xx_lib\include\lpc17xx_adc.h" lastModified="14761b3706c">
          <include file="..\..\..\src\cmsis_boot\LPC17xx.h"/>
          <include file="..\..\..\lpc17xx_lib\include\lpc_types.h"/>
       </source>
-      <source file="..\..\..\src\uKernel\heap.c" lastModified="1459f010955">
-         <include file="..\..\..\src\uKernel\heap.h"/>
-      </source>
-      <source file="..\..\..\src\uKernel\task_types.h" lastModified="1459f010846">
+      <source file="..\..\..\src\uKernel\task_types.h" lastModified="14761b36484">
          <include file="..\..\..\src\uKernel\list.h"/>
       </source>
-      <source file="..\..\..\src\uKernel\types.h" lastModified="1459f01056b">
+      <source file="..\..\..\src\uKernel\types.h" lastModified="14761b362cc">
          <include file="..\..\..\src\uKernel\port_types.h"/>
       </source>
-      <source file="..\..\..\src\uKernel\kernel.h" lastModified="1459f010bed">
+      <source file="..\..\..\src\uKernel\kernel.h" lastModified="14761b3683f">
          <include file="..\..\..\src\uKernel\port.h"/>
          <include file="..\..\..\src\uKernel\task_types.h"/>
          <include file="..\..\..\src\uKernel\hooks.h"/>
       </source>
-      <source file="..\..\..\src\cmsis\core_cm3.h" lastModified="1459f01195f">
+      <source file="..\..\..\src\cmsis\core_cm3.h" lastModified="14761b37197">
       </source>
    </includePath>
 </dependencies>

@@ -1,4 +1,5 @@
 #include "heap.h"
+#include "kernel.h"
 #include <stdio.h>
 
 static int heap_start, heap_end;
@@ -6,7 +7,7 @@ static int heap_start, heap_end;
 uint_8 heap1[HEAP_SIZE + HEAP_ALIGN - 1];
 uint_8 *heap;
 
-
+/* to be called before OSTickStart();*/
 void heapInit()
 {
 	uint_32 i;
@@ -22,22 +23,27 @@ void heapInit()
 
 void *portMalloc(uint_32 sizeRequested)
 {
-#error "portMalloc is not thread safe! Critical region should be introduced here"
+
 	void *ret;
+	ENTER_CRITICAL();
 	if (heap_end + sizeRequested > HEAP_SIZE) {
 		//if ((heap_end + sizeRequested*/) % HEAP_SIZE > heap_start)//MOD1:
+
 		if(sizeRequested > heap_start)
 			ret = NULL;
 		else {
-		//	ret = (void *)&heap[heap_end + sizeRequested - HEAP_SIZE];//MOD2:
 			ret = (void *)&heap[0];
 			heap_end += sizeRequested - HEAP_SIZE;
 		}
+
 	}
 	else{
+
 		ret = (void *)&heap[heap_end];// + sizeRequested];//MOD3:
 		heap_end += sizeRequested;
+
 	}
+	EXIT_CRITICAL();
 	return ret;
 }
 

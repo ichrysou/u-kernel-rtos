@@ -1,7 +1,7 @@
 #ifndef __KERN_CONF__
 #define __KERN_CONF__
 
-#define MAX_TASKS 10
+#define MAX_TASKS 32
 
 #define IDLE_TASK_SLEEP 0
 
@@ -14,6 +14,8 @@
 #endif
 
 #define CONF_HEAP_SIZE 1000
+#define CONF_HEAP_ALIGN 4
+#define STACK_ALIGN 4
 #define STACK_SIZE 350 //in words 
 #define IDLE_STACK_SIZE 150
 #define OS_TICK_FREQ 1000 // in ticks/sec
@@ -23,10 +25,10 @@
 #define HP_PORT_OPTIMAL 3
 #define HIGHEST_PRIO_ALT HP_PORT_OPTIMAL
 
-#define IDLE_TASK_HOOK 1
+#define IDLE_TASK_HOOK_ENABLED 1
 #define HOOKS_ENABLED 1
-#define STATS_ENABLED 1
-
+#define STATS_ENABLED 0
+#define CONTEXT_SWITCH_HOOK_ENABLED 1
 #define TIME_SLICE 10 //in ticks
 
 #if HIGHEST_PRIO_ALT == HP_PORT_OPTIMAL && MAX_TASKS > 32 && !MULTIPLE_TASKS_PER_PRIORITY

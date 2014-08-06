@@ -30,9 +30,7 @@ void cpsid(void);
 
 OSStackType *StkInit(OSStackType *tos, task function, void *args, OSStackType stack_size);
 
-void swap(void);
 
-void init_service(void);
 uint_32 OSTickConfig(void);
 void OSTickStart(void);
 void OSStartFirstTask();
@@ -57,21 +55,18 @@ __attribute__( ( always_inline ) ) static unsigned char __clz( ulBitmap )
 //compiler abstraction?
 
 void context_switch(void) __attribute__(( naked ));
-void start_first_task(void);
+//void start_first_task(void);
 void hw_init(void);
-
 
 #ifdef DEBUG
 void prvGetRegistersFromStack( uint32_t *pulFaultStackAddress );
 #endif
 
+#if STATS_ENABLED
+void port_stat_timer_init();
+uint_32 port_get_stat_timer_val(void);
+void port_reset_stat_timer_val();
+#endif
 
 #endif
 
-
-
-
-
-/*
-void start_os(void);
- */

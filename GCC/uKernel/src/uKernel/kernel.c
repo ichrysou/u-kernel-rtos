@@ -1,6 +1,7 @@
 #include "kernel.h"
 #include "heap.h"
 
+#include "hooks.h"
 OSStackType IdleStack[IDLE_STACK_SIZE];
 
 uint_32 criticalNesting = 0; 
@@ -33,9 +34,7 @@ void StartOS(void){
 	OSTickConfig();
 	OSTickStart();
 	kernel_running = 1;
-	init_service();
-
-
+	OSStartFirstTask();
 }
 
 void schedule(void)
@@ -50,6 +49,15 @@ void schedule(void)
 			return;
 		}else{
 			EXIT_CRITICAL();
+
+#if CONTEXT_SWITCH_HOOK_ENABLED
+			contextSwitchHook();
+#endif
+#if STATS_ENABLED
+			stats_hook();
+#endif
+
+
 			SWITCH_CONTEXT();
 		}
 	}else{
@@ -60,23 +68,22 @@ void schedule(void)
 
 void IdleTask(void *args)
 {
-#if STATS_ENABLED
-	const uint_8 always_true = 1;
-	while(always_true){
-#else
-		while(1){
-#endif
 
 
+
+	while(1){
+
+
+		idleCounter++;
 
 #if IDLE_TASK_SLEEP
-		idleCounter++;
+
 		LPC_SC->PCON = 0x00;
 		__WFI();
-#else
-		idleCounter++;
 #endif
-#if HOOKS_ENABLED && IDLE_TASK_HOOK 
+
+
+#if HOOKS_ENABLED && IDLE_TASK_HOOK_ENABLED
 		idleTaskHook();
 #endif
 	}

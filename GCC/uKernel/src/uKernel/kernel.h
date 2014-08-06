@@ -66,9 +66,16 @@ static __inline void interruptExit(void)
 	ENTER_CRITICAL();
 	if(--interruptNesting == 0){
 		FindHighestPriorityTask();
-		if (highestTCB != currentTCB)
-			SWITCH_CONTEXT();
+		if (highestTCB != currentTCB){
+#if CONTEXT_SWITCH_HOOK_ENABLED
+			contextSwitchHook();
+#endif
 
+#if STATS_ENABLED
+			stats_hook();
+#endif
+			SWITCH_CONTEXT();
+		}
 	}
 	EXIT_CRITICAL();
 

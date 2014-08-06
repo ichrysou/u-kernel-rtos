@@ -1,11 +1,21 @@
 Archive member included because of file (symbol)
 
-c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_addsubsf3.o)
-                              ..\obj\stats.o (__aeabi_ui2f)
-c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_muldivsf3.o)
-                              ..\obj\stats.o (__aeabi_fmul)
-c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_fixunssfsi.o)
-                              ..\obj\stats.o (__aeabi_f2uiz)
+c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_aeabi_uldivmod.o)
+                              ..\obj\lpc17xx_timer.o (__aeabi_uldivmod)
+c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(bpabi.o)
+                              c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_aeabi_uldivmod.o) (__gnu_uldivmod_helper)
+c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(unwind-arm.o)
+                              c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(bpabi.o) (__aeabi_unwind_cpp_pr0)
+c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(libunwind.o)
+                              c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(unwind-arm.o) (restore_core_regs)
+c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(pr-support.o)
+                              c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(unwind-arm.o) (__gnu_unwind_execute)
+c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_dvmd_tls.o)
+                              c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_aeabi_uldivmod.o) (__aeabi_ldiv0)
+c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_divdi3.o)
+                              c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(bpabi.o) (__divdi3)
+c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_udivdi3.o)
+                              c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(bpabi.o) (__udivdi3)
 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memcpy.o)
                               ..\obj\main.o (memcpy)
 
@@ -15,12 +25,12 @@ Common symbol       size              file
 Stack3              0x578             ..\obj\main.o
 highestTCB          0x4               ..\obj\task.o
 currentTCB          0x4               ..\obj\task.o
-ReadyArray          0x28              ..\obj\task.o
+ReadyArray          0x80              ..\obj\task.o
 taskMatrixQueue     0x4               ..\obj\main.o
 StackMatrix         0x578             ..\obj\main.o
 Stack2              0x578             ..\obj\main.o
 allTasksLinked      0x8               ..\obj\task.o
-TaskArray           0x28              ..\obj\task.o
+TaskArray           0x80              ..\obj\task.o
 Stack5              0x578             ..\obj\main.o
 heap1               0x3eb             ..\obj\heap.o
 heap                0x4               ..\obj\heap.o
@@ -36,6 +46,41 @@ Stack4              0x578             ..\obj\main.o
 
 Discarded input sections
 
+ .text          0x00000000        0x0 ..\obj\lpc17xx_timer.o
+ .data          0x00000000        0x0 ..\obj\lpc17xx_timer.o
+ .bss           0x00000000        0x0 ..\obj\lpc17xx_timer.o
+ .text.getPClock
+                0x00000000       0x68 ..\obj\lpc17xx_timer.o
+ .text.converUSecToVal
+                0x00000000       0x64 ..\obj\lpc17xx_timer.o
+ .text.converPtrToTimeNum
+                0x00000000       0x6c ..\obj\lpc17xx_timer.o
+ .rodata        0x00000000       0x54 ..\obj\lpc17xx_timer.o
+ .text.TIM_GetIntStatus
+                0x00000000       0xb4 ..\obj\lpc17xx_timer.o
+ .text.TIM_GetIntCaptureStatus
+                0x00000000       0xb8 ..\obj\lpc17xx_timer.o
+ .text.TIM_ClearIntPending
+                0x00000000       0xa0 ..\obj\lpc17xx_timer.o
+ .text.TIM_ClearIntCapturePending
+                0x00000000       0xa4 ..\obj\lpc17xx_timer.o
+ .text.TIM_ConfigStructInit
+                0x00000000       0x40 ..\obj\lpc17xx_timer.o
+ .text.TIM_Init
+                0x00000000      0x1cc ..\obj\lpc17xx_timer.o
+ .text.TIM_DeInit
+                0x00000000       0xc4 ..\obj\lpc17xx_timer.o
+ .text.TIM_Cmd  0x00000000       0x78 ..\obj\lpc17xx_timer.o
+ .text.TIM_ResetCounter
+                0x00000000       0x6c ..\obj\lpc17xx_timer.o
+ .text.TIM_ConfigMatch
+                0x00000000      0x1cc ..\obj\lpc17xx_timer.o
+ .text.TIM_UpdateMatchValue
+                0x00000000       0x98 ..\obj\lpc17xx_timer.o
+ .text.TIM_ConfigCapture
+                0x00000000      0x108 ..\obj\lpc17xx_timer.o
+ .text.TIM_GetCaptureValue
+                0x00000000       0x84 ..\obj\lpc17xx_timer.o
  .text          0x00000000        0x0 ..\obj\core_cm3.o
  .data          0x00000000        0x0 ..\obj\core_cm3.o
  .bss           0x00000000        0x0 ..\obj\core_cm3.o
@@ -85,6 +130,12 @@ Discarded input sections
  .text.__WFI    0x00000000        0xc ..\obj\lpc17xx_clkpwr.o
  .text.CLKPWR_SetPCLKDiv
                 0x00000000       0xcc ..\obj\lpc17xx_clkpwr.o
+ .text.CLKPWR_GetPCLKSEL
+                0x00000000       0x54 ..\obj\lpc17xx_clkpwr.o
+ .text.CLKPWR_GetPCLK
+                0x00000000       0x74 ..\obj\lpc17xx_clkpwr.o
+ .text.CLKPWR_ConfigPPWR
+                0x00000000       0x78 ..\obj\lpc17xx_clkpwr.o
  .text.CLKPWR_Sleep
                 0x00000000       0x1c ..\obj\lpc17xx_clkpwr.o
  .text.CLKPWR_DeepSleep
@@ -94,6 +145,7 @@ Discarded input sections
  .text.CLKPWR_DeepPowerDown
                 0x00000000       0x28 ..\obj\lpc17xx_clkpwr.o
  .text          0x00000000        0x0 ..\obj\system_LPC17xx.o
+ .data          0x00000000        0x4 ..\obj\system_LPC17xx.o
  .bss           0x00000000        0x0 ..\obj\system_LPC17xx.o
  .text.SystemCoreClockUpdate
                 0x00000000      0x214 ..\obj\system_LPC17xx.o
@@ -109,8 +161,6 @@ Discarded input sections
  .text          0x00000000        0x0 ..\obj\task.o
  .data          0x00000000        0x0 ..\obj\task.o
  .text.__clz    0x00000000       0x20 ..\obj\task.o
- .text.task_lTCBAlloc
-                0x00000000       0x20 ..\obj\task.o
  .text.getTCBbyPrio
                 0x00000000       0x30 ..\obj\task.o
  .text.prioEnable
@@ -120,16 +170,24 @@ Discarded input sections
  .text          0x00000000        0x0 ..\obj\lpc17xx_adc.o
  .data          0x00000000        0x0 ..\obj\lpc17xx_adc.o
  .bss           0x00000000        0x0 ..\obj\lpc17xx_adc.o
+ .text.ADC_Init
+                0x00000000       0xa4 ..\obj\lpc17xx_adc.o
  .text.ADC_DeInit
                 0x00000000       0x48 ..\obj\lpc17xx_adc.o
  .text.ADC_GetData
                 0x00000000       0x38 ..\obj\lpc17xx_adc.o
  .text.ADC_StartCmd
                 0x00000000       0x90 ..\obj\lpc17xx_adc.o
+ .text.ADC_BurstCmd
+                0x00000000       0x50 ..\obj\lpc17xx_adc.o
  .text.ADC_PowerdownCmd
                 0x00000000       0x50 ..\obj\lpc17xx_adc.o
  .text.ADC_EdgeStartConfig
                 0x00000000       0x6c ..\obj\lpc17xx_adc.o
+ .text.ADC_IntConfig
+                0x00000000       0xb4 ..\obj\lpc17xx_adc.o
+ .text.ADC_ChannelCmd
+                0x00000000       0x70 ..\obj\lpc17xx_adc.o
  .text.ADC_ChannelGetData
                 0x00000000       0x58 ..\obj\lpc17xx_adc.o
  .text.ADC_GlobalGetStatus
@@ -205,9 +263,8 @@ Discarded input sections
  .text.__clz    0x00000000       0x20 ..\obj\wait_queue.o
  .text          0x00000000        0x0 ..\obj\stats.o
  .data          0x00000000        0x0 ..\obj\stats.o
+ .bss           0x00000000        0x0 ..\obj\stats.o
  .text.__clz    0x00000000       0x20 ..\obj\stats.o
- .text.stats_hook
-                0x00000000        0xc ..\obj\stats.o
  .text          0x00000000        0x0 ..\obj\lpc17xx_libcfg_default.o
  .data          0x00000000        0x0 ..\obj\lpc17xx_libcfg_default.o
  .bss           0x00000000        0x0 ..\obj\lpc17xx_libcfg_default.o
@@ -249,6 +306,8 @@ Discarded input sections
  .data          0x00000000        0x0 ..\obj\port.o
  .bss           0x00000000        0x0 ..\obj\port.o
  .text.__clz    0x00000000       0x20 ..\obj\port.o
+ .text.OSTickStop
+                0x00000000       0x24 ..\obj\port.o
  .text.HardFaultHndlr
                 0x00000000       0x20 ..\obj\port.o
  .text          0x00000000        0x0 ..\obj\kernel.o
@@ -284,19 +343,47 @@ Discarded input sections
                 0x00000000       0x4c ..\obj\message_queue.o
  .text.queueGetNumberOfMessages
                 0x00000000       0x18 ..\obj\message_queue.o
- .data          0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_addsubsf3.o)
- .bss           0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_addsubsf3.o)
- .data          0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_muldivsf3.o)
- .bss           0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_muldivsf3.o)
- .data          0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_fixunssfsi.o)
- .bss           0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_fixunssfsi.o)
+ .text          0x00000000       0x2c c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_aeabi_uldivmod.o)
+ .data          0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_aeabi_uldivmod.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_aeabi_uldivmod.o)
+ .text          0x00000000       0x5c c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(bpabi.o)
+ .data          0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(bpabi.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(bpabi.o)
+ .ARM.extab     0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(bpabi.o)
+ .ARM.exidx     0x00000000       0x10 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(bpabi.o)
+ .text          0x00000000      0xb4c c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(unwind-arm.o)
+ .data          0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(unwind-arm.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(unwind-arm.o)
+ .ARM.extab     0x00000000       0x18 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(unwind-arm.o)
+ .ARM.exidx     0x00000000       0xc0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(unwind-arm.o)
+ .text          0x00000000      0x1ac c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(libunwind.o)
+ .data          0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(libunwind.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(libunwind.o)
+ .text          0x00000000      0x374 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(pr-support.o)
+ .data          0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(pr-support.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(pr-support.o)
+ .ARM.extab     0x00000000       0x18 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(pr-support.o)
+ .ARM.exidx     0x00000000       0x48 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(pr-support.o)
+ .text          0x00000000        0x4 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_dvmd_tls.o)
+ .data          0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_dvmd_tls.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_dvmd_tls.o)
+ .text          0x00000000      0x2c0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_divdi3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_divdi3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_divdi3.o)
+ .ARM.extab     0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_divdi3.o)
+ .ARM.exidx     0x00000000        0x8 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_divdi3.o)
+ .text          0x00000000      0x28c c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_udivdi3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_udivdi3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_udivdi3.o)
+ .ARM.extab     0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_udivdi3.o)
+ .ARM.exidx     0x00000000        0x8 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_udivdi3.o)
  .data          0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memcpy.o)
  .bss           0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memcpy.o)
 
 Memory Configuration
 
 Name             Origin             Length             Attributes
-rom              0x00000000         0x00080000         xr
+rom              0x00000000         0x00008000         xr
 ram              0x10000000         0x00008000         xrw
 ram1             0x2007c000         0x00008000         xrw
 *default*        0x00000000         0xffffffff
@@ -305,421 +392,362 @@ Linker script and memory map
 
                 0x10008000                _eram = 0x10008000
 
-.text           0x00000000     0x2b1c
+.text           0x00000000     0x20f0
  *(.isr_vector .isr_vector.*)
  .isr_vector    0x00000000       0xcc ..\obj\cr_startup_lpc17.o
                 0x00000000                g_pfnVectors
  *(.text .text.* .gnu.linkonce.t.*)
- .text.CLKPWR_GetPCLKSEL
-                0x000000cc       0x54 ..\obj\lpc17xx_clkpwr.o
-                0x000000cc                CLKPWR_GetPCLKSEL
- .text.CLKPWR_GetPCLK
-                0x00000120       0x74 ..\obj\lpc17xx_clkpwr.o
-                0x00000120                CLKPWR_GetPCLK
- .text.CLKPWR_ConfigPPWR
-                0x00000194       0x78 ..\obj\lpc17xx_clkpwr.o
-                0x00000194                CLKPWR_ConfigPPWR
  .text.SystemInit
-                0x0000020c      0x240 ..\obj\system_LPC17xx.o
-                0x0000020c                SystemInit
+                0x000000cc      0x240 ..\obj\system_LPC17xx.o
+                0x000000cc                SystemInit
  .text.ResetISR
-                0x0000044c       0x68 ..\obj\cr_startup_lpc17.o
-                0x0000044c                ResetISR
+                0x0000030c       0x68 ..\obj\cr_startup_lpc17.o
+                0x0000030c                ResetISR
  .text.NMI_Handler
-                0x000004b4        0x8 ..\obj\cr_startup_lpc17.o
-                0x000004b4                NMI_Handler
+                0x00000374        0x8 ..\obj\cr_startup_lpc17.o
+                0x00000374                NMI_Handler
  .text.HardFault_Handler
-                0x000004bc        0x8 ..\obj\cr_startup_lpc17.o
-                0x000004bc                HardFault_Handler
+                0x0000037c        0x8 ..\obj\cr_startup_lpc17.o
+                0x0000037c                HardFault_Handler
  .text.MemManage_Handler
-                0x000004c4        0x8 ..\obj\cr_startup_lpc17.o
-                0x000004c4                MemManage_Handler
+                0x00000384        0x8 ..\obj\cr_startup_lpc17.o
+                0x00000384                MemManage_Handler
  .text.BusFault_Handler
-                0x000004cc        0x8 ..\obj\cr_startup_lpc17.o
-                0x000004cc                BusFault_Handler
+                0x0000038c        0x8 ..\obj\cr_startup_lpc17.o
+                0x0000038c                BusFault_Handler
  .text.UsageFault_Handler
-                0x000004d4        0x8 ..\obj\cr_startup_lpc17.o
-                0x000004d4                UsageFault_Handler
+                0x00000394        0x8 ..\obj\cr_startup_lpc17.o
+                0x00000394                UsageFault_Handler
  .text.DebugMon_Handler
-                0x000004dc        0x8 ..\obj\cr_startup_lpc17.o
-                0x000004dc                DebugMon_Handler
+                0x0000039c        0x8 ..\obj\cr_startup_lpc17.o
+                0x0000039c                DebugMon_Handler
  .text.IntDefaultHandler
-                0x000004e4        0x8 ..\obj\cr_startup_lpc17.o
-                0x000004e4                TIMER2_IRQHandler
-                0x000004e4                RIT_IRQHandler
-                0x000004e4                I2C0_IRQHandler
-                0x000004e4                USBActivity_IRQHandler
-                0x000004e4                PWM1_IRQHandler
-                0x000004e4                I2C1_IRQHandler
-                0x000004e4                EINT2_IRQHandler
-                0x000004e4                UART1_IRQHandler
-                0x000004e4                EINT3_IRQHandler
-                0x000004e4                CANActivity_IRQHandler
-                0x000004e4                TIMER3_IRQHandler
-                0x000004e4                UART0_IRQHandler
-                0x000004e4                IntDefaultHandler
-                0x000004e4                PLL0_IRQHandler
-                0x000004e4                CAN_IRQHandler
-                0x000004e4                PLL1_IRQHandler
-                0x000004e4                SSP0_IRQHandler
-                0x000004e4                I2S_IRQHandler
-                0x000004e4                I2C2_IRQHandler
-                0x000004e4                RTC_IRQHandler
-                0x000004e4                TIMER0_IRQHandler
-                0x000004e4                SPI_IRQHandler
-                0x000004e4                EINT1_IRQHandler
-                0x000004e4                TIMER1_IRQHandler
-                0x000004e4                UART2_IRQHandler
-                0x000004e4                SSP1_IRQHandler
-                0x000004e4                USB_IRQHandler
-                0x000004e4                BOD_IRQHandler
-                0x000004e4                WDT_IRQHandler
-                0x000004e4                QEI_IRQHandler
-                0x000004e4                EINT0_IRQHandler
-                0x000004e4                DMA_IRQHandler
-                0x000004e4                UART3_IRQHandler
-                0x000004e4                MCPWM_IRQHandler
-                0x000004e4                ENET_IRQHandler
+                0x000003a4        0x8 ..\obj\cr_startup_lpc17.o
+                0x000003a4                TIMER2_IRQHandler
+                0x000003a4                RIT_IRQHandler
+                0x000003a4                I2C0_IRQHandler
+                0x000003a4                USBActivity_IRQHandler
+                0x000003a4                PWM1_IRQHandler
+                0x000003a4                I2C1_IRQHandler
+                0x000003a4                EINT2_IRQHandler
+                0x000003a4                UART1_IRQHandler
+                0x000003a4                EINT3_IRQHandler
+                0x000003a4                CANActivity_IRQHandler
+                0x000003a4                TIMER3_IRQHandler
+                0x000003a4                UART0_IRQHandler
+                0x000003a4                IntDefaultHandler
+                0x000003a4                PLL0_IRQHandler
+                0x000003a4                CAN_IRQHandler
+                0x000003a4                PLL1_IRQHandler
+                0x000003a4                SSP0_IRQHandler
+                0x000003a4                I2S_IRQHandler
+                0x000003a4                I2C2_IRQHandler
+                0x000003a4                RTC_IRQHandler
+                0x000003a4                TIMER0_IRQHandler
+                0x000003a4                SPI_IRQHandler
+                0x000003a4                EINT1_IRQHandler
+                0x000003a4                TIMER1_IRQHandler
+                0x000003a4                UART2_IRQHandler
+                0x000003a4                SSP1_IRQHandler
+                0x000003a4                USB_IRQHandler
+                0x000003a4                BOD_IRQHandler
+                0x000003a4                WDT_IRQHandler
+                0x000003a4                QEI_IRQHandler
+                0x000003a4                EINT0_IRQHandler
+                0x000003a4                DMA_IRQHandler
+                0x000003a4                UART3_IRQHandler
+                0x000003a4                MCPWM_IRQHandler
+                0x000003a4                ENET_IRQHandler
  .text.__list_add
-                0x000004ec       0x30 ..\obj\task.o
+                0x000003ac       0x30 ..\obj\task.o
  .text.list_add_tail
-                0x0000051c       0x20 ..\obj\task.o
+                0x000003dc       0x20 ..\obj\task.o
  .text.enterCritical
-                0x0000053c       0x30 ..\obj\task.o
+                0x000003fc       0x30 ..\obj\task.o
  .text.exitCritical
-                0x0000056c       0x30 ..\obj\task.o
+                0x0000042c       0x30 ..\obj\task.o
  .text.tasksInit
-                0x0000059c       0x94 ..\obj\task.o
-                0x0000059c                tasksInit
+                0x0000045c       0x94 ..\obj\task.o
+                0x0000045c                tasksInit
  .text.task_create
-                0x00000630       0xf0 ..\obj\task.o
-                0x00000630                task_create
+                0x000004f0       0xf0 ..\obj\task.o
+                0x000004f0                task_create
  .text.task_lTCBInit
-                0x00000720       0x60 ..\obj\task.o
+                0x000005e0       0x60 ..\obj\task.o
  .text.taskEnable
-                0x00000780       0x84 ..\obj\task.o
-                0x00000780                taskEnable
+                0x00000640       0x84 ..\obj\task.o
+                0x00000640                taskEnable
  .text.idleTaskInit
-                0x00000804       0x30 ..\obj\task.o
-                0x00000804                idleTaskInit
- .text.ADC_Init
-                0x00000834       0xa4 ..\obj\lpc17xx_adc.o
-                0x00000834                ADC_Init
- .text.ADC_BurstCmd
-                0x000008d8       0x50 ..\obj\lpc17xx_adc.o
-                0x000008d8                ADC_BurstCmd
- .text.ADC_IntConfig
-                0x00000928       0xb4 ..\obj\lpc17xx_adc.o
-                0x00000928                ADC_IntConfig
- .text.ADC_ChannelCmd
-                0x000009dc       0x70 ..\obj\lpc17xx_adc.o
-                0x000009dc                ADC_ChannelCmd
+                0x000006c4       0x30 ..\obj\task.o
+                0x000006c4                idleTaskInit
  .text.ADC_ChannelGetStatus
-                0x00000a4c       0x8c ..\obj\lpc17xx_adc.o
-                0x00000a4c                ADC_ChannelGetStatus
+                0x000006f4       0x8c ..\obj\lpc17xx_adc.o
+                0x000006f4                ADC_ChannelGetStatus
  .text.ADC_GlobalGetData
-                0x00000ad8       0x34 ..\obj\lpc17xx_adc.o
-                0x00000ad8                ADC_GlobalGetData
- .text.NVIC_EnableIRQ
-                0x00000b0c       0x38 ..\obj\main.o
+                0x00000780       0x34 ..\obj\lpc17xx_adc.o
+                0x00000780                ADC_GlobalGetData
  .text.enterCritical
-                0x00000b44       0x30 ..\obj\main.o
+                0x000007b4       0x30 ..\obj\main.o
  .text.exitCritical
-                0x00000b74       0x30 ..\obj\main.o
+                0x000007e4       0x30 ..\obj\main.o
  .text.interruptEnter
-                0x00000ba4       0x28 ..\obj\main.o
+                0x00000814       0x28 ..\obj\main.o
  .text.interruptExit
-                0x00000bcc       0x9c ..\obj\main.o
- .text.main     0x00000c68      0x1e8 ..\obj\main.o
-                0x00000c68                main
- .text.Task1    0x00000e50       0x78 ..\obj\main.o
-                0x00000e50                Task1
+                0x0000083c       0xa0 ..\obj\main.o
+ .text.main     0x000008dc      0x1e8 ..\obj\main.o
+                0x000008dc                main
+ .text.Task1    0x00000ac4       0x78 ..\obj\main.o
+                0x00000ac4                Task1
  .text.ADC_IRQHandler
-                0x00000ec8       0x44 ..\obj\main.o
-                0x00000ec8                ADC_IRQHandler
+                0x00000b3c       0x40 ..\obj\main.o
+                0x00000b3c                ADC_IRQHandler
  .text.ADC_Task
-                0x00000f0c       0x7c ..\obj\main.o
-                0x00000f0c                ADC_Task
+                0x00000b7c       0x2c ..\obj\main.o
+                0x00000b7c                ADC_Task
  .text.TaskMatrix
-                0x00000f88      0x100 ..\obj\main.o
-                0x00000f88                TaskMatrix
- .text.Task2    0x00001088      0x144 ..\obj\main.o
-                0x00001088                Task2
- .text.Task3    0x000011cc       0x90 ..\obj\main.o
-                0x000011cc                Task3
- .text.Task4    0x0000125c       0x38 ..\obj\main.o
-                0x0000125c                Task4
- .text.Task5    0x00001294       0x18 ..\obj\main.o
-                0x00001294                Task5
- .text.Task6    0x000012ac       0x44 ..\obj\main.o
-                0x000012ac                Task6
+                0x00000ba8      0x100 ..\obj\main.o
+                0x00000ba8                TaskMatrix
+ .text.Task2    0x00000ca8       0xf8 ..\obj\main.o
+                0x00000ca8                Task2
+ .text.Task3    0x00000da0       0x90 ..\obj\main.o
+                0x00000da0                Task3
+ .text.Task4    0x00000e30       0x38 ..\obj\main.o
+                0x00000e30                Task4
+ .text.Task5    0x00000e68       0x34 ..\obj\main.o
+                0x00000e68                Task5
+ .text.Task6    0x00000e9c       0x44 ..\obj\main.o
+                0x00000e9c                Task6
  .text.idleTaskHook
-                0x000012f0        0xc ..\obj\main.o
-                0x000012f0                idleTaskHook
+                0x00000ee0        0xc ..\obj\hooks.o
+                0x00000ee0                idleTaskHook
+ .text.contextSwitchHook
+                0x00000eec        0xc ..\obj\hooks.o
+                0x00000eec                contextSwitchHook
  .text.enterCritical
-                0x000012fc       0x30 ..\obj\heap.o
+                0x00000ef8       0x30 ..\obj\heap.o
  .text.exitCritical
-                0x0000132c       0x30 ..\obj\heap.o
+                0x00000f28       0x30 ..\obj\heap.o
  .text.heapInit
-                0x0000135c       0x5c ..\obj\heap.o
-                0x0000135c                heapInit
+                0x00000f58       0x5c ..\obj\heap.o
+                0x00000f58                heapInit
  .text.portMalloc
-                0x000013b8       0xb0 ..\obj\heap.o
-                0x000013b8                portMalloc
+                0x00000fb4       0xb0 ..\obj\heap.o
+                0x00000fb4                portMalloc
  .text.GPIO_GetPointer
-                0x00001468       0x7c ..\obj\lpc17xx_gpio.o
+                0x00001064       0x7c ..\obj\lpc17xx_gpio.o
  .text.GPIO_SetDir
-                0x000014e4       0x54 ..\obj\lpc17xx_gpio.o
-                0x000014e4                GPIO_SetDir
+                0x000010e0       0x54 ..\obj\lpc17xx_gpio.o
+                0x000010e0                GPIO_SetDir
  .text.GPIO_SetValue
-                0x00001538       0x2c ..\obj\lpc17xx_gpio.o
-                0x00001538                GPIO_SetValue
+                0x00001134       0x2c ..\obj\lpc17xx_gpio.o
+                0x00001134                GPIO_SetValue
  .text.GPIO_ClearValue
-                0x00001564       0x2c ..\obj\lpc17xx_gpio.o
-                0x00001564                GPIO_ClearValue
+                0x00001160       0x2c ..\obj\lpc17xx_gpio.o
+                0x00001160                GPIO_ClearValue
  .text.__list_add
-                0x00001590       0x30 ..\obj\wait_queue.o
+                0x0000118c       0x30 ..\obj\wait_queue.o
  .text.list_add
-                0x000015c0       0x20 ..\obj\wait_queue.o
+                0x000011bc       0x20 ..\obj\wait_queue.o
  .text.list_add_tail
-                0x000015e0       0x20 ..\obj\wait_queue.o
+                0x000011dc       0x20 ..\obj\wait_queue.o
  .text.__list_del
-                0x00001600       0x20 ..\obj\wait_queue.o
+                0x000011fc       0x20 ..\obj\wait_queue.o
  .text.list_del
-                0x00001620       0x30 ..\obj\wait_queue.o
+                0x0000121c       0x30 ..\obj\wait_queue.o
  .text.list_del_init
-                0x00001650       0x2c ..\obj\wait_queue.o
+                0x0000124c       0x2c ..\obj\wait_queue.o
  .text.list_empty
-                0x0000167c       0x24 ..\obj\wait_queue.o
+                0x00001278       0x24 ..\obj\wait_queue.o
  .text.enterCritical
-                0x000016a0       0x30 ..\obj\wait_queue.o
+                0x0000129c       0x30 ..\obj\wait_queue.o
  .text.exitCritical
-                0x000016d0       0x30 ..\obj\wait_queue.o
+                0x000012cc       0x30 ..\obj\wait_queue.o
  .text.addTaskToWaitQueue
-                0x00001700       0x68 ..\obj\wait_queue.o
-                0x00001700                addTaskToWaitQueue
+                0x000012fc       0x68 ..\obj\wait_queue.o
+                0x000012fc                addTaskToWaitQueue
  .text.removeTaskFromWaitQueue
-                0x00001768       0x68 ..\obj\wait_queue.o
-                0x00001768                removeTaskFromWaitQueue
+                0x00001364       0x68 ..\obj\wait_queue.o
+                0x00001364                removeTaskFromWaitQueue
  .text.removeHeadFromWaitQueue
-                0x000017d0       0x48 ..\obj\wait_queue.o
-                0x000017d0                removeHeadFromWaitQueue
- .text.statsInit
-                0x00001818       0x58 ..\obj\stats.o
-                0x00001818                statsInit
- .text.getCpuUtilization
-                0x00001870       0x6c ..\obj\stats.o
-                0x00001870                getCpuUtilization
+                0x000013cc       0x48 ..\obj\wait_queue.o
+                0x000013cc                removeHeadFromWaitQueue
  .text.check_failed
-                0x000018dc        0xc ..\obj\lpc17xx_libcfg_default.o
-                0x000018dc                check_failed
+                0x00001414        0xc ..\obj\lpc17xx_libcfg_default.o
+                0x00001414                check_failed
  .text.enterCritical
-                0x000018e8       0x30 ..\obj\time.o
+                0x00001420       0x30 ..\obj\time.o
  .text.exitCritical
-                0x00001918       0x30 ..\obj\time.o
+                0x00001450       0x30 ..\obj\time.o
  .text.interruptEnter
-                0x00001948       0x28 ..\obj\time.o
+                0x00001480       0x28 ..\obj\time.o
  .text.interruptExit
-                0x00001970       0x9c ..\obj\time.o
- .text.OSTick   0x00001a0c      0x120 ..\obj\time.o
-                0x00001a0c                OSTick
+                0x000014a8       0xa0 ..\obj\time.o
+ .text.OSTick   0x00001548       0x94 ..\obj\time.o
+                0x00001548                OSTick
  .text.timeDelay
-                0x00001b2c       0x3c ..\obj\time.o
-                0x00001b2c                timeDelay
+                0x000015dc       0x8c ..\obj\time.o
+                0x000015dc                timeDelay
  .text.NVIC_SetPriority
-                0x00001b68       0x5c ..\obj\port.o
- .text.StkInit  0x00001bc4       0x6c ..\obj\port.o
-                0x00001bc4                StkInit
+                0x00001668       0x5c ..\obj\port.o
+ .text.StkInit  0x000016c4       0x84 ..\obj\port.o
+                0x000016c4                StkInit
  .text.OSStartFirstTask
-                0x00001c30       0x20 ..\obj\port.o
-                0x00001c30                OSStartFirstTask
+                0x00001748       0x20 ..\obj\port.o
+                0x00001748                OSStartFirstTask
  .text.start_first_task
-                0x00001c50       0x24 ..\obj\port.o
-                0x00001c50                start_first_task
+                0x00001768       0x24 ..\obj\port.o
+                0x00001768                start_first_task
  .text.OSTickStart
-                0x00001c74       0x18 ..\obj\port.o
-                0x00001c74                OSTickStart
- .text.OSTickStop
-                0x00001c8c       0x24 ..\obj\port.o
-                0x00001c8c                OSTickStop
+                0x0000178c       0x18 ..\obj\port.o
+                0x0000178c                OSTickStart
  .text.OSTickConfig
-                0x00001cb0       0x5c ..\obj\port.o
-                0x00001cb0                OSTickConfig
- .text.cpsie    0x00001d0c        0xc ..\obj\port.o
-                0x00001d0c                cpsie
- .text.cpsid    0x00001d18        0xc ..\obj\port.o
-                0x00001d18                cpsid
+                0x000017a4       0x5c ..\obj\port.o
+                0x000017a4                OSTickConfig
+ .text.cpsie    0x00001800        0xc ..\obj\port.o
+                0x00001800                cpsie
+ .text.cpsid    0x0000180c        0xc ..\obj\port.o
+                0x0000180c                cpsid
  .text.context_switch
-                0x00001d24       0x30 ..\obj\port.o
-                0x00001d24                context_switch
- .text.hw_init  0x00001d54       0x3c ..\obj\port.o
-                0x00001d54                hw_init
- .text.init_service
-                0x00001d90        0xc ..\obj\port.o
-                0x00001d90                init_service
+                0x00001818       0x30 ..\obj\port.o
+                0x00001818                context_switch
+ .text.hw_init  0x00001848       0x3c ..\obj\port.o
+                0x00001848                hw_init
  .text.enterCritical
-                0x00001d9c       0x30 ..\obj\kernel.o
+                0x00001884       0x30 ..\obj\kernel.o
  .text.exitCritical
-                0x00001dcc       0x30 ..\obj\kernel.o
+                0x000018b4       0x30 ..\obj\kernel.o
  .text.uKern_Init
-                0x00001dfc       0x18 ..\obj\kernel.o
-                0x00001dfc                uKern_Init
- .text.StartOS  0x00001e14       0x6c ..\obj\kernel.o
-                0x00001e14                StartOS
+                0x000018e4       0x14 ..\obj\kernel.o
+                0x000018e4                uKern_Init
+ .text.StartOS  0x000018f8       0x6c ..\obj\kernel.o
+                0x000018f8                StartOS
  .text.schedule
-                0x00001e80       0x94 ..\obj\kernel.o
-                0x00001e80                schedule
+                0x00001964       0x98 ..\obj\kernel.o
+                0x00001964                schedule
  .text.IdleTask
-                0x00001f14       0x3c ..\obj\kernel.o
-                0x00001f14                IdleTask
- .text.yield    0x00001f50       0x74 ..\obj\kernel.o
-                0x00001f50                yield
+                0x000019fc       0x28 ..\obj\kernel.o
+                0x000019fc                IdleTask
+ .text.yield    0x00001a24       0x74 ..\obj\kernel.o
+                0x00001a24                yield
  .text.dotmat_init
-                0x00001fc4       0x40 ..\obj\dotmatgl.o
-                0x00001fc4                dotmat_init
+                0x00001a98       0x40 ..\obj\dotmatgl.o
+                0x00001a98                dotmat_init
  .text.plot_col
-                0x00002004       0x40 ..\obj\dotmatgl.o
-                0x00002004                plot_col
+                0x00001ad8       0x40 ..\obj\dotmatgl.o
+                0x00001ad8                plot_col
  .text.unplot_col
-                0x00002044       0x3c ..\obj\dotmatgl.o
-                0x00002044                unplot_col
+                0x00001b18       0x3c ..\obj\dotmatgl.o
+                0x00001b18                unplot_col
  .text.plot_val
-                0x00002080       0x24 ..\obj\dotmatgl.o
-                0x00002080                plot_val
+                0x00001b54       0x24 ..\obj\dotmatgl.o
+                0x00001b54                plot_val
  .text.enterCritical
-                0x000020a4       0x30 ..\obj\sem.o
+                0x00001b78       0x30 ..\obj\sem.o
  .text.exitCritical
-                0x000020d4       0x30 ..\obj\sem.o
+                0x00001ba8       0x30 ..\obj\sem.o
  .text.sem_init
-                0x00002104       0x3c ..\obj\sem.o
-                0x00002104                sem_init
- .text.sem_get  0x00002140       0xbc ..\obj\sem.o
-                0x00002140                sem_get
+                0x00001bd8       0x3c ..\obj\sem.o
+                0x00001bd8                sem_init
+ .text.sem_get  0x00001c14       0xbc ..\obj\sem.o
+                0x00001c14                sem_get
  .text.list_empty
-                0x000021fc       0x24 ..\obj\message_queue.o
+                0x00001cd0       0x24 ..\obj\message_queue.o
  .text.enterCritical
-                0x00002220       0x30 ..\obj\message_queue.o
+                0x00001cf4       0x30 ..\obj\message_queue.o
  .text.exitCritical
-                0x00002250       0x30 ..\obj\message_queue.o
+                0x00001d24       0x30 ..\obj\message_queue.o
  .text.queueCreate
-                0x00002280       0xb0 ..\obj\message_queue.o
-                0x00002280                queueCreate
+                0x00001d54       0xb0 ..\obj\message_queue.o
+                0x00001d54                queueCreate
  .text.queueSendToTail
-                0x00002330       0xb8 ..\obj\message_queue.o
-                0x00002330                queueSendToTail
+                0x00001e04       0xb8 ..\obj\message_queue.o
+                0x00001e04                queueSendToTail
  .text.queueReceive
-                0x000023e8       0xdc ..\obj\message_queue.o
-                0x000023e8                queueReceive
+                0x00001ebc       0xdc ..\obj\message_queue.o
+                0x00001ebc                queueReceive
  .text.queueGetMessage
-                0x000024c4       0x5c ..\obj\message_queue.o
- .text          0x00002520      0x21c c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_addsubsf3.o)
-                0x00002520                __aeabi_frsub
-                0x00002528                __subsf3
-                0x00002528                __aeabi_fsub
-                0x0000252c                __aeabi_fadd
-                0x0000252c                __addsf3
-                0x0000268c                __aeabi_ui2f
-                0x0000268c                __floatunsisf
-                0x00002694                __aeabi_i2f
-                0x00002694                __floatsisf
-                0x000026b0                __aeabi_ul2f
-                0x000026b0                __floatundisf
-                0x000026c0                __aeabi_l2f
-                0x000026c0                __floatdisf
- .text          0x0000273c      0x2a0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_muldivsf3.o)
-                0x0000273c                __mulsf3
-                0x0000273c                __aeabi_fmul
-                0x000028a4                __aeabi_fdiv
-                0x000028a4                __divsf3
- .text          0x000029dc       0x40 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_fixunssfsi.o)
-                0x000029dc                __fixunssfsi
-                0x000029dc                __aeabi_f2uiz
- .text          0x00002a1c       0x84 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memcpy.o)
-                0x00002a1c                memcpy
+                0x00001f98       0x5c ..\obj\message_queue.o
+ .text          0x00001ff4       0x84 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memcpy.o)
+                0x00001ff4                memcpy
  *(.glue_7t)
  .glue_7t       0x00000000        0x0 linker stubs
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
  *(.rodata .rodata* .gnu.linkonce.r.*)
- .rodata        0x00002aa0       0x54 ..\obj\lpc17xx_adc.o
- .rodata        0x00002af4       0x28 ..\obj\main.o
-                0x00002af4                j
+ .rodata        0x00002078       0x50 ..\obj\lpc17xx_adc.o
+ .rodata        0x000020c8       0x28 ..\obj\main.o
+                0x000020c8                j
 
-.vfp11_veneer   0x00002b1c        0x0
+.vfp11_veneer   0x000020f0        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x00002b1c        0x0
+.v4_bx          0x000020f0        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00002b1c                __exidx_start = .
+                0x000020f0                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00002b1c                __exidx_end = .
-                0x00002b1c                . = ALIGN (0x4)
-                0x00002b1c                _etext = .
-                0x00002b1c                _sidata = .
+                0x000020f0                __exidx_end = .
+                0x000020f0                . = ALIGN (0x4)
+                0x000020f0                _etext = .
+                0x000020f0                _sidata = .
 
-.data           0x10000000        0x4 load address 0x00002b1c
+.data           0x10000000        0x0 load address 0x000020f0
                 0x10000000                _sdata = .
  *(.data .data.*)
- .data          0x10000000        0x4 ..\obj\system_LPC17xx.o
-                0x10000000                SystemCoreClock
-                0x10000004                . = ALIGN (0x4)
-                0x10000004                _edata = .
+                0x10000000                . = ALIGN (0x4)
+                0x10000000                _edata = .
 
-.bss            0x10000004     0x36a4 load address 0x00002b20
-                0x10000004                _sbss = .
+.bss            0x2007c000     0x3748
+                0x2007c000                _sbss = .
  *(.bss .bss.*)
- .bss           0x10000004        0x4 ..\obj\task.o
-                0x10000004                number_of_tasks
- .bss           0x10000008        0x8 ..\obj\heap.o
- .bss           0x10000010        0xc ..\obj\stats.o
-                0x10000010                statCounter
-                0x10000014                stat_flag
-                0x10000018                idleCounterStats
- .bss           0x1000001c        0x4 ..\obj\time.o
- .bss           0x10000020       0x10 ..\obj\kernel.o
-                0x10000020                criticalNesting
-                0x10000024                interruptNesting
-                0x10000028                idleCounter
-                0x1000002c                kernel_running
+ .bss           0x2007c000        0x4 ..\obj\task.o
+                0x2007c000                number_of_tasks
+ .bss           0x2007c004        0x8 ..\obj\heap.o
+ .bss           0x2007c00c        0x4 ..\obj\time.o
+ .bss           0x2007c010       0x10 ..\obj\kernel.o
+                0x2007c010                criticalNesting
+                0x2007c014                interruptNesting
+                0x2007c018                idleCounter
+                0x2007c01c                kernel_running
  *(COMMON)
- COMMON         0x10000030      0x400 ..\obj\cr_startup_lpc17.o
-                0x10000030                pulStack
- COMMON         0x10000430      0x2bc ..\obj\task.o
-                0x10000430                highestTCB
-                0x10000434                currentTCB
-                0x10000438                ReadyArray
-                0x10000460                allTasksLinked
-                0x10000468                TaskArray
-                0x10000490                IdleStack
-                0x100006e8                ReadyTaskBitmap
- COMMON         0x100006ec     0x2bcc ..\obj\main.o
-                0x100006ec                Stack3
-                0x10000c64                taskMatrixQueue
-                0x10000c68                StackMatrix
-                0x100011e0                Stack2
-                0x10001758                Stack5
-                0x10001cd0                Stack1
-                0x10002248                StackADC
-                0x100027c0                task6Q
-                0x100027c4                s
-                0x100027c8                Stack6
-                0x10002d40                Stack4
- COMMON         0x100032b8      0x3f0 ..\obj\heap.o
-                0x100032b8                heap1
-                0x100036a4                heap
-                0x100036a8                . = ALIGN (0x4)
-                0x100036a8                _ebss = .
+ COMMON         0x2007c020      0x400 ..\obj\cr_startup_lpc17.o
+                0x2007c020                pulStack
+ COMMON         0x2007c420      0x36c ..\obj\task.o
+                0x2007c420                highestTCB
+                0x2007c424                currentTCB
+                0x2007c428                ReadyArray
+                0x2007c4a8                allTasksLinked
+                0x2007c4b0                TaskArray
+                0x2007c530                IdleStack
+                0x2007c788                ReadyTaskBitmap
+ COMMON         0x2007c78c     0x2bcc ..\obj\main.o
+                0x2007c78c                Stack3
+                0x2007cd04                taskMatrixQueue
+                0x2007cd08                StackMatrix
+                0x2007d280                Stack2
+                0x2007d7f8                Stack5
+                0x2007dd70                Stack1
+                0x2007e2e8                StackADC
+                0x2007e860                task6Q
+                0x2007e864                s
+                0x2007e868                Stack6
+                0x2007ede0                Stack4
+ COMMON         0x2007f358      0x3f0 ..\obj\heap.o
+                0x2007f358                heap1
+                0x2007f744                heap
+                0x2007f748                . = ALIGN (0x4)
+                0x2007f748                _ebss = .
 
-.co_stack       0x100036a8        0x0
-                0x100036a8                . = ALIGN (0x8)
+.co_stack       0x10000000        0x0
+                0x10000000                . = ALIGN (0x8)
  *(.co_stack .co_stack.*)
-                0x100036a8                . = ALIGN (0x4)
-                0x100036a8                _end = .
+                0x10000000                . = ALIGN (0x4)
+                0x10000000                _end = .
+LOAD ..\obj\lpc17xx_timer.o
 LOAD ..\obj\core_cm3.o
 LOAD ..\obj\lpc17xx_clkpwr.o
 LOAD ..\obj\system_LPC17xx.o
@@ -748,205 +776,222 @@ LOAD c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4
 END GROUP
 OUTPUT(uKernel.elf elf32-littlearm)
 
-.debug_info     0x00000000     0x780e
- .debug_info    0x00000000      0x548 ..\obj\core_cm3.o
- .debug_info    0x00000548      0x667 ..\obj\lpc17xx_clkpwr.o
- .debug_info    0x00000baf      0x4f9 ..\obj\system_LPC17xx.o
- .debug_info    0x000010a8      0x251 ..\obj\cr_startup_lpc17.o
- .debug_info    0x000012f9      0x656 ..\obj\task.o
- .debug_info    0x0000194f      0x604 ..\obj\lpc17xx_adc.o
- .debug_info    0x00001f53     0x116f ..\obj\main.o
- .debug_info    0x000030c2      0x41a ..\obj\heap.o
- .debug_info    0x000034dc      0xe1a ..\obj\lpc17xx_gpio.o
- .debug_info    0x000042f6      0x568 ..\obj\wait_queue.o
- .debug_info    0x0000485e      0x3ac ..\obj\stats.o
- .debug_info    0x00004c0a       0xc5 ..\obj\lpc17xx_libcfg_default.o
- .debug_info    0x00004ccf      0x643 ..\obj\time.o
- .debug_info    0x00005312      0x4a6 ..\obj\lpc17xx_pinsel.o
- .debug_info    0x000057b8      0x440 ..\obj\syscalls.o
- .debug_info    0x00005bf8      0x6f0 ..\obj\port.o
- .debug_info    0x000062e8      0x616 ..\obj\kernel.o
- .debug_info    0x000068fe      0x4fe ..\obj\dotmatgl.o
- .debug_info    0x00006dfc      0x468 ..\obj\sem.o
- .debug_info    0x00007264      0x5aa ..\obj\message_queue.o
+.debug_info     0x00000000     0x7c39
+ .debug_info    0x00000000      0x87e ..\obj\lpc17xx_timer.o
+ .debug_info    0x0000087e      0x548 ..\obj\core_cm3.o
+ .debug_info    0x00000dc6      0x667 ..\obj\lpc17xx_clkpwr.o
+ .debug_info    0x0000142d      0x4f9 ..\obj\system_LPC17xx.o
+ .debug_info    0x00001926      0x251 ..\obj\cr_startup_lpc17.o
+ .debug_info    0x00001b77      0x632 ..\obj\task.o
+ .debug_info    0x000021a9      0x604 ..\obj\lpc17xx_adc.o
+ .debug_info    0x000027ad      0xe4a ..\obj\main.o
+ .debug_info    0x000035f7       0x50 ..\obj\hooks.o
+ .debug_info    0x00003647      0x421 ..\obj\heap.o
+ .debug_info    0x00003a68      0xe1a ..\obj\lpc17xx_gpio.o
+ .debug_info    0x00004882      0x56f ..\obj\wait_queue.o
+ .debug_info    0x00004df1      0x2d8 ..\obj\stats.o
+ .debug_info    0x000050c9       0xc5 ..\obj\lpc17xx_libcfg_default.o
+ .debug_info    0x0000518e      0x5c7 ..\obj\time.o
+ .debug_info    0x00005755      0x4a6 ..\obj\lpc17xx_pinsel.o
+ .debug_info    0x00005bfb      0x447 ..\obj\syscalls.o
+ .debug_info    0x00006042      0x6e2 ..\obj\port.o
+ .debug_info    0x00006724      0x5f7 ..\obj\kernel.o
+ .debug_info    0x00006d1b      0x4fe ..\obj\dotmatgl.o
+ .debug_info    0x00007219      0x46f ..\obj\sem.o
+ .debug_info    0x00007688      0x5b1 ..\obj\message_queue.o
 
-.debug_abbrev   0x00000000     0x1c95
- .debug_abbrev  0x00000000       0xd5 ..\obj\core_cm3.o
- .debug_abbrev  0x000000d5      0x170 ..\obj\lpc17xx_clkpwr.o
- .debug_abbrev  0x00000245       0xd7 ..\obj\system_LPC17xx.o
- .debug_abbrev  0x0000031c       0xc8 ..\obj\cr_startup_lpc17.o
- .debug_abbrev  0x000003e4      0x1ff ..\obj\task.o
- .debug_abbrev  0x000005e3      0x13b ..\obj\lpc17xx_adc.o
- .debug_abbrev  0x0000071e      0x300 ..\obj\main.o
- .debug_abbrev  0x00000a1e        0x1 ..\obj\hooks.o
- .debug_abbrev  0x00000a1f      0x19b ..\obj\heap.o
- .debug_abbrev  0x00000bba      0x1c7 ..\obj\lpc17xx_gpio.o
- .debug_abbrev  0x00000d81      0x176 ..\obj\wait_queue.o
- .debug_abbrev  0x00000ef7      0x155 ..\obj\stats.o
- .debug_abbrev  0x0000104c       0x66 ..\obj\lpc17xx_libcfg_default.o
- .debug_abbrev  0x000010b2      0x1ff ..\obj\time.o
- .debug_abbrev  0x000012b1      0x11b ..\obj\lpc17xx_pinsel.o
- .debug_abbrev  0x000013cc       0xde ..\obj\syscalls.o
- .debug_abbrev  0x000014aa      0x1e4 ..\obj\port.o
- .debug_abbrev  0x0000168e      0x1e1 ..\obj\kernel.o
- .debug_abbrev  0x0000186f       0xfc ..\obj\dotmatgl.o
- .debug_abbrev  0x0000196b      0x187 ..\obj\sem.o
- .debug_abbrev  0x00001af2      0x1a3 ..\obj\message_queue.o
+.debug_abbrev   0x00000000     0x1d68
+ .debug_abbrev  0x00000000      0x1b2 ..\obj\lpc17xx_timer.o
+ .debug_abbrev  0x000001b2       0xd5 ..\obj\core_cm3.o
+ .debug_abbrev  0x00000287      0x170 ..\obj\lpc17xx_clkpwr.o
+ .debug_abbrev  0x000003f7       0xd7 ..\obj\system_LPC17xx.o
+ .debug_abbrev  0x000004ce       0xc8 ..\obj\cr_startup_lpc17.o
+ .debug_abbrev  0x00000596      0x1e8 ..\obj\task.o
+ .debug_abbrev  0x0000077e      0x13b ..\obj\lpc17xx_adc.o
+ .debug_abbrev  0x000008b9      0x285 ..\obj\main.o
+ .debug_abbrev  0x00000b3e       0x29 ..\obj\hooks.o
+ .debug_abbrev  0x00000b67      0x19b ..\obj\heap.o
+ .debug_abbrev  0x00000d02      0x1c7 ..\obj\lpc17xx_gpio.o
+ .debug_abbrev  0x00000ec9      0x176 ..\obj\wait_queue.o
+ .debug_abbrev  0x0000103f      0x102 ..\obj\stats.o
+ .debug_abbrev  0x00001141       0x66 ..\obj\lpc17xx_libcfg_default.o
+ .debug_abbrev  0x000011a7      0x1ff ..\obj\time.o
+ .debug_abbrev  0x000013a6      0x11b ..\obj\lpc17xx_pinsel.o
+ .debug_abbrev  0x000014c1       0xde ..\obj\syscalls.o
+ .debug_abbrev  0x0000159f      0x1e4 ..\obj\port.o
+ .debug_abbrev  0x00001783      0x1bf ..\obj\kernel.o
+ .debug_abbrev  0x00001942       0xfc ..\obj\dotmatgl.o
+ .debug_abbrev  0x00001a3e      0x187 ..\obj\sem.o
+ .debug_abbrev  0x00001bc5      0x1a3 ..\obj\message_queue.o
 
-.debug_loc      0x00000000     0x2b2a
- .debug_loc     0x00000000      0x3f0 ..\obj\core_cm3.o
- .debug_loc     0x000003f0      0x1bc ..\obj\lpc17xx_clkpwr.o
- .debug_loc     0x000005ac       0x58 ..\obj\system_LPC17xx.o
- .debug_loc     0x00000604      0x1f0 ..\obj\cr_startup_lpc17.o
- .debug_loc     0x000007f4      0x2f8 ..\obj\task.o
- .debug_loc     0x00000aec      0x2d8 ..\obj\lpc17xx_adc.o
- .debug_loc     0x00000dc4      0x38e ..\obj\main.o
- .debug_loc     0x00001152      0x164 ..\obj\heap.o
- .debug_loc     0x000012b6      0x620 ..\obj\lpc17xx_gpio.o
- .debug_loc     0x000018d6      0x2c0 ..\obj\wait_queue.o
- .debug_loc     0x00001b96       0xbc ..\obj\stats.o
- .debug_loc     0x00001c52       0x38 ..\obj\lpc17xx_libcfg_default.o
- .debug_loc     0x00001c8a      0x1bc ..\obj\time.o
- .debug_loc     0x00001e46      0x150 ..\obj\lpc17xx_pinsel.o
- .debug_loc     0x00001f96      0x1ec ..\obj\syscalls.o
- .debug_loc     0x00002182      0x26c ..\obj\port.o
- .debug_loc     0x000023ee      0x190 ..\obj\kernel.o
- .debug_loc     0x0000257e      0x1b4 ..\obj\dotmatgl.o
- .debug_loc     0x00002732      0x1a8 ..\obj\sem.o
- .debug_loc     0x000028da      0x250 ..\obj\message_queue.o
+.debug_loc      0x00000000     0x2db6
+ .debug_loc     0x00000000      0x380 ..\obj\lpc17xx_timer.o
+ .debug_loc     0x00000380      0x3f0 ..\obj\core_cm3.o
+ .debug_loc     0x00000770      0x1bc ..\obj\lpc17xx_clkpwr.o
+ .debug_loc     0x0000092c       0x58 ..\obj\system_LPC17xx.o
+ .debug_loc     0x00000984      0x1f0 ..\obj\cr_startup_lpc17.o
+ .debug_loc     0x00000b74      0x2c0 ..\obj\task.o
+ .debug_loc     0x00000e34      0x2d8 ..\obj\lpc17xx_adc.o
+ .debug_loc     0x0000110c      0x32a ..\obj\main.o
+ .debug_loc     0x00001436       0x58 ..\obj\hooks.o
+ .debug_loc     0x0000148e      0x164 ..\obj\heap.o
+ .debug_loc     0x000015f2      0x620 ..\obj\lpc17xx_gpio.o
+ .debug_loc     0x00001c12      0x2c0 ..\obj\wait_queue.o
+ .debug_loc     0x00001ed2       0x38 ..\obj\stats.o
+ .debug_loc     0x00001f0a       0x38 ..\obj\lpc17xx_libcfg_default.o
+ .debug_loc     0x00001f42      0x1bc ..\obj\time.o
+ .debug_loc     0x000020fe      0x150 ..\obj\lpc17xx_pinsel.o
+ .debug_loc     0x0000224e      0x1ec ..\obj\syscalls.o
+ .debug_loc     0x0000243a      0x240 ..\obj\port.o
+ .debug_loc     0x0000267a      0x190 ..\obj\kernel.o
+ .debug_loc     0x0000280a      0x1b4 ..\obj\dotmatgl.o
+ .debug_loc     0x000029be      0x1a8 ..\obj\sem.o
+ .debug_loc     0x00002b66      0x250 ..\obj\message_queue.o
 
-.debug_aranges  0x00000000      0x890
+.debug_aranges  0x00000000      0x918
  .debug_aranges
-                0x00000000       0xc8 ..\obj\core_cm3.o
+                0x00000000       0x98 ..\obj\lpc17xx_timer.o
  .debug_aranges
-                0x000000c8       0x60 ..\obj\lpc17xx_clkpwr.o
+                0x00000098       0xc8 ..\obj\core_cm3.o
  .debug_aranges
-                0x00000128       0x28 ..\obj\system_LPC17xx.o
+                0x00000160       0x60 ..\obj\lpc17xx_clkpwr.o
  .debug_aranges
-                0x00000150       0x70 ..\obj\cr_startup_lpc17.o
+                0x000001c0       0x28 ..\obj\system_LPC17xx.o
  .debug_aranges
-                0x000001c0       0x88 ..\obj\task.o
+                0x000001e8       0x70 ..\obj\cr_startup_lpc17.o
  .debug_aranges
-                0x00000248       0x80 ..\obj\lpc17xx_adc.o
+                0x00000258       0x80 ..\obj\task.o
  .debug_aranges
-                0x000002c8       0xa0 ..\obj\main.o
+                0x000002d8       0x80 ..\obj\lpc17xx_adc.o
  .debug_aranges
-                0x00000368       0x50 ..\obj\heap.o
+                0x00000358       0x90 ..\obj\main.o
  .debug_aranges
-                0x000003b8       0xf8 ..\obj\lpc17xx_gpio.o
+                0x000003e8       0x28 ..\obj\hooks.o
  .debug_aranges
-                0x000004b0       0x80 ..\obj\wait_queue.o
+                0x00000410       0x50 ..\obj\heap.o
  .debug_aranges
-                0x00000530       0x38 ..\obj\stats.o
+                0x00000460       0xf8 ..\obj\lpc17xx_gpio.o
  .debug_aranges
-                0x00000568       0x20 ..\obj\lpc17xx_libcfg_default.o
+                0x00000558       0x80 ..\obj\wait_queue.o
  .debug_aranges
-                0x00000588       0x60 ..\obj\time.o
+                0x000005d8       0x20 ..\obj\stats.o
  .debug_aranges
-                0x000005e8       0x48 ..\obj\lpc17xx_pinsel.o
+                0x000005f8       0x20 ..\obj\lpc17xx_libcfg_default.o
  .debug_aranges
-                0x00000630       0x60 ..\obj\syscalls.o
+                0x00000618       0x60 ..\obj\time.o
  .debug_aranges
-                0x00000690       0x88 ..\obj\port.o
+                0x00000678       0x48 ..\obj\lpc17xx_pinsel.o
  .debug_aranges
-                0x00000718       0x58 ..\obj\kernel.o
+                0x000006c0       0x60 ..\obj\syscalls.o
  .debug_aranges
-                0x00000770       0x58 ..\obj\dotmatgl.o
+                0x00000720       0x80 ..\obj\port.o
  .debug_aranges
-                0x000007c8       0x58 ..\obj\sem.o
+                0x000007a0       0x58 ..\obj\kernel.o
  .debug_aranges
-                0x00000820       0x70 ..\obj\message_queue.o
+                0x000007f8       0x58 ..\obj\dotmatgl.o
+ .debug_aranges
+                0x00000850       0x58 ..\obj\sem.o
+ .debug_aranges
+                0x000008a8       0x70 ..\obj\message_queue.o
 
-.debug_ranges   0x00000000      0x750
- .debug_ranges  0x00000000       0xb8 ..\obj\core_cm3.o
- .debug_ranges  0x000000b8       0x50 ..\obj\lpc17xx_clkpwr.o
- .debug_ranges  0x00000108       0x18 ..\obj\system_LPC17xx.o
- .debug_ranges  0x00000120       0x60 ..\obj\cr_startup_lpc17.o
- .debug_ranges  0x00000180       0x78 ..\obj\task.o
- .debug_ranges  0x000001f8       0x70 ..\obj\lpc17xx_adc.o
- .debug_ranges  0x00000268       0x90 ..\obj\main.o
- .debug_ranges  0x000002f8       0x40 ..\obj\heap.o
- .debug_ranges  0x00000338       0xe8 ..\obj\lpc17xx_gpio.o
- .debug_ranges  0x00000420       0x70 ..\obj\wait_queue.o
- .debug_ranges  0x00000490       0x28 ..\obj\stats.o
- .debug_ranges  0x000004b8       0x10 ..\obj\lpc17xx_libcfg_default.o
- .debug_ranges  0x000004c8       0x50 ..\obj\time.o
- .debug_ranges  0x00000518       0x38 ..\obj\lpc17xx_pinsel.o
- .debug_ranges  0x00000550       0x50 ..\obj\syscalls.o
- .debug_ranges  0x000005a0       0x78 ..\obj\port.o
- .debug_ranges  0x00000618       0x48 ..\obj\kernel.o
- .debug_ranges  0x00000660       0x48 ..\obj\dotmatgl.o
- .debug_ranges  0x000006a8       0x48 ..\obj\sem.o
- .debug_ranges  0x000006f0       0x60 ..\obj\message_queue.o
+.debug_ranges   0x00000000      0x7b8
+ .debug_ranges  0x00000000       0x88 ..\obj\lpc17xx_timer.o
+ .debug_ranges  0x00000088       0xb8 ..\obj\core_cm3.o
+ .debug_ranges  0x00000140       0x50 ..\obj\lpc17xx_clkpwr.o
+ .debug_ranges  0x00000190       0x18 ..\obj\system_LPC17xx.o
+ .debug_ranges  0x000001a8       0x60 ..\obj\cr_startup_lpc17.o
+ .debug_ranges  0x00000208       0x70 ..\obj\task.o
+ .debug_ranges  0x00000278       0x70 ..\obj\lpc17xx_adc.o
+ .debug_ranges  0x000002e8       0x80 ..\obj\main.o
+ .debug_ranges  0x00000368       0x18 ..\obj\hooks.o
+ .debug_ranges  0x00000380       0x40 ..\obj\heap.o
+ .debug_ranges  0x000003c0       0xe8 ..\obj\lpc17xx_gpio.o
+ .debug_ranges  0x000004a8       0x70 ..\obj\wait_queue.o
+ .debug_ranges  0x00000518       0x10 ..\obj\stats.o
+ .debug_ranges  0x00000528       0x10 ..\obj\lpc17xx_libcfg_default.o
+ .debug_ranges  0x00000538       0x50 ..\obj\time.o
+ .debug_ranges  0x00000588       0x38 ..\obj\lpc17xx_pinsel.o
+ .debug_ranges  0x000005c0       0x50 ..\obj\syscalls.o
+ .debug_ranges  0x00000610       0x70 ..\obj\port.o
+ .debug_ranges  0x00000680       0x48 ..\obj\kernel.o
+ .debug_ranges  0x000006c8       0x48 ..\obj\dotmatgl.o
+ .debug_ranges  0x00000710       0x48 ..\obj\sem.o
+ .debug_ranges  0x00000758       0x60 ..\obj\message_queue.o
 
-.debug_line     0x00000000     0x32fa
- .debug_line    0x00000000      0x293 ..\obj\core_cm3.o
- .debug_line    0x00000293      0x2da ..\obj\lpc17xx_clkpwr.o
- .debug_line    0x0000056d      0x228 ..\obj\system_LPC17xx.o
- .debug_line    0x00000795      0x1ba ..\obj\cr_startup_lpc17.o
- .debug_line    0x0000094f      0x2c3 ..\obj\task.o
- .debug_line    0x00000c12      0x3df ..\obj\lpc17xx_adc.o
- .debug_line    0x00000ff1      0x4ad ..\obj\main.o
- .debug_line    0x0000149e        0x0 ..\obj\hooks.o
- .debug_line    0x0000149e      0x1e6 ..\obj\heap.o
- .debug_line    0x00001684      0x4a2 ..\obj\lpc17xx_gpio.o
- .debug_line    0x00001b26      0x268 ..\obj\wait_queue.o
- .debug_line    0x00001d8e      0x1a0 ..\obj\stats.o
- .debug_line    0x00001f2e      0x10e ..\obj\lpc17xx_libcfg_default.o
- .debug_line    0x0000203c      0x2b1 ..\obj\time.o
- .debug_line    0x000022ed      0x279 ..\obj\lpc17xx_pinsel.o
- .debug_line    0x00002566      0x1a2 ..\obj\syscalls.o
- .debug_line    0x00002708      0x301 ..\obj\port.o
- .debug_line    0x00002a09      0x288 ..\obj\kernel.o
- .debug_line    0x00002c91      0x204 ..\obj\dotmatgl.o
- .debug_line    0x00002e95      0x1f9 ..\obj\sem.o
- .debug_line    0x0000308e      0x26c ..\obj\message_queue.o
+.debug_line     0x00000000     0x378b
+ .debug_line    0x00000000      0x555 ..\obj\lpc17xx_timer.o
+ .debug_line    0x00000555      0x292 ..\obj\core_cm3.o
+ .debug_line    0x000007e7      0x2d6 ..\obj\lpc17xx_clkpwr.o
+ .debug_line    0x00000abd      0x225 ..\obj\system_LPC17xx.o
+ .debug_line    0x00000ce2      0x1b8 ..\obj\cr_startup_lpc17.o
+ .debug_line    0x00000e9a      0x2ab ..\obj\task.o
+ .debug_line    0x00001145      0x3db ..\obj\lpc17xx_adc.o
+ .debug_line    0x00001520      0x46e ..\obj\main.o
+ .debug_line    0x0000198e       0x81 ..\obj\hooks.o
+ .debug_line    0x00001a0f      0x1e3 ..\obj\heap.o
+ .debug_line    0x00001bf2      0x49e ..\obj\lpc17xx_gpio.o
+ .debug_line    0x00002090      0x265 ..\obj\wait_queue.o
+ .debug_line    0x000022f5      0x107 ..\obj\stats.o
+ .debug_line    0x000023fc      0x10d ..\obj\lpc17xx_libcfg_default.o
+ .debug_line    0x00002509      0x299 ..\obj\time.o
+ .debug_line    0x000027a2      0x275 ..\obj\lpc17xx_pinsel.o
+ .debug_line    0x00002a17      0x1a1 ..\obj\syscalls.o
+ .debug_line    0x00002bb8      0x2ec ..\obj\port.o
+ .debug_line    0x00002ea4      0x287 ..\obj\kernel.o
+ .debug_line    0x0000312b      0x201 ..\obj\dotmatgl.o
+ .debug_line    0x0000332c      0x1f6 ..\obj\sem.o
+ .debug_line    0x00003522      0x269 ..\obj\message_queue.o
 
-.debug_str      0x00000000     0x1fcd
- .debug_str     0x00000000      0x22b ..\obj\core_cm3.o
-                                0x275 (size before relaxing)
- .debug_str     0x0000022b      0x2e4 ..\obj\lpc17xx_clkpwr.o
-                                0x3c7 (size before relaxing)
- .debug_str     0x0000050f       0x71 ..\obj\system_LPC17xx.o
-                                0x304 (size before relaxing)
- .debug_str     0x00000580      0x142 ..\obj\cr_startup_lpc17.o
-                                0x21c (size before relaxing)
- .debug_str     0x000006c2      0x318 ..\obj\task.o
-                                0x40f (size before relaxing)
- .debug_str     0x000009da      0x3af ..\obj\lpc17xx_adc.o
-                                0x4da (size before relaxing)
- .debug_str     0x00000d89      0x52a ..\obj\main.o
-                                0x9eb (size before relaxing)
- .debug_str     0x000012b3       0x94 ..\obj\heap.o
-                                0x323 (size before relaxing)
- .debug_str     0x00001347      0x335 ..\obj\lpc17xx_gpio.o
-                                0x58c (size before relaxing)
- .debug_str     0x0000167c       0xc4 ..\obj\wait_queue.o
-                                0x3db (size before relaxing)
- .debug_str     0x00001740       0x9a ..\obj\stats.o
-                                0x31b (size before relaxing)
- .debug_str     0x000017da       0x73 ..\obj\lpc17xx_libcfg_default.o
-                                0x156 (size before relaxing)
- .debug_str     0x0000184d       0x91 ..\obj\time.o
-                                0x3d0 (size before relaxing)
- .debug_str     0x000018de      0x27e ..\obj\lpc17xx_pinsel.o
-                                0x3a0 (size before relaxing)
- .debug_str     0x00001b5c      0x165 ..\obj\syscalls.o
-                                0x2aa (size before relaxing)
- .debug_str     0x00001cc1       0xfe ..\obj\port.o
-                                0x4f8 (size before relaxing)
- .debug_str     0x00001dbf       0x7c ..\obj\kernel.o
-                                0x399 (size before relaxing)
- .debug_str     0x00001e3b       0x68 ..\obj\dotmatgl.o
-                                0x2bc (size before relaxing)
- .debug_str     0x00001ea3       0x76 ..\obj\sem.o
-                                0x378 (size before relaxing)
- .debug_str     0x00001f19       0xb4 ..\obj\message_queue.o
-                                0x3f8 (size before relaxing)
+.debug_str      0x00000000     0x23e6
+ .debug_str     0x00000000      0x584 ..\obj\lpc17xx_timer.o
+                                0x5cd (size before relaxing)
+ .debug_str     0x00000584      0x180 ..\obj\core_cm3.o
+                                0x274 (size before relaxing)
+ .debug_str     0x00000704      0x29a ..\obj\lpc17xx_clkpwr.o
+                                0x3c6 (size before relaxing)
+ .debug_str     0x0000099e       0x70 ..\obj\system_LPC17xx.o
+                                0x303 (size before relaxing)
+ .debug_str     0x00000a0e      0x141 ..\obj\cr_startup_lpc17.o
+                                0x21b (size before relaxing)
+ .debug_str     0x00000b4f      0x306 ..\obj\task.o
+                                0x3fd (size before relaxing)
+ .debug_str     0x00000e55      0x390 ..\obj\lpc17xx_adc.o
+                                0x4d9 (size before relaxing)
+ .debug_str     0x000011e5      0x2c1 ..\obj\main.o
+                                0x6d6 (size before relaxing)
+ .debug_str     0x000014a6       0x62 ..\obj\hooks.o
+                                 0xab (size before relaxing)
+ .debug_str     0x00001508       0x93 ..\obj\heap.o
+                                0x327 (size before relaxing)
+ .debug_str     0x0000159b      0x334 ..\obj\lpc17xx_gpio.o
+                                0x58b (size before relaxing)
+ .debug_str     0x000018cf       0xc3 ..\obj\wait_queue.o
+                                0x3df (size before relaxing)
+ .debug_str     0x00001992       0x43 ..\obj\stats.o
+                                0x2b0 (size before relaxing)
+ .debug_str     0x000019d5       0x72 ..\obj\lpc17xx_libcfg_default.o
+                                0x155 (size before relaxing)
+ .debug_str     0x00001a47       0x7e ..\obj\time.o
+                                0x391 (size before relaxing)
+ .debug_str     0x00001ac5      0x27d ..\obj\lpc17xx_pinsel.o
+                                0x39f (size before relaxing)
+ .debug_str     0x00001d42      0x164 ..\obj\syscalls.o
+                                0x2ae (size before relaxing)
+ .debug_str     0x00001ea6      0x327 ..\obj\port.o
+                                0x4f0 (size before relaxing)
+ .debug_str     0x000021cd       0x8a ..\obj\kernel.o
+                                0x387 (size before relaxing)
+ .debug_str     0x00002257       0x67 ..\obj\dotmatgl.o
+                                0x2bb (size before relaxing)
+ .debug_str     0x000022be       0x75 ..\obj\sem.o
+                                0x37c (size before relaxing)
+ .debug_str     0x00002333       0xb3 ..\obj\message_queue.o
+                                0x3fc (size before relaxing)
 
 .comment        0x00000000       0x70
- .comment       0x00000000       0x70 ..\obj\core_cm3.o
+ .comment       0x00000000       0x70 ..\obj\lpc17xx_timer.o
                                  0x71 (size before relaxing)
+ .comment       0x00000000       0x71 ..\obj\core_cm3.o
  .comment       0x00000000       0x71 ..\obj\lpc17xx_clkpwr.o
  .comment       0x00000000       0x71 ..\obj\system_LPC17xx.o
  .comment       0x00000000       0x71 ..\obj\cr_startup_lpc17.o
@@ -971,75 +1016,94 @@ OUTPUT(uKernel.elf elf32-littlearm)
 .ARM.attributes
                 0x00000000       0x33
  .ARM.attributes
-                0x00000000       0x33 ..\obj\core_cm3.o
+                0x00000000       0x33 ..\obj\lpc17xx_timer.o
  .ARM.attributes
-                0x00000033       0x33 ..\obj\lpc17xx_clkpwr.o
+                0x00000033       0x33 ..\obj\core_cm3.o
  .ARM.attributes
-                0x00000066       0x33 ..\obj\system_LPC17xx.o
+                0x00000066       0x33 ..\obj\lpc17xx_clkpwr.o
  .ARM.attributes
-                0x00000099       0x33 ..\obj\cr_startup_lpc17.o
+                0x00000099       0x33 ..\obj\system_LPC17xx.o
  .ARM.attributes
-                0x000000cc       0x33 ..\obj\task.o
+                0x000000cc       0x33 ..\obj\cr_startup_lpc17.o
  .ARM.attributes
-                0x000000ff       0x33 ..\obj\lpc17xx_adc.o
+                0x000000ff       0x33 ..\obj\task.o
  .ARM.attributes
-                0x00000132       0x33 ..\obj\main.o
+                0x00000132       0x33 ..\obj\lpc17xx_adc.o
  .ARM.attributes
-                0x00000165       0x33 ..\obj\hooks.o
+                0x00000165       0x33 ..\obj\main.o
  .ARM.attributes
-                0x00000198       0x33 ..\obj\heap.o
+                0x00000198       0x33 ..\obj\hooks.o
  .ARM.attributes
-                0x000001cb       0x33 ..\obj\lpc17xx_gpio.o
+                0x000001cb       0x33 ..\obj\heap.o
  .ARM.attributes
-                0x000001fe       0x33 ..\obj\wait_queue.o
+                0x000001fe       0x33 ..\obj\lpc17xx_gpio.o
  .ARM.attributes
-                0x00000231       0x33 ..\obj\stats.o
+                0x00000231       0x33 ..\obj\wait_queue.o
  .ARM.attributes
-                0x00000264       0x33 ..\obj\lpc17xx_libcfg_default.o
+                0x00000264       0x33 ..\obj\stats.o
  .ARM.attributes
-                0x00000297       0x33 ..\obj\time.o
+                0x00000297       0x33 ..\obj\lpc17xx_libcfg_default.o
  .ARM.attributes
-                0x000002ca       0x33 ..\obj\lpc17xx_pinsel.o
+                0x000002ca       0x33 ..\obj\time.o
  .ARM.attributes
-                0x000002fd       0x33 ..\obj\syscalls.o
+                0x000002fd       0x33 ..\obj\lpc17xx_pinsel.o
  .ARM.attributes
-                0x00000330       0x33 ..\obj\port.o
+                0x00000330       0x33 ..\obj\syscalls.o
  .ARM.attributes
-                0x00000363       0x33 ..\obj\kernel.o
+                0x00000363       0x33 ..\obj\port.o
  .ARM.attributes
-                0x00000396       0x33 ..\obj\dotmatgl.o
+                0x00000396       0x33 ..\obj\kernel.o
  .ARM.attributes
-                0x000003c9       0x33 ..\obj\sem.o
+                0x000003c9       0x33 ..\obj\dotmatgl.o
  .ARM.attributes
-                0x000003fc       0x33 ..\obj\message_queue.o
+                0x000003fc       0x33 ..\obj\sem.o
  .ARM.attributes
-                0x0000042f       0x1d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_addsubsf3.o)
+                0x0000042f       0x33 ..\obj\message_queue.o
  .ARM.attributes
-                0x0000044c       0x1d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_muldivsf3.o)
+                0x00000462       0x1d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_aeabi_uldivmod.o)
  .ARM.attributes
-                0x00000469       0x1d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_fixunssfsi.o)
+                0x0000047f       0x2d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(bpabi.o)
  .ARM.attributes
-                0x00000486       0x2d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memcpy.o)
+                0x000004ac       0x2d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(unwind-arm.o)
+ .ARM.attributes
+                0x000004d9       0x1d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(libunwind.o)
+ .ARM.attributes
+                0x000004f6       0x2d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(pr-support.o)
+ .ARM.attributes
+                0x00000523       0x1d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x00000540       0x2d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_divdi3.o)
+ .ARM.attributes
+                0x0000056d       0x2d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_udivdi3.o)
+ .ARM.attributes
+                0x0000059a       0x2d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memcpy.o)
 
-.debug_frame    0x00000000     0x19dc
- .debug_frame   0x00000000      0x280 ..\obj\core_cm3.o
- .debug_frame   0x00000280      0x10c ..\obj\lpc17xx_clkpwr.o
- .debug_frame   0x0000038c       0x40 ..\obj\system_LPC17xx.o
- .debug_frame   0x000003cc      0x120 ..\obj\cr_startup_lpc17.o
- .debug_frame   0x000004ec      0x1bc ..\obj\task.o
- .debug_frame   0x000006a8      0x1ac ..\obj\lpc17xx_adc.o
- .debug_frame   0x00000854      0x218 ..\obj\main.o
- .debug_frame   0x00000a6c       0xd8 ..\obj\heap.o
- .debug_frame   0x00000b44      0x378 ..\obj\lpc17xx_gpio.o
- .debug_frame   0x00000ebc      0x19c ..\obj\wait_queue.o
- .debug_frame   0x00001058       0x84 ..\obj\stats.o
- .debug_frame   0x000010dc       0x2c ..\obj\lpc17xx_libcfg_default.o
- .debug_frame   0x00001108      0x114 ..\obj\time.o
- .debug_frame   0x0000121c       0xbc ..\obj\lpc17xx_pinsel.o
- .debug_frame   0x000012d8      0x108 ..\obj\syscalls.o
- .debug_frame   0x000013e0      0x174 ..\obj\port.o
- .debug_frame   0x00001554      0x100 ..\obj\kernel.o
- .debug_frame   0x00001654       0xf8 ..\obj\dotmatgl.o
- .debug_frame   0x0000174c      0x104 ..\obj\sem.o
- .debug_frame   0x00001850      0x160 ..\obj\message_queue.o
- .debug_frame   0x000019b0       0x2c c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memcpy.o)
+.debug_frame    0x00000000     0x1f6c
+ .debug_frame   0x00000000      0x208 ..\obj\lpc17xx_timer.o
+ .debug_frame   0x00000208      0x280 ..\obj\core_cm3.o
+ .debug_frame   0x00000488      0x10c ..\obj\lpc17xx_clkpwr.o
+ .debug_frame   0x00000594       0x40 ..\obj\system_LPC17xx.o
+ .debug_frame   0x000005d4      0x120 ..\obj\cr_startup_lpc17.o
+ .debug_frame   0x000006f4      0x19c ..\obj\task.o
+ .debug_frame   0x00000890      0x1ac ..\obj\lpc17xx_adc.o
+ .debug_frame   0x00000a3c      0x1e4 ..\obj\main.o
+ .debug_frame   0x00000c20       0x40 ..\obj\hooks.o
+ .debug_frame   0x00000c60       0xd8 ..\obj\heap.o
+ .debug_frame   0x00000d38      0x378 ..\obj\lpc17xx_gpio.o
+ .debug_frame   0x000010b0      0x19c ..\obj\wait_queue.o
+ .debug_frame   0x0000124c       0x30 ..\obj\stats.o
+ .debug_frame   0x0000127c       0x2c ..\obj\lpc17xx_libcfg_default.o
+ .debug_frame   0x000012a8      0x114 ..\obj\time.o
+ .debug_frame   0x000013bc       0xbc ..\obj\lpc17xx_pinsel.o
+ .debug_frame   0x00001478      0x108 ..\obj\syscalls.o
+ .debug_frame   0x00001580      0x158 ..\obj\port.o
+ .debug_frame   0x000016d8      0x100 ..\obj\kernel.o
+ .debug_frame   0x000017d8       0xf8 ..\obj\dotmatgl.o
+ .debug_frame   0x000018d0      0x104 ..\obj\sem.o
+ .debug_frame   0x000019d4      0x160 ..\obj\message_queue.o
+ .debug_frame   0x00001b34       0x50 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(bpabi.o)
+ .debug_frame   0x00001b84      0x268 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(unwind-arm.o)
+ .debug_frame   0x00001dec       0xec c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(pr-support.o)
+ .debug_frame   0x00001ed8       0x34 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_divdi3.o)
+ .debug_frame   0x00001f0c       0x34 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_udivdi3.o)
+ .debug_frame   0x00001f40       0x2c c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memcpy.o)

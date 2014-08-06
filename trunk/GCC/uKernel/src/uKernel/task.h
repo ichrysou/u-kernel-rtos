@@ -44,11 +44,7 @@ err_t taskEnable(TCB *tsk);
 err_t taskDisable(TCB *tsk);
 
 void idleTaskInit(void);
-/* ==========================================================*/
-/* ------------- Private Function Declarations -------------*/
-/* ========================================================*/
-static TCB * task_lTCBAlloc(void);
-static void task_lTCBInit(TCB *newTCB, uint_8 prio, uint_32 stk_size);
+
 
 #if HIGHEST_PRIO_ALT != 3
 void FindHighestPriorityTask(void);

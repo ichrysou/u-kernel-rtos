@@ -3,7 +3,11 @@
 #include "task.h"
 #include "kernel.h"
 #include "heap.h"
+/* ==========================================================*/
+/* ------------- Private Function Declarations -------------*/
+/* ========================================================*/
 
+static void task_lTCBInit(TCB *newTCB, uint_8 prio, uint_32 stk_size);
 /* ========================================*/
 /* ---------------- Globals ------------- */
 /* ========================================*/
@@ -146,16 +150,6 @@ err_t task_create(uint_8 prio, task function, void *args, uint_32 stk_size, uint
 	return ret;
 }
 
-
-static TCB * task_lTCBAlloc(void)
-{
-	/* depends on mem mang scheme*/
-	//TODO: MEM_MANG change
-#if MEM_MANG == 0
-	TCB *tmpTCB = (TCB *)portMalloc(sizeof(TCB));
-#endif
-	return tmpTCB;
-}
 
 static void task_lTCBInit(TCB *newTCB, uint_8 prio, uint_32 stk_size)
 {
@@ -304,7 +298,11 @@ err_t taskEnable(TCB *tsk)
 #endif
 
 	EXIT_CRITICAL();
-	schedule();
+	/* if taskEnable is not called from within an ISR then call schedule*/
+	if(interruptNesting == 0){
+		schedule();
+	}
+
 	return ERR_OK;
 }
 

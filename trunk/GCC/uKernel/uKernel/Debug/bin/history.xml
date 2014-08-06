@@ -1,28 +1,29 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <history>
-   <processor signature="4.6.2 -mcpu=cortex-m3 -mthumb -g -nostartfiles -Map=uKernel.map -O0 --gc-sections -LC:\CooCox\CoIDE\configuration\ProgramData\uKernel -TC:\CooCox\CoIDE\configuration\ProgramData\uKernel/arm-gcc-link.ld -g">
-      <target file="uKernel.elf" lastModified="14761c03c4d">
-         <source file="..\obj\core_cm3.o" lastModified="14761bbda6d"/>
-         <source file="..\obj\lpc17xx_clkpwr.o" lastModified="14761bbdb51"/>
-         <source file="..\obj\system_LPC17xx.o" lastModified="14761bbdbe5"/>
-         <source file="..\obj\cr_startup_lpc17.o" lastModified="14761bbdc4d"/>
-         <source file="..\obj\task.o" lastModified="14761bbdd23"/>
-         <source file="..\obj\lpc17xx_adc.o" lastModified="14761bbdda1"/>
-         <source file="..\obj\main.o" lastModified="14761bbdf66"/>
-         <source file="..\obj\hooks.o" lastModified="14761bbdfca"/>
-         <source file="..\obj\heap.o" lastModified="14761c039f6"/>
-         <source file="..\obj\lpc17xx_gpio.o" lastModified="14761bbe0e7"/>
-         <source file="..\obj\wait_queue.o" lastModified="14761bbe184"/>
-         <source file="..\obj\stats.o" lastModified="14761bbe207"/>
-         <source file="..\obj\lpc17xx_libcfg_default.o" lastModified="14761bbe28b"/>
-         <source file="..\obj\time.o" lastModified="14761bbe35c"/>
-         <source file="..\obj\lpc17xx_pinsel.o" lastModified="14761bbe3e1"/>
-         <source file="..\obj\syscalls.o" lastModified="14761bbe45e"/>
-         <source file="..\obj\port.o" lastModified="14761bbe4cd"/>
-         <source file="..\obj\kernel.o" lastModified="14761bbe54c"/>
-         <source file="..\obj\dotmatgl.o" lastModified="14761bbe5b1"/>
-         <source file="..\obj\sem.o" lastModified="14761bbe649"/>
-         <source file="..\obj\message_queue.o" lastModified="14761bbe72b"/>
+   <processor signature="4.6.2 -mcpu=cortex-m3 -mthumb -g -nostartfiles -Map=uKernel.map -O0 --gc-sections -LC:/Users/hlias/Desktop/rtos-latest/GCC/uKernel -TC:/Users/hlias/Desktop/rtos-latest/GCC/uKernel/arm-gcc-link.ld -g">
+      <target file="uKernel.elf" lastModified="147ab9395bf">
+         <source file="..\obj\lpc17xx_timer.o" lastModified="147ab8ba336"/>
+         <source file="..\obj\core_cm3.o" lastModified="147ab8ba3ab"/>
+         <source file="..\obj\lpc17xx_clkpwr.o" lastModified="147ab8ba417"/>
+         <source file="..\obj\system_LPC17xx.o" lastModified="147ab8ba47a"/>
+         <source file="..\obj\cr_startup_lpc17.o" lastModified="147ab8ba4d6"/>
+         <source file="..\obj\task.o" lastModified="147ab8e2acc"/>
+         <source file="..\obj\lpc17xx_adc.o" lastModified="147ab8ba5e5"/>
+         <source file="..\obj\main.o" lastModified="147ab939363"/>
+         <source file="..\obj\hooks.o" lastModified="147ab8ba7c5"/>
+         <source file="..\obj\heap.o" lastModified="147ab8ba837"/>
+         <source file="..\obj\lpc17xx_gpio.o" lastModified="147ab8ba8df"/>
+         <source file="..\obj\wait_queue.o" lastModified="147ab8e2caf"/>
+         <source file="..\obj\stats.o" lastModified="147ab8f6f3b"/>
+         <source file="..\obj\lpc17xx_libcfg_default.o" lastModified="147ab8baace"/>
+         <source file="..\obj\time.o" lastModified="147ab8f6fc2"/>
+         <source file="..\obj\lpc17xx_pinsel.o" lastModified="147ab8bac12"/>
+         <source file="..\obj\syscalls.o" lastModified="147ab8bac76"/>
+         <source file="..\obj\port.o" lastModified="147ab8bace6"/>
+         <source file="..\obj\kernel.o" lastModified="147ab8bad60"/>
+         <source file="..\obj\dotmatgl.o" lastModified="147ab8badce"/>
+         <source file="..\obj\sem.o" lastModified="147ab8e2ea8"/>
+         <source file="..\obj\message_queue.o" lastModified="147ab8e2f35"/>
       </target>
    </processor>
 </history>

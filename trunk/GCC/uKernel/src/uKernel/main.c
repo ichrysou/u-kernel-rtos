@@ -23,14 +23,14 @@ void ADC_Task(void *args);
 const int j = 1;
 #define is_little_endian() ((*(char *) &j) == 1)
 /* prios increase from 0 to 32*/
-#define TASK1_PRIO 1
-#define TASK2_PRIO 2
-#define TASK3_PRIO 3
-#define TASK4_PRIO 4
-#define TASK5_PRIO 5 //MOD: prio changed to 6
-#define TASK6_PRIO 6
-#define TASKMAT_PRIO 7
-#define ADC_TASK_PRIO 8
+#define TASK1_PRIO 2
+#define TASK2_PRIO 3
+#define TASK3_PRIO 4
+#define TASK4_PRIO 5
+#define TASK5_PRIO 6 //MOD: prio changed to 6
+#define TASK6_PRIO 7
+#define TASKMAT_PRIO 8
+#define ADC_TASK_PRIO 9
 
 OSStackType Stack1[STACK_SIZE];
 OSStackType Stack2[STACK_SIZE];
@@ -95,17 +95,17 @@ void Task1(void *args)
 	uint_32 fact = 1;
 	while(1){
 		fact = 1;
-		for (i = 0; i < 5; i++){
+		for (i = 0; i < 50; i++){
 			;;
 		}
-		for (i = 1; i < 10; i++)
+		for (i = 1; i < 100; i++)
 			fact = fact*(i + 1);
 		
 		LPC_GPIO1->FIOPIN ^= 1 << 18;
 		timeDelay(100);
 	}
 }
-ADC_IRQHandler()
+void ADC_IRQHandler(void)
 {
 	uint_32 adcValue;
 
@@ -125,17 +125,17 @@ ADC_IRQHandler()
 void ADC_Task(void *args)
 {
 	/*ADC init*/
-	ADC_Init(LPC_ADC, 2000);
-	ADC_ChannelCmd(LPC_ADC, ADC_CHANNEL_0, ENABLE);
-
-	ADC_IntConfig(LPC_ADC, ADC_ADINTEN0, ENABLE);
-	ADC_BurstCmd(LPC_ADC, ENABLE);
-	NVIC_EnableIRQ(ADC_IRQn);
+//	ADC_Init(LPC_ADC, 2000);
+//	ADC_ChannelCmd(LPC_ADC, ADC_CHANNEL_0, ENABLE);
+//
+//	ADC_IntConfig(LPC_ADC, ADC_ADINTEN0, ENABLE);
+//	ADC_BurstCmd(LPC_ADC, ENABLE);
+//	NVIC_EnableIRQ(ADC_IRQn);
 	while(1){
 
 		LPC_GPIO1->FIOPIN ^= 1 << 20;
 
-		timeDelay(1000);
+		timeDelay(100);
 
 	}
 
@@ -162,7 +162,7 @@ void TaskMatrix(void *args)
 		plot_val(temp);
 		if((cntr++ % 250) == 0)
 					phase = (phase + 1) % meslen;
-		timeDelay(1);
+		timeDelay(100);
 	}
 
 }
@@ -172,8 +172,7 @@ void Task2(void *args)
 	int i,j;
 	uint_32 primes[100];
 	uint_8 found = 0;
-	uint_32 CpuUtil[20];
-	int cntr = 0, cntr2 = 0;
+	int cntr = 0;
 	while(1){
 		
 		for (i = 0; i < 100 ; i++){
@@ -192,9 +191,9 @@ void Task2(void *args)
 		}
 
 		LPC_GPIO1->FIOPIN ^= 1 << 20;
-
+#if STATS_ENABLED
 		CpuUtil[cntr2++ % 20] = getCpuUtilization();
-
+#endif
 		timeDelay( 200);
 	}
 }
@@ -213,7 +212,7 @@ void Task3(void *args)
 
 		queueSendToTail(task6Q, (void *)&fibonacci[3]);
 		//sem_release(s);
-		timeDelay(100);
+		timeDelay(1000);
 	}
 }
 
@@ -226,9 +225,16 @@ void Task4(void *args){
 }
 
 void Task5(void *args){
+	uint_32 i = 0;
 	while(1){
-		timeDelay(2000);
+		timeDelay(200);
+
 		yield();
+		for (i = 0; i < 100; i++){
+#if STATS_ENABLED
+			getCpuUtilization();
+#endif
+		}
 	}
 }
 
@@ -243,15 +249,4 @@ void Task6(void *args){
 	}
 }
 
-#if IDLE_TASK_HOOK == 1
-void idleTaskHook()
-{
-	/* user defiend code here*/
-	/*do sth like this*/
-	/*if (sleepOnIdle){
-		sleep
-	}*/
-	;;
 
-}
-#endif

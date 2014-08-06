@@ -1,4 +1,5 @@
 #include "port.h"
+#include "lpc17xx_timer.h"
 
 /**
  * @brief: Initialize the stack of a newly created task. 
@@ -10,6 +11,10 @@ OSStackType *StkInit(OSStackType *tos, task function, void *args, OSStackType st
 	#if STACK_GROWTH == 1
 	
 	OSStackType *stk;
+	/*guarantee stack alignment is 4 byte alignment*/
+	if (((uint_32)tos & (STACK_ALIGN - 1)) != 0){
+		tos = ((uint_32)tos + (uint_32)(STACK_ALIGN - 1)) & ~(STACK_ALIGN - 1);
+	}
   	stk = tos;//this causes #bug 0: bos + stack_size - 1;
 	*--stk = 0x01000000; //xPSR Reserved, value 1 is for the t-bit
 	
@@ -158,11 +163,6 @@ void hw_init(){
     *(portNVIC_SYSPRI2) |= portNVIC_SYSTICK_PRI;
 
 }
-void init_service(void)
-{
-
-    OSStartFirstTask();
-}
 
 void HardFaultHndlr(void)
 {
@@ -175,42 +175,44 @@ void HardFaultHndlr(void)
 			"b prvGetRegistersFromStack	\n"
 			);
 }
-/*
-void start_os(void){
-	__asm volatile(
 
-            " svc 0                                 \n"
-            " nop                                   \n"
-			);
+#if STATS_ENABLED
+void port_reset_stat_timer_val(){
+	TIM_ResetCounter(LPC_TIM0);
 }
 
-void SVC_Handler(void)
-{
+void port_stat_timer_init(){
 
-	__asm volatile(
-			"tst lr, #4		\n"
-			//"mrseq r0, msp  \n"
-			//"mrsne r0, psp  \n"
-			"b MainSVCHandler \n"
-			"bx lr			\n "
-			);
+
+		TIM_TIMERCFG_Type TMR0_Cfg;
+		TIM_MATCHCFG_Type TMR0_Match;
+
+		/* On reset, Timer0/1 are enabled (PCTIM0/1 = 1), and Timer2/3 are disabled (PCTIM2/3 = 0).*/
+		/* Initialize timer 0, prescale count time of 100uS */
+		TMR0_Cfg.PrescaleOption = TIM_PRESCALE_USVAL;
+		TMR0_Cfg.PrescaleValue = 1;
+		/* Use channel 0, MR0 */
+		TMR0_Match.MatchChannel = 0;
+		/* Enable interrupt when MR0 matches the value in TC register */
+		TMR0_Match.IntOnMatch = ENABLE;
+		/* Enable reset on MR0: TIMER will reset if MR0 matches it */
+		TMR0_Match.ResetOnMatch = TRUE;
+		/* Don't stop on MR0 if MR0 matches it*/
+		TMR0_Match.StopOnMatch = FALSE;
+		/* Do nothing for external output pin if match (see cmsis help, there are another options) */
+		TMR0_Match.ExtMatchOutputType = TIM_EXTMATCH_NOTHING;
+		/* Set Match value, count value of 10000 (10000 * 100uS = 1000000us = 1s --> 1 Hz) */
+		TMR0_Match.MatchValue = 10000000;
+		/* Set configuration for Tim_config and Tim_MatchConfig */
+		TIM_Init(LPC_TIM0, TIM_TIMER_MODE, &TMR0_Cfg);
+		TIM_ConfigMatch(LPC_TIM0, &TMR0_Match);
+		/* Start timer 0 */
+		TIM_Cmd(LPC_TIM0, ENABLE);
+
 }
-void PendSV_Handler(void)
-{
-	__asm volatile("b context_switch \n");
+
+uint_32 port_get_stat_timer_val(void){
+	return LPC_TIM0->TC;
 }
-*/
-/*__asm void FindHighestPriorityTask()
-{
-	PRESERVE 8
-	IMPORT ReadyTaskBitmap
-	IMPORT highestTCB
-	IMPORT ReadyTaskArray
-	ldr r0, =ReadyTaskBitmap
-	ldr r0, [r0]
-	rbit r1, r0
-	clz r0, r1
-	ldr r1, =ReadyTaskArray
-	ldr r2, [r1]
-	ldr r0, [r2 + r]
-}*/
+
+#endif

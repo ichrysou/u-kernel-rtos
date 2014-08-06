@@ -4,7 +4,7 @@
 #include "types.h"
 
 #define HEAP_SIZE CONF_HEAP_SIZE
-#define HEAP_ALIGN 4
+#define HEAP_ALIGN CONF_HEAP_ALIGN
 
 
 void heapInit();

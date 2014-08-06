@@ -1,42 +1,65 @@
 #include "stats.h"
 #include "kernel.h"
 #include "port.h"
-volatile uint_32 statCounter = 0;
-volatile uint_8 stat_flag = 0;
-uint_32 idleCounterStats = 0;
+#include "time.h"
+#include "task.h"
 
+#if STATS_ENABLED
+
+OSStackType StatTaskStack[STAT_TASK_STACK_SIZE];
+
+
+static uint_32 idleTimerStamp = 0;
+static uint_32 idleTimerTime = 0;
+static uint_32 statTimerTime = 0;
+static uint_32 statTimerStamp = 0;
+static float_32 cpuUtilization = 0;
+float_32 utilizations[100];
+
+void StatTask(void *args)
+{
+	uint_32 i = 0;
+	while(1){
+		idleTimerTime = 0;
+		port_reset_stat_timer_val();
+		/*care must be taken that timer overflow time is less than total delay of statistic task,so
+		 * that the cpu utilization calculation is valid*/
+		statTimerStamp = port_get_stat_timer_val();
+		timeDelay(1000);
+		statTimerTime = port_get_stat_timer_val() - statTimerStamp;/*TIM_GetCounter(TIM2);*/
+		cpuUtilization = (float_32) (100 * ((statTimerTime- idleTimerTime) / (float)statTimerTime));
+		utilizations[i++ % 100] = cpuUtilization;
+
+	}
+}
 /* systick interrupts should be already configured before this call*/
 /* this call only works in StartOS for some strange reason.*/
 void statsInit()
 {
 
+	port_stat_timer_init();
+	task_create(STAT_TASK_PRIO,
+				StatTask,
+				NULL,
+				STAT_TASK_STACK_SIZE,
+				&StatTaskStack[STAT_TASK_STACK_SIZE - 1],
+				0);
 
-    ENABLE_INTERRUPTS();
-
-    OSTickConfig();
-    OSTickStart();
-    while(!stat_flag);
-	while(stat_flag){
-		 statCounter++;
-	}
-
-	DISABLE_INTERRUPTS();
-	OSTickStop();
 }
 
 uint_32 getCpuUtilization(){
 
 	/* TODO: can be a better way? */
-	if (!STATS_ENABLED)
-		return 0xFF;
-	if (!kernel_running)
-		return (uint_32) 0xFFFFFFFF;
-
-	return (uint_32)(100  *  ((statCounter - idleCounterStats) / (float)statCounter));
+	return (uint_32)cpuUtilization;
 
 }
-/*needs to be called from the sys tick irq
+/*needs to be called from the context switch hook
  */
 void stats_hook(){
-
+	if (highestTCB == TaskArray[IDLE_TASK_PRIO]){
+		idleTimerStamp = port_get_stat_timer_val();/*TIM_GetCounter(TIM2);*/
+	}else if(currentTCB == TaskArray[IDLE_TASK_PRIO]){
+		idleTimerTime += port_get_stat_timer_val() - idleTimerStamp;/*TIM_GetCounter(TIM2) - idleTimerStamp;*/
+	}
 }
+#endif

@@ -55,6 +55,17 @@ uint_32 getCpuUtilization(){
 }
 /*needs to be called from the context switch hook
  */
+ /** Bug: You need to call this somehow also from the interruptEnter/Exit routine, so that 
+ *        the interrupt service time is not calculated in the idleTimerTime variable.
+ *        In general 3 states we have:
+ *        1) Idle Task -> Interrupt Enter
+ *        2) InterruptExit -> Idle Task
+ *        3) InterruptExit -> Idle Task with Contex Switch.
+ *        Desired behavior:
+ *        1) Stamp the timer that was already counting since entry to the idle task from cases 2) and 3). Add the difference with stamp from 2 and 3 to idleTimerTime.
+ *        2) Stamp the timer in idleTimerStamp
+ *        3) Stamp the timer in idleTimerStamp.
+ */
 void stats_hook(){
 	if (highestTCB == TaskArray[IDLE_TASK_PRIO]){
 		idleTimerStamp = port_get_stat_timer_val();/*TIM_GetCounter(TIM2);*/

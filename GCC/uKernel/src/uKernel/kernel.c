@@ -56,8 +56,6 @@ void schedule(void)
 #if STATS_ENABLED
 			stats_hook();
 #endif
-
-
 			SWITCH_CONTEXT();
 		}
 	}else{
@@ -73,7 +71,6 @@ void IdleTask(void *args)
 
 	while(1){
 
-
 		idleCounter++;
 
 #if IDLE_TASK_SLEEP
@@ -81,7 +78,6 @@ void IdleTask(void *args)
 		LPC_SC->PCON = 0x00;
 		__WFI();
 #endif
-
 
 #if HOOKS_ENABLED && IDLE_TASK_HOOK_ENABLED
 		idleTaskHook();

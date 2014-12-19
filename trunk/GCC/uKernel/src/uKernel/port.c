@@ -79,7 +79,7 @@ uint_32 OSTickConfig(void){
 }	
 
 
-#ifdef __DEBUG__
+
 volatile uint32_t r0;
 volatile uint32_t r1;
 volatile uint32_t r2;
@@ -110,7 +110,7 @@ of this function. */
     /* When the following line is hit, the variables contain the register values. */
     for( ;; );
 }
-#endif
+
 
 void cpsie(void)
 {

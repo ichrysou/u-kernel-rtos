@@ -8,6 +8,10 @@
 #include "message_queue.h"
 #include "sem.h"
 #include "lpc17xx_adc.h"
+#include "lpc17xx_pwm.h"
+#include "lpc17xx_pinsel.h"
+#include "lpc_types.h"
+
 #if HOOKS_ENABLED
 #include "hooks.h"
 #endif
@@ -48,6 +52,10 @@ sem *s;
 
 
 
+PWM_TIMERCFG_Type PWMCfgDat;
+PWM_MATCHCFG_Type PWMMatchCfgDat;
+PINSEL_CFG_Type PinCfg;
+
 
 int main()
 {
@@ -57,8 +65,6 @@ int main()
 	LPC_GPIO1->FIODIR |= 1 << 21;
 	LPC_GPIO1->FIODIR |= 1 << 23;
 
-	//currentTCB = malloc(sizeof(TCB));
-	//highestTCB = malloc(sizeof(TCB));
 	/*this should be called somewhere else*/
 
 	uKern_Init();
@@ -75,6 +81,73 @@ int main()
 	/* buggy method. dynamic task allocation causes bugs, since we don't have heap reserved space */
 	//task_create(TASK1_PRIO, Task1, NULL, STACK_MIN_SIZE);
 	//task_create(TASK2_PRIO, Task2, NULL, STACK_MIN_SIZE);
+
+	/* PWM block section -------------------------------------------- */
+
+	/* Initialize PWM peripheral, timer mode
+	 * PWM prescale value = 1 (absolute value - tick value)
+     */
+
+//	PWMCfgDat.PrescaleOption = PWM_TIMER_PRESCALE_TICKVAL;
+//	PWMCfgDat.PrescaleValue = 5;
+//	PWM_Init(LPC_PWM1, PWM_MODE_TIMER, (void *) &PWMCfgDat);
+
+	/*
+	 * Initialize PWM pin connect
+	 */
+/*	PinCfg.Funcnum = 1;
+	PinCfg.OpenDrain = 0;
+	PinCfg.Pinmode = 0;
+	PinCfg.Portnum = 2;
+	PinCfg.Pinnum = 6;
+	PINSEL_ConfigPin(&PinCfg);*/
+
+	/* Set match value for PWM match channel 0 = 100, update immediately */
+	/*PWM_MatchUpdate(LPC_PWM1, 0, 100, PWM_MATCH_UPDATE_NOW);*/
+	/* PWM Timer/Counter will be reset when channel 0 matching
+	 * no interrupt when match
+	 * no stop when match
+	 */
+	/*PWMMatchCfgDat.IntOnMatch = DISABLE;
+	PWMMatchCfgDat.MatchChannel = 0;
+	PWMMatchCfgDat.ResetOnMatch = ENABLE;
+	PWMMatchCfgDat.StopOnMatch = DISABLE;
+	PWM_ConfigMatch(LPC_PWM1, &PWMMatchCfgDat);*/
+	/* Configure each PWM channel: --------------------------------------------- */
+	/*
+	 * - Channel 5: Single Edge
+	 * The Match register values are as follows:
+	 * - MR0 = 100 (PWM rate)
+	 * - MR5 = 65 (PWM5 output)
+	 * PWM Duty on each PWM channel:
+	 * - Channel 5: Set by match 0, Reset by match 5.
+	 */
+
+	/* Edge setting ------------------------------------ */
+//	/*PWM_ChannelConfig(LPC_PWM1, 6, PWM_CHANNEL_SINGLE_EDGE);*/
+
+	/* Match value setting ------------------------------------ */
+//	PWM_MatchUpdate(LPC_PWM1, 6, 50, PWM_MATCH_UPDATE_NOW);
+	/* Match option setting ------------------------------------ */
+//	PWMMatchCfgDat.IntOnMatch = DISABLE;
+//	PWMMatchCfgDat.MatchChannel = 6;
+//	PWMMatchCfgDat.ResetOnMatch = DISABLE;
+//	PWMMatchCfgDat.StopOnMatch = DISABLE;
+
+
+//   	PWM_ConfigMatch(LPC_PWM1, &PWMMatchCfgDat);
+
+	/* Enable PWM Channel Output ------------------------------------ */
+
+	/* Channel 5 */
+//	PWM_ChannelCmd(LPC_PWM1, 6, ENABLE);
+
+	/* Reset and Start counter */
+//	PWM_ResetCounter(LPC_PWM1);
+//	PWM_CounterCmd(LPC_PWM1, ENABLE);
+
+	/* Start PWM now */
+//	PWM_Cmd(LPC_PWM1, ENABLE);
 
 	/*init other services*/
 
@@ -101,7 +174,7 @@ void Task1(void *args)
 		for (i = 1; i < 100; i++)
 			fact = fact*(i + 1);
 		
-		LPC_GPIO1->FIOPIN ^= 1 << 18;
+//		LPC_GPIO1->FIOPIN ^= 1 << 18;
 		timeDelay(100);
 	}
 }
@@ -133,9 +206,9 @@ void ADC_Task(void *args)
 //	NVIC_EnableIRQ(ADC_IRQn);
 	while(1){
 
-		LPC_GPIO1->FIOPIN ^= 1 << 20;
+		//LPC_GPIO1->FIOPIN ^= 1 << 20;
 
-		timeDelay(100);
+		timeDelay(10);
 
 	}
 
@@ -167,34 +240,36 @@ void TaskMatrix(void *args)
 
 }
 //prime numbas (stop after 10 first)
+uint_32 CpuUtil[20];
 void Task2(void *args)
 {
-	int i,j;
+	int i = 0,j;
 	uint_32 primes[100];
 	uint_8 found = 0;
 	int cntr = 0;
 	while(1){
 		
-		for (i = 0; i < 100 ; i++){
-			for (j = 2; j < i; j++){
-				found = 1;
-				if (((i % j) == 0)) {
-					found = 0;
-					break;
-				}
-			}
-			if (found){
-				primes[cntr++ % 100] = i;  // this array overlaps with our stack after index 0x51  or sth.. that is very weird.
-				found = 0; 
+//		for (i = 0; i < 100 ; i++){
+			//for (j = 2; j < i; j++){
+				//found = 1;
+				//if (((i % j) == 0)) {
+					//found = 0;
+				//	break;
+			//	}
+			//}
+		//	if (found){
+		//		primes[cntr++ % 100] = i;  // this array overlaps with our stack after index 0x51  or sth.. that is very weird.
+		//		found = 0;
 				//timeDelay( 200);//yield();//prioEnable(TASK1_PRIO);
-			}
-		}
+		//	}
+		//}
 
-		LPC_GPIO1->FIOPIN ^= 1 << 20;
+//		LPC_GPIO1->FIOPIN ^= 1 << 20;
 #if STATS_ENABLED
-		CpuUtil[cntr2++ % 20] = getCpuUtilization();
+		CpuUtil[cntr++ % 20] = getCpuUtilization();
 #endif
-		timeDelay( 200);
+//		PWM_MatchUpdate(LPC_PWM1, 6, 100 - i++, PWM_MATCH_UPDATE_NOW);
+		timeDelay( 40);
 	}
 }
 
@@ -212,14 +287,17 @@ void Task3(void *args)
 
 		queueSendToTail(task6Q, (void *)&fibonacci[3]);
 		//sem_release(s);
-		timeDelay(1000);
+		LPC_GPIO1->FIOPIN ^= 1 << 23;			
+		timeDelay(20);
+
 	}
 }
 
 void Task4(void *args){
 	while(1){
-		sem_get(s, 1000);
-		LPC_GPIO1->FIOPIN ^= 1 << 21;
+
+		sem_get(s, 10);
+//		LPC_GPIO1->FIOPIN ^= 1 << 21;
 		/*timeDelay(1000);*/
 	}
 }
@@ -227,7 +305,7 @@ void Task4(void *args){
 void Task5(void *args){
 	uint_32 i = 0;
 	while(1){
-		timeDelay(200);
+		timeDelay(40);
 
 		yield();
 		for (i = 0; i < 100; i++){
@@ -244,7 +322,7 @@ void Task6(void *args){
 	while(1){
 
 		queueReceive(task6Q, buff, 0);
-		LPC_GPIO1->FIOPIN ^= 1 << 23;
+
 		/*timeDelay(100);*/
 	}
 }

@@ -19,14 +19,16 @@ float_32 utilizations[100];
 void StatTask(void *args)
 {
 	uint_32 i = 0;
+	uint_32 temp;
 	while(1){
 		idleTimerTime = 0;
 		port_reset_stat_timer_val();
 		/*care must be taken that timer overflow time is less than total delay of statistic task,so
 		 * that the cpu utilization calculation is valid*/
 		statTimerStamp = port_get_stat_timer_val();
-		timeDelay(1000);
-		statTimerTime = port_get_stat_timer_val() - statTimerStamp;/*TIM_GetCounter(TIM2);*/
+		timeDelay(100);
+		temp = port_get_stat_timer_val();
+		statTimerTime = temp - statTimerStamp;/*TIM_GetCounter(TIM2);*/
 		cpuUtilization = (float_32) (100 * ((statTimerTime- idleTimerTime) / (float)statTimerTime));
 		utilizations[i++ % 100] = cpuUtilization;
 
@@ -47,10 +49,10 @@ void statsInit()
 
 }
 
-uint_32 getCpuUtilization(){
+float_32 getCpuUtilization(){
 
 	/* TODO: can be a better way? */
-	return (uint_32)cpuUtilization;
+	return (float_32)cpuUtilization;
 
 }
 /*needs to be called from the context switch hook
@@ -66,11 +68,33 @@ uint_32 getCpuUtilization(){
  *        2) Stamp the timer in idleTimerStamp
  *        3) Stamp the timer in idleTimerStamp.
  */
+uint_32 first = 1;
 void stats_hook(){
-	if (highestTCB == TaskArray[IDLE_TASK_PRIO]){
-		idleTimerStamp = port_get_stat_timer_val();/*TIM_GetCounter(TIM2);*/
-	}else if(currentTCB == TaskArray[IDLE_TASK_PRIO]){
-		idleTimerTime += port_get_stat_timer_val() - idleTimerStamp;/*TIM_GetCounter(TIM2) - idleTimerStamp;*/
+	uint_32 temp;
+	/* two cases:
+	 interrupt nesting > 0
+	 interrupt nesting == 0*/
+	temp = port_get_stat_timer_val();
+	if (interruptNesting == 1){
+		if (highestTCB == TaskArray[IDLE_TASK_PRIO]){ /* first case: interrupt occured on idle task context */
+			idleTimerTime += temp - idleTimerStamp;
+			if (first){
+				first = 0;
+				LPC_GPIO1->FIOPIN |= 1 << 18;
+			}
+
+			/* idleTimerStamp = port_get_stat_timer_val(); */
+		}
+		
+	}else if (interruptNesting == 0){
+		if (highestTCB == TaskArray[IDLE_TASK_PRIO]){
+			idleTimerStamp = temp;
+			if (first){
+				first = 0;
+				LPC_GPIO1->FIOPIN |= 1 << 20;					
+			}
+		}
+		
 	}
 }
 #endif

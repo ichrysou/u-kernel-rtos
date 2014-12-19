@@ -27,7 +27,7 @@
 
 #define IDLE_TASK_HOOK_ENABLED 1
 #define HOOKS_ENABLED 1
-#define STATS_ENABLED 0
+#define STATS_ENABLED 1
 #define CONTEXT_SWITCH_HOOK_ENABLED 1
 #define TIME_SLICE 10 //in ticks
 

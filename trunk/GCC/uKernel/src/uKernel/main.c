@@ -5,10 +5,10 @@
 #include "heap.h"
 #include "message_queue.h"
 #include "sem.h"
-#include "lpc17xx_adc.h"
-#include "lpc17xx_pwm.h"
-#include "lpc17xx_pinsel.h"
-#include "lpc_types.h"
+/* #include "lpc17xx_adc.h" */
+/* #include "lpc17xx_pwm.h" */
+/* #include "lpc17xx_pinsel.h" */
+/* #include "lpc_types.h" */
 
 #if HOOKS_ENABLED
 #include "hooks.h"
@@ -50,9 +50,9 @@ sem *s;
 
 
 
-PWM_TIMERCFG_Type PWMCfgDat;
-PWM_MATCHCFG_Type PWMMatchCfgDat;
-PINSEL_CFG_Type PinCfg;
+/* PWM_TIMERCFG_Type PWMCfgDat; */
+/* PWM_MATCHCFG_Type PWMMatchCfgDat; */
+/* PINSEL_CFG_Type PinCfg; */
 
 
 int main()
@@ -184,11 +184,11 @@ void ADC_IRQHandler(void)
 
 	interruptEnter();
 
-	if (ADC_ChannelGetStatus(LPC_ADC,ADC_CHANNEL_0, ADC_DATA_DONE))
-	{
-		//adcValue = ADC_ChannelGetData(LPC_ADC,ADC_CHANNEL_0);
-		adcValue = ADC_GlobalGetData(LPC_ADC);
-	}
+	/* if (ADC_ChannelGetStatus(LPC_ADC,ADC_CHANNEL_0, ADC_DATA_DONE)) */
+	/* { */
+	/* 	//adcValue = ADC_ChannelGetData(LPC_ADC,ADC_CHANNEL_0); */
+	/* 	adcValue = ADC_GlobalGetData(LPC_ADC); */
+	/* } */
 
 	interruptExit();
 }
@@ -208,7 +208,7 @@ void ADC_Task(void *args)
 
 		//LPC_GPIO1->FIOPIN ^= 1 << 20;
 
-		timeDelay(10);
+		timeDelay(100);
 
 	}
 
@@ -221,20 +221,20 @@ void TaskMatrix(void *args)
 
 	int meslen = sizeof(message);
 	unsigned short int phase = 0;
-	dotmat_init();
+//	dotmat_init();
 	int cntr = 0;
 	int fast = 0;
 	uint_8 temp;
 
 	while(1){
 
-		unplot_col(fast);
+		/* unplot_col(fast); */
 		fast = (++fast) % MAT_MAX_COL;
-		plot_col(fast);
+		/* plot_col(fast); */
 		temp =  message[(fast + phase) % meslen] ;
-		plot_val(temp);
+		/* plot_val(temp); */
 		if((cntr++ % 250) == 0)
-					phase = (phase + 1) % meslen;
+			phase = (phase + 1) % meslen;
 		timeDelay(100);
 	}
 
@@ -271,7 +271,7 @@ void Task2(void *args)
 		CpuUtil[cntr++ % 20] = getCpuUtilization();
 #endif
 //		PWM_MatchUpdate(LPC_PWM1, 6, 100 - i++, PWM_MATCH_UPDATE_NOW);
-		timeDelay( 40);
+		timeDelay( 400);
 	}
 }
 
@@ -292,7 +292,7 @@ void Task3(void *args)
 		queueSendToTail(task6Q, (void *)&fibonacci[3]);
 		//sem_release(s);
 		LPC_GPIO1->FIOPIN ^= 1 << 23;			
-		timeDelay(20);
+		timeDelay(200);
 
 	}
 }
@@ -313,7 +313,7 @@ void Task5(void *args){
 	args = (void *)((uint_32 )args + 1);
 	uint_32 i = 0;
 	while(1){
-		timeDelay(40);
+		timeDelay(400);
 
 		yield();
 		for (i = 0; i < 100; i++){

@@ -1,134 +1,82 @@
 Archive member included because of file (symbol)
 
 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_addsubsf3.o)
-                              C:\Users\hlias\AppData\Local\Temp\ccmJyVTl.o (__aeabi_ui2f)
+                              ..\..\src\uKernel\stats.o (__aeabi_ui2f)
 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_muldivsf3.o)
-                              C:\Users\hlias\AppData\Local\Temp\ccmJyVTl.o (__aeabi_fmul)
-c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_aeabi_uldivmod.o)
-                              C:\Users\hlias\AppData\Local\Temp\cczgd2sI.o (__aeabi_uldivmod)
-c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(bpabi.o)
-                              c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_aeabi_uldivmod.o) (__gnu_uldivmod_helper)
-c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(unwind-arm.o)
-                              c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(bpabi.o) (__aeabi_unwind_cpp_pr0)
-c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(libunwind.o)
-                              c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(unwind-arm.o) (restore_core_regs)
-c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(pr-support.o)
-                              c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(unwind-arm.o) (__gnu_unwind_execute)
-c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_dvmd_tls.o)
-                              c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_aeabi_uldivmod.o) (__aeabi_ldiv0)
-c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_divdi3.o)
-                              c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(bpabi.o) (__divdi3)
-c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_udivdi3.o)
-                              c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(bpabi.o) (__udivdi3)
+                              ..\..\src\uKernel\stats.o (__aeabi_fmul)
 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memcpy.o)
-                              C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o (memcpy)
+                              ..\..\src\uKernel\main.o (memcpy)
 
 Allocating common symbols
 Common symbol       size              file
 
-Stack3              0x578             C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
-r3                  0x4               C:\Users\hlias\AppData\Local\Temp\ccAIHEDS.o
-highestTCB          0x4               C:\Users\hlias\AppData\Local\Temp\ccUFO42o.o
-currentTCB          0x4               C:\Users\hlias\AppData\Local\Temp\ccUFO42o.o
-ReadyArray          0x80              C:\Users\hlias\AppData\Local\Temp\ccUFO42o.o
-taskMatrixQueue     0x4               C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
-r0                  0x4               C:\Users\hlias\AppData\Local\Temp\ccAIHEDS.o
-utilizations        0x190             C:\Users\hlias\AppData\Local\Temp\ccmJyVTl.o
-StackMatrix         0x578             C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
-Stack2              0x578             C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
-allTasksLinked      0x8               C:\Users\hlias\AppData\Local\Temp\ccUFO42o.o
-PWMCfgDat           0x8               C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
-TaskArray           0x80              C:\Users\hlias\AppData\Local\Temp\ccUFO42o.o
-Stack5              0x578             C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
-StatTaskStack       0x190             C:\Users\hlias\AppData\Local\Temp\ccmJyVTl.o
-heap1               0x3eb             C:\Users\hlias\AppData\Local\Temp\ccFgCcI1.o
-heap                0x4               C:\Users\hlias\AppData\Local\Temp\ccFgCcI1.o
-pulStack            0x400             C:\Users\hlias\AppData\Local\Temp\ccfOUIpv.o
-Stack1              0x578             C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
-PinCfg              0x5               C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
-StackADC            0x578             C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
-lr                  0x4               C:\Users\hlias\AppData\Local\Temp\ccAIHEDS.o
-task6Q              0x4               C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
-IdleStack           0x258             C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
-s                   0x4               C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
-r2                  0x4               C:\Users\hlias\AppData\Local\Temp\ccAIHEDS.o
-Stack6              0x578             C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
-CpuUtil             0x50              C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
-pc                  0x4               C:\Users\hlias\AppData\Local\Temp\ccAIHEDS.o
-psr                 0x4               C:\Users\hlias\AppData\Local\Temp\ccAIHEDS.o
-ReadyTaskBitmap     0x4               C:\Users\hlias\AppData\Local\Temp\ccUFO42o.o
-PWMMatchCfgDat      0x4               C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
-r12                 0x4               C:\Users\hlias\AppData\Local\Temp\ccAIHEDS.o
-Stack4              0x578             C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
-r1                  0x4               C:\Users\hlias\AppData\Local\Temp\ccAIHEDS.o
+Stack3              0x578             ..\..\src\uKernel\main.o
+r3                  0x4               ..\..\src\uKernel\port.o
+highestTCB          0x4               ..\..\src\uKernel\task.o
+currentTCB          0x4               ..\..\src\uKernel\task.o
+ReadyArray          0x80              ..\..\src\uKernel\task.o
+taskMatrixQueue     0x4               ..\..\src\uKernel\main.o
+r0                  0x4               ..\..\src\uKernel\port.o
+utilizations        0x190             ..\..\src\uKernel\stats.o
+StackMatrix         0x578             ..\..\src\uKernel\main.o
+Stack2              0x578             ..\..\src\uKernel\main.o
+allTasksLinked      0x8               ..\..\src\uKernel\task.o
+TaskArray           0x80              ..\..\src\uKernel\task.o
+Stack5              0x578             ..\..\src\uKernel\main.o
+StatTaskStack       0x190             ..\..\src\uKernel\stats.o
+heap1               0x3eb             ..\..\src\uKernel\heap.o
+heap                0x4               ..\..\src\uKernel\heap.o
+pulStack            0x400             ..\..\src\cmsis_boot\startup\cr_startup_lpc17.o
+Stack1              0x578             ..\..\src\uKernel\main.o
+StackADC            0x578             ..\..\src\uKernel\main.o
+lr                  0x4               ..\..\src\uKernel\port.o
+task6Q              0x4               ..\..\src\uKernel\main.o
+IdleStack           0x258             ..\..\src\uKernel\main.o
+s                   0x4               ..\..\src\uKernel\main.o
+r2                  0x4               ..\..\src\uKernel\port.o
+Stack6              0x578             ..\..\src\uKernel\main.o
+CpuUtil             0x50              ..\..\src\uKernel\main.o
+pc                  0x4               ..\..\src\uKernel\port.o
+psr                 0x4               ..\..\src\uKernel\port.o
+ReadyTaskBitmap     0x4               ..\..\src\uKernel\task.o
+r12                 0x4               ..\..\src\uKernel\port.o
+Stack4              0x578             ..\..\src\uKernel\main.o
+r1                  0x4               ..\..\src\uKernel\port.o
 
 Discarded input sections
 
- .data          0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
- .bss           0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
- .data          0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccFgCcI1.o
- .data          0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccu8kER2.o
- .bss           0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccu8kER2.o
- .data          0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccSzFIV6.o
- .data          0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\cccvcrTo.o
- .bss           0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\cccvcrTo.o
- .data          0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccAIHEDS.o
- .bss           0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccAIHEDS.o
- .data          0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccO2Yb3x.o
- .bss           0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccO2Yb3x.o
- .data          0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccUFO42o.o
- .data          0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccdEBipv.o
- .data          0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccUsF28M.o
- .bss           0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccUsF28M.o
- .data          0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccdJblcf.o
- .bss           0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccdJblcf.o
- .data          0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccQvlepO.o
- .bss           0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccQvlepO.o
- .data          0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccjRnxww.o
- .bss           0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccjRnxww.o
- .data          0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccO5bZkr.o
- .bss           0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccO5bZkr.o
- .text          0x00000000      0x2a0 C:\Users\hlias\AppData\Local\Temp\ccfQRTSy.o
- .data          0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccfQRTSy.o
- .bss           0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccfQRTSy.o
- .text          0x00000000      0xb80 C:\Users\hlias\AppData\Local\Temp\cczgd2sI.o
- .data          0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\cczgd2sI.o
- .bss           0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\cczgd2sI.o
- .rodata        0x00000000       0x28 C:\Users\hlias\AppData\Local\Temp\cczgd2sI.o
- .data          0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\cct3a3l4.o
- .bss           0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\cct3a3l4.o
- .data          0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\cclJ5TTH.o
- .bss           0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\cclJ5TTH.o
- .text          0x00000000      0x28c C:\Users\hlias\AppData\Local\Temp\ccPqXNFu.o
- .data          0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccPqXNFu.o
- .bss           0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccPqXNFu.o
- .bss           0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccrYPDvp.o
- .data          0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccfOUIpv.o
- .bss           0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccfOUIpv.o
- .data          0x00000000        0x0 C:\Users\hlias\AppData\Local\Temp\ccMoubNy.o
+ .data          0x00000000        0x0 ..\..\src\uKernel\main.o
+ .bss           0x00000000        0x0 ..\..\src\uKernel\main.o
+ .data          0x00000000        0x0 ..\..\src\uKernel\heap.o
+ .data          0x00000000        0x0 ..\..\src\uKernel\hooks.o
+ .bss           0x00000000        0x0 ..\..\src\uKernel\hooks.o
+ .data          0x00000000        0x0 ..\..\src\uKernel\kernel.o
+ .data          0x00000000        0x0 ..\..\src\uKernel\message_queue.o
+ .bss           0x00000000        0x0 ..\..\src\uKernel\message_queue.o
+ .data          0x00000000        0x0 ..\..\src\uKernel\port.o
+ .bss           0x00000000        0x0 ..\..\src\uKernel\port.o
+ .data          0x00000000        0x0 ..\..\src\uKernel\sem.o
+ .bss           0x00000000        0x0 ..\..\src\uKernel\sem.o
+ .data          0x00000000        0x0 ..\..\src\uKernel\task.o
+ .data          0x00000000        0x0 ..\..\src\uKernel\time.o
+ .data          0x00000000        0x0 ..\..\src\uKernel\wait_queue.o
+ .bss           0x00000000        0x0 ..\..\src\uKernel\wait_queue.o
+ .data          0x00000000        0x0 ..\..\lpc17xx_lib\source\lpc17xx_timer.o
+ .bss           0x00000000        0x0 ..\..\lpc17xx_lib\source\lpc17xx_timer.o
+ .data          0x00000000        0x0 ..\..\src\cmsis_boot\startup\cr_startup_lpc17.o
+ .bss           0x00000000        0x0 ..\..\src\cmsis_boot\startup\cr_startup_lpc17.o
+ .data          0x00000000        0x0 ..\..\lpc17xx_lib\source\lpc17xx_clkpwr.o
+ .bss           0x00000000        0x0 ..\..\lpc17xx_lib\source\lpc17xx_clkpwr.o
+ .bss           0x00000000        0x0 ..\..\src\cmsis_boot\system_LPC17xx.o
+ .text          0x00000000      0x28c ..\..\src\cmsis\core_cm3.o
+ .data          0x00000000        0x0 ..\..\src\cmsis\core_cm3.o
+ .bss           0x00000000        0x0 ..\..\src\cmsis\core_cm3.o
+ .data          0x00000000        0x0 ..\..\lpc17xx_lib\source\lpc17xx_libcfg_default.o
+ .bss           0x00000000        0x0 ..\..\lpc17xx_lib\source\lpc17xx_libcfg_default.o
  .data          0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_addsubsf3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_addsubsf3.o)
  .data          0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_muldivsf3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_muldivsf3.o)
- .data          0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_aeabi_uldivmod.o)
- .bss           0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_aeabi_uldivmod.o)
- .data          0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(bpabi.o)
- .bss           0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(bpabi.o)
- .ARM.extab     0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(bpabi.o)
- .data          0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(unwind-arm.o)
- .bss           0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(unwind-arm.o)
- .data          0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(libunwind.o)
- .bss           0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(libunwind.o)
- .data          0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(pr-support.o)
- .bss           0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(pr-support.o)
- .data          0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_dvmd_tls.o)
- .bss           0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_dvmd_tls.o)
- .data          0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_divdi3.o)
- .bss           0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_divdi3.o)
- .ARM.extab     0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_divdi3.o)
- .data          0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_udivdi3.o)
- .bss           0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_udivdi3.o)
- .ARM.extab     0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_udivdi3.o)
  .data          0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memcpy.o)
  .bss           0x00000000        0x0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memcpy.o)
 
@@ -142,427 +90,290 @@ ram1             0x2007c000         0x00008000         xrw
 
 Linker script and memory map
 
-LOAD C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
-LOAD C:\Users\hlias\AppData\Local\Temp\ccFgCcI1.o
-LOAD C:\Users\hlias\AppData\Local\Temp\ccu8kER2.o
-LOAD C:\Users\hlias\AppData\Local\Temp\ccSzFIV6.o
-LOAD C:\Users\hlias\AppData\Local\Temp\cccvcrTo.o
-LOAD C:\Users\hlias\AppData\Local\Temp\ccAIHEDS.o
-LOAD C:\Users\hlias\AppData\Local\Temp\ccO2Yb3x.o
-LOAD C:\Users\hlias\AppData\Local\Temp\ccmJyVTl.o
-LOAD C:\Users\hlias\AppData\Local\Temp\ccUFO42o.o
-LOAD C:\Users\hlias\AppData\Local\Temp\ccdEBipv.o
-LOAD C:\Users\hlias\AppData\Local\Temp\ccUsF28M.o
-LOAD C:\Users\hlias\AppData\Local\Temp\ccdJblcf.o
-LOAD C:\Users\hlias\AppData\Local\Temp\ccQvlepO.o
-LOAD C:\Users\hlias\AppData\Local\Temp\ccjRnxww.o
-LOAD C:\Users\hlias\AppData\Local\Temp\ccO5bZkr.o
-LOAD C:\Users\hlias\AppData\Local\Temp\ccfQRTSy.o
-LOAD C:\Users\hlias\AppData\Local\Temp\cczgd2sI.o
-LOAD C:\Users\hlias\AppData\Local\Temp\cct3a3l4.o
-LOAD C:\Users\hlias\AppData\Local\Temp\cclJ5TTH.o
-LOAD C:\Users\hlias\AppData\Local\Temp\ccPqXNFu.o
-LOAD C:\Users\hlias\AppData\Local\Temp\ccrYPDvp.o
-LOAD C:\Users\hlias\AppData\Local\Temp\ccfOUIpv.o
-LOAD C:\Users\hlias\AppData\Local\Temp\ccMoubNy.o
+LOAD ..\..\src\uKernel\main.o
+LOAD ..\..\src\uKernel\heap.o
+LOAD ..\..\src\uKernel\hooks.o
+LOAD ..\..\src\uKernel\kernel.o
+LOAD ..\..\src\uKernel\message_queue.o
+LOAD ..\..\src\uKernel\port.o
+LOAD ..\..\src\uKernel\sem.o
+LOAD ..\..\src\uKernel\stats.o
+LOAD ..\..\src\uKernel\task.o
+LOAD ..\..\src\uKernel\time.o
+LOAD ..\..\src\uKernel\wait_queue.o
+LOAD ..\..\lpc17xx_lib\source\lpc17xx_timer.o
+LOAD ..\..\src\cmsis_boot\startup\cr_startup_lpc17.o
+LOAD ..\..\lpc17xx_lib\source\lpc17xx_clkpwr.o
+LOAD ..\..\src\cmsis_boot\system_LPC17xx.o
+LOAD ..\..\src\cmsis\core_cm3.o
+LOAD ..\..\lpc17xx_lib\source\lpc17xx_libcfg_default.o
                 0x10008000                _eram = 0x10008000
 
-.text           0x00000000     0x6220
+.text           0x00000000     0x3a54
  *(.isr_vector .isr_vector.*)
- .isr_vector    0x00000000       0xcc C:\Users\hlias\AppData\Local\Temp\ccfOUIpv.o
+ .isr_vector    0x00000000       0xcc ..\..\src\cmsis_boot\startup\cr_startup_lpc17.o
                 0x00000000                g_pfnVectors
  *(.text .text.* .gnu.linkonce.t.*)
- .text          0x000000cc      0x6f0 C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
+ .text          0x000000cc      0x6a4 ..\..\src\uKernel\main.o
                 0x0000021c                main
                 0x00000404                Task1
                 0x00000474                ADC_IRQHandler
-                0x000004b4                ADC_Task
-                0x000004c8                TaskMatrix
-                0x000005c8                Task2
-                0x00000654                Task3
-                0x00000710                Task4
-                0x0000073c                Task5
-                0x00000780                Task6
- .text          0x000007bc      0x1f8 C:\Users\hlias\AppData\Local\Temp\ccFgCcI1.o
-                0x0000083c                heapInit
-                0x00000898                portMalloc
-                0x00000948                portFree
-                0x0000095c                getHeapSize
- .text          0x000009b4       0x18 C:\Users\hlias\AppData\Local\Temp\ccu8kER2.o
-                0x000009b4                idleTaskHook
-                0x000009c0                contextSwitchHook
- .text          0x000009cc      0x23c C:\Users\hlias\AppData\Local\Temp\ccSzFIV6.o
-                0x00000a4c                uKern_Init
-                0x00000a64                StartOS
-                0x00000ad0                schedule
-                0x00000b6c                IdleTask
-                0x00000b94                yield
- .text          0x00000c08      0x3c0 C:\Users\hlias\AppData\Local\Temp\cccvcrTo.o
-                0x00000cac                queueCreate
-                0x00000d5c                queueDelete
-                0x00000d74                queueSendToTail
-                0x00000e2c                queueReceive
-                0x00000f08                queuePeek
-                0x00000f54                queueGetNumberOfMessages
- .text          0x00000fc8      0x38c C:\Users\hlias\AppData\Local\Temp\ccAIHEDS.o
-                0x00001044                StkInit
-                0x000010c8                OSStartFirstTask
-                0x000010e4                start_first_task
-                0x00001108                OSTickStart
-                0x00001120                OSTickStop
-                0x00001144                OSTickConfig
-                0x000011a0                prvGetRegistersFromStack
-                0x0000121c                cpsie
-                0x00001228                cpsid
-                0x00001234                context_switch
-                0x00001264                hw_init
-                0x000012a0                HardFaultHndlr
-                0x000012bc                port_reset_stat_timer_val
-                0x000012cc                port_stat_timer_init
-                0x0000133c                port_get_stat_timer_val
- .text          0x00001354      0x218 C:\Users\hlias\AppData\Local\Temp\ccO2Yb3x.o
-                0x000013f8                sem_init
-                0x00001434                sem_free
-                0x0000144c                sem_get
-                0x00001508                sem_release
- .text          0x0000156c      0x250 C:\Users\hlias\AppData\Local\Temp\ccmJyVTl.o
-                0x0000158c                StatTask
-                0x00001674                statsInit
-                0x000016a8                getCpuUtilization
-                0x000016c0                stats_hook
- .text          0x000017bc      0x4e0 C:\Users\hlias\AppData\Local\Temp\ccUFO42o.o
-                0x0000188c                tasksInit
-                0x00001920                task_create
-                0x00001a70                getTCBbyPrio
-                0x00001aa0                prioEnable
-                0x00001b38                taskEnable
-                0x00001bc8                prioDisable
-                0x00001c6c                idleTaskInit
- .text          0x00001c9c      0x2a0 C:\Users\hlias\AppData\Local\Temp\ccdEBipv.o
-                0x00001df8                OSTick
-                0x00001e8c                TickTasks
-                0x00001e98                timeDelay
-                0x00001f24                getTickCount
- .text          0x00001f3c      0x2a8 C:\Users\hlias\AppData\Local\Temp\ccUsF28M.o
-                0x000020cc                addTaskToWaitQueue
-                0x00002134                removeTaskFromWaitQueue
-                0x0000219c                removeHeadFromWaitQueue
- .text          0x000021e4      0x19c C:\Users\hlias\AppData\Local\Temp\ccdJblcf.o
-                0x000021e4                dotmat_init
-                0x00002224                plot_col
-                0x00002264                unplot_col
-                0x000022a0                plot_row
-                0x000022dc                unplot_row
-                0x0000231c                plot_val
-                0x00002340                plot_xy
-                0x00002360                unplot_xy
- .text          0x00002380      0x2ac C:\Users\hlias\AppData\Local\Temp\ccQvlepO.o
-                0x0000238c                CLKPWR_SetPCLKDiv
-                0x00002458                CLKPWR_GetPCLKSEL
-                0x000024ac                CLKPWR_GetPCLK
-                0x00002520                CLKPWR_ConfigPPWR
-                0x00002598                CLKPWR_Sleep
-                0x000025b4                CLKPWR_DeepSleep
-                0x000025dc                CLKPWR_PowerDown
-                0x00002604                CLKPWR_DeepPowerDown
- .text          0x0000262c        0xc C:\Users\hlias\AppData\Local\Temp\ccjRnxww.o
-                0x0000262c                check_failed
- .text          0x00002638      0x8b0 C:\Users\hlias\AppData\Local\Temp\ccO5bZkr.o
-                0x000027ac                GPIO_SetDir
-                0x00002800                GPIO_SetValue
-                0x0000282c                GPIO_ClearValue
-                0x00002858                GPIO_ReadValue
-                0x00002888                GPIO_IntCmd
-                0x0000290c                GPIO_GetIntStatus
-                0x000029cc                GPIO_ClearInt
-                0x00002a0c                FIO_SetDir
-                0x00002a34                FIO_SetValue
-                0x00002a54                FIO_ClearValue
-                0x00002a74                FIO_ReadValue
-                0x00002a94                FIO_IntCmd
-                0x00002abc                FIO_GetIntStatus
-                0x00002ae8                FIO_ClearInt
-                0x00002b08                FIO_SetMask
-                0x00002b5c                FIO_HalfWordSetDir
-                0x00002bf0                FIO_HalfWordSetMask
-                0x00002c84                FIO_HalfWordSetValue
-                0x00002cc4                FIO_HalfWordClearValue
-                0x00002d04                FIO_HalfWordReadValue
-                0x00002d48                FIO_ByteSetDir
-                0x00002db8                FIO_ByteSetMask
-                0x00002e30                FIO_ByteSetValue
-                0x00002e6c                FIO_ByteClearValue
-                0x00002ea8                FIO_ByteReadValue
- .text          0x00002ee8      0x578 C:\Users\hlias\AppData\Local\Temp\cct3a3l4.o
-                0x00002ee8                ADC_Init
-                0x00002f8c                ADC_DeInit
-                0x00002fd4                ADC_GetData
-                0x0000300c                ADC_StartCmd
-                0x0000309c                ADC_BurstCmd
-                0x000030ec                ADC_PowerdownCmd
-                0x0000313c                ADC_EdgeStartConfig
-                0x000031a8                ADC_IntConfig
-                0x0000325c                ADC_ChannelCmd
-                0x000032cc                ADC_ChannelGetData
-                0x00003324                ADC_ChannelGetStatus
-                0x000033b0                ADC_GlobalGetData
-                0x000033e4                ADC_GlobalGetStatus
- .text          0x00003460      0xb8c C:\Users\hlias\AppData\Local\Temp\cclJ5TTH.o
-                0x00003598                TIM_GetIntStatus
-                0x0000364c                TIM_GetIntCaptureStatus
-                0x00003704                TIM_ClearIntPending
-                0x000037a4                TIM_ClearIntCapturePending
-                0x00003848                TIM_ConfigStructInit
-                0x00003888                TIM_Init
-                0x00003a54                TIM_DeInit
-                0x00003b18                TIM_Cmd
-                0x00003b90                TIM_ResetCounter
-                0x00003bfc                TIM_ConfigMatch
-                0x00003dc8                TIM_UpdateMatchValue
-                0x00003e60                TIM_ConfigCapture
-                0x00003f68                TIM_GetCaptureValue
- .text          0x00003fec      0x454 C:\Users\hlias\AppData\Local\Temp\ccrYPDvp.o
-                0x00003fec                SystemCoreClockUpdate
-                0x00004200                SystemInit
- .text          0x00004440       0xb8 C:\Users\hlias\AppData\Local\Temp\ccfOUIpv.o
-                0x00004440                ResetISR
-                0x000044a0                NMI_Handler
-                0x000044a8                HardFault_Handler
-                0x000044b0                MemManage_Handler
-                0x000044b8                BusFault_Handler
-                0x000044c0                UsageFault_Handler
-                0x000044c8                SVCall_Handler
-                0x000044d0                DebugMon_Handler
-                0x000044d8                PendSV_Handler
-                0x000044e0                SysTick_Handler
-                0x000044e8                PWM1_IRQHandler
-                0x000044e8                I2C1_IRQHandler
-                0x000044e8                EINT2_IRQHandler
-                0x000044e8                UART1_IRQHandler
-                0x000044e8                EINT3_IRQHandler
-                0x000044e8                CANActivity_IRQHandler
-                0x000044e8                TIMER3_IRQHandler
-                0x000044e8                UART0_IRQHandler
-                0x000044e8                I2C0_IRQHandler
-                0x000044e8                IntDefaultHandler
-                0x000044e8                PLL0_IRQHandler
-                0x000044e8                RIT_IRQHandler
-                0x000044e8                PLL1_IRQHandler
-                0x000044e8                SSP0_IRQHandler
-                0x000044e8                I2S_IRQHandler
-                0x000044e8                I2C2_IRQHandler
-                0x000044e8                RTC_IRQHandler
-                0x000044e8                TIMER0_IRQHandler
-                0x000044e8                SPI_IRQHandler
-                0x000044e8                EINT1_IRQHandler
-                0x000044e8                TIMER1_IRQHandler
-                0x000044e8                UART2_IRQHandler
-                0x000044e8                SSP1_IRQHandler
-                0x000044e8                USB_IRQHandler
-                0x000044e8                BOD_IRQHandler
-                0x000044e8                USBActivity_IRQHandler
-                0x000044e8                WDT_IRQHandler
-                0x000044e8                QEI_IRQHandler
-                0x000044e8                EINT0_IRQHandler
-                0x000044e8                TIMER2_IRQHandler
-                0x000044e8                DMA_IRQHandler
-                0x000044e8                CAN_IRQHandler
-                0x000044e8                UART3_IRQHandler
-                0x000044e8                MCPWM_IRQHandler
-                0x000044e8                ENET_IRQHandler
- .text          0x000044f8      0x128 C:\Users\hlias\AppData\Local\Temp\ccMoubNy.o
-                0x000044f8                _sbrk
-                0x00004554                link
-                0x00004570                _close
-                0x00004588                _fstat
-                0x000045ac                _isatty
-                0x000045c4                _lseek
-                0x000045e0                _read
-                0x000045fc                _write
-                0x00004618                abort
- .text          0x00004620      0x21c c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_addsubsf3.o)
-                0x00004620                __aeabi_frsub
-                0x00004628                __subsf3
-                0x00004628                __aeabi_fsub
-                0x0000462c                __aeabi_fadd
-                0x0000462c                __addsf3
-                0x0000478c                __aeabi_ui2f
-                0x0000478c                __floatunsisf
-                0x00004794                __aeabi_i2f
-                0x00004794                __floatsisf
-                0x000047b0                __aeabi_ul2f
-                0x000047b0                __floatundisf
-                0x000047c0                __aeabi_l2f
-                0x000047c0                __floatdisf
- .text          0x0000483c      0x2a0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_muldivsf3.o)
-                0x0000483c                __mulsf3
-                0x0000483c                __aeabi_fmul
-                0x000049a4                __aeabi_fdiv
-                0x000049a4                __divsf3
- .text          0x00004adc       0x2c c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_aeabi_uldivmod.o)
-                0x00004adc                __aeabi_uldivmod
- .text          0x00004b08       0x5c c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(bpabi.o)
-                0x00004b08                __gnu_ldivmod_helper
-                0x00004b38                __gnu_uldivmod_helper
- .text          0x00004b64      0xb4c c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(unwind-arm.o)
-                0x00004e0c                _Unwind_VRS_Get
-                0x00004e4c                _Unwind_VRS_Set
-                0x000051a4                __aeabi_unwind_cpp_pr2
-                0x000051a8                __aeabi_unwind_cpp_pr1
-                0x000051ac                __aeabi_unwind_cpp_pr0
-                0x000051b0                _Unwind_VRS_Pop
-                0x00005564                _Unwind_GetCFA
-                0x00005568                __gnu_Unwind_RaiseException
-                0x000055c8                __gnu_Unwind_ForcedUnwind
-                0x000055dc                __gnu_Unwind_Resume
-                0x00005618                __gnu_Unwind_Resume_or_Rethrow
-                0x00005628                _Unwind_Complete
-                0x0000562c                _Unwind_DeleteException
-                0x0000563c                __gnu_Unwind_Backtrace
- .text          0x000056b0      0x1ac c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(libunwind.o)
-                0x000056b0                __restore_core_regs
-                0x000056b0                restore_core_regs
-                0x000056c8                __gnu_Unwind_Restore_VFP
-                0x000056d0                __gnu_Unwind_Save_VFP
-                0x000056d8                __gnu_Unwind_Restore_VFP_D
-                0x000056e0                __gnu_Unwind_Save_VFP_D
-                0x000056e8                __gnu_Unwind_Restore_VFP_D_16_to_31
-                0x000056f0                __gnu_Unwind_Save_VFP_D_16_to_31
-                0x000056f8                __gnu_Unwind_Restore_WMMXD
-                0x0000573c                __gnu_Unwind_Save_WMMXD
-                0x00005780                __gnu_Unwind_Restore_WMMXC
-                0x00005794                __gnu_Unwind_Save_WMMXC
-                0x000057a8                ___Unwind_RaiseException
-                0x000057a8                _Unwind_RaiseException
-                0x000057cc                _Unwind_Resume
-                0x000057cc                ___Unwind_Resume
-                0x000057f0                _Unwind_Resume_or_Rethrow
-                0x000057f0                ___Unwind_Resume_or_Rethrow
-                0x00005814                _Unwind_ForcedUnwind
-                0x00005814                ___Unwind_ForcedUnwind
-                0x00005838                ___Unwind_Backtrace
-                0x00005838                _Unwind_Backtrace
- .text          0x0000585c      0x374 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(pr-support.o)
-                0x000058b0                __gnu_unwind_execute
-                0x00005b78                __gnu_unwind_frame
-                0x00005ba0                _Unwind_GetRegionStart
-                0x00005bac                _Unwind_GetLanguageSpecificData
-                0x00005bc0                _Unwind_GetDataRelBase
-                0x00005bc8                _Unwind_GetTextRelBase
- .text          0x00005bd0        0x4 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_dvmd_tls.o)
-                0x00005bd0                __aeabi_idiv0
-                0x00005bd0                __aeabi_ldiv0
- .text          0x00005bd4      0x2c0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_divdi3.o)
-                0x00005bd4                __divdi3
- .text          0x00005e94      0x28c c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_udivdi3.o)
-                0x00005e94                __udivdi3
- .text          0x00006120       0x84 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memcpy.o)
-                0x00006120                memcpy
+                0x00000484                ADC_Task
+                0x00000498                TaskMatrix
+                0x0000057c                Task2
+                0x00000608                Task3
+                0x000006c4                Task4
+                0x000006f0                Task5
+                0x00000734                Task6
+ .text          0x00000770      0x1f8 ..\..\src\uKernel\heap.o
+                0x000007f0                heapInit
+                0x0000084c                portMalloc
+                0x000008fc                portFree
+                0x00000910                getHeapSize
+ .text          0x00000968       0x18 ..\..\src\uKernel\hooks.o
+                0x00000968                idleTaskHook
+                0x00000974                contextSwitchHook
+ .text          0x00000980      0x23c ..\..\src\uKernel\kernel.o
+                0x00000a00                uKern_Init
+                0x00000a18                StartOS
+                0x00000a84                schedule
+                0x00000b20                IdleTask
+                0x00000b48                yield
+ .text          0x00000bbc      0x3c0 ..\..\src\uKernel\message_queue.o
+                0x00000c60                queueCreate
+                0x00000d10                queueDelete
+                0x00000d28                queueSendToTail
+                0x00000de0                queueReceive
+                0x00000ebc                queuePeek
+                0x00000f08                queueGetNumberOfMessages
+ .text          0x00000f7c      0x38c ..\..\src\uKernel\port.o
+                0x00000ff8                StkInit
+                0x0000107c                OSStartFirstTask
+                0x00001098                start_first_task
+                0x000010bc                OSTickStart
+                0x000010d4                OSTickStop
+                0x000010f8                OSTickConfig
+                0x00001154                prvGetRegistersFromStack
+                0x000011d0                cpsie
+                0x000011dc                cpsid
+                0x000011e8                context_switch
+                0x00001218                hw_init
+                0x00001254                HardFaultHndlr
+                0x00001270                port_reset_stat_timer_val
+                0x00001280                port_stat_timer_init
+                0x000012f0                port_get_stat_timer_val
+ .text          0x00001308      0x218 ..\..\src\uKernel\sem.o
+                0x000013ac                sem_init
+                0x000013e8                sem_free
+                0x00001400                sem_get
+                0x000014bc                sem_release
+ .text          0x00001520      0x250 ..\..\src\uKernel\stats.o
+                0x00001540                StatTask
+                0x00001628                statsInit
+                0x0000165c                getCpuUtilization
+                0x00001674                stats_hook
+ .text          0x00001770      0x4e0 ..\..\src\uKernel\task.o
+                0x00001840                tasksInit
+                0x000018d4                task_create
+                0x00001a24                getTCBbyPrio
+                0x00001a54                prioEnable
+                0x00001aec                taskEnable
+                0x00001b7c                prioDisable
+                0x00001c20                idleTaskInit
+ .text          0x00001c50      0x2a0 ..\..\src\uKernel\time.o
+                0x00001dac                OSTick
+                0x00001e40                TickTasks
+                0x00001e4c                timeDelay
+                0x00001ed8                getTickCount
+ .text          0x00001ef0      0x2a8 ..\..\src\uKernel\wait_queue.o
+                0x00002080                addTaskToWaitQueue
+                0x000020e8                removeTaskFromWaitQueue
+                0x00002150                removeHeadFromWaitQueue
+ .text          0x00002198      0xb64 ..\..\lpc17xx_lib\source\lpc17xx_timer.o
+                0x000022a8                TIM_GetIntStatus
+                0x0000235c                TIM_GetIntCaptureStatus
+                0x00002414                TIM_ClearIntPending
+                0x000024b4                TIM_ClearIntCapturePending
+                0x00002558                TIM_ConfigStructInit
+                0x00002598                TIM_Init
+                0x00002764                TIM_DeInit
+                0x00002828                TIM_Cmd
+                0x000028a0                TIM_ResetCounter
+                0x0000290c                TIM_ConfigMatch
+                0x00002ad8                TIM_UpdateMatchValue
+                0x00002b70                TIM_ConfigCapture
+                0x00002c78                TIM_GetCaptureValue
+ .text          0x00002cfc       0xb8 ..\..\src\cmsis_boot\startup\cr_startup_lpc17.o
+                0x00002cfc                ResetISR
+                0x00002d5c                NMI_Handler
+                0x00002d64                HardFault_Handler
+                0x00002d6c                MemManage_Handler
+                0x00002d74                BusFault_Handler
+                0x00002d7c                UsageFault_Handler
+                0x00002d84                SVCall_Handler
+                0x00002d8c                DebugMon_Handler
+                0x00002d94                PendSV_Handler
+                0x00002d9c                SysTick_Handler
+                0x00002da4                PWM1_IRQHandler
+                0x00002da4                I2C1_IRQHandler
+                0x00002da4                EINT2_IRQHandler
+                0x00002da4                UART1_IRQHandler
+                0x00002da4                EINT3_IRQHandler
+                0x00002da4                CANActivity_IRQHandler
+                0x00002da4                TIMER3_IRQHandler
+                0x00002da4                UART0_IRQHandler
+                0x00002da4                I2C0_IRQHandler
+                0x00002da4                IntDefaultHandler
+                0x00002da4                PLL0_IRQHandler
+                0x00002da4                RIT_IRQHandler
+                0x00002da4                PLL1_IRQHandler
+                0x00002da4                SSP0_IRQHandler
+                0x00002da4                I2S_IRQHandler
+                0x00002da4                I2C2_IRQHandler
+                0x00002da4                RTC_IRQHandler
+                0x00002da4                TIMER0_IRQHandler
+                0x00002da4                SPI_IRQHandler
+                0x00002da4                EINT1_IRQHandler
+                0x00002da4                TIMER1_IRQHandler
+                0x00002da4                UART2_IRQHandler
+                0x00002da4                SSP1_IRQHandler
+                0x00002da4                USB_IRQHandler
+                0x00002da4                BOD_IRQHandler
+                0x00002da4                USBActivity_IRQHandler
+                0x00002da4                WDT_IRQHandler
+                0x00002da4                QEI_IRQHandler
+                0x00002da4                EINT0_IRQHandler
+                0x00002da4                TIMER2_IRQHandler
+                0x00002da4                DMA_IRQHandler
+                0x00002da4                CAN_IRQHandler
+                0x00002da4                UART3_IRQHandler
+                0x00002da4                MCPWM_IRQHandler
+                0x00002da4                ENET_IRQHandler
+ .text          0x00002db4      0x2ac ..\..\lpc17xx_lib\source\lpc17xx_clkpwr.o
+                0x00002dc0                CLKPWR_SetPCLKDiv
+                0x00002e8c                CLKPWR_GetPCLKSEL
+                0x00002ee0                CLKPWR_GetPCLK
+                0x00002f54                CLKPWR_ConfigPPWR
+                0x00002fcc                CLKPWR_Sleep
+                0x00002fe8                CLKPWR_DeepSleep
+                0x00003010                CLKPWR_PowerDown
+                0x00003038                CLKPWR_DeepPowerDown
+ .text          0x00003060      0x454 ..\..\src\cmsis_boot\system_LPC17xx.o
+                0x00003060                SystemCoreClockUpdate
+                0x00003274                SystemInit
+ .text          0x000034b4        0xc ..\..\lpc17xx_lib\source\lpc17xx_libcfg_default.o
+                0x000034b4                check_failed
+ .text          0x000034c0      0x21c c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_addsubsf3.o)
+                0x000034c0                __aeabi_frsub
+                0x000034c8                __subsf3
+                0x000034c8                __aeabi_fsub
+                0x000034cc                __aeabi_fadd
+                0x000034cc                __addsf3
+                0x0000362c                __aeabi_ui2f
+                0x0000362c                __floatunsisf
+                0x00003634                __aeabi_i2f
+                0x00003634                __floatsisf
+                0x00003650                __aeabi_ul2f
+                0x00003650                __floatundisf
+                0x00003660                __aeabi_l2f
+                0x00003660                __floatdisf
+ .text          0x000036dc      0x2a0 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_muldivsf3.o)
+                0x000036dc                __mulsf3
+                0x000036dc                __aeabi_fmul
+                0x00003844                __aeabi_fdiv
+                0x00003844                __divsf3
+ .text          0x0000397c       0x84 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memcpy.o)
+                0x0000397c                memcpy
  *(.glue_7t)
  .glue_7t       0x00000000        0x0 linker stubs
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
  *(.rodata .rodata* .gnu.linkonce.r.*)
- .rodata        0x000061a4       0x28 C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
-                0x000061a4                j
- .rodata        0x000061cc       0x28 C:\Users\hlias\AppData\Local\Temp\cct3a3l4.o
- .rodata        0x000061f4       0x2c C:\Users\hlias\AppData\Local\Temp\cclJ5TTH.o
+ .rodata        0x00003a00       0x28 ..\..\src\uKernel\main.o
+                0x00003a00                j
+ .rodata        0x00003a28       0x2c ..\..\lpc17xx_lib\source\lpc17xx_timer.o
 
-.vfp11_veneer   0x00006220        0x0
+.vfp11_veneer   0x00003a54        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x00006220        0x0
+.v4_bx          0x00003a54        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.ARM.extab      0x00006220       0x30
+.ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
- .ARM.extab     0x00006220       0x18 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(unwind-arm.o)
- .ARM.extab     0x00006238       0x18 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(pr-support.o)
-                0x00006250                __exidx_start = .
+                0x00003a54                __exidx_start = .
 
-.ARM.exidx      0x00006250       0xe8
+.ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x00006250       0x10 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(bpabi.o)
- .ARM.exidx     0x00006260       0x88 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(unwind-arm.o)
-                                 0xc0 (size before relaxing)
- .ARM.exidx     0x000062e8       0x38 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(pr-support.o)
-                                 0x48 (size before relaxing)
- .ARM.exidx     0x00006320        0x8 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_divdi3.o)
- .ARM.exidx     0x00006328       0x10 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_udivdi3.o)
-                                  0x8 (size before relaxing)
-                0x00006338                __exidx_end = .
-                0x00006338                . = ALIGN (0x4)
-                0x00006338                _etext = .
-                0x00006338                _sidata = .
+                0x00003a54                __exidx_end = .
+                0x00003a54                . = ALIGN (0x4)
+                0x00003a54                _etext = .
+                0x00003a54                _sidata = .
 
-.data           0x10004000        0x8 load address 0x00006338
+.data           0x10004000        0x8 load address 0x00003a54
                 0x10004000                _sdata = .
  *(.data .data.*)
- .data          0x10004000        0x4 C:\Users\hlias\AppData\Local\Temp\ccmJyVTl.o
+ .data          0x10004000        0x4 ..\..\src\uKernel\stats.o
                 0x10004000                first
- .data          0x10004004        0x4 C:\Users\hlias\AppData\Local\Temp\ccrYPDvp.o
+ .data          0x10004004        0x4 ..\..\src\cmsis_boot\system_LPC17xx.o
                 0x10004004                SystemCoreClock
                 0x10004008                . = ALIGN (0x4)
                 0x10004008                _edata = .
 
-.bss            0x2007c000     0x3b04
+.bss            0x2007c000     0x3aec
                 0x2007c000                _sbss = .
  *(.bss .bss.*)
- .bss           0x2007c000        0x8 C:\Users\hlias\AppData\Local\Temp\ccFgCcI1.o
- .bss           0x2007c008       0x10 C:\Users\hlias\AppData\Local\Temp\ccSzFIV6.o
+ .bss           0x2007c000        0x8 ..\..\src\uKernel\heap.o
+ .bss           0x2007c008       0x10 ..\..\src\uKernel\kernel.o
                 0x2007c008                criticalNesting
                 0x2007c00c                interruptNesting
                 0x2007c010                idleCounter
                 0x2007c014                kernel_running
- .bss           0x2007c018       0x14 C:\Users\hlias\AppData\Local\Temp\ccmJyVTl.o
- .bss           0x2007c02c        0x4 C:\Users\hlias\AppData\Local\Temp\ccUFO42o.o
+ .bss           0x2007c018       0x14 ..\..\src\uKernel\stats.o
+ .bss           0x2007c02c        0x4 ..\..\src\uKernel\task.o
                 0x2007c02c                number_of_tasks
- .bss           0x2007c030        0x4 C:\Users\hlias\AppData\Local\Temp\ccdEBipv.o
- .bss           0x2007c034        0x4 C:\Users\hlias\AppData\Local\Temp\ccMoubNy.o
+ .bss           0x2007c030        0x4 ..\..\src\uKernel\time.o
  *(COMMON)
- COMMON         0x2007c038     0x2e88 C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
-                0x2007c038                Stack3
-                0x2007c5b0                taskMatrixQueue
-                0x2007c5b4                StackMatrix
-                0x2007cb2c                Stack2
-                0x2007d0a4                PWMCfgDat
-                0x2007d0ac                Stack5
-                0x2007d624                Stack1
-                0x2007db9c                PinCfg
-                0x2007dba4                StackADC
-                0x2007e11c                task6Q
-                0x2007e120                IdleStack
-                0x2007e378                s
-                0x2007e37c                Stack6
-                0x2007e8f4                CpuUtil
-                0x2007e944                PWMMatchCfgDat
-                0x2007e948                Stack4
- COMMON         0x2007eec0      0x3f0 C:\Users\hlias\AppData\Local\Temp\ccFgCcI1.o
-                0x2007eec0                heap1
-                0x2007f2ac                heap
- COMMON         0x2007f2b0       0x20 C:\Users\hlias\AppData\Local\Temp\ccAIHEDS.o
-                0x2007f2b0                r3
-                0x2007f2b4                r0
-                0x2007f2b8                lr
-                0x2007f2bc                r2
-                0x2007f2c0                pc
-                0x2007f2c4                psr
-                0x2007f2c8                r12
-                0x2007f2cc                r1
- COMMON         0x2007f2d0      0x320 C:\Users\hlias\AppData\Local\Temp\ccmJyVTl.o
-                0x2007f2d0                utilizations
-                0x2007f460                StatTaskStack
- COMMON         0x2007f5f0      0x114 C:\Users\hlias\AppData\Local\Temp\ccUFO42o.o
-                0x2007f5f0                highestTCB
-                0x2007f5f4                currentTCB
-                0x2007f5f8                ReadyArray
-                0x2007f678                allTasksLinked
-                0x2007f680                TaskArray
-                0x2007f700                ReadyTaskBitmap
- COMMON         0x2007f704      0x400 C:\Users\hlias\AppData\Local\Temp\ccfOUIpv.o
-                0x2007f704                pulStack
-                0x2007fb04                . = ALIGN (0x4)
-                0x2007fb04                _ebss = .
+ COMMON         0x2007c034     0x2e74 ..\..\src\uKernel\main.o
+                0x2007c034                Stack3
+                0x2007c5ac                taskMatrixQueue
+                0x2007c5b0                StackMatrix
+                0x2007cb28                Stack2
+                0x2007d0a0                Stack5
+                0x2007d618                Stack1
+                0x2007db90                StackADC
+                0x2007e108                task6Q
+                0x2007e10c                IdleStack
+                0x2007e364                s
+                0x2007e368                Stack6
+                0x2007e8e0                CpuUtil
+                0x2007e930                Stack4
+ COMMON         0x2007eea8      0x3f0 ..\..\src\uKernel\heap.o
+                0x2007eea8                heap1
+                0x2007f294                heap
+ COMMON         0x2007f298       0x20 ..\..\src\uKernel\port.o
+                0x2007f298                r3
+                0x2007f29c                r0
+                0x2007f2a0                lr
+                0x2007f2a4                r2
+                0x2007f2a8                pc
+                0x2007f2ac                psr
+                0x2007f2b0                r12
+                0x2007f2b4                r1
+ COMMON         0x2007f2b8      0x320 ..\..\src\uKernel\stats.o
+                0x2007f2b8                utilizations
+                0x2007f448                StatTaskStack
+ COMMON         0x2007f5d8      0x114 ..\..\src\uKernel\task.o
+                0x2007f5d8                highestTCB
+                0x2007f5dc                currentTCB
+                0x2007f5e0                ReadyArray
+                0x2007f660                allTasksLinked
+                0x2007f668                TaskArray
+                0x2007f6e8                ReadyTaskBitmap
+ COMMON         0x2007f6ec      0x400 ..\..\src\cmsis_boot\startup\cr_startup_lpc17.o
+                0x2007f6ec                pulStack
+                0x2007faec                . = ALIGN (0x4)
+                0x2007faec                _ebss = .
 
 .co_stack       0x10004008        0x0
                 0x10004008                . = ALIGN (0x8)
@@ -576,326 +387,233 @@ LOAD c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4
 END GROUP
 OUTPUT(bin/uKernel.elf elf32-littlearm)
 
-.debug_info     0x00000000     0x8f1b
- .debug_info    0x00000000     0x100d C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
- .debug_info    0x0000100d      0x41d C:\Users\hlias\AppData\Local\Temp\ccFgCcI1.o
- .debug_info    0x0000142a       0x81 C:\Users\hlias\AppData\Local\Temp\ccu8kER2.o
- .debug_info    0x000014ab      0x623 C:\Users\hlias\AppData\Local\Temp\ccSzFIV6.o
- .debug_info    0x00001ace      0x5ad C:\Users\hlias\AppData\Local\Temp\cccvcrTo.o
- .debug_info    0x0000207b      0xac9 C:\Users\hlias\AppData\Local\Temp\ccAIHEDS.o
- .debug_info    0x00002b44      0x46b C:\Users\hlias\AppData\Local\Temp\ccO2Yb3x.o
- .debug_info    0x00002faf      0x784 C:\Users\hlias\AppData\Local\Temp\ccmJyVTl.o
- .debug_info    0x00003733      0x62e C:\Users\hlias\AppData\Local\Temp\ccUFO42o.o
- .debug_info    0x00003d61      0x5f4 C:\Users\hlias\AppData\Local\Temp\ccdEBipv.o
- .debug_info    0x00004355      0x56b C:\Users\hlias\AppData\Local\Temp\ccUsF28M.o
- .debug_info    0x000048c0      0x4fe C:\Users\hlias\AppData\Local\Temp\ccdJblcf.o
- .debug_info    0x00004dbe      0x667 C:\Users\hlias\AppData\Local\Temp\ccQvlepO.o
- .debug_info    0x00005425       0xc5 C:\Users\hlias\AppData\Local\Temp\ccjRnxww.o
- .debug_info    0x000054ea      0xe1a C:\Users\hlias\AppData\Local\Temp\ccO5bZkr.o
- .debug_info    0x00006304      0x4a6 C:\Users\hlias\AppData\Local\Temp\ccfQRTSy.o
- .debug_info    0x000067aa      0x81a C:\Users\hlias\AppData\Local\Temp\cczgd2sI.o
- .debug_info    0x00006fc4      0x604 C:\Users\hlias\AppData\Local\Temp\cct3a3l4.o
- .debug_info    0x000075c8      0x87e C:\Users\hlias\AppData\Local\Temp\cclJ5TTH.o
- .debug_info    0x00007e46      0x548 C:\Users\hlias\AppData\Local\Temp\ccPqXNFu.o
- .debug_info    0x0000838e      0x4f9 C:\Users\hlias\AppData\Local\Temp\ccrYPDvp.o
- .debug_info    0x00008887      0x251 C:\Users\hlias\AppData\Local\Temp\ccfOUIpv.o
- .debug_info    0x00008ad8      0x443 C:\Users\hlias\AppData\Local\Temp\ccMoubNy.o
+.debug_info     0x00000000     0x6249
+ .debug_info    0x00000000      0xda0 ..\..\src\uKernel\main.o
+ .debug_info    0x00000da0      0x41d ..\..\src\uKernel\heap.o
+ .debug_info    0x000011bd       0x8f ..\..\src\uKernel\hooks.o
+ .debug_info    0x0000124c      0x623 ..\..\src\uKernel\kernel.o
+ .debug_info    0x0000186f      0x5ad ..\..\src\uKernel\message_queue.o
+ .debug_info    0x00001e1c      0xab4 ..\..\src\uKernel\port.o
+ .debug_info    0x000028d0      0x46b ..\..\src\uKernel\sem.o
+ .debug_info    0x00002d3b      0x784 ..\..\src\uKernel\stats.o
+ .debug_info    0x000034bf      0x62e ..\..\src\uKernel\task.o
+ .debug_info    0x00003aed      0x5f4 ..\..\src\uKernel\time.o
+ .debug_info    0x000040e1      0x56b ..\..\src\uKernel\wait_queue.o
+ .debug_info    0x0000464c      0x870 ..\..\lpc17xx_lib\source\lpc17xx_timer.o
+ .debug_info    0x00004ebc      0x24a ..\..\src\cmsis_boot\startup\cr_startup_lpc17.o
+ .debug_info    0x00005106      0x659 ..\..\lpc17xx_lib\source\lpc17xx_clkpwr.o
+ .debug_info    0x0000575f      0x4f2 ..\..\src\cmsis_boot\system_LPC17xx.o
+ .debug_info    0x00005c51      0x541 ..\..\src\cmsis\core_cm3.o
+ .debug_info    0x00006192       0xb7 ..\..\lpc17xx_lib\source\lpc17xx_libcfg_default.o
 
-.debug_abbrev   0x00000000     0x20b8
- .debug_abbrev  0x00000000      0x2e3 C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
- .debug_abbrev  0x000002e3      0x199 C:\Users\hlias\AppData\Local\Temp\ccFgCcI1.o
- .debug_abbrev  0x0000047c       0x3f C:\Users\hlias\AppData\Local\Temp\ccu8kER2.o
- .debug_abbrev  0x000004bb      0x1e1 C:\Users\hlias\AppData\Local\Temp\ccSzFIV6.o
- .debug_abbrev  0x0000069c      0x1a1 C:\Users\hlias\AppData\Local\Temp\cccvcrTo.o
- .debug_abbrev  0x0000083d      0x256 C:\Users\hlias\AppData\Local\Temp\ccAIHEDS.o
- .debug_abbrev  0x00000a93      0x185 C:\Users\hlias\AppData\Local\Temp\ccO2Yb3x.o
- .debug_abbrev  0x00000c18      0x1bd C:\Users\hlias\AppData\Local\Temp\ccmJyVTl.o
- .debug_abbrev  0x00000dd5      0x1e6 C:\Users\hlias\AppData\Local\Temp\ccUFO42o.o
- .debug_abbrev  0x00000fbb      0x213 C:\Users\hlias\AppData\Local\Temp\ccdEBipv.o
- .debug_abbrev  0x000011ce      0x174 C:\Users\hlias\AppData\Local\Temp\ccUsF28M.o
- .debug_abbrev  0x00001342       0xfc C:\Users\hlias\AppData\Local\Temp\ccdJblcf.o
- .debug_abbrev  0x0000143e      0x170 C:\Users\hlias\AppData\Local\Temp\ccQvlepO.o
- .debug_abbrev  0x000015ae       0x66 C:\Users\hlias\AppData\Local\Temp\ccjRnxww.o
- .debug_abbrev  0x00001614      0x1c7 C:\Users\hlias\AppData\Local\Temp\ccO5bZkr.o
- .debug_abbrev  0x000017db      0x11b C:\Users\hlias\AppData\Local\Temp\ccfQRTSy.o
- .debug_abbrev  0x000018f6      0x185 C:\Users\hlias\AppData\Local\Temp\cczgd2sI.o
- .debug_abbrev  0x00001a7b      0x13b C:\Users\hlias\AppData\Local\Temp\cct3a3l4.o
- .debug_abbrev  0x00001bb6      0x1b2 C:\Users\hlias\AppData\Local\Temp\cclJ5TTH.o
- .debug_abbrev  0x00001d68       0xd5 C:\Users\hlias\AppData\Local\Temp\ccPqXNFu.o
- .debug_abbrev  0x00001e3d       0xd7 C:\Users\hlias\AppData\Local\Temp\ccrYPDvp.o
- .debug_abbrev  0x00001f14       0xc8 C:\Users\hlias\AppData\Local\Temp\ccfOUIpv.o
- .debug_abbrev  0x00001fdc       0xdc C:\Users\hlias\AppData\Local\Temp\ccMoubNy.o
+.debug_abbrev   0x00000000     0x1942
+ .debug_abbrev  0x00000000      0x2e7 ..\..\src\uKernel\main.o
+ .debug_abbrev  0x000002e7      0x199 ..\..\src\uKernel\heap.o
+ .debug_abbrev  0x00000480       0x3f ..\..\src\uKernel\hooks.o
+ .debug_abbrev  0x000004bf      0x1e1 ..\..\src\uKernel\kernel.o
+ .debug_abbrev  0x000006a0      0x1a1 ..\..\src\uKernel\message_queue.o
+ .debug_abbrev  0x00000841      0x256 ..\..\src\uKernel\port.o
+ .debug_abbrev  0x00000a97      0x185 ..\..\src\uKernel\sem.o
+ .debug_abbrev  0x00000c1c      0x1bd ..\..\src\uKernel\stats.o
+ .debug_abbrev  0x00000dd9      0x1e6 ..\..\src\uKernel\task.o
+ .debug_abbrev  0x00000fbf      0x213 ..\..\src\uKernel\time.o
+ .debug_abbrev  0x000011d2      0x174 ..\..\src\uKernel\wait_queue.o
+ .debug_abbrev  0x00001346      0x1b2 ..\..\lpc17xx_lib\source\lpc17xx_timer.o
+ .debug_abbrev  0x000014f8       0xc8 ..\..\src\cmsis_boot\startup\cr_startup_lpc17.o
+ .debug_abbrev  0x000015c0      0x170 ..\..\lpc17xx_lib\source\lpc17xx_clkpwr.o
+ .debug_abbrev  0x00001730       0xd7 ..\..\src\cmsis_boot\system_LPC17xx.o
+ .debug_abbrev  0x00001807       0xd5 ..\..\src\cmsis\core_cm3.o
+ .debug_abbrev  0x000018dc       0x66 ..\..\lpc17xx_lib\source\lpc17xx_libcfg_default.o
 
-.debug_loc      0x00000000     0x3262
- .debug_loc     0x00000000      0x32a C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
- .debug_loc     0x0000032a      0x164 C:\Users\hlias\AppData\Local\Temp\ccFgCcI1.o
- .debug_loc     0x0000048e       0x58 C:\Users\hlias\AppData\Local\Temp\ccu8kER2.o
- .debug_loc     0x000004e6      0x190 C:\Users\hlias\AppData\Local\Temp\ccSzFIV6.o
- .debug_loc     0x00000676      0x250 C:\Users\hlias\AppData\Local\Temp\cccvcrTo.o
- .debug_loc     0x000008c6      0x308 C:\Users\hlias\AppData\Local\Temp\ccAIHEDS.o
- .debug_loc     0x00000bce      0x1a8 C:\Users\hlias\AppData\Local\Temp\ccO2Yb3x.o
- .debug_loc     0x00000d76      0x10c C:\Users\hlias\AppData\Local\Temp\ccmJyVTl.o
- .debug_loc     0x00000e82      0x2c0 C:\Users\hlias\AppData\Local\Temp\ccUFO42o.o
- .debug_loc     0x00001142      0x1bc C:\Users\hlias\AppData\Local\Temp\ccdEBipv.o
- .debug_loc     0x000012fe      0x2c0 C:\Users\hlias\AppData\Local\Temp\ccUsF28M.o
- .debug_loc     0x000015be      0x1b4 C:\Users\hlias\AppData\Local\Temp\ccdJblcf.o
- .debug_loc     0x00001772      0x1bc C:\Users\hlias\AppData\Local\Temp\ccQvlepO.o
- .debug_loc     0x0000192e       0x38 C:\Users\hlias\AppData\Local\Temp\ccjRnxww.o
- .debug_loc     0x00001966      0x620 C:\Users\hlias\AppData\Local\Temp\ccO5bZkr.o
- .debug_loc     0x00001f86      0x150 C:\Users\hlias\AppData\Local\Temp\ccfQRTSy.o
- .debug_loc     0x000020d6      0x310 C:\Users\hlias\AppData\Local\Temp\cczgd2sI.o
- .debug_loc     0x000023e6      0x2d8 C:\Users\hlias\AppData\Local\Temp\cct3a3l4.o
- .debug_loc     0x000026be      0x380 C:\Users\hlias\AppData\Local\Temp\cclJ5TTH.o
- .debug_loc     0x00002a3e      0x3f0 C:\Users\hlias\AppData\Local\Temp\ccPqXNFu.o
- .debug_loc     0x00002e2e       0x58 C:\Users\hlias\AppData\Local\Temp\ccrYPDvp.o
- .debug_loc     0x00002e86      0x1f0 C:\Users\hlias\AppData\Local\Temp\ccfOUIpv.o
- .debug_loc     0x00003076      0x1ec C:\Users\hlias\AppData\Local\Temp\ccMoubNy.o
+.debug_loc      0x00000000     0x215e
+ .debug_loc     0x00000000      0x31e ..\..\src\uKernel\main.o
+ .debug_loc     0x0000031e      0x164 ..\..\src\uKernel\heap.o
+ .debug_loc     0x00000482       0x58 ..\..\src\uKernel\hooks.o
+ .debug_loc     0x000004da      0x190 ..\..\src\uKernel\kernel.o
+ .debug_loc     0x0000066a      0x250 ..\..\src\uKernel\message_queue.o
+ .debug_loc     0x000008ba      0x308 ..\..\src\uKernel\port.o
+ .debug_loc     0x00000bc2      0x1a8 ..\..\src\uKernel\sem.o
+ .debug_loc     0x00000d6a      0x10c ..\..\src\uKernel\stats.o
+ .debug_loc     0x00000e76      0x2c0 ..\..\src\uKernel\task.o
+ .debug_loc     0x00001136      0x1bc ..\..\src\uKernel\time.o
+ .debug_loc     0x000012f2      0x2c0 ..\..\src\uKernel\wait_queue.o
+ .debug_loc     0x000015b2      0x380 ..\..\lpc17xx_lib\source\lpc17xx_timer.o
+ .debug_loc     0x00001932      0x1f0 ..\..\src\cmsis_boot\startup\cr_startup_lpc17.o
+ .debug_loc     0x00001b22      0x1bc ..\..\lpc17xx_lib\source\lpc17xx_clkpwr.o
+ .debug_loc     0x00001cde       0x58 ..\..\src\cmsis_boot\system_LPC17xx.o
+ .debug_loc     0x00001d36      0x3f0 ..\..\src\cmsis\core_cm3.o
+ .debug_loc     0x00002126       0x38 ..\..\lpc17xx_lib\source\lpc17xx_libcfg_default.o
 
-.debug_aranges  0x00000000      0x2e0
+.debug_aranges  0x00000000      0x220
  .debug_aranges
-                0x00000000       0x20 C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
+                0x00000000       0x20 ..\..\src\uKernel\main.o
  .debug_aranges
-                0x00000020       0x20 C:\Users\hlias\AppData\Local\Temp\ccFgCcI1.o
+                0x00000020       0x20 ..\..\src\uKernel\heap.o
  .debug_aranges
-                0x00000040       0x20 C:\Users\hlias\AppData\Local\Temp\ccu8kER2.o
+                0x00000040       0x20 ..\..\src\uKernel\hooks.o
  .debug_aranges
-                0x00000060       0x20 C:\Users\hlias\AppData\Local\Temp\ccSzFIV6.o
+                0x00000060       0x20 ..\..\src\uKernel\kernel.o
  .debug_aranges
-                0x00000080       0x20 C:\Users\hlias\AppData\Local\Temp\cccvcrTo.o
+                0x00000080       0x20 ..\..\src\uKernel\message_queue.o
  .debug_aranges
-                0x000000a0       0x20 C:\Users\hlias\AppData\Local\Temp\ccAIHEDS.o
+                0x000000a0       0x20 ..\..\src\uKernel\port.o
  .debug_aranges
-                0x000000c0       0x20 C:\Users\hlias\AppData\Local\Temp\ccO2Yb3x.o
+                0x000000c0       0x20 ..\..\src\uKernel\sem.o
  .debug_aranges
-                0x000000e0       0x20 C:\Users\hlias\AppData\Local\Temp\ccmJyVTl.o
+                0x000000e0       0x20 ..\..\src\uKernel\stats.o
  .debug_aranges
-                0x00000100       0x20 C:\Users\hlias\AppData\Local\Temp\ccUFO42o.o
+                0x00000100       0x20 ..\..\src\uKernel\task.o
  .debug_aranges
-                0x00000120       0x20 C:\Users\hlias\AppData\Local\Temp\ccdEBipv.o
+                0x00000120       0x20 ..\..\src\uKernel\time.o
  .debug_aranges
-                0x00000140       0x20 C:\Users\hlias\AppData\Local\Temp\ccUsF28M.o
+                0x00000140       0x20 ..\..\src\uKernel\wait_queue.o
  .debug_aranges
-                0x00000160       0x20 C:\Users\hlias\AppData\Local\Temp\ccdJblcf.o
+                0x00000160       0x20 ..\..\lpc17xx_lib\source\lpc17xx_timer.o
  .debug_aranges
-                0x00000180       0x20 C:\Users\hlias\AppData\Local\Temp\ccQvlepO.o
+                0x00000180       0x20 ..\..\src\cmsis_boot\startup\cr_startup_lpc17.o
  .debug_aranges
-                0x000001a0       0x20 C:\Users\hlias\AppData\Local\Temp\ccjRnxww.o
+                0x000001a0       0x20 ..\..\lpc17xx_lib\source\lpc17xx_clkpwr.o
  .debug_aranges
-                0x000001c0       0x20 C:\Users\hlias\AppData\Local\Temp\ccO5bZkr.o
+                0x000001c0       0x20 ..\..\src\cmsis_boot\system_LPC17xx.o
  .debug_aranges
-                0x000001e0       0x20 C:\Users\hlias\AppData\Local\Temp\ccfQRTSy.o
+                0x000001e0       0x20 ..\..\src\cmsis\core_cm3.o
  .debug_aranges
-                0x00000200       0x20 C:\Users\hlias\AppData\Local\Temp\cczgd2sI.o
- .debug_aranges
-                0x00000220       0x20 C:\Users\hlias\AppData\Local\Temp\cct3a3l4.o
- .debug_aranges
-                0x00000240       0x20 C:\Users\hlias\AppData\Local\Temp\cclJ5TTH.o
- .debug_aranges
-                0x00000260       0x20 C:\Users\hlias\AppData\Local\Temp\ccPqXNFu.o
- .debug_aranges
-                0x00000280       0x20 C:\Users\hlias\AppData\Local\Temp\ccrYPDvp.o
- .debug_aranges
-                0x000002a0       0x20 C:\Users\hlias\AppData\Local\Temp\ccfOUIpv.o
- .debug_aranges
-                0x000002c0       0x20 C:\Users\hlias\AppData\Local\Temp\ccMoubNy.o
+                0x00000200       0x20 ..\..\lpc17xx_lib\source\lpc17xx_libcfg_default.o
 
-.debug_line     0x00000000     0x27b7
- .debug_line    0x00000000      0x2de C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
- .debug_line    0x000002de      0x10e C:\Users\hlias\AppData\Local\Temp\ccFgCcI1.o
- .debug_line    0x000003ec       0x4a C:\Users\hlias\AppData\Local\Temp\ccu8kER2.o
- .debug_line    0x00000436      0x1a2 C:\Users\hlias\AppData\Local\Temp\ccSzFIV6.o
- .debug_line    0x000005d8      0x157 C:\Users\hlias\AppData\Local\Temp\cccvcrTo.o
- .debug_line    0x0000072f      0x1ee C:\Users\hlias\AppData\Local\Temp\ccAIHEDS.o
- .debug_line    0x0000091d      0x118 C:\Users\hlias\AppData\Local\Temp\ccO2Yb3x.o
- .debug_line    0x00000a35      0x1c2 C:\Users\hlias\AppData\Local\Temp\ccmJyVTl.o
- .debug_line    0x00000bf7      0x17c C:\Users\hlias\AppData\Local\Temp\ccUFO42o.o
- .debug_line    0x00000d73      0x1a6 C:\Users\hlias\AppData\Local\Temp\ccdEBipv.o
- .debug_line    0x00000f19      0x146 C:\Users\hlias\AppData\Local\Temp\ccUsF28M.o
- .debug_line    0x0000105f      0x12f C:\Users\hlias\AppData\Local\Temp\ccdJblcf.o
- .debug_line    0x0000118e      0x1bd C:\Users\hlias\AppData\Local\Temp\ccQvlepO.o
- .debug_line    0x0000134b       0xe4 C:\Users\hlias\AppData\Local\Temp\ccjRnxww.o
- .debug_line    0x0000142f      0x28f C:\Users\hlias\AppData\Local\Temp\ccO5bZkr.o
- .debug_line    0x000016be      0x190 C:\Users\hlias\AppData\Local\Temp\ccfQRTSy.o
- .debug_line    0x0000184e      0x417 C:\Users\hlias\AppData\Local\Temp\cczgd2sI.o
- .debug_line    0x00001c65      0x299 C:\Users\hlias\AppData\Local\Temp\cct3a3l4.o
- .debug_line    0x00001efe      0x3ee C:\Users\hlias\AppData\Local\Temp\cclJ5TTH.o
- .debug_line    0x000022ec      0x154 C:\Users\hlias\AppData\Local\Temp\ccPqXNFu.o
- .debug_line    0x00002440      0x19d C:\Users\hlias\AppData\Local\Temp\ccrYPDvp.o
- .debug_line    0x000025dd       0xd4 C:\Users\hlias\AppData\Local\Temp\ccfOUIpv.o
- .debug_line    0x000026b1      0x106 C:\Users\hlias\AppData\Local\Temp\ccMoubNy.o
+.debug_line     0x00000000     0x161c
+ .debug_line    0x00000000      0x20c ..\..\src\uKernel\main.o
+ .debug_line    0x0000020c      0x10e ..\..\src\uKernel\heap.o
+ .debug_line    0x0000031a       0x4a ..\..\src\uKernel\hooks.o
+ .debug_line    0x00000364      0x124 ..\..\src\uKernel\kernel.o
+ .debug_line    0x00000488      0x157 ..\..\src\uKernel\message_queue.o
+ .debug_line    0x000005df      0x170 ..\..\src\uKernel\port.o
+ .debug_line    0x0000074f      0x118 ..\..\src\uKernel\sem.o
+ .debug_line    0x00000867      0x144 ..\..\src\uKernel\stats.o
+ .debug_line    0x000009ab      0x17c ..\..\src\uKernel\task.o
+ .debug_line    0x00000b27      0x128 ..\..\src\uKernel\time.o
+ .debug_line    0x00000c4f      0x146 ..\..\src\uKernel\wait_queue.o
+ .debug_line    0x00000d95      0x391 ..\..\lpc17xx_lib\source\lpc17xx_timer.o
+ .debug_line    0x00001126       0xd4 ..\..\src\cmsis_boot\startup\cr_startup_lpc17.o
+ .debug_line    0x000011fa      0x161 ..\..\lpc17xx_lib\source\lpc17xx_clkpwr.o
+ .debug_line    0x0000135b      0x141 ..\..\src\cmsis_boot\system_LPC17xx.o
+ .debug_line    0x0000149c       0xf8 ..\..\src\cmsis\core_cm3.o
+ .debug_line    0x00001594       0x88 ..\..\lpc17xx_lib\source\lpc17xx_libcfg_default.o
 
-.debug_str      0x00000000     0x2538
- .debug_str     0x00000000      0x73e C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
-                                0x7a2 (size before relaxing)
- .debug_str     0x0000073e       0x6a C:\Users\hlias\AppData\Local\Temp\ccFgCcI1.o
+.debug_str      0x00000000     0x1760
+ .debug_str     0x00000000      0x571 ..\..\src\uKernel\main.o
+                                0x5d5 (size before relaxing)
+ .debug_str     0x00000571       0x6f ..\..\src\uKernel\heap.o
                                 0x2fa (size before relaxing)
- .debug_str     0x000007a8       0x39 C:\Users\hlias\AppData\Local\Temp\ccu8kER2.o
-                                0x102 (size before relaxing)
- .debug_str     0x000007e1       0x75 C:\Users\hlias\AppData\Local\Temp\ccSzFIV6.o
+ .debug_str     0x000005e0       0x39 ..\..\src\uKernel\hooks.o
+                                0x11d (size before relaxing)
+ .debug_str     0x00000619       0x75 ..\..\src\uKernel\kernel.o
                                 0x36f (size before relaxing)
- .debug_str     0x00000856       0xf7 C:\Users\hlias\AppData\Local\Temp\cccvcrTo.o
+ .debug_str     0x0000068e       0xf7 ..\..\src\uKernel\message_queue.o
                                 0x3cf (size before relaxing)
- .debug_str     0x0000094d      0x500 C:\Users\hlias\AppData\Local\Temp\ccAIHEDS.o
-                                0x728 (size before relaxing)
- .debug_str     0x00000e4d       0x44 C:\Users\hlias\AppData\Local\Temp\ccO2Yb3x.o
+ .debug_str     0x00000785      0x557 ..\..\src\uKernel\port.o
+                                0x6f7 (size before relaxing)
+ .debug_str     0x00000cdc       0x44 ..\..\src\uKernel\sem.o
                                 0x34f (size before relaxing)
- .debug_str     0x00000e91       0xa0 C:\Users\hlias\AppData\Local\Temp\ccmJyVTl.o
+ .debug_str     0x00000d20       0xa0 ..\..\src\uKernel\stats.o
                                 0x489 (size before relaxing)
- .debug_str     0x00000f31       0xbf C:\Users\hlias\AppData\Local\Temp\ccUFO42o.o
+ .debug_str     0x00000dc0       0xbf ..\..\src\uKernel\task.o
                                 0x3d0 (size before relaxing)
- .debug_str     0x00000ff0       0x4f C:\Users\hlias\AppData\Local\Temp\ccdEBipv.o
+ .debug_str     0x00000e7f       0x4f ..\..\src\uKernel\time.o
                                 0x36f (size before relaxing)
- .debug_str     0x0000103f       0x86 C:\Users\hlias\AppData\Local\Temp\ccUsF28M.o
+ .debug_str     0x00000ece       0x86 ..\..\src\uKernel\wait_queue.o
                                 0x3b2 (size before relaxing)
- .debug_str     0x000010c5       0x49 C:\Users\hlias\AppData\Local\Temp\ccdJblcf.o
-                                0x2da (size before relaxing)
- .debug_str     0x0000110e      0x214 C:\Users\hlias\AppData\Local\Temp\ccQvlepO.o
-                                0x3da (size before relaxing)
- .debug_str     0x00001322       0x49 C:\Users\hlias\AppData\Local\Temp\ccjRnxww.o
-                                0x169 (size before relaxing)
- .debug_str     0x0000136b      0x30b C:\Users\hlias\AppData\Local\Temp\ccO5bZkr.o
-                                0x59f (size before relaxing)
- .debug_str     0x00001676      0x214 C:\Users\hlias\AppData\Local\Temp\ccfQRTSy.o
-                                0x3b3 (size before relaxing)
- .debug_str     0x0000188a      0x3ee C:\Users\hlias\AppData\Local\Temp\cczgd2sI.o
-                                0x5ec (size before relaxing)
- .debug_str     0x00001c78      0x285 C:\Users\hlias\AppData\Local\Temp\cct3a3l4.o
-                                0x4ed (size before relaxing)
- .debug_str     0x00001efd      0x253 C:\Users\hlias\AppData\Local\Temp\cclJ5TTH.o
-                                0x5e1 (size before relaxing)
- .debug_str     0x00002150      0x14e C:\Users\hlias\AppData\Local\Temp\ccPqXNFu.o
-                                0x288 (size before relaxing)
- .debug_str     0x0000229e       0x47 C:\Users\hlias\AppData\Local\Temp\ccrYPDvp.o
-                                0x317 (size before relaxing)
- .debug_str     0x000022e5      0x118 C:\Users\hlias\AppData\Local\Temp\ccfOUIpv.o
-                                0x22f (size before relaxing)
- .debug_str     0x000023fd      0x13b C:\Users\hlias\AppData\Local\Temp\ccMoubNy.o
-                                0x281 (size before relaxing)
+ .debug_str     0x00000f54      0x315 ..\..\lpc17xx_lib\source\lpc17xx_timer.o
+                                0x5b6 (size before relaxing)
+ .debug_str     0x00001269      0x118 ..\..\src\cmsis_boot\startup\cr_startup_lpc17.o
+                                0x209 (size before relaxing)
+ .debug_str     0x00001381      0x1fb ..\..\lpc17xx_lib\source\lpc17xx_clkpwr.o
+                                0x3af (size before relaxing)
+ .debug_str     0x0000157c       0x47 ..\..\src\cmsis_boot\system_LPC17xx.o
+                                0x2f1 (size before relaxing)
+ .debug_str     0x000015c3      0x154 ..\..\src\cmsis\core_cm3.o
+                                0x262 (size before relaxing)
+ .debug_str     0x00001717       0x49 ..\..\lpc17xx_lib\source\lpc17xx_libcfg_default.o
+                                0x13e (size before relaxing)
 
 .comment        0x00000000       0x70
- .comment       0x00000000       0x70 C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
+ .comment       0x00000000       0x70 ..\..\src\uKernel\main.o
                                  0x71 (size before relaxing)
- .comment       0x00000000       0x71 C:\Users\hlias\AppData\Local\Temp\ccFgCcI1.o
- .comment       0x00000000       0x71 C:\Users\hlias\AppData\Local\Temp\ccu8kER2.o
- .comment       0x00000000       0x71 C:\Users\hlias\AppData\Local\Temp\ccSzFIV6.o
- .comment       0x00000000       0x71 C:\Users\hlias\AppData\Local\Temp\cccvcrTo.o
- .comment       0x00000000       0x71 C:\Users\hlias\AppData\Local\Temp\ccAIHEDS.o
- .comment       0x00000000       0x71 C:\Users\hlias\AppData\Local\Temp\ccO2Yb3x.o
- .comment       0x00000000       0x71 C:\Users\hlias\AppData\Local\Temp\ccmJyVTl.o
- .comment       0x00000000       0x71 C:\Users\hlias\AppData\Local\Temp\ccUFO42o.o
- .comment       0x00000000       0x71 C:\Users\hlias\AppData\Local\Temp\ccdEBipv.o
- .comment       0x00000000       0x71 C:\Users\hlias\AppData\Local\Temp\ccUsF28M.o
- .comment       0x00000000       0x71 C:\Users\hlias\AppData\Local\Temp\ccdJblcf.o
- .comment       0x00000000       0x71 C:\Users\hlias\AppData\Local\Temp\ccQvlepO.o
- .comment       0x00000000       0x71 C:\Users\hlias\AppData\Local\Temp\ccjRnxww.o
- .comment       0x00000000       0x71 C:\Users\hlias\AppData\Local\Temp\ccO5bZkr.o
- .comment       0x00000000       0x71 C:\Users\hlias\AppData\Local\Temp\ccfQRTSy.o
- .comment       0x00000000       0x71 C:\Users\hlias\AppData\Local\Temp\cczgd2sI.o
- .comment       0x00000000       0x71 C:\Users\hlias\AppData\Local\Temp\cct3a3l4.o
- .comment       0x00000000       0x71 C:\Users\hlias\AppData\Local\Temp\cclJ5TTH.o
- .comment       0x00000000       0x71 C:\Users\hlias\AppData\Local\Temp\ccPqXNFu.o
- .comment       0x00000000       0x71 C:\Users\hlias\AppData\Local\Temp\ccrYPDvp.o
- .comment       0x00000000       0x71 C:\Users\hlias\AppData\Local\Temp\ccfOUIpv.o
- .comment       0x00000000       0x71 C:\Users\hlias\AppData\Local\Temp\ccMoubNy.o
+ .comment       0x00000000       0x71 ..\..\src\uKernel\heap.o
+ .comment       0x00000000       0x71 ..\..\src\uKernel\hooks.o
+ .comment       0x00000000       0x71 ..\..\src\uKernel\kernel.o
+ .comment       0x00000000       0x71 ..\..\src\uKernel\message_queue.o
+ .comment       0x00000000       0x71 ..\..\src\uKernel\port.o
+ .comment       0x00000000       0x71 ..\..\src\uKernel\sem.o
+ .comment       0x00000000       0x71 ..\..\src\uKernel\stats.o
+ .comment       0x00000000       0x71 ..\..\src\uKernel\task.o
+ .comment       0x00000000       0x71 ..\..\src\uKernel\time.o
+ .comment       0x00000000       0x71 ..\..\src\uKernel\wait_queue.o
+ .comment       0x00000000       0x71 ..\..\lpc17xx_lib\source\lpc17xx_timer.o
+ .comment       0x00000000       0x71 ..\..\src\cmsis_boot\startup\cr_startup_lpc17.o
+ .comment       0x00000000       0x71 ..\..\lpc17xx_lib\source\lpc17xx_clkpwr.o
+ .comment       0x00000000       0x71 ..\..\src\cmsis_boot\system_LPC17xx.o
+ .comment       0x00000000       0x71 ..\..\src\cmsis\core_cm3.o
+ .comment       0x00000000       0x71 ..\..\lpc17xx_lib\source\lpc17xx_libcfg_default.o
 
 .ARM.attributes
                 0x00000000       0x33
  .ARM.attributes
-                0x00000000       0x33 C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
+                0x00000000       0x33 ..\..\src\uKernel\main.o
  .ARM.attributes
-                0x00000033       0x33 C:\Users\hlias\AppData\Local\Temp\ccFgCcI1.o
+                0x00000033       0x33 ..\..\src\uKernel\heap.o
  .ARM.attributes
-                0x00000066       0x33 C:\Users\hlias\AppData\Local\Temp\ccu8kER2.o
+                0x00000066       0x33 ..\..\src\uKernel\hooks.o
  .ARM.attributes
-                0x00000099       0x33 C:\Users\hlias\AppData\Local\Temp\ccSzFIV6.o
+                0x00000099       0x33 ..\..\src\uKernel\kernel.o
  .ARM.attributes
-                0x000000cc       0x33 C:\Users\hlias\AppData\Local\Temp\cccvcrTo.o
+                0x000000cc       0x33 ..\..\src\uKernel\message_queue.o
  .ARM.attributes
-                0x000000ff       0x33 C:\Users\hlias\AppData\Local\Temp\ccAIHEDS.o
+                0x000000ff       0x33 ..\..\src\uKernel\port.o
  .ARM.attributes
-                0x00000132       0x33 C:\Users\hlias\AppData\Local\Temp\ccO2Yb3x.o
+                0x00000132       0x33 ..\..\src\uKernel\sem.o
  .ARM.attributes
-                0x00000165       0x33 C:\Users\hlias\AppData\Local\Temp\ccmJyVTl.o
+                0x00000165       0x33 ..\..\src\uKernel\stats.o
  .ARM.attributes
-                0x00000198       0x33 C:\Users\hlias\AppData\Local\Temp\ccUFO42o.o
+                0x00000198       0x33 ..\..\src\uKernel\task.o
  .ARM.attributes
-                0x000001cb       0x33 C:\Users\hlias\AppData\Local\Temp\ccdEBipv.o
+                0x000001cb       0x33 ..\..\src\uKernel\time.o
  .ARM.attributes
-                0x000001fe       0x33 C:\Users\hlias\AppData\Local\Temp\ccUsF28M.o
+                0x000001fe       0x33 ..\..\src\uKernel\wait_queue.o
  .ARM.attributes
-                0x00000231       0x33 C:\Users\hlias\AppData\Local\Temp\ccdJblcf.o
+                0x00000231       0x33 ..\..\lpc17xx_lib\source\lpc17xx_timer.o
  .ARM.attributes
-                0x00000264       0x33 C:\Users\hlias\AppData\Local\Temp\ccQvlepO.o
+                0x00000264       0x33 ..\..\src\cmsis_boot\startup\cr_startup_lpc17.o
  .ARM.attributes
-                0x00000297       0x33 C:\Users\hlias\AppData\Local\Temp\ccjRnxww.o
+                0x00000297       0x33 ..\..\lpc17xx_lib\source\lpc17xx_clkpwr.o
  .ARM.attributes
-                0x000002ca       0x33 C:\Users\hlias\AppData\Local\Temp\ccO5bZkr.o
+                0x000002ca       0x33 ..\..\src\cmsis_boot\system_LPC17xx.o
  .ARM.attributes
-                0x000002fd       0x33 C:\Users\hlias\AppData\Local\Temp\ccfQRTSy.o
+                0x000002fd       0x33 ..\..\src\cmsis\core_cm3.o
  .ARM.attributes
-                0x00000330       0x33 C:\Users\hlias\AppData\Local\Temp\cczgd2sI.o
+                0x00000330       0x33 ..\..\lpc17xx_lib\source\lpc17xx_libcfg_default.o
  .ARM.attributes
-                0x00000363       0x33 C:\Users\hlias\AppData\Local\Temp\cct3a3l4.o
+                0x00000363       0x1d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_addsubsf3.o)
  .ARM.attributes
-                0x00000396       0x33 C:\Users\hlias\AppData\Local\Temp\cclJ5TTH.o
+                0x00000380       0x1d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_muldivsf3.o)
  .ARM.attributes
-                0x000003c9       0x33 C:\Users\hlias\AppData\Local\Temp\ccPqXNFu.o
- .ARM.attributes
-                0x000003fc       0x33 C:\Users\hlias\AppData\Local\Temp\ccrYPDvp.o
- .ARM.attributes
-                0x0000042f       0x33 C:\Users\hlias\AppData\Local\Temp\ccfOUIpv.o
- .ARM.attributes
-                0x00000462       0x33 C:\Users\hlias\AppData\Local\Temp\ccMoubNy.o
- .ARM.attributes
-                0x00000495       0x1d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_addsubsf3.o)
- .ARM.attributes
-                0x000004b2       0x1d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_arm_muldivsf3.o)
- .ARM.attributes
-                0x000004cf       0x1d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_aeabi_uldivmod.o)
- .ARM.attributes
-                0x000004ec       0x2d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(bpabi.o)
- .ARM.attributes
-                0x00000519       0x2d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(unwind-arm.o)
- .ARM.attributes
-                0x00000546       0x1d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(libunwind.o)
- .ARM.attributes
-                0x00000563       0x2d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(pr-support.o)
- .ARM.attributes
-                0x00000590       0x1d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_dvmd_tls.o)
- .ARM.attributes
-                0x000005ad       0x2d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_divdi3.o)
- .ARM.attributes
-                0x000005da       0x2d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_udivdi3.o)
- .ARM.attributes
-                0x00000607       0x2d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memcpy.o)
+                0x0000039d       0x2d c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memcpy.o)
 
-.debug_frame    0x00000000     0x2224
- .debug_frame   0x00000000      0x1e4 C:\Users\hlias\AppData\Local\Temp\ccqXdpW7.o
- .debug_frame   0x000001e4       0xd8 C:\Users\hlias\AppData\Local\Temp\ccFgCcI1.o
- .debug_frame   0x000002bc       0x40 C:\Users\hlias\AppData\Local\Temp\ccu8kER2.o
- .debug_frame   0x000002fc      0x100 C:\Users\hlias\AppData\Local\Temp\ccSzFIV6.o
- .debug_frame   0x000003fc      0x160 C:\Users\hlias\AppData\Local\Temp\cccvcrTo.o
- .debug_frame   0x0000055c      0x1c8 C:\Users\hlias\AppData\Local\Temp\ccAIHEDS.o
- .debug_frame   0x00000724      0x104 C:\Users\hlias\AppData\Local\Temp\ccO2Yb3x.o
- .debug_frame   0x00000828       0xa8 C:\Users\hlias\AppData\Local\Temp\ccmJyVTl.o
- .debug_frame   0x000008d0      0x19c C:\Users\hlias\AppData\Local\Temp\ccUFO42o.o
- .debug_frame   0x00000a6c      0x114 C:\Users\hlias\AppData\Local\Temp\ccdEBipv.o
- .debug_frame   0x00000b80      0x19c C:\Users\hlias\AppData\Local\Temp\ccUsF28M.o
- .debug_frame   0x00000d1c       0xf8 C:\Users\hlias\AppData\Local\Temp\ccdJblcf.o
- .debug_frame   0x00000e14      0x10c C:\Users\hlias\AppData\Local\Temp\ccQvlepO.o
- .debug_frame   0x00000f20       0x2c C:\Users\hlias\AppData\Local\Temp\ccjRnxww.o
- .debug_frame   0x00000f4c      0x378 C:\Users\hlias\AppData\Local\Temp\ccO5bZkr.o
- .debug_frame   0x000012c4       0xbc C:\Users\hlias\AppData\Local\Temp\ccfQRTSy.o
- .debug_frame   0x00001380      0x1d0 C:\Users\hlias\AppData\Local\Temp\cczgd2sI.o
- .debug_frame   0x00001550      0x1ac C:\Users\hlias\AppData\Local\Temp\cct3a3l4.o
- .debug_frame   0x000016fc      0x208 C:\Users\hlias\AppData\Local\Temp\cclJ5TTH.o
- .debug_frame   0x00001904      0x280 C:\Users\hlias\AppData\Local\Temp\ccPqXNFu.o
- .debug_frame   0x00001b84       0x40 C:\Users\hlias\AppData\Local\Temp\ccrYPDvp.o
- .debug_frame   0x00001bc4      0x120 C:\Users\hlias\AppData\Local\Temp\ccfOUIpv.o
- .debug_frame   0x00001ce4      0x108 C:\Users\hlias\AppData\Local\Temp\ccMoubNy.o
- .debug_frame   0x00001dec       0x50 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(bpabi.o)
- .debug_frame   0x00001e3c      0x268 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(unwind-arm.o)
- .debug_frame   0x000020a4       0xec c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(pr-support.o)
- .debug_frame   0x00002190       0x34 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_divdi3.o)
- .debug_frame   0x000021c4       0x34 c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libgcc.a(_udivdi3.o)
- .debug_frame   0x000021f8       0x2c c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memcpy.o)
+.debug_frame    0x00000000     0x1464
+ .debug_frame   0x00000000      0x1e0 ..\..\src\uKernel\main.o
+ .debug_frame   0x000001e0       0xd8 ..\..\src\uKernel\heap.o
+ .debug_frame   0x000002b8       0x40 ..\..\src\uKernel\hooks.o
+ .debug_frame   0x000002f8      0x100 ..\..\src\uKernel\kernel.o
+ .debug_frame   0x000003f8      0x160 ..\..\src\uKernel\message_queue.o
+ .debug_frame   0x00000558      0x1c8 ..\..\src\uKernel\port.o
+ .debug_frame   0x00000720      0x104 ..\..\src\uKernel\sem.o
+ .debug_frame   0x00000824       0xa8 ..\..\src\uKernel\stats.o
+ .debug_frame   0x000008cc      0x19c ..\..\src\uKernel\task.o
+ .debug_frame   0x00000a68      0x114 ..\..\src\uKernel\time.o
+ .debug_frame   0x00000b7c      0x19c ..\..\src\uKernel\wait_queue.o
+ .debug_frame   0x00000d18      0x208 ..\..\lpc17xx_lib\source\lpc17xx_timer.o
+ .debug_frame   0x00000f20      0x120 ..\..\src\cmsis_boot\startup\cr_startup_lpc17.o
+ .debug_frame   0x00001040      0x10c ..\..\lpc17xx_lib\source\lpc17xx_clkpwr.o
+ .debug_frame   0x0000114c       0x40 ..\..\src\cmsis_boot\system_LPC17xx.o
+ .debug_frame   0x0000118c      0x280 ..\..\src\cmsis\core_cm3.o
+ .debug_frame   0x0000140c       0x2c ..\..\lpc17xx_lib\source\lpc17xx_libcfg_default.o
+ .debug_frame   0x00001438       0x2c c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memcpy.o)

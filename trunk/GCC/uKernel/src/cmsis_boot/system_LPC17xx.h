@@ -30,7 +30,7 @@
 extern "C" {
 #endif
 
-#include <stdint.h>
+#include "port_types.h"
 
 /** @addtogroup LPC17xx_System
  * @{

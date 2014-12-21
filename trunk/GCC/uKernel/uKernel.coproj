@@ -75,6 +75,7 @@
     <Component id="255" name="CLKPWR" path="" type="2"/>
     <Component id="257" name="GPIO" path="" type="2"/>
     <Component id="258" name="PINSEL" path="" type="2"/>
+    <Component id="266" name="PWM" path="" type="2"/>
     <Component id="270" name="ADC" path="" type="2"/>
     <Component id="273" name="TIMER" path="" type="2"/>
   </Components>
@@ -90,6 +91,7 @@
     <File name="Src/cmsis_boot/LPC17xx.h" path="src/cmsis_boot/LPC17xx.h" type="1"/>
     <File name="Src/uKernel/sem.c" path="src/uKernel/sem.c" type="1"/>
     <File name="lpc17xx_lib" path="" type="2"/>
+    <File name="syscalls/syscalls.c" path="syscalls/syscalls.c" type="1"/>
     <File name="Src/cmsis_boot/startup" path="" type="2"/>
     <File name="lpc17xx_lib/source/lpc17xx_pinsel.c" path="lpc17xx_lib/source/lpc17xx_pinsel.c" type="1"/>
     <File name="Src/uKernel" path="" type="2"/>
@@ -107,29 +109,32 @@
     <File name="Src/dotmatgl.c" path="src/dotmatgl.c" type="1"/>
     <File name="Src/uKernel/stats.c" path="src/uKernel/stats.c" type="1"/>
     <File name="lpc17xx_lib/include/lpc17xx_clkpwr.h" path="lpc17xx_lib/include/lpc17xx_clkpwr.h" type="1"/>
+    <File name="lpc17xx_lib/source/lpc17xx_pwm.c" path="lpc17xx_lib/source/lpc17xx_pwm.c" type="1"/>
     <File name="lpc17xx_lib/include/lpc17xx_pinsel.h" path="lpc17xx_lib/include/lpc17xx_pinsel.h" type="1"/>
     <File name="Src/uKernel/kernel.h" path="src/uKernel/kernel.h" type="1"/>
     <File name="Src/uKernel/sem.h" path="src/uKernel/sem.h" type="1"/>
     <File name="lpc17xx_lib/include/lpc17xx_libcfg_default.h" path="lpc17xx_lib/include/lpc17xx_libcfg_default.h" type="1"/>
     <File name="lpc17xx_lib/source/lpc17xx_clkpwr.c" path="lpc17xx_lib/source/lpc17xx_clkpwr.c" type="1"/>
     <File name="Src/dotmatgl.h" path="src/dotmatgl.h" type="1"/>
-    <File name="lpc17xx_lib/include/lpc17xx_gpio.h" path="lpc17xx_lib/include/lpc17xx_gpio.h" type="1"/>
     <File name="Src/uKernel/task_types.h" path="src/uKernel/task_types.h" type="1"/>
+    <File name="lpc17xx_lib/include/lpc17xx_gpio.h" path="lpc17xx_lib/include/lpc17xx_gpio.h" type="1"/>
     <File name="Src/uKernel/stats.h" path="src/uKernel/stats.h" type="1"/>
     <File name="Src/cmsis/core_cm3.c" path="src/cmsis/core_cm3.c" type="1"/>
-    <File name="lpc17xx_lib/source/lpc17xx_timer.c" path="lpc17xx_lib/source/lpc17xx_timer.c" type="1"/>
     <File name="Src/uKernel/task.h" path="src/uKernel/task.h" type="1"/>
+    <File name="lpc17xx_lib/source/lpc17xx_timer.c" path="lpc17xx_lib/source/lpc17xx_timer.c" type="1"/>
     <File name="Src/uKernel/port.h" path="src/uKernel/port.h" type="1"/>
-    <File name="Src/cmsis_boot/system_LPC17xx.h" path="src/cmsis_boot/system_LPC17xx.h" type="1"/>
     <File name="lpc17xx_lib/include/lpc17xx_timer.h" path="lpc17xx_lib/include/lpc17xx_timer.h" type="1"/>
+    <File name="Src/cmsis_boot/system_LPC17xx.h" path="src/cmsis_boot/system_LPC17xx.h" type="1"/>
     <File name="Src/uKernel/port.c" path="src/uKernel/port.c" type="1"/>
     <File name="Src/cmsis_boot/system_LPC17xx.c" path="src/cmsis_boot/system_LPC17xx.c" type="1"/>
     <File name="Src/syscalls/syscalls.c" path="src/syscalls/syscalls.c" type="1"/>
     <File name="Src/uKernel/kern_conf.h" path="src/uKernel/kern_conf.h" type="1"/>
     <File name="Src/uKernel/heap.h" path="src/uKernel/heap.h" type="1"/>
+    <File name="syscalls" path="" type="2"/>
     <File name="Src/uKernel/port_types.h" path="src/uKernel/port_types.h" type="1"/>
     <File name="Src/cmsis_boot" path="" type="2"/>
     <File name="Src/cmsis" path="" type="2"/>
+    <File name="lpc17xx_lib/include/lpc17xx_pwm.h" path="lpc17xx_lib/include/lpc17xx_pwm.h" type="1"/>
     <File name="lpc17xx_lib/include" path="" type="2"/>
     <File name="Src/uKernel/time.c" path="src/uKernel/time.c" type="1"/>
     <File name="Src/uKernel/wait_queue.h" path="src/uKernel/wait_queue.h" type="1"/>

@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "task.h"
 #include "lpc17xx.h"
 #include "dotmatgl.h"
@@ -158,12 +156,14 @@ int main()
 
 	StartOS();
 	/* We actually do not expect to ever reach here */
+	return;
 }
 
 //factorial of 12
 void Task1(void *args)
 {
-
+	args = (void *)0;
+	args = (void *)((uint_32 )args + 1);
 	int i = 0;
 	uint_32 fact = 1;
 	while(1){
@@ -243,6 +243,8 @@ void TaskMatrix(void *args)
 uint_32 CpuUtil[20];
 void Task2(void *args)
 {
+	args = (void *)0;
+	args = (void *)((uint_32 )args + 1);
 	int i = 0,j;
 	uint_32 primes[100];
 	uint_8 found = 0;
@@ -277,6 +279,8 @@ void Task2(void *args)
 void Task3(void *args)
 {	
 	
+	args = (void *)0;
+	args = (void *)((uint_32 )args + 1);
 	uint_32 fibonacci[100];
 	int i;
 	while(1){
@@ -294,6 +298,8 @@ void Task3(void *args)
 }
 
 void Task4(void *args){
+	args = (void *)0;
+	args = (void *)((uint_32 )args + 1);
 	while(1){
 
 		sem_get(s, 10);
@@ -303,6 +309,8 @@ void Task4(void *args){
 }
 
 void Task5(void *args){
+	args = (void *)0;
+	args = (void *)((uint_32 )args + 1);
 	uint_32 i = 0;
 	while(1){
 		timeDelay(40);
@@ -317,6 +325,8 @@ void Task5(void *args){
 }
 
 void Task6(void *args){
+	args = (void *)0;
+	args = (void *)((uint_32 )args + 1);
 	uint_32 *buff = portMalloc(sizeof(uint_32));
 
 	while(1){

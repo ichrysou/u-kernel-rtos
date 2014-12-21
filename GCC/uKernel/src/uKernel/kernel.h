@@ -49,7 +49,7 @@ static __inline void enterCritical()
 
 static __inline void exitCritical(){
 	if (--criticalNesting == 0)
-			ENABLE_INTERRUPTS();
+		ENABLE_INTERRUPTS();
 }
 
 static __inline void interruptEnter(void)

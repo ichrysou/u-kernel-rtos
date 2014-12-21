@@ -3,7 +3,7 @@
 #include "types.h"
 #include "kern_conf.h"
 #include "list.h"
-#include <stdlib.h>
+
 
 /* ========================================*/
 /* ---------------- Macros ------------- */

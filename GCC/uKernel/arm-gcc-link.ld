@@ -3,11 +3,12 @@ OUTPUT_FORMAT ("elf32-littlearm", "elf32-bigarm", "elf32-littlearm")
 MEMORY
 {
 	rom (rx)  : ORIGIN = 0x00000000, LENGTH = 0x00008000
-	ram (rwx) : ORIGIN = 0x10000000, LENGTH = 0x00008000
+	ram (rwx) : ORIGIN = 0x10004000, LENGTH = 0x00008000
 	ram1 (rwx) : ORIGIN = 0x2007C000, LENGTH = 0x00008000
 }
 
 _eram = 0x10004000 + 0x00004000;
+
 /* Section Definitions */ 
 SECTIONS 
 { 

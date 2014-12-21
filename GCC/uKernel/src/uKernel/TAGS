@@ -1,0 +1,321 @@
+
+heap.c,225
+static int heap_start,5,58
+static int heap_start, heap_end;5,58
+uint_8 heap1[heap17,92
+uint_8 *heap;heap8,134
+void heapInit(11,189
+void *portMalloc(portMalloc24,513
+void portFree(50,972
+uint_32 getHeapSize(58,1060
+
+heap.h,74
+#define __HEAP_H__2,19
+#define HEAP_SIZE 6,81
+#define HEAP_ALIGN 7,114
+
+hooks.c,55
+void idleTaskHook(6,68
+void contextSwitchHook(13,103
+
+hooks.h,25
+#define __HOOKS_H__2,20
+
+kernel.c,276
+OSStackType IdleStack[IdleStack5,58
+uint_32 criticalNesting 7,99
+uint_32 interruptNesting 8,129
+volatile uint_32 idleCounter 9,159
+uint_8 kernel_running 10,193
+void uKern_Init(12,277
+void StartOS(27,478
+void schedule(40,686
+void IdleTask(69,1150
+void yield(92,1351
+
+kernel.h,435
+#define __KERNEL_C__2,21
+OSStackType IdleStack[IdleStack16,361
+#define configMAX_SYSCALL_INTERRUPT_PRIORITY 29,626
+#define IDLE_TASK_PRIO 31,682
+#define ENTER_CRITICAL(34,709
+#define EXIT_CRITICAL(35,750
+#define IntEnter(37,791
+#define IntExit(38,827
+static __inline void enterCritical(43,928
+static __inline void exitCritical(50,1038
+static __inline void interruptEnter(55,1131
+static __inline void interruptExit(63,1237
+
+kern_conf.h,694
+#define __KERN_CONF__2,22
+#define MAX_TASKS 4,45
+#define IDLE_TASK_SLEEP 6,67
+#define MULTIPLE_TASKS_PER_PRIORITY 8,94
+#define MAX_PRIO 11,166
+#define MAX_PRIO 13,199
+#define CONF_HEAP_SIZE 16,227
+#define CONF_HEAP_ALIGN 17,255
+#define STACK_ALIGN 18,281
+#define STACK_SIZE 19,303
+#define IDLE_STACK_SIZE 20,338
+#define OS_TICK_FREQ 21,366
+#define CPU_FREQ 22,408
+#define HP_NAIVE 24,457
+#define HP_PORT_OPTIMAL 25,476
+#define HIGHEST_PRIO_ALT 26,502
+#define IDLE_TASK_HOOK_ENABLED 28,544
+#define HOOKS_ENABLED 29,577
+#define STATS_ENABLED 30,601
+#define CONTEXT_SWITCH_HOOK_ENABLED 31,625
+#define TIME_SLICE 32,663
+#define MEM_MANG 38,886
+#define WAIT_QUEUE_IMPL 39,905
+
+list.h,945
+#define __LIST_H2,17
+struct list_head 20,637
+	struct list_head *next,next21,656
+	struct list_head *next, *prev;prev21,656
+#define LIST_HEAD_INIT(24,692
+#define LIST_HEAD(26,743
+#define INIT_LIST_HEAD(29,816
+static __inline void __list_add(39,1076
+static __inline void list_add(55,1457
+static __inline void list_add_tail(68,1781
+static __inline void __list_del(80,2088
+static __inline void list_del(91,2406
+static __inline void list_del_init(102,2679
+static __inline void list_move(113,2953
+static __inline void list_move_tail(124,3260
+static __inline int list_empty(135,3516
+static __inline void __list_splice(140,3604
+static __inline void list_splice(159,4010
+static __inline void list_splice_init(172,4350
+#define list_entry(187,4738
+#define list_for_each(195,4982
+#define list_for_each_prev(203,5239
+#define list_for_each_safe(213,5598
+#define list_for_each_entry(223,5930
+#define list_for_each_entry_safe(235,6441
+
+main.c,1027
+const int j 27,529
+#define is_little_endian(28,546
+#define TASK1_PRIO 30,628
+#define TASK2_PRIO 31,649
+#define TASK3_PRIO 32,670
+#define TASK4_PRIO 33,691
+#define TASK5_PRIO 34,712
+#define TASK6_PRIO 35,758
+#define TASKMAT_PRIO 36,779
+#define ADC_TASK_PRIO 37,802
+OSStackType Stack1[Stack139,827
+OSStackType Stack2[Stack240,859
+OSStackType Stack3[Stack341,891
+OSStackType Stack4[Stack442,923
+OSStackType Stack5[Stack543,955
+OSStackType Stack6[Stack644,987
+OSStackType StackMatrix[StackMatrix45,1019
+OSStackType StackADC[StackADC46,1056
+queue *task6Q;task6Q48,1091
+queue *taskMatrixQueue;taskMatrixQueue49,1106
+sem *s;s51,1131
+PWM_TIMERCFG_Type PWMCfgDat;55,1142
+PWM_MATCHCFG_Type PWMMatchCfgDat;56,1171
+PINSEL_CFG_Type PinCfg;57,1205
+int main(60,1231
+void Task1(164,4638
+void ADC_IRQHandler(181,4866
+void ADC_Task(198,5128
+void TaskMatrix(216,5436
+uint_32 CpuUtil[CpuUtil243,6074
+void Task2(244,6095
+void Task3(277,6799
+void Task4(294,7092
+void Task5(303,7209
+void Task6(317,7378
+
+message_queue.c,228
+queue *queueCreate(queueCreate8,138
+void queueDelete(29,775
+err_t queueSendToTail(34,821
+err_t queueReceive(64,1831
+err_t queuePeek(104,2824
+uint_32 queueGetNumberOfMessages(122,3160
+static void queueGetMessage(127,3227
+
+message_queue.h,403
+#define __MESSAGE_QUEUE_H__2,28
+typedef struct queue{queue6,99
+        uint_8 *head;head7,121
+        uint_8 *tail;tail8,143
+        uint_8 *start;start9,165
+        uint_8 *end;end10,188
+        uint_32 max_length;11,209
+        uint_32 length;12,237
+        uint_32 elementSize;13,261
+        struct list_head tasksPost;14,290
+        struct list_head tasksPend;15,326
+} queue;16,362
+
+port.c,703
+OSStackType *StkInit(StkInit8,116
+void OSStartFirstTask(31,844
+void start_first_task(45,1412
+void OSTickStart(61,1740
+void OSTickStop(67,1971
+uint_32 OSTickConfig(71,2107
+volatile uint32_t r0;83,2678
+volatile uint32_t r1;84,2700
+volatile uint32_t r2;85,2722
+volatile uint32_t r3;86,2744
+volatile uint32_t r12;87,2766
+volatile uint32_t lr;88,2789
+volatile uint32_t pc;89,2832
+volatile uint32_t psr;90,2877
+void prvGetRegistersFromStack(92,2931
+void cpsie(115,3650
+void cpsid(122,3711
+void context_switch(130,3774
+void hw_init(157,4340
+void HardFaultHndlr(167,4581
+void port_reset_stat_timer_val(180,4796
+void port_stat_timer_init(184,4862
+uint_32 port_get_stat_timer_val(214,6004
+
+port.h,449
+#define __PORT_H__2,19
+#define configKERNEL_INTERRUPT_PRIORITY 9,104
+#define portNVIC_PENDSV_PRI 10,148
+#define portNVIC_SYSTICK_PRI 11,260
+#define portNVIC_SYSPRI2 12,364
+#define  DISABLE_INTERRUPTS(19,601
+#define  ENABLE_INTERRUPTS(20,639
+#define STACK_GROWTH 22,678
+#define SWITCH_CONTEXT(24,747
+__attribute__( ( always_inline ) ) static unsigned char __clz(44,1432
+#define FindHighestPriorityTask(51,1627
+void context_switch(57,1784
+
+port_types.h,258
+#define __PORT_TYPES_H__2,25
+typedef unsigned char uint_8;4,75
+typedef char int_8;5,105
+typedef unsigned short int uint_16;6,125
+typedef short int int_16;7,161
+typedef unsigned int uint_32;8,187
+typedef int int_32;9,217
+typedef float float_32;10,237
+
+sem.c,100
+sem *sem_init(sem_init8,134
+void sem_free(16,281
+err_t sem_get(21,381
+void sem_release(60,1244
+
+sem.h,127
+#define __SEM_H__2,18
+typedef struct semaphore 7,75
+	uint_32 cnt;8,102
+	struct list_head task_queue;9,116
+}sem;sem10,146
+
+stats.c,386
+OSStackType StatTaskStack[StatTaskStack9,113
+static uint_32 idleTimerStamp 12,164
+static uint_32 idleTimerTime 13,199
+static uint_32 statTimerTime 14,233
+static uint_32 statTimerStamp 15,267
+static float_32 cpuUtilization 16,302
+float_32 utilizations[utilizations17,338
+void StatTask(19,367
+void statsInit(37,1049
+float_32 getCpuUtilization(50,1231
+void stats_hook(69,2040
+
+stats.h,92
+#define __STATS_H__2,20
+#define STAT_TASK_PRIO 9,149
+#define STAT_TASK_STACK_SIZE 12,182
+
+task.c,662
+TCB *TaskArray[TaskArray19,650
+struct list_head allTasksLinked;21,731
+TCB *ReadyArray[ReadyArray24,835
+uint_32 ReadyTaskBitmap[ReadyTaskBitmap27,938
+uint_32 ReadyTaskIndex;28,985
+uint_32 ReadyTaskBitmap;30,1051
+uint_32 number_of_tasks 33,1084
+TCB *currentTCB;currentTCB36,1115
+TCB *highestTCB;highestTCB37,1132
+void tasksInit(44,1357
+err_t task_create(74,2036
+static void task_lTCBInit(154,4549
+TCB *getTCBbyPrio(getTCBbyPrio168,4879
+void FindHighestPriorityTask(178,5019
+uint_8 clz(190,5262
+void FindHighestPriorityTask(217,5647
+err_t prioEnable(238,6162
+err_t taskEnable(264,6688
+err_t prioDisable(309,7708
+void idleTaskInit(335,8282
+
+task.h,50
+#define __TASK_H__2,19
+#define IDLE_PRIO 11,255
+
+task_types.h,368
+#define __TASK_TYPES_H__2,25
+typedef struct task_struct 4,68
+	OSStackType *TopOfStkPtr;TopOfStkPtr5,97
+	uint_16 prio;6,150
+	state_t state;7,208
+	event_state_t estate;8,246
+	volatile uint_32 delay;9,411
+	struct list_head event_list;10,436
+	struct list_head delay_list;11,466
+	struct list_head same_prio_tasks;13,528
+	uint_32 time_slice;14,563
+} TCB;16,591
+
+time.c,142
+static volatile unsigned int OSTicks 9,132
+void OSTick(12,176
+void TickTasks(57,1288
+void timeDelay(63,1392
+uint_32 getTickCount(82,1828
+
+time.h,24
+#define __TIME_H__2,19
+
+types.h,459
+#define __TYPES_H__2,20
+	ERR_NO_MEM,6,80
+	ERR_INVALID_PRIO,7,93
+	ERR_UNKNOWN,8,112
+	ERR_OK,9,126
+	ERR_Q_EMPTY,10,135
+	ERR_Q_FULL,11,149
+	ERR_Q_TIMEOUT12,162
+}err_t;err_t13,177
+	RUNNING,16,201
+	READY,17,211
+	BLOCKED,18,219
+	SUSPENDED,19,231
+}state_t;state_t20,243
+	MESSAGE_QUEUE,23,269
+	SEMAPHORE,24,285
+	TIMED_OUT,25,297
+	NONE26,309
+}event_state_t;event_state_t27,315
+typedef void (*task)task29,332
+typedef uint_32 OSStackType;31,363
+
+wait_queue.c,154
+err_t addTaskToWaitQueue(5,79
+TCB *removeTaskFromWaitQueue(removeTaskFromWaitQueue26,581
+TCB *removeHeadFromWaitQueue(removeHeadFromWaitQueue56,1135
+
+wait_queue.h,30
+#define __WAIT_QUEUE_H__2,25

@@ -31,7 +31,7 @@ void StatTask(void *args)
 		statTimerTime = temp - statTimerStamp;/*TIM_GetCounter(TIM2);*/
 		cpuUtilization = (float_32) (100 * ((statTimerTime- idleTimerTime) / (float)statTimerTime));
 		utilizations[i++ % 100] = cpuUtilization;
-
+		
 	}
 }
 /* systick interrupts should be already configured before this call*/
@@ -41,20 +41,19 @@ void statsInit()
 
 	port_stat_timer_init();
 	task_create(STAT_TASK_PRIO,
-				StatTask,
-				NULL,
-				STAT_TASK_STACK_SIZE,
-				&StatTaskStack[STAT_TASK_STACK_SIZE - 1],
-				0);
-
+		    StatTask,
+		    NULL,
+		    STAT_TASK_STACK_SIZE,
+		    &StatTaskStack[STAT_TASK_STACK_SIZE - 1],
+		    0);
+	
 }
 
-float_32 getCpuUtilization(){
-
-	/* TODO: can be a better way? */
+float_32 getCpuUtilization()
+{
 	return (float_32)cpuUtilization;
-
 }
+
 /*needs to be called from the context switch hook
  */
  /** Bug: You need to call this somehow also from the interruptEnter/Exit routine, so that 
@@ -68,31 +67,23 @@ float_32 getCpuUtilization(){
  *        2) Stamp the timer in idleTimerStamp
  *        3) Stamp the timer in idleTimerStamp.
  */
-uint_32 first = 1;
+
 void stats_hook(){
 	uint_32 temp;
 	/* two cases:
-	 interrupt nesting > 0
-	 interrupt nesting == 0*/
+	   interrupt nesting > 0
+	   interrupt nesting == 0*/
 	temp = port_get_stat_timer_val();
 	if (interruptNesting == 1){
 		if (highestTCB == TaskArray[IDLE_TASK_PRIO]){ /* first case: interrupt occured on idle task context */
 			idleTimerTime += temp - idleTimerStamp;
-			if (first){
-				first = 0;
-				LPC_GPIO1->FIOPIN |= 1 << 18;
-			}
-
-			/* idleTimerStamp = port_get_stat_timer_val(); */
+			
 		}
 		
 	}else if (interruptNesting == 0){
 		if (highestTCB == TaskArray[IDLE_TASK_PRIO]){
 			idleTimerStamp = temp;
-			if (first){
-				first = 0;
-				LPC_GPIO1->FIOPIN |= 1 << 20;					
-			}
+			
 		}
 		
 	}

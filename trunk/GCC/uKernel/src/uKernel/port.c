@@ -41,7 +41,7 @@ void OSStartFirstTask(){
 			);
 	
 }
-/* enriched alternative*/
+
 void start_first_task(void)
 {
 	__asm volatile(
@@ -55,13 +55,12 @@ void start_first_task(void)
 			"bx r14						\n"
 			" .align 2					\n"
 			"highestTCBconst2:  .word highestTCB\n"
-			);
+		);
 }
 
 void OSTickStart(void){
-  SysTick->CTRL  = SysTick_CTRL_CLKSOURCE_Msk | 
-                   SysTick_CTRL_TICKINT_Msk   | 
-                   SysTick_CTRL_ENABLE_Msk;                    /* Enable SysTick IRQ and SysTick Timer */
+	SysTick->CTRL  = SysTick_CTRL_CLKSOURCE_Msk | SysTick_CTRL_TICKINT_Msk
+		| SysTick_CTRL_ENABLE_Msk;         /* Enable SysTick IRQ and SysTick Timer */
 }
 
 void OSTickStop(void){
@@ -69,13 +68,13 @@ void OSTickStop(void){
 }
 
 uint_32 OSTickConfig(void){
-  unsigned int ticks = CPU_FREQ / OS_TICK_FREQ;
-  if (ticks > SysTick_LOAD_RELOAD_Msk)  return (1);            /* Reload value impossible */
-                                                               
-  SysTick->LOAD  = (ticks & SysTick_LOAD_RELOAD_Msk) - 1;      /* set reload register */
-  NVIC_SetPriority (SysTick_IRQn, (1<<__NVIC_PRIO_BITS) - 1);  /* set Priority for Cortex-M0 System Interrupts */
-  SysTick->VAL   = 0;                                          /* Load the SysTick Counter Value */
-  return (0);               
+	unsigned int ticks = CPU_FREQ / OS_TICK_FREQ;
+	if (ticks > SysTick_LOAD_RELOAD_Msk)  return (1);            /* Reload value impossible */
+	
+	SysTick->LOAD  = (ticks & SysTick_LOAD_RELOAD_Msk) - 1;      /* set reload register */
+	NVIC_SetPriority (SysTick_IRQn, (1<<__NVIC_PRIO_BITS) - 1);  /* set Priority for Cortex-M0 System Interrupts */
+	SysTick->VAL   = 0;                                          /* Load the SysTick Counter Value */
+	return (0);               
 }	
 
 
@@ -95,17 +94,17 @@ void prvGetRegistersFromStack( uint32_t *pulFaultStackAddress )
 away as the variables never actually get used.  If the debugger won't show the
 values of the variables, make them global my moving their declaration outside
 of this function. */
-
-    r0 = pulFaultStackAddress[ 0 ];
-    r1 = pulFaultStackAddress[ 1 ];
-    r2 = pulFaultStackAddress[ 2 ];
-    r3 = pulFaultStackAddress[ 3 ];
-
-    r12 = pulFaultStackAddress[ 4 ];
-    lr = pulFaultStackAddress[ 5 ];
-    pc = pulFaultStackAddress[ 6 ];
-    psr = pulFaultStackAddress[ 7 ];
-
+	
+	r0 = pulFaultStackAddress[ 0 ];
+	r1 = pulFaultStackAddress[ 1 ];
+	r2 = pulFaultStackAddress[ 2 ];
+	r3 = pulFaultStackAddress[ 3 ];
+	
+	r12 = pulFaultStackAddress[ 4 ];
+	lr = pulFaultStackAddress[ 5 ];
+	pc = pulFaultStackAddress[ 6 ];
+	psr = pulFaultStackAddress[ 7 ];
+    
 
     /* When the following line is hit, the variables contain the register values. */
     for( ;; );
@@ -114,17 +113,13 @@ of this function. */
 
 void cpsie(void)
 {
-	__asm volatile(
-			"cpsie i	\n"
-		);
-};
+	__asm volatile("cpsie i	\n");
+}
 
 void cpsid(void)
 {
-	__asm volatile(
-			"cpsid i	\n"
-			);
-};
+	__asm volatile("cpsid i	\n");
+}
 
 
 void context_switch(void)

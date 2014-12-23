@@ -76,22 +76,12 @@ err_t task_create(uint_8 prio, task function, void *args, uint_32 stk_size, uint
 	/* Check if task priority is bigger than the maximum allowed number of tasks
 	   or if task priority is reserved by another task */
 
-#if MULTIPLE_TASKS_PER_PRIORITY
-	/* Check for invalid conditions*/
-	if ((number_of_tasks) == MAX_TASKS){
-		ret = ERR_UNKNOWN;
-		return ret;
-	}else if(prio > MAX_PRIO){
-		ret = ERR_INVALID_PRIO;
-		return ret;
-	}
-#else
 	/*in case of 1-1 prios-tasks only this check would do*/
 	if ((prio > MAX_TASKS) || (TaskArray[prio] != NULL)){
 			ret = ERR_INVALID_PRIO;
 			return ret;
 		}
-#endif
+
 
 	/* keeping some stats */
 	number_of_tasks++;	//number of created tasks
@@ -104,38 +94,12 @@ err_t task_create(uint_8 prio, task function, void *args, uint_32 stk_size, uint
 	/* StkInit is in port */
 	newTCB->TopOfStkPtr = StkInit(tos, function, args, stk_size);
 
-	/* register the task */
-#if MULTIPLE_TASKS_PER_PRIORITY
-	/* Now put the task where it should be*/
-	if(TaskArray[newTCB->prio] == NULL)
-		/* no other task with this priority exists */
-		TaskArray[newTCB->prio] = newTCB;
-	else{
-		/* if this is the second task to be added in this priority
-		 * assign time_slice of the first one as well, so that the kernel
-		 * will know they are linked and they will go round robin*/
-		//TODO: time slice will be implemented as a second step
-		/*if(list_empty(&TaskArray[newTCB->prio]->same_prio_tasks))
-			TaskArray[newTCB->prio]->time_slice = TIME_SLICE;
-		newTCB->time_slice = TIME_SLICE;*/
-		list_add_tail(&(newTCB->same_prio_tasks),&(TaskArray[newTCB->prio]->same_prio_tasks));
-	}
-#else
 	TaskArray[newTCB->prio] = newTCB;
-#endif
 
-	/* Prepare rest uKernel variables according to HIGEST_PRIO_ALT */
-
-#if MULTIPLE_TASKS_PER_PRIORITY			//needed only here
-	if (ReadyArray[newTCB->prio] == NULL)
-		ReadyArray[newTCB->prio] = newTCB;
-	//else case already taken care of, because of taskarray, #$@!
-#else
 	ReadyArray[newTCB->prio] = newTCB;
-#endif
+
 #if HIGHEST_PRIO_ALT == 2
-	/* for MULTIPLE_TASKS_PER_PRIORITY still raise the bits */
-	/* update ready task bitmap */
+
 	ReadyTaskBitmap[(newTCB->prio >> 5)] |=  1 << (newTCB->prio & 0x1F);
 	ReadyTaskIndex |= 1 << (newTCB->prio >> 5);
 #elif HIGHEST_PRIO_ALT == 3
@@ -157,9 +121,7 @@ static void task_lTCBInit(TCB *newTCB, uint_8 prio, uint_32 stk_size)
 	newTCB->delay = 0;
 	INIT_LIST_HEAD(&(newTCB->delay_list));
 	INIT_LIST_HEAD(&(newTCB->event_list));
-#if MULTIPLE_TASKS_PER_PRIORITY
-	INIT_LIST_HEAD(&(newTCB->same_prio_tasks));
-#endif
+
 }
 
 
@@ -220,43 +182,28 @@ void FindHighestPriorityTask()
 #endif
 
 
-//TODO: changes for MULTIPLE_TASKS_PER_PRIORITY DONE, verify
-
-/*
- *TODO: needs changes for multiple tasks per priority.
- * PrioEnabled should be a better name for this
- * TaskEnable should be another API that takes TCB as argument.
- * THis could be used in MULTIPLE_TASKS_PER_PRIORITY conditions.
- * err_t TaskEnabe(TCB* tmp){
- * 	tmp->state = READY
- *
-  *
- * }
- */
 err_t prioEnable(uint_16 prio)
 {
-#if !MULTIPLE_TASKS_PER_PRIORITY
+	
 	ENTER_CRITICAL();
-		if (TaskArray[prio] == NULL){
-			EXIT_CRITICAL();
-			return 	ERR_INVALID_PRIO;
-		}
-		TaskArray[prio]->state = READY;
-
-
-		ReadyArray[prio] = TaskArray[prio];
-#if HIGHEST_PRIO_ALT == 2
-		ReadyTaskBitmap[(prio >> 5)] |= 1 << (prio & 0x1F);
-		ReadyTaskIndex |= 1 << (prio >> 5);
-#elif HIGHEST_PRIO_ALT == 3
-		ReadyTaskBitmap |= 1 << (prio & 0x1F);
-#endif
+	if (TaskArray[prio] == NULL){
 		EXIT_CRITICAL();
-		schedule();
-		return ERR_OK;
-#else
-		return ERR_UNKNOWN;
+		return 	ERR_INVALID_PRIO;
+	}
+	TaskArray[prio]->state = READY;
+	
+	
+	ReadyArray[prio] = TaskArray[prio];
+#if HIGHEST_PRIO_ALT == 2
+	ReadyTaskBitmap[(prio >> 5)] |= 1 << (prio & 0x1F);
+	ReadyTaskIndex |= 1 << (prio >> 5);
+	
+#elif HIGHEST_PRIO_ALT == 3
+	ReadyTaskBitmap |= 1 << (prio & 0x1F);
 #endif
+	EXIT_CRITICAL();
+	schedule();
+	return ERR_OK;
 }
 
 err_t taskEnable(TCB *tsk)
@@ -269,22 +216,6 @@ err_t taskEnable(TCB *tsk)
 	}
 	tsk->state = READY;
 
-#if MULTIPLE_TASKS_PER_PRIORITY
-
-	if (ReadyArray[prio] == NULL){
-		ReadyArray[prio] = tsk;
-#if HIGHEST_PRIO_ALT == 2
-		ReadyTaskBitmap[(prio >> 5)] |= 1 << (prio & 0x1F);
-		ReadyTaskIndex |= 1 << (prio >> 5);
-#elif HIGHEST_PRIO_ALT == 3
-		ReadyTaskBitmap |= 1 << (prio & 0x1F);
-#endif
-	}else{
-		list_add_tail(&(tsk->same_prio_tasks), &(ReadyArray[prio]->same_prio_tasks));
-	}
-	//TODO:you need to think this through. Where to put the tsk on PRIO_ALT 2, 3?
-
-#else
 
 	ReadyArray[prio] = tsk;
 #if HIGHEST_PRIO_ALT == 2
@@ -293,7 +224,7 @@ err_t taskEnable(TCB *tsk)
 #elif HIGHEST_PRIO_ALT == 3
 	ReadyTaskBitmap |= 1 << (prio & 0x1F);
 #endif
-#endif
+
 
 	EXIT_CRITICAL();
 	/* if taskEnable is not called from within an ISR then call schedule*/
@@ -306,28 +237,25 @@ err_t taskEnable(TCB *tsk)
 
 err_t prioDisable(uint_16 prio)
 {
-#if !(MULTIPLE_TASKS_PER_PRIORITY)
+
 	if (TaskArray[prio] == NULL)
-			return ERR_INVALID_PRIO;
-		if (prio == currentTCB->prio){
-			yield();
-			return ERR_OK;
-		}else{
-			ENTER_CRITICAL();
-			TaskArray[prio]->state = BLOCKED;
-			ReadyArray[prio] = NULL;
-	#if HIGHSET_PRIO_ALT == 2
-			ReadyTaskBitmap[ (prio >>5)] &= ~(1 << (prio & 0x1F));
-			ReadyTaskIndex &= ~(1 << (prio >> 5));
-	#elif HIGHEST_PRIO_ALT == 3
-			ReadyTaskBitmap &= ~(1 << (prio & 0x1F));
-	#endif
-			EXIT_CRITICAL();
-			return ERR_OK;
-		}
-#else
-		return ERR_UNKNOWN;
+		return ERR_INVALID_PRIO;
+	if (prio == currentTCB->prio){
+		yield();
+		return ERR_OK;
+	}else{
+		ENTER_CRITICAL();
+		TaskArray[prio]->state = BLOCKED;
+		ReadyArray[prio] = NULL;
+#if HIGHSET_PRIO_ALT == 2
+		ReadyTaskBitmap[ (prio >>5)] &= ~(1 << (prio & 0x1F));
+		ReadyTaskIndex &= ~(1 << (prio >> 5));
+#elif HIGHEST_PRIO_ALT == 3
+		ReadyTaskBitmap &= ~(1 << (prio & 0x1F));
 #endif
+		EXIT_CRITICAL();
+		return ERR_OK;
+	}
 }
 
 void idleTaskInit()
@@ -338,31 +266,5 @@ void idleTaskInit()
 	task_create(IDLE_TASK_PRIO, IdleTask, NULL, IDLE_STACK_SIZE, &ildeStack[0], NULL);
 #endif
 }
-/**
- * TODO: the same as TaskEnable
- */
-//err_t taskDisable(TCB *tsk)
-//{
-//	if (TaskArray[prio] == NULL)
-//		return ERR_INVALID_PRIO;
-//	if (prio == currentTCB->prio){
-//		yield();
-//		return ERR_OK;
-//	}else{
-//		ENTER_CRITICAL();
-//		TaskArray[prio]->state = BLOCKED;
-//
-//#if HIGHEST_PRIO_ALT == 1
-//		ReadyArray[prio] = NULL;
-//#elif HIGHSET_PRIO_ALT == 2
-//		ReadyTaskBitmap[ (prio >>5)] &= ~(1 << (prio & 0x1F));
-//		ReadyTaskIndex &= ~(1 << (prio >> 5));
-//#elif HIGHEST_PRIO_ALT == 3
-//		ReadyTaskBitmap &= ~(1 << (prio & 0x1F));
-//#endif
-//		EXIT_CRITICAL();
-//		return ERR_OK;
-//	}
-//}
 
 

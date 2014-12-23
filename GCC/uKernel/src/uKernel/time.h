@@ -3,7 +3,6 @@
 #include "types.h"
 
 void OSTick(void);
-void TickTasks(void);
 void timeDelay(uint_32 ticks);
 uint_32 getTickCount(void);
 

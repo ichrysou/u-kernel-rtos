@@ -9,9 +9,5 @@ typedef struct task_struct {
 	volatile uint_32 delay;
 	struct list_head event_list;
 	struct list_head delay_list;
-#if MULTIPLE_TASKS_PER_PRIORITY
-	struct list_head same_prio_tasks;
-	uint_32 time_slice;
-#endif
 } TCB;
 #endif

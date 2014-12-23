@@ -50,8 +50,4 @@ void idleTaskInit(void);
 void FindHighestPriorityTask(void);
 #endif
 
-
-//void schedule(void);
-//void yield(void);
-
 #endif

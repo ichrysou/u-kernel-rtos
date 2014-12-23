@@ -5,14 +5,7 @@
 
 #define IDLE_TASK_SLEEP 0
 
-#define MULTIPLE_TASKS_PER_PRIORITY 0
-
-#if !MULTIPLE_TASKS_PER_PRIORITY
 #define MAX_PRIO MAX_TASKS
-#else
-#define MAX_PRIO 10
-#endif
-
 #define CONF_HEAP_SIZE 1000
 #define CONF_HEAP_ALIGN 4
 #define STACK_ALIGN 4
@@ -31,8 +24,8 @@
 #define CONTEXT_SWITCH_HOOK_ENABLED 1
 #define TIME_SLICE 10 //in ticks
 
-#if HIGHEST_PRIO_ALT == HP_PORT_OPTIMAL && MAX_TASKS > 32 && !MULTIPLE_TASKS_PER_PRIORITY
-#error "When using port accelerated context switch, you can't have more than 32 tasks man"
+#if HIGHEST_PRIO_ALT == HP_PORT_OPTIMAL && MAX_TASKS > 32
+#error "When using port accelerated context switch, you can't have more than 32 tasks"
 #endif
 
 #define MEM_MANG 0

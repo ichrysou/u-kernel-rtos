@@ -63,8 +63,6 @@ int main()
 	LPC_GPIO1->FIODIR |= 1 << 21;
 	LPC_GPIO1->FIODIR |= 1 << 23;
 
-	/*this should be called somewhere else*/
-
 	uKern_Init();
 	/* create ur tasks */
 	task_create(TASK1_PRIO, Task1, NULL, STACK_SIZE, &Stack1[STACK_SIZE - 1], NULL);
@@ -75,77 +73,6 @@ int main()
 	task_create(TASK6_PRIO, Task6, NULL, STACK_SIZE, &Stack6[STACK_SIZE - 1], NULL);
 	task_create(TASKMAT_PRIO, TaskMatrix, NULL, STACK_SIZE, &StackMatrix[STACK_SIZE - 1], NULL);
 	task_create(ADC_TASK_PRIO, ADC_Task, NULL, STACK_SIZE, &StackADC[STACK_SIZE - 1], NULL);
-
-	/* buggy method. dynamic task allocation causes bugs, since we don't have heap reserved space */
-	//task_create(TASK1_PRIO, Task1, NULL, STACK_MIN_SIZE);
-	//task_create(TASK2_PRIO, Task2, NULL, STACK_MIN_SIZE);
-
-	/* PWM block section -------------------------------------------- */
-
-	/* Initialize PWM peripheral, timer mode
-	 * PWM prescale value = 1 (absolute value - tick value)
-     */
-
-//	PWMCfgDat.PrescaleOption = PWM_TIMER_PRESCALE_TICKVAL;
-//	PWMCfgDat.PrescaleValue = 5;
-//	PWM_Init(LPC_PWM1, PWM_MODE_TIMER, (void *) &PWMCfgDat);
-
-	/*
-	 * Initialize PWM pin connect
-	 */
-/*	PinCfg.Funcnum = 1;
-	PinCfg.OpenDrain = 0;
-	PinCfg.Pinmode = 0;
-	PinCfg.Portnum = 2;
-	PinCfg.Pinnum = 6;
-	PINSEL_ConfigPin(&PinCfg);*/
-
-	/* Set match value for PWM match channel 0 = 100, update immediately */
-	/*PWM_MatchUpdate(LPC_PWM1, 0, 100, PWM_MATCH_UPDATE_NOW);*/
-	/* PWM Timer/Counter will be reset when channel 0 matching
-	 * no interrupt when match
-	 * no stop when match
-	 */
-	/*PWMMatchCfgDat.IntOnMatch = DISABLE;
-	PWMMatchCfgDat.MatchChannel = 0;
-	PWMMatchCfgDat.ResetOnMatch = ENABLE;
-	PWMMatchCfgDat.StopOnMatch = DISABLE;
-	PWM_ConfigMatch(LPC_PWM1, &PWMMatchCfgDat);*/
-	/* Configure each PWM channel: --------------------------------------------- */
-	/*
-	 * - Channel 5: Single Edge
-	 * The Match register values are as follows:
-	 * - MR0 = 100 (PWM rate)
-	 * - MR5 = 65 (PWM5 output)
-	 * PWM Duty on each PWM channel:
-	 * - Channel 5: Set by match 0, Reset by match 5.
-	 */
-
-	/* Edge setting ------------------------------------ */
-//	/*PWM_ChannelConfig(LPC_PWM1, 6, PWM_CHANNEL_SINGLE_EDGE);*/
-
-	/* Match value setting ------------------------------------ */
-//	PWM_MatchUpdate(LPC_PWM1, 6, 50, PWM_MATCH_UPDATE_NOW);
-	/* Match option setting ------------------------------------ */
-//	PWMMatchCfgDat.IntOnMatch = DISABLE;
-//	PWMMatchCfgDat.MatchChannel = 6;
-//	PWMMatchCfgDat.ResetOnMatch = DISABLE;
-//	PWMMatchCfgDat.StopOnMatch = DISABLE;
-
-
-//   	PWM_ConfigMatch(LPC_PWM1, &PWMMatchCfgDat);
-
-	/* Enable PWM Channel Output ------------------------------------ */
-
-	/* Channel 5 */
-//	PWM_ChannelCmd(LPC_PWM1, 6, ENABLE);
-
-	/* Reset and Start counter */
-//	PWM_ResetCounter(LPC_PWM1);
-//	PWM_CounterCmd(LPC_PWM1, ENABLE);
-
-	/* Start PWM now */
-//	PWM_Cmd(LPC_PWM1, ENABLE);
 
 	/*init other services*/
 
@@ -174,7 +101,7 @@ void Task1(void *args)
 		for (i = 1; i < 100; i++)
 			fact = fact*(i + 1);
 		
-//		LPC_GPIO1->FIOPIN ^= 1 << 18;
+		LPC_GPIO1->FIOPIN ^= 1 << 18;
 		timeDelay(10);
 	}
 }
@@ -206,7 +133,7 @@ void ADC_Task(void *args)
 //	NVIC_EnableIRQ(ADC_IRQn);
 	while(1){
 
-		//LPC_GPIO1->FIOPIN ^= 1 << 20;
+		LPC_GPIO1->FIOPIN ^= 1 << 20;
 
 		timeDelay(10);
 
@@ -266,7 +193,7 @@ void Task2(void *args)
 		//	}
 		//}
 
-//		LPC_GPIO1->FIOPIN ^= 1 << 20;
+		LPC_GPIO1->FIOPIN ^= 1 << 20;
 #if STATS_ENABLED
 		CpuUtil[cntr++ % 20] = getCpuUtilization();
 #endif
@@ -303,7 +230,7 @@ void Task4(void *args){
 	while(1){
 
 		sem_get(s, 10);
-//		LPC_GPIO1->FIOPIN ^= 1 << 21;
+		LPC_GPIO1->FIOPIN ^= 1 << 21;
 		/*timeDelay(1000);*/
 	}
 }

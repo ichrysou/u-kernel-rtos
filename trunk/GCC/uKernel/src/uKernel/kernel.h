@@ -4,7 +4,7 @@
 #include "port.h"
 #include <stdio.h>
 #include "task_types.h"
-
+/*! bug: static __inline is compiler specific. Make it generic*/
 /*********************GLOBALS*******************************/
 extern volatile uint_32 idleCounter;
 extern uint_8 kernel_running; /*flag*/

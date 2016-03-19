@@ -32,7 +32,7 @@ err_t sem_get(sem *s, uint_32 timeout)
 	//TODO: do it NOW, currentTCB->estate = SEMAPHORE
 	currentTCB->estate = SEMAPHORE;
 	addTaskToWaitQueue( &(s->task_queue) , currentTCB);
-	if	(timeout){
+	if(timeout){
 		timeDelay(timeout);
 		EXIT_CRITICAL();
 		/*context switch will hit here?*/

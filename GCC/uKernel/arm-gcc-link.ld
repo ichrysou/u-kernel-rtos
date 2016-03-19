@@ -52,7 +52,7 @@ SECTIONS
         *(COMMON) 
         . = ALIGN(4); 
         _ebss = . ; 
-    } > ram1
+    } > ram
     
     /* stack section */
     .co_stack (NOLOAD):

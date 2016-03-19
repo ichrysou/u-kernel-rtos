@@ -1,18 +1,18 @@
 #include "kernel.h"
 #include "heap.h"
-
+#include "stats.h"
+#include "hooks.h"
 #include "hooks.h"
 OSStackType IdleStack[IDLE_STACK_SIZE];
 
 uint_32 criticalNesting = 0; 
 uint_32 interruptNesting = 0;
-volatile uint_32 idleCounter = 0;
+uint_32 idleCounter = 0;
 uint_8 kernel_running = 0;
 
 /* early initialization, must be the first thing to do in main*/
 void uKern_Init(void)
 {
-
 	heapInit();
 	tasksInit();
 	hw_init();
@@ -20,20 +20,27 @@ void uKern_Init(void)
 #if STATS_ENABLED
 	statsInit();
 #endif
-	
 }
 /*this is  always last call in main function. It should
  * not be expected to ever return.*/
 void StartOS(void){
-	/* Find first task to start*/
-	FindHighestPriorityTask();
-	currentTCB = highestTCB;
-	/*enable interrupts*/
-	OSTickConfig();
-	OSTickStart();
-	kernel_running = 1;
-	/* provoke trap  */
-	OSStartFirstTask();
+     uint_32 i;
+     
+     /* Find first task to start*/
+     FindHighestPriorityTask();
+     currentTCB = highestTCB;
+     
+     OSTickConfig();
+
+/* #if STATS_ENABLED == 1 */
+     /* stats_calculate_idleMax(); */
+/* #else */
+     OSTickStart();
+/* #endif */
+     kernel_running = 1;
+     highestTCB->state = RUNNING;
+     /* provoke trap  */
+     OSStartFirstTask();
 }
 
 void schedule(void)
@@ -47,14 +54,13 @@ void schedule(void)
 			EXIT_CRITICAL();
 			return;
 		}else{
+		        highestTCB->state = RUNNING;
 			EXIT_CRITICAL();
 			
 #if CONTEXT_SWITCH_HOOK_ENABLED
 			contextSwitchHook();
 #endif
-#if STATS_ENABLED
-			stats_hook();
-#endif
+			
 			SWITCH_CONTEXT();
 		}
 	}else{
@@ -62,19 +68,19 @@ void schedule(void)
 		return;
 	}
 }
-
+uint_8 always_true;
 void IdleTask(void *args)
 {
-	
-	while(1){
+        always_true = 1;
+	while(always_true){
+	  DISABLE_INTERRUPTS();
 		idleCounter++;
-		
+	  ENABLE_INTERRUPTS();
 #if IDLE_TASK_SLEEP
-		
 		LPC_SC->PCON = 0x00;
 		__WFI();
 #endif
-
+		
 #if HOOKS_ENABLED && IDLE_TASK_HOOK_ENABLED
 		idleTaskHook();
 #endif

@@ -1,6 +1,6 @@
 #include "heap.h"
 #include "kernel.h"
-#include <stdio.h>
+
 
 static int heap_start, heap_end;
 

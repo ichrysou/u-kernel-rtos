@@ -238,6 +238,7 @@ err_t taskEnable(TCB *tsk)
 err_t prioDisable(uint_16 prio)
 {
 
+  
 	if (TaskArray[prio] == NULL)
 		return ERR_INVALID_PRIO;
 	if (prio == currentTCB->prio){

@@ -6,86 +6,112 @@
 
 #if STATS_ENABLED
 
+uint_8 stat_counter_not_ready;
 OSStackType StatTaskStack[STAT_TASK_STACK_SIZE];
-
-
-static uint_32 idleTimerStamp = 0;
-static uint_32 idleTimerTime = 0;
-static uint_32 statTimerTime = 0;
-static uint_32 statTimerStamp = 0;
+uint_32 idleCounter_Max;
 static float_32 cpuUtilization = 0;
 float_32 utilizations[100];
+uint_8 stat_idle_counter_ready;
+uint_8 stat_calibration;
+
 
 void StatTask(void *args)
 {
-	uint_32 i = 0;
-	uint_32 temp;
-	while(1){
-		idleTimerTime = 0;
-		port_reset_stat_timer_val();
-		/*care must be taken that timer overflow time is less than total delay of statistic task,so
-		 * that the cpu utilization calculation is valid*/
-		statTimerStamp = port_get_stat_timer_val();
-		timeDelay(100);
-		temp = port_get_stat_timer_val();
-		statTimerTime = temp - statTimerStamp;/*TIM_GetCounter(TIM2);*/
-		cpuUtilization = (float_32) (100 * ((statTimerTime- idleTimerTime) / (float)statTimerTime));
-		utilizations[i++ % 100] = cpuUtilization;
-		
-	}
+     TCB *stat_task_cb;
+     uint_32 i = 0;
+     uint_16 prio = 0;
+     uint_8 first_time;
+     idleCounter_Max = 0;
+     first_time = 1;
+
+     while(1) {
+	  /* clear the idle counter */
+	  idleCounter = 0;
+	  
+	  /* disable all other tasks */
+	  if (first_time){
+	    for (prio = 1; prio < MAX_TASKS; prio++){
+	      if (prio != currentTCB->prio){
+		prioDisable(prio);
+	      }
+	    }
+
+	  }
+	  /* wait for 1000 ticks */
+	  timeDelay(1000);
+
+	  /* collect idleCounter max value */
+	  if (first_time){
+	    idleCounter_Max = idleCounter;
+	    first_time = 0;
+	    for (prio = 1; prio < MAX_TASKS; prio++){
+	      if (prio != currentTCB->prio){
+		prioEnable(prio);
+	      }
+	    }
+	  }
+	  
+	  cpuUtilization = (float_32 ) 100 * (1 - (float_32) idleCounter / idleCounter_Max);
+	  utilizations[i++ % 100] = cpuUtilization;
+     }
 }
+
 /* systick interrupts should be already configured before this call*/
 /* this call only works in StartOS for some strange reason.*/
 void statsInit()
 {
+  /* stat_counter_not_ready = 1; */
+  /* idleCounter_Max = 0; */
+  /* stat_calibration = 0; */
+     task_create(STAT_TASK_PRIO,
+     		 StatTask,
+     		 NULL,
+     		 STAT_TASK_STACK_SIZE,
+     		 &StatTaskStack[STAT_TASK_STACK_SIZE - 1],
+     		 0);
+}
 
-	port_stat_timer_init();
-	task_create(STAT_TASK_PRIO,
-		    StatTask,
-		    NULL,
-		    STAT_TASK_STACK_SIZE,
-		    &StatTaskStack[STAT_TASK_STACK_SIZE - 1],
-		    0);
-	
+void stats_calculate_idleMax(void)
+{
+    
+     OSTickStart();
+     ENABLE_INTERRUPTS();
+     while(stat_counter_not_ready){
+     DISABLE_INTERRUPTS();	/* this is just here to mimic the same code as the idle task */
+       idleCounter_Max++;
+     ENABLE_INTERRUPTS();       
+     }
+     stat_calibration = 1;
+     DISABLE_INTERRUPTS();
 }
 
 float_32 getCpuUtilization()
 {
-	return (float_32)cpuUtilization;
+     return (float_32)cpuUtilization;
 }
 
-/*needs to be called from the context switch hook
- */
- /** Bug: You need to call this somehow also from the interruptEnter/Exit routine, so that 
- *        the interrupt service time is not calculated in the idleTimerTime variable.
- *        In general 3 states we have:
- *        1) Idle Task -> Interrupt Enter
- *        2) InterruptExit -> Idle Task
- *        3) InterruptExit -> Idle Task with Contex Switch.
- *        Desired behavior:
- *        1) Stamp the timer that was already counting since entry to the idle task from cases 2) and 3). Add the difference with stamp from 2 and 3 to idleTimerTime.
- *        2) Stamp the timer in idleTimerStamp
- *        3) Stamp the timer in idleTimerStamp.
- */
+void stats_cpu_util_calc(void)
+{
+  /* if(stat_calibration == 0){ */
+  /*   if ((OSTicks++ < 100) && (stat_counter_not_ready == 1)) { */
+  /*     interruptExit(); */
+  /*     return; */
+  /*   }else{ */
+  /*     OSTicks = 0; */
+  /*     stat_counter_not_ready = 0; */
+  /*     interruptExit(); */
+  /*     return; */
+  /*   } */
+    
+  /* } else { */
+  /*   if ((OSTicks % 100) == 0) { */
+  /*     cpuUtilization = (float_32 ) 100 * (1 - (float_32) idleCounter / idleCounter_Max); */
+  /*     idleCounter = 0; */
+  /*   } */
+  /* } */
+}
 
 void stats_hook(){
-	uint_32 temp;
-	/* two cases:
-	   interrupt nesting > 0
-	   interrupt nesting == 0*/
-	temp = port_get_stat_timer_val();
-	if (interruptNesting == 1){
-		if (highestTCB == TaskArray[IDLE_TASK_PRIO]){ /* first case: interrupt occured on idle task context */
-			idleTimerTime += temp - idleTimerStamp;
-			
-		}
-		
-	}else if (interruptNesting == 0){
-		if (highestTCB == TaskArray[IDLE_TASK_PRIO]){
-			idleTimerStamp = temp;
-			
-		}
-		
-	}
+     ;;
 }
 #endif

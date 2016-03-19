@@ -1,70 +1,72 @@
 CC=arm-none-eabi-gcc
 OBJCOPY=arm-none-eabi-objcopy
-ARCH=arm-none-eabi-ar
-LDSCRIPT=..\..\arm-gcc-link.ld
+LDSCRIPT=../../arm-gcc-link.ld
 OBJ_DIR = obj
 BIN_DIR = bin
-RTOS_SOURCE_DIR=..\..\src\uKernel
-ARM_SOURCE_DIR=..\..\lpc17xx_lib\source
-CORTEX_SOURCE_DIR=..\..\src
+RTOS_SOURCE_DIR=../../src/uKernel
+ARM_SOURCE_DIR=../../lpc17xx_lib/source
+CORTEX_SOURCE_DIR=../../src
 WARNINGS= #-Wall #-Wextra -Wshadow -Wpointer-arith -Wbad-function-cast -Wcast-align -Wsign-compare \
 	-Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wunused
 
-CFLAGS=$(WARNINGS) -mcpu=cortex-m3 -mthumb -DLPC1768 -I..\..\lpc17xx_lib\include -I..\..\src\uKernel -I..\..\src -I..\..\src\cmsis_boot -I..\..\src\cmsis -g
+CFLAGS=$(WARNINGS) -mcpu=cortex-m3 -mthumb -DLPC1768 -I../../lpc17xx_lib/include -I../../src/uKernel -I../../src -I../../src/cmsis_boot -I../../src/cmsis -g -O0
 
-LINKER_FLAGS=-mcpu=cortex-m3 -mthumb -g -nostartfiles -Wl,-Map=$(BIN_DIR)/uKernel.map -O0  -Wl,--gc-sections -L..\uKernel -Wl,-T..\..\arm-gcc-link.ld -g -o $(BIN_DIR)/uKernel.elf
+LINKER_FLAGS=-mcpu=cortex-m3 -mthumb -g -nostartfiles -Wl,-Map=$(BIN_DIR)/uKernel.map -O0  -Wl,--gc-sections -L../uKernel -Wl,-T../../arm-gcc-link.ld -g -o $(BIN_DIR)/uKernel.elf
 
 RTOS_SRC = \
-$(RTOS_SOURCE_DIR)\main.c \
-$(RTOS_SOURCE_DIR)\heap.c \
-$(RTOS_SOURCE_DIR)\hooks.c \
-$(RTOS_SOURCE_DIR)\kernel.c \
-$(RTOS_SOURCE_DIR)\message_queue.c \
-$(RTOS_SOURCE_DIR)\port.c \
-$(RTOS_SOURCE_DIR)\sem.c \
-$(RTOS_SOURCE_DIR)\stats.c \
-$(RTOS_SOURCE_DIR)\task.c \
-$(RTOS_SOURCE_DIR)\time.c \
-$(RTOS_SOURCE_DIR)\wait_queue.c 
+$(RTOS_SOURCE_DIR)/main.c \
+$(RTOS_SOURCE_DIR)/heap.c \
+$(RTOS_SOURCE_DIR)/hooks.c \
+$(RTOS_SOURCE_DIR)/kernel.c \
+$(RTOS_SOURCE_DIR)/message_queue.c \
+$(RTOS_SOURCE_DIR)/port.c \
+$(RTOS_SOURCE_DIR)/sem.c \
+$(RTOS_SOURCE_DIR)/stats.c \
+$(RTOS_SOURCE_DIR)/task.c \
+$(RTOS_SOURCE_DIR)/time.c \
+$(RTOS_SOURCE_DIR)/wait_queue.c 
 
-RTOS_INC = $(RTOS_SOURCE_DIR)\heap.h \
-$(RTOS_SOURCE_DIR)\hooks.h \
-$(RTOS_SOURCE_DIR)\kern_conf.h \
-$(RTOS_SOURCE_DIR)\kernel.h \
-$(RTOS_SOURCE_DIR)\list.h \
-$(RTOS_SOURCE_DIR)\message_queue.h \
-$(RTOS_SOURCE_DIR)\port.h \
-$(RTOS_SOURCE_DIR)\port_types.h \
-$(RTOS_SOURCE_DIR)\sem.h \
-$(RTOS_SOURCE_DIR)\stats.h \
-$(RTOS_SOURCE_DIR)\task.h \
-$(RTOS_SOURCE_DIR)\task_types.h \
-$(RTOS_SOURCE_DIR)\time.h \
-$(RTOS_SOURCE_DIR)\types.h \
-$(RTOS_SOURCE_DIR)\wait_queue.h
+RTOS_INC = $(RTOS_SOURCE_DIR)/heap.h \
+$(RTOS_SOURCE_DIR)/hooks.h \
+$(RTOS_SOURCE_DIR)/kern_conf.h \
+$(RTOS_SOURCE_DIR)/kernel.h \
+$(RTOS_SOURCE_DIR)/list.h \
+$(RTOS_SOURCE_DIR)/message_queue.h \
+$(RTOS_SOURCE_DIR)/port.h \
+$(RTOS_SOURCE_DIR)/port_types.h \
+$(RTOS_SOURCE_DIR)/sem.h \
+$(RTOS_SOURCE_DIR)/stats.h \
+$(RTOS_SOURCE_DIR)/task.h \
+$(RTOS_SOURCE_DIR)/task_types.h \
+$(RTOS_SOURCE_DIR)/time.h \
+$(RTOS_SOURCE_DIR)/types.h \
+$(RTOS_SOURCE_DIR)/wait_queue.h
 
 ARM_SRC = \
-$(ARM_SOURCE_DIR)\lpc17xx_timer.c \
-$(ARM_SOURCE_DIR)\lpc17xx_clkpwr.c \
-$(ARM_SOURCE_DIR)\lpc17xx_libcfg_default.c \
-$(ARM_SOURCE_DIR)\lpc17xx_pinsel.c \
+$(ARM_SOURCE_DIR)/lpc17xx_timer.c \
+$(ARM_SOURCE_DIR)/lpc17xx_clkpwr.c \
+$(ARM_SOURCE_DIR)/lpc17xx_libcfg_default.c \
+$(ARM_SOURCE_DIR)/lpc17xx_pinsel.c \
 
 ARM_INC = \
-$(ARM_SOURCE_DIR)\..\include\lpc_types.h \
-$(ARM_SOURCE_DIR)\..\include\lpc17xx_timer.h \
-$(ARM_SOURCE_DIR)\..\include\lpc17xx_pinsel.h \
-$(ARM_SOURCE_DIR)\..\include\lpc17xx_clkpwr.h \
-$(ARM_SOURCE_DIR)\..\include\lpc17xx_libcfg_default.h
+$(ARM_SOURCE_DIR)/../include/lpc_types.h \
+$(ARM_SOURCE_DIR)/../include/lpc17xx_timer.h \
+$(ARM_SOURCE_DIR)/../include/lpc17xx_pinsel.h \
+$(ARM_SOURCE_DIR)/../include/lpc17xx_clkpwr.h \
+$(ARM_SOURCE_DIR)/../include/lpc17xx_libcfg_default.h \
+
+
+
 
 CORTEX_SRC = \
-$(CORTEX_SOURCE_DIR)\cmsis_boot\startup\cr_startup_lpc17.c \
-$(CORTEX_SOURCE_DIR)\cmsis_boot\system_LPC17xx.c \
-$(CORTEX_SOURCE_DIR)\cmsis\core_cm3.c
+$(CORTEX_SOURCE_DIR)/cmsis_boot/startup/cr_startup_lpc17.c \
+$(CORTEX_SOURCE_DIR)/cmsis_boot/system_LPC17xx.c \
+$(CORTEX_SOURCE_DIR)/cmsis/core_cm3.c
 
 CORTEX_INC = \
-$(CORTEX_SOURCE_DIR)\cmsis\core_cm3.h \
-$(CORTEX_SOURCE_DIR)\cmsis_boot\LPC17xx.h \
-$(CORTEX_SOURCE_DIR)\cmsis_boot\system_LPC17xx.h 
+$(CORTEX_SOURCE_DIR)/cmsis/core_cm3.h \
+$(CORTEX_SOURCE_DIR)/cmsis_boot/LPC17xx.h \
+$(CORTEX_SOURCE_DIR)/cmsis_boot/system_LPC17xx.h 
 
 
 

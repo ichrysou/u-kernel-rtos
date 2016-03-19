@@ -6,7 +6,7 @@ extern volatile uint_8 stat_flag;
 
 
 #if HIGHEST_PRIO_ALT == 3
-#define STAT_TASK_PRIO 1
+#define STAT_TASK_PRIO 10
 #endif
 
 #define STAT_TASK_STACK_SIZE 100
@@ -14,6 +14,6 @@ extern volatile uint_8 stat_flag;
 void statsInit();
 float_32 getCpuUtilization();
 void stats_hook();
-
+void stats_cpu_util_calc(void);
 
 #endif

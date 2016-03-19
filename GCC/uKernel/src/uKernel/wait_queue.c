@@ -10,10 +10,10 @@ err_t addTaskToWaitQueue(struct list_head *list, TCB *task)
 	if (list_empty(list)){
 		list_add(&(task->event_list), list);
 	}else{
-		for(tmp = list; (list_entry(tmp->prev, TCB, event_list)->prio) <= (task->prio); tmp = tmp->prev){
-			;;
-		}
-		list_add_tail(&(task->event_list), tmp);
+		/* for(tmp = list; (list_entry(tmp->prev, TCB, event_list)->prio) <= (task->prio); tmp = tmp->prev){ */
+		/* 	;; */
+		/* } */
+		list_add_tail(&(task->event_list), list);
 	}
 	EXIT_CRITICAL();	
 	

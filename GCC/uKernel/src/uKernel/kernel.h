@@ -2,11 +2,11 @@
 #define __KERNEL_C__
 
 #include "port.h"
-#include <stdio.h>
+
 #include "task_types.h"
 /*! bug: static __inline is compiler specific. Make it generic*/
 /*********************GLOBALS*******************************/
-extern volatile uint_32 idleCounter;
+extern uint_32 idleCounter;
 extern uint_8 kernel_running; /*flag*/
 extern TCB *highestTCB;
 extern TCB *currentTCB;
@@ -72,9 +72,6 @@ static __inline void interruptExit(void)
 
 		
 		FindHighestPriorityTask();
-#if STATS_ENABLED
-		stats_hook();
-#endif
 		if (highestTCB != currentTCB){
 #if CONTEXT_SWITCH_HOOK_ENABLED
 			contextSwitchHook();

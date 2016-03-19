@@ -2,15 +2,22 @@
 #include "kernel.h"
 #include "task.h"
 
-static volatile unsigned int OSTicks = 0;
-
+static uint_32 new_var = 0;
+static volatile uint_32 OSTicks = 0;
+extern uint_8 stat_counter_not_ready;
+extern uint_8 stat_calibration;
+static float_32 cpuUtilization = 0;
+float_32 utilizations[100];
+uint_32  Ticks[100];
+extern uint_32 idleCounter_Max;
+uint_32 i = 0;
 void OSTick(void){
 	
 	TCB *tmp;
 	struct list_head *iter1;
 	
 	interruptEnter();
-	
+
 	/* increase tick counter*/
 	OSTicks++;
 	/* check task list for delayed tasks*/

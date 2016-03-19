@@ -13,6 +13,7 @@ typedef enum {
 }err_t;
 
 typedef enum {
+        UNINITIALIZED,
 	RUNNING,
 	READY,
 	BLOCKED,		

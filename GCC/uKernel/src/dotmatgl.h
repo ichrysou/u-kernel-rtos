@@ -3,12 +3,12 @@
 
 #include "lpc17xx_clkpwr.h"
 #include "lpc17xx_gpio.h"
-#define MAT_MAX_COL 7
+#define MAT_MAX_COL 14
 #define MAT_MAX_ROW 5
-#define COL_PORT	LPC_GPIO0
+#define COL_PORT	LPC_GPIO1
 #define ROW_PORT	LPC_GPIO2
 #define VAL_PORT	ROW_PORT
-#define COL_PORT_PINS (0x07F << 4)
+#define COL_PORT_PINS (0x3FFF << 4)
 #define ROW_PORT_PINS (0x1F << 1)
 #define COL_POLARITY 0
 #define ROW_POLARITY 1

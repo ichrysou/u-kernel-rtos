@@ -96,7 +96,7 @@ static void set_PinFunc ( uint8_t portnum, uint8_t pinnum, uint8_t funcnum)
 		pinselreg_idx++;
 	}
 	*(uint32_t *)(pPinCon + pinselreg_idx) &= ~(0x03UL << (pinnum_t * 2));
-	*(uint32_t *)(pPinCon + pinselreg_idx) |= ((uint32_t)funcnum) << ((pinnum_t - 1) * 2);
+	*(uint32_t *)(pPinCon + pinselreg_idx) |= ((uint32_t)funcnum) << ((pinnum_t) * 2);
 }
 
 /*********************************************************************//**

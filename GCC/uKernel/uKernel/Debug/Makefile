@@ -11,9 +11,10 @@ WARNINGS= #-Wall #-Wextra -Wshadow -Wpointer-arith -Wbad-function-cast -Wcast-al
 
 CFLAGS=$(WARNINGS) -mcpu=cortex-m3 -mthumb -DLPC1768 -I../../lpc17xx_lib/include -I../../src/uKernel -I../../src -I../../src/cmsis_boot -I../../src/cmsis -g -O0
 
-LINKER_FLAGS=-mcpu=cortex-m3 -mthumb -g -nostartfiles -Wl,-Map=$(BIN_DIR)/uKernel.map -O0  -Wl,--gc-sections -L../uKernel -Wl,-T../../arm-gcc-link.ld -g -o $(BIN_DIR)/uKernel.elf
+LINKER_FLAGS=-mcpu=cortex-m3 -mthumb -g -nostartfiles -Wl,-Map=$(BIN_DIR)/uKernel.map -O0  -Wl,--gc-sections -L../uKernel -Wl,-T../../arm-gcc-link.ld -g -o $(BIN_DIR)/uKernel.elf -lc
 
 RTOS_SRC = \
+$(RTOS_SOURCE_DIR)/syscalls.c \
 $(RTOS_SOURCE_DIR)/main.c \
 $(RTOS_SOURCE_DIR)/heap.c \
 $(RTOS_SOURCE_DIR)/hooks.c \
@@ -47,6 +48,8 @@ $(ARM_SOURCE_DIR)/lpc17xx_timer.c \
 $(ARM_SOURCE_DIR)/lpc17xx_clkpwr.c \
 $(ARM_SOURCE_DIR)/lpc17xx_libcfg_default.c \
 $(ARM_SOURCE_DIR)/lpc17xx_pinsel.c \
+$(ARM_SOURCE_DIR)/lpc17xx_gpio.c \
+$(ARM_SOURCE_DIR)/lpc17xx_uart.c \
 
 ARM_INC = \
 $(ARM_SOURCE_DIR)/../include/lpc_types.h \
@@ -54,6 +57,7 @@ $(ARM_SOURCE_DIR)/../include/lpc17xx_timer.h \
 $(ARM_SOURCE_DIR)/../include/lpc17xx_pinsel.h \
 $(ARM_SOURCE_DIR)/../include/lpc17xx_clkpwr.h \
 $(ARM_SOURCE_DIR)/../include/lpc17xx_libcfg_default.h \
+$(ARM_SOURCE_DIR)/../include/lpc17xx_uart.h \
 
 
 

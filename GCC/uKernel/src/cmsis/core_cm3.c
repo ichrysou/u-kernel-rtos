@@ -21,7 +21,7 @@
  *
  ******************************************************************************/
 
-#include "port_types.h"
+#include <stdint.h>
 
 /* define compiler specific symbols */
 #if defined ( __CC_ARM   )

@@ -8,7 +8,7 @@
 #define MAX_PRIO MAX_TASKS
 #define CONF_HEAP_SIZE 1000
 #define CONF_HEAP_ALIGN 4
-#define STACK_ALIGN 4
+#define STACK_ALIGN 4U
 #define STACK_SIZE 350 //in words 
 #define IDLE_STACK_SIZE 150
 #define OS_TICK_FREQ 1000 // in ticks/sec

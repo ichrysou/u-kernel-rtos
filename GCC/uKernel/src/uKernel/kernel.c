@@ -17,7 +17,7 @@ void uKern_Init(void)
 	tasksInit();
 	hw_init();
 	
-#if STATS_ENABLED
+#if STATS_ENABLED == 1
 	statsInit();
 #endif
 }
@@ -73,9 +73,13 @@ void IdleTask(void *args)
 {
         always_true = 1;
 	while(always_true){
+	  #if STATS_ENABLED == 1
 	  DISABLE_INTERRUPTS();
+	  #endif
 		idleCounter++;
+	  #if STATS_ENABLED == 1		
 	  ENABLE_INTERRUPTS();
+	  #endif	  
 #if IDLE_TASK_SLEEP
 		LPC_SC->PCON = 0x00;
 		__WFI();

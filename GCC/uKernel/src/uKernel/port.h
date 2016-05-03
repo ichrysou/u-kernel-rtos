@@ -35,13 +35,14 @@ uint_32 OSTickConfig(void);
 void OSTickStart(void);
 void OSStartFirstTask();
 void HardFaultHndlr(void);
+void *portMemcpy(void *dest, const void *src, uint_32 n);
 #if HIGHEST_PRIO_ALT == 3
 #if MAX_PRIO > 32
 #error "Number of task priorities is too damn high for using port specific FindHighestPriorityTask.\
 		Either use less tasks or change HIGHEST_PRIO_ALT in kern_conf.h"
 #endif
 
-__attribute__( ( always_inline ) ) static unsigned char __clz( ulBitmap )
+static unsigned char __clz( ulBitmap )
 {
 	unsigned char ucReturn;
 	__asm volatile ( "clz %0, %1" : "=r" ( ucReturn ) : "r" ( ulBitmap ) );

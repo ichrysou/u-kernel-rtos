@@ -2,8 +2,11 @@
 #define __KERNEL_C__
 
 #include "port.h"
-
 #include "task_types.h"
+#include "stats.h"
+#if HOOKS_ENABLED
+#include "hooks.h"
+#endif
 /*! bug: static __inline is compiler specific. Make it generic*/
 /*********************GLOBALS*******************************/
 extern uint_32 idleCounter;
@@ -23,9 +26,7 @@ extern uint_32 ReadyTaskBitmap;
 #endif
 
 
-#if HOOKS_ENABLED
-#include "hooks.h"
-#endif
+
 #define configMAX_SYSCALL_INTERRUPT_PRIORITY  (5 << 3)
 
 #define IDLE_TASK_PRIO 0
@@ -39,6 +40,14 @@ extern uint_32 ReadyTaskBitmap;
 
 extern uint_32 criticalNesting;
 extern uint_32 interruptNesting;
+
+void uKern_Init(void);
+void StartOS(void);
+
+void IdleTask(void *args);
+
+void schedule(void);
+void yield(void);
 
 static __inline void enterCritical()
 {
@@ -73,21 +82,14 @@ static __inline void interruptExit(void)
 		
 		FindHighestPriorityTask();
 		if (highestTCB != currentTCB){
-#if CONTEXT_SWITCH_HOOK_ENABLED
-			contextSwitchHook();
+#if (HOOKS_ENABLED) && (CONTEXT_SWITCH_HOOK_ENABLED)
+		     contextSwitchHook();
 #endif
 
-			SWITCH_CONTEXT();
+		     SWITCH_CONTEXT();
 		}
 	}
 	EXIT_CRITICAL();
 
 }
-void uKern_Init(void);
-void StartOS(void);
-
-void IdleTask(void *args);
-
-void schedule(void);
-void yield(void);
 #endif

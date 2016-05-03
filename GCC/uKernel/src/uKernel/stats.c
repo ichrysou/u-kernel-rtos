@@ -90,28 +90,10 @@ float_32 getCpuUtilization()
      return (float_32)cpuUtilization;
 }
 
-void stats_cpu_util_calc(void)
+void stats_hook(void)
 {
-  /* if(stat_calibration == 0){ */
-  /*   if ((OSTicks++ < 100) && (stat_counter_not_ready == 1)) { */
-  /*     interruptExit(); */
-  /*     return; */
-  /*   }else{ */
-  /*     OSTicks = 0; */
-  /*     stat_counter_not_ready = 0; */
-  /*     interruptExit(); */
-  /*     return; */
-  /*   } */
-    
-  /* } else { */
-  /*   if ((OSTicks % 100) == 0) { */
-  /*     cpuUtilization = (float_32 ) 100 * (1 - (float_32) idleCounter / idleCounter_Max); */
-  /*     idleCounter = 0; */
-  /*   } */
-  /* } */
+  ;;
 }
 
-void stats_hook(){
-     ;;
-}
+
 #endif

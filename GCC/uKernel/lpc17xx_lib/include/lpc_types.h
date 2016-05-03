@@ -30,8 +30,7 @@
 #define LPC_TYPES_H
 
 /* Includes ------------------------------------------------------------------- */
-#include "port_types.h"
-
+#include <stdint.h>
 
 /* Public Types --------------------------------------------------------------- */
 /** @defgroup LPC_Types_Public_Types LPC_Types Public Types

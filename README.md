@@ -1,5 +1,5 @@
 # u-kernel-rtos
-Automatically exported from code.google.com/p/u-kernel-rtos
+
 Portable (to be proven in action), preemptive, priority based, Real Time Operating System. Implemented Services:
 
 Task Management

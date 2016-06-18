@@ -1,6 +1,6 @@
 CC=arm-none-eabi-gcc
 OBJCOPY=arm-none-eabi-objcopy
-LDSCRIPT=../../arm-gcc-link.ld
+LDSCRIPT=arm-gcc-link.ld
 OBJ_DIR = obj
 BIN_DIR = bin
 RTOS_SOURCE_DIR=../../src/uKernel
@@ -11,7 +11,7 @@ WARNINGS= #-Wall #-Wextra -Wshadow -Wpointer-arith -Wbad-function-cast -Wcast-al
 
 CFLAGS=$(WARNINGS) -mcpu=cortex-m3 -mthumb -DLPC1768 -I../../lpc17xx_lib/include -I../../src/uKernel -I../../src -I../../src/cmsis_boot -I../../src/cmsis -g -O0
 
-LINKER_FLAGS=-mcpu=cortex-m3 -mthumb -g -nostartfiles -Wl,-Map=$(BIN_DIR)/uKernel.map -O0  -Wl,--gc-sections -L../uKernel -Wl,-T../../arm-gcc-link.ld -g -o $(BIN_DIR)/uKernel.elf -lc
+LINKER_FLAGS=-mcpu=cortex-m3 -mthumb -g -nostartfiles -Wl,-Map=$(BIN_DIR)/uKernel.map -O0  -Wl,--gc-sections -L../uKernel -Wl,-T$(LDSCRIPT) -g -o $(BIN_DIR)/uKernel.elf -lc
 
 RTOS_SRC = \
 $(RTOS_SOURCE_DIR)/main.c \

@@ -7,7 +7,7 @@
 /* give one for binary semaphore */
 sem *sem_init(uint_32 count)
 {
-	sem *tmp = (sem *)portMalloc(sizeof(sem));
+	sem *tmp = (sem *)heapMalloc(sizeof(sem));
 	tmp->cnt = count;
 	INIT_LIST_HEAD(&(tmp->task_queue));
 	return tmp;
@@ -15,7 +15,7 @@ sem *sem_init(uint_32 count)
 
 void sem_free(sem *sem)
 {
-	portFree(sem);
+	heapFree(sem);
 }
 
 

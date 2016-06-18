@@ -7,9 +7,8 @@
 #define HEAP_ALIGN CONF_HEAP_ALIGN
 
 void heapInit();
-void *portMalloc(uint_32 sizeRequested);
-uint_32 getHeapSize();
-void portFree(void *ptr);
-
+void *heapMalloc(uint_32 sizeRequested);
+uint_32 heapGetHeapSize();
+void heapFree(void *ptr);
 
 #endif

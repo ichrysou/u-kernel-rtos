@@ -192,7 +192,7 @@ void Task5(void *args){
 void Task6(void *args){
      args = (void *)0;
      err_t queue_err;
-     uint_8 *buff = portMalloc(16 * sizeof(uint_8));
+     uint_8 *buff = heapMalloc(16 * sizeof(uint_8));
      uint_32 loc_rxCnt;
      /*addded sth here*/
      while(1){

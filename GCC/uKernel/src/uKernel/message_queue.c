@@ -6,11 +6,11 @@ static void queueGetMessage(void *buff, queue *q);
 
 queue *queueCreate(unsigned int max_length, unsigned int elementSize)
 {
-     queue *q =(queue *) portMalloc(sizeof(queue));
+     queue *q =(queue *) heapMalloc(sizeof(queue));
      if (q == NULL){
 	  return NULL;
      }
-     q->start =(uint_8 *) portMalloc(elementSize * max_length);
+     q->start =(uint_8 *) heapMalloc(elementSize * max_length);
      if (q->start == NULL){
 	  return NULL;
      }
@@ -27,7 +27,7 @@ queue *queueCreate(unsigned int max_length, unsigned int elementSize)
 
 void queueDelete(queue *q)
 {
-     portFree(q);
+     heapFree(q);
 }
 
 err_t queueSendToTail(queue *q, void *msg)

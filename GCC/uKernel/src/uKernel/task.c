@@ -88,7 +88,7 @@ err_t task_create(uint_8 prio, task function, void *args, uint_32 stk_size, uint
 	/* there's always room for moar... */
 
 	/* Initialize TCB and Stack */
- 	newTCB = (TCB *)portMalloc(sizeof(TCB));//TCBAlloc();
+ 	newTCB = (TCB *)heapMalloc(sizeof(TCB));//TCBAlloc();
 	task_lTCBInit(newTCB, prio, stk_size);
 
 	/* StkInit is in port */

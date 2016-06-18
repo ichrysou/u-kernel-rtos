@@ -21,7 +21,7 @@ void heapInit()
 	}
 }
 
-void *portMalloc(uint_32 sizeRequested)
+void *heapMalloc(uint_32 sizeRequested)
 {
 
 	void *ret;
@@ -47,7 +47,7 @@ void *portMalloc(uint_32 sizeRequested)
 	return ret;
 }
 
-void portFree(void *ptr)
+void heapFree(void *ptr)
 {
 	return;
 }
@@ -55,7 +55,7 @@ void portFree(void *ptr)
 /**
  * @brief: Returns the size of free heap
  */
-uint_32 getHeapSize(){
+uint_32 heapGetHeapSize(){
 	return (heap_end > heap_start) ? (heap_end - heap_start) : (heap_end + HEAP_SIZE - heap_start);
 }
 

@@ -14,7 +14,6 @@ CFLAGS=$(WARNINGS) -mcpu=cortex-m3 -mthumb -DLPC1768 -I../../lpc17xx_lib/include
 LINKER_FLAGS=-mcpu=cortex-m3 -mthumb -g -nostartfiles -Wl,-Map=$(BIN_DIR)/uKernel.map -O0  -Wl,--gc-sections -L../uKernel -Wl,-T../../arm-gcc-link.ld -g -o $(BIN_DIR)/uKernel.elf -lc
 
 RTOS_SRC = \
-$(RTOS_SOURCE_DIR)/syscalls.c \
 $(RTOS_SOURCE_DIR)/main.c \
 $(RTOS_SOURCE_DIR)/heap.c \
 $(RTOS_SOURCE_DIR)/hooks.c \

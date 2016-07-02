@@ -11,7 +11,7 @@ Portable (to be proven in action), preemptive, priority based, Real Time Operati
 
 ## How to cross-compile and run the example application:
 ### Prerequisites:
-GNU ARM Embedded compiler must be installed. For instruction on how to install see [here](https://launchpad.net/gcc-arm-embedded)
+GNU ARM Embedded compiler must be installed. For instructions on how to install see [here](https://launchpad.net/gcc-arm-embedded)
 
 ### Steps:
 - Navigate via the command line to the Makefile directory:

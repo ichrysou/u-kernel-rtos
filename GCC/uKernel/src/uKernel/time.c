@@ -62,7 +62,7 @@ void timeDelay(uint_32 ticks){
 	ReadyTaskBitmap &=  ~(1 << (currentTCB->prio & 0x1F)) ;
 	
 	EXIT_CRITICAL();
-	schedule();
+	kernel_schedule();
 #endif
 }
 

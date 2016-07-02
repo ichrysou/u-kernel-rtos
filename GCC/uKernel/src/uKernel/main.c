@@ -59,9 +59,9 @@ int main()
 {
 
      /* initalize rtOS */
-     uKern_Init();
+     kernel_init();
 
-     /* don't create any tasks before uKern_Init()!!! */
+     /* don't create any tasks before kernel_init()!!! */
      task_create(TASK1_PRIO, Task1, NULL, STACK_SIZE, &Stack1[STACK_SIZE - 1], NULL);
      task_create(TASK2_PRIO, Task2, NULL, STACK_SIZE, &Stack2[STACK_SIZE - 1], NULL);
      task_create(TASK3_PRIO, Task3, NULL, STACK_SIZE, &Stack3[STACK_SIZE - 1], NULL);
@@ -76,7 +76,7 @@ int main()
      task1_factorial = sem_init(1);
 
      /* Start the kernel */
-     StartOS();
+     kernel_start();
      
      /* We actually do not expect to ever reach here */
      return 0;

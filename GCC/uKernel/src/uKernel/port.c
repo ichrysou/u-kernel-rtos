@@ -1,7 +1,11 @@
 #include "port.h"
 #include "lpc17xx_timer.h"
 
-
+void port_sleep(void)
+{
+     LPC_SC->PCON = 0x00;
+     __WFI();
+}
 void *portMemcpy(void *dest, const void *src, uint_32 n)
 {
      uint_32 i;

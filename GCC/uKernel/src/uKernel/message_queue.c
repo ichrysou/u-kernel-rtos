@@ -86,8 +86,8 @@ err_t queueReceive(queue *q, void *buff, int timeout)
 	       }
 	  }else{
 	       EXIT_CRITICAL();
-	       /* no timeout then just yield*/
-	       yield();
+	       /* no timeout then just kernel_yield*/
+	       kernel_yield();
 	       /* returned task, just received a message */
 	  }
 	  ENTER_CRITICAL();

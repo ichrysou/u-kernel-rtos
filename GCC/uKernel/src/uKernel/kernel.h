@@ -9,14 +9,14 @@
 #endif
 /*! bug: static __inline is compiler specific. Make it generic*/
 /*********************GLOBALS*******************************/
-extern uint_32 idleCounter;
+
 extern uint_8 kernel_running; /*flag*/
 extern TCB *highestTCB;
 extern TCB *currentTCB;
 
 extern TCB *TaskArray[MAX_TASKS];
 extern TCB *ReadyArray[MAX_TASKS];
-OSStackType IdleStack[IDLE_STACK_SIZE];
+
 
 #if HIGHEST_PRIO_ALT == 2
 extern uint_32 ReadyTaskBitmap[(MAX_TASKS >> 5) + 1];
@@ -41,13 +41,11 @@ extern uint_32 ReadyTaskBitmap;
 extern uint_32 criticalNesting;
 extern uint_32 interruptNesting;
 
-void uKern_Init(void);
-void StartOS(void);
+void kernel_init(void);
+void kernel_start(void);
 
-void IdleTask(void *args);
-
-void schedule(void);
-void yield(void);
+void kernel_schedule(void);
+void kernel_yield(void);
 
 static __inline void enterCritical()
 {

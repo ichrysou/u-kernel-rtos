@@ -45,7 +45,7 @@ err_t sem_get(sem *s, uint_32 timeout)
 	}else{
 
 		EXIT_CRITICAL();
-		yield();
+		kernel_yield();
 		/*context switch will hit here?*/
 		/* exit point 3*/
 	}

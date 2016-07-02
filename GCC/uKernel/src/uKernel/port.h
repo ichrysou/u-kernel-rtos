@@ -33,6 +33,7 @@ OSStackType *StkInit(OSStackType *tos, task function, void *args, OSStackType st
 
 uint_32 OSTickConfig(void);
 void OSTickStart(void);
+void port_sleep(void);
 void OSStartFirstTask();
 void HardFaultHndlr(void);
 void *portMemcpy(void *dest, const void *src, uint_32 n);

@@ -6,6 +6,7 @@
 
 #if STATS_ENABLED
 
+extern uint_32 idleCounter;
 uint_8 stat_counter_not_ready;
 OSStackType StatTaskStack[STAT_TASK_STACK_SIZE];
 uint_32 idleCounter_Max;
@@ -57,7 +58,7 @@ void StatTask(void *args)
 }
 
 /* systick interrupts should be already configured before this call*/
-/* this call only works in StartOS for some strange reason.*/
+/* this call only works in kernel_start for some strange reason.*/
 void statsInit()
 {
   /* stat_counter_not_ready = 1; */

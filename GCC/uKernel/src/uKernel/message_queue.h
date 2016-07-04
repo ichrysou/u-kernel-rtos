@@ -15,12 +15,12 @@ typedef struct queue{
         struct list_head tasksPend;
 } queue;
 
-queue *queueCreate(unsigned int max_size, unsigned int elementSize);
-void queueDelete(queue *q);
-err_t queueSendToTail(queue *q, void *msg);
-//error_t queueSendToHead(queue *q, void *msg, int timeout);
-err_t queueReceive(queue *q, void *buff, int timeout);
-err_t queuePeek(queue *q, void *buff);
+queue *queue_create(unsigned int max_size, unsigned int elementSize);
+void queue_delete(queue *q);
+err_t queue_sendToTail(queue *q, void *msg);
+
+err_t queue_receive(queue *q, void *buff, int timeout);
+err_t queue_peek(queue *q, void *buff);
 
 
 #endif

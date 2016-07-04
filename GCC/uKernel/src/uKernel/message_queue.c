@@ -2,9 +2,9 @@
 #include "kernel.h"
 #include "heap.h"
 
-static void queueGetMessage(void *buff, queue *q);
+static void queue_getMessage(void *buff, queue *q);
 
-queue *queueCreate(unsigned int max_length, unsigned int elementSize)
+queue *queue_create(unsigned int max_length, unsigned int elementSize)
 {
      queue *q =(queue *) heapMalloc(sizeof(queue));
      if (q == NULL){
@@ -25,12 +25,12 @@ queue *queueCreate(unsigned int max_length, unsigned int elementSize)
      return q;
 }
 
-void queueDelete(queue *q)
+void queue_delete(queue *q)
 {
      heapFree(q);
 }
 
-err_t queueSendToTail(queue *q, void *msg)
+err_t queue_sendToTail(queue *q, void *msg)
 {
      TCB *tmp;
      ENTER_CRITICAL();
@@ -58,14 +58,14 @@ err_t queueSendToTail(queue *q, void *msg)
      return ERR_OK;
 }
 
-err_t queueReceive(queue *q, void *buff, int timeout)
+err_t queue_receive(queue *q, void *buff, int timeout)
 {
      ENTER_CRITICAL();
      /* is there a message in the queue?*/
      if (q->length){
 	  /* if yes just get it and return */
 	  currentTCB->estate = NONE;
-	  queueGetMessage(buff, q);
+	  queue_getMessage(buff, q);
 	  EXIT_CRITICAL();
 	  return ERR_OK;
      }else{
@@ -92,13 +92,13 @@ err_t queueReceive(queue *q, void *buff, int timeout)
 	  }
 	  ENTER_CRITICAL();
 	  currentTCB->estate = NONE;
-	  queueGetMessage(buff, q);
+	  queue_getMessage(buff, q);
 	  EXIT_CRITICAL();
 	  return ERR_OK;
      }
 }
 
-err_t queuePeek(queue *q, void *buff)
+err_t queue_peek(queue *q, void *buff)
 {
      err_t ret;
      ENTER_CRITICAL();
@@ -106,7 +106,7 @@ err_t queuePeek(queue *q, void *buff)
      if (q->length){
 	  /* if yes just get it and return */
 	  currentTCB->estate = NONE;
-	  queueGetMessage(buff, q);
+	  queue_getMessage(buff, q);
 	  ret = ERR_OK;
      }else{
 	  /*Queue is empty just leave*/
@@ -121,7 +121,7 @@ uint_32 queueGetNumberOfMessages(queue *q)
      return q->length;
 }
 
-static void queueGetMessage(void *buff, queue *q)
+static void queue_getMessage(void *buff, queue *q)
 {
      portMemcpy(buff, q->head, q->elementSize);
      q->length--;

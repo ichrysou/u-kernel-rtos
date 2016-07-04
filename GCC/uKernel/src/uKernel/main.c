@@ -71,7 +71,7 @@ int main()
      task_create(TASK7_PRIO, Task7, NULL, STACK_SIZE, &Stack7[STACK_SIZE - 1], NULL);
 
      /*init other OS services*/
-     task6Q = queueCreate(10, 16 * sizeof(uint_8));
+     task6Q = queue_create(10, 16 * sizeof(uint_8));
      s = sem_init(1);
      task1_factorial = sem_init(1);
 
@@ -199,7 +199,7 @@ void Task6(void *args){
 	  
 	  /* } */
 	  
-	  queueReceive(task6Q,(void *) buff, 0);
+	  queue_receive(task6Q,(void *) buff, 0);
 	  LPC_GPIO1->FIOPIN ^= 1 << 20;
 
 	  /* /\* limit of TX FIFO is 16 bytes *\/ */
@@ -332,7 +332,7 @@ void UART3_IRQHandler(void)
 	       }
 	       ENTER_CRITICAL();
 	       rxBuf[0] = loc_rxCnt;
-	       queueSendToTail(task6Q, (void *)&rxBuf[0]);
+	       queue_sendToTail(task6Q, (void *)&rxBuf[0]);
 	       EXIT_CRITICAL();
 	       LPC_GPIO1->FIOPIN ^= 1 << 18;
 	       break;
@@ -342,7 +342,7 @@ void UART3_IRQHandler(void)
 	       rxBuf[1 + loc_rxCnt++] = ReceiveValue;
 	       ENTER_CRITICAL();
 	       rxBuf[0] = loc_rxCnt;
-	       queueSendToTail(task6Q, (void *)&rxBuf[0]);
+	       queue_sendToTail(task6Q, (void *)&rxBuf[0]);
 	       EXIT_CRITICAL();
 	       LPC_GPIO1->FIOPIN ^= 1 << 18;
 	       break;

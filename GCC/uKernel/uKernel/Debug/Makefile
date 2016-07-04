@@ -4,12 +4,12 @@ LDSCRIPT=arm-gcc-link.ld
 OBJ_DIR = obj
 BIN_DIR = bin
 RTOS_SOURCE_DIR=../../src/uKernel
-ARM_SOURCE_DIR=../../lpc17xx_lib/source
+ARM_SOURCE_DIR=../../src/lpc17xx_lib/source
 CORTEX_SOURCE_DIR=../../src
 WARNINGS= #-Wall #-Wextra -Wshadow -Wpointer-arith -Wbad-function-cast -Wcast-align -Wsign-compare \
 	-Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wunused
 
-CFLAGS=$(WARNINGS) -mcpu=cortex-m3 -mthumb -DLPC1768 -I../../lpc17xx_lib/include -I../../src/uKernel -I../../src -I../../src/cmsis_boot -I../../src/cmsis -g -O0
+CFLAGS=$(WARNINGS) -mcpu=cortex-m3 -mthumb -DLPC1768 -I../../src/lpc17xx_lib/include -I../../src/uKernel -I../../src -I../../src/cmsis_boot -I../../src/cmsis -g -O0
 
 LINKER_FLAGS=-mcpu=cortex-m3 -mthumb -g -nostartfiles -Wl,-Map=$(BIN_DIR)/uKernel.map -O0  -Wl,--gc-sections -L../uKernel -Wl,-T$(LDSCRIPT) -g -o $(BIN_DIR)/uKernel.elf -lc
 

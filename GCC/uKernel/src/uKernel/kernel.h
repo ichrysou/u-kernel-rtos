@@ -3,7 +3,6 @@
 
 #include "port.h"
 #include "task_types.h"
-#include "stats.h"
 #if HOOKS_ENABLED
 #include "hooks.h"
 #endif
@@ -63,9 +62,6 @@ static __inline void interruptEnter(void)
 {
 	ENTER_CRITICAL();
 	interruptNesting++;
-	#if STATS_ENABLED
-	stats_hook();
-	#endif
 	EXIT_CRITICAL();
 
 }

@@ -10,6 +10,7 @@
 #include "heap.h"
 #include "message_queue.h"
 #include "sem.h"
+#include "time.h"
 
 /* prios increase from 0 to 32*/
 #define TASK1_PRIO 2

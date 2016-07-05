@@ -34,9 +34,6 @@ extern uint_32 ReadyTaskBitmap;
 #define ENTER_CRITICAL() enterCritical()
 #define EXIT_CRITICAL()  exitCritical()
 
-#define IntEnter() interruptEnter()
-#define IntExit() interruptExit()
-
 extern uint_32 criticalNesting;
 extern uint_32 interruptNesting;
 

@@ -1,5 +1,4 @@
 #include "stats.h"
-#include "kernel.h"
 #include "port.h"
 #include "time.h"
 #include "task.h"

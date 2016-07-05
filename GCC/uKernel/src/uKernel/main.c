@@ -101,7 +101,7 @@ void Task1(void *args)
 	  fact_result = fact;
 	  sem_release(task1_factorial);
 	  
-	  timeDelay(100);
+	  time_delay(100);
      }
 }
 
@@ -138,7 +138,7 @@ void Task2(void *args)
 	  fact_result = 0xAA;
 	  sem_release(task1_factorial);
     
-	  timeDelay( 200);
+	  time_delay( 200);
      }
 }
 
@@ -157,7 +157,7 @@ void Task3(void *args)
 	  for (i = 2; i < 1000; i++)
 	       fibonacci[i%100] = fibonacci[(i - 1)%100] + fibonacci[(i - 2)%100];
 	  
-	  timeDelay(200);
+	  time_delay(200);
      }
 }
 
@@ -169,7 +169,6 @@ void Task4(void *args){
 	  semaphore = sem_get(s, 100);
     
 	  LPC_GPIO1->FIOPIN ^= 1 << 21;
-	  /*timeDelay(1000);*/
      }
 }
 
@@ -179,11 +178,11 @@ void Task5(void *args){
      float_32 cpuLoad;
      while(1){
 
-	  timeDelay(30);
+	  time_delay(30);
 
 	  for (i = 0; i < 100; i++){
 
-	       cpuLoad = getCpuUtilization();
+	       cpuLoad = stats_getCpuUtilization();
 
 	  }
      }
@@ -192,7 +191,7 @@ void Task5(void *args){
 void Task6(void *args){
      args = (void *)0;
      err_t queue_err;
-     uint_8 *buff = heapMalloc(16 * sizeof(uint_8));
+     uint_8 *buff = heap_malloc(16 * sizeof(uint_8));
      uint_32 loc_rxCnt;
      /*addded sth here*/
      while(1){
@@ -204,7 +203,7 @@ void Task6(void *args){
 
 	  /* /\* limit of TX FIFO is 16 bytes *\/ */
 	  UART_Send(UARTx, (uint_8 *)&buff[1], ((uint_32)buff[0]) & 0xFF, NONE_BLOCKING);
-	  timeDelay(10);
+	  time_delay(10);
 
        
      }
@@ -226,7 +225,7 @@ void Task7(void *args)
 	       UART_Send(LPC_UART3, (uint8_t *)"hello word\n", sizeof("hello word\n"), NONE_BLOCKING);
 	  }
 	  /* } */
- 	  timeDelay(100);
+ 	  time_delay(100);
 	  LPC_GPIO1->FIOPIN ^= 1 << 23;	       
      }
 }

@@ -6,7 +6,7 @@ void port_sleep(void)
      LPC_SC->PCON = 0x00;
      __WFI();
 }
-void *portMemcpy(void *dest, const void *src, uint_32 n)
+void *port_memcpy(void *dest, const void *src, uint_32 n)
 {
      uint_32 i;
      uint_8 *loc_dest, *loc_src;
@@ -27,7 +27,7 @@ void *portMemcpy(void *dest, const void *src, uint_32 n)
  * @brief: Initialize the stack of a newly created task. 
  * 
  */
-OSStackType *StkInit(OSStackType *tos, task function, void *args, OSStackType stack_size)
+OSStackType *port_stackInit(OSStackType *tos, task function, void *args, OSStackType stack_size)
 {
      /* Simulate the stack frame as it was one of an interrupted task */
 #if STACK_GROWTH == 1
@@ -52,7 +52,7 @@ OSStackType *StkInit(OSStackType *tos, task function, void *args, OSStackType st
 
 
 /* Set the msp back to the start of the stack. */
-void OSStartFirstTask(){
+void port_startFirstTask(){
 
      __asm volatile(
 	  /* " ldr r0, =0xE000ED08   \n"      /\* Use *\/ */
@@ -66,7 +66,7 @@ void OSStartFirstTask(){
 	
 }
 
-void start_first_task(void)
+void port_startFirstTaskHandler(void)
 {
      __asm volatile(
 	  "ldr r2, highestTCBconst2		\n"
@@ -82,16 +82,16 @@ void start_first_task(void)
 	  );
 }
 
-void OSTickStart(void){
+void port_tickStart(void){
      SysTick->CTRL  = SysTick_CTRL_CLKSOURCE_Msk | SysTick_CTRL_TICKINT_Msk
 	  | SysTick_CTRL_ENABLE_Msk;         /* Enable SysTick IRQ and SysTick Timer */
 }
 
-void OSTickStop(void){
+void port_tickStop(void){
      SysTick->CTRL  &= ~(SysTick_CTRL_ENABLE_Msk);                    /* Disable SysTick IRQ and SysTick Timer */
 }
 
-uint_32 OSTickConfig(void){
+uint_32 port_tickConfig(void){
      unsigned int ticks = CPU_FREQ / OS_TICK_FREQ;
      if (ticks > SysTick_LOAD_RELOAD_Msk)  return (1);            /* Reload value impossible */
 	
@@ -135,18 +135,18 @@ void prvGetRegistersFromStack( uint32_t *pulFaultStackAddress )
 }
 
 
-void cpsie(void)
+void port_enableInterrupts(void)
 {
      __asm volatile("cpsie i	\n");
 }
 
-void cpsid(void)
+void port_disableInterrupts(void)
 {
      __asm volatile("cpsid i	\n");
 }
 
 
-void context_switch(void)
+void port_contextSwitch(void)
 {
      __asm volatile(
 
@@ -173,7 +173,7 @@ void context_switch(void)
 
 
 
-void hw_init(){
+void port_hwInit(){
 #ifdef __DEBUG__
      SCB->VTOR = 0x10000000;
 #endif
@@ -196,43 +196,3 @@ void HardFault_Handler(void)
 	  );
 }
 
-#if STATS_ENABLED
-void port_reset_stat_timer_val(){
-     TIM_ResetCounter(LPC_TIM0);
-}
-
-void port_stat_timer_init(){
-
-
-     TIM_TIMERCFG_Type TMR0_Cfg;
-     TIM_MATCHCFG_Type TMR0_Match;
-
-     /* On reset, Timer0/1 are enabled (PCTIM0/1 = 1), and Timer2/3 are disabled (PCTIM2/3 = 0).*/
-     /* Initialize timer 0, prescale count time of 100uS */
-     TMR0_Cfg.PrescaleOption = TIM_PRESCALE_USVAL;
-     TMR0_Cfg.PrescaleValue = 1;
-     /* Use channel 0, MR0 */
-     TMR0_Match.MatchChannel = 0;
-     /* Enable interrupt when MR0 matches the value in TC register */
-     TMR0_Match.IntOnMatch = ENABLE;
-     /* Enable reset on MR0: TIMER will reset if MR0 matches it */
-     TMR0_Match.ResetOnMatch = TRUE;
-     /* Don't stop on MR0 if MR0 matches it*/
-     TMR0_Match.StopOnMatch = FALSE;
-     /* Do nothing for external output pin if match (see cmsis help, there are another options) */
-     TMR0_Match.ExtMatchOutputType = TIM_EXTMATCH_NOTHING;
-     /* Set Match value, count value of 10000 (10000 * 100uS = 1000000us = 1s --> 1 Hz) */
-     TMR0_Match.MatchValue = 10000000;
-     /* Set configuration for Tim_config and Tim_MatchConfig */
-     TIM_Init(LPC_TIM0, TIM_TIMER_MODE, &TMR0_Cfg);
-     TIM_ConfigMatch(LPC_TIM0, &TMR0_Match);
-     /* Start timer 0 */
-     TIM_Cmd(LPC_TIM0, ENABLE);
-
-}
-
-uint_32 port_get_stat_timer_val(void){
-     return LPC_TIM0->TC;
-}
-
-#endif

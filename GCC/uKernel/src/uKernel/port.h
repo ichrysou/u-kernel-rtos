@@ -13,11 +13,11 @@
 /* critical region handling */
 //naive implementation
 //__inline and asm should go to compiler abstraction layer
-void cpsie();
-void cpsid(void);
+void port_enableInterrupts(void);
+void port_disableInterrupts(void);
 
-#define  DISABLE_INTERRUPTS() cpsid()
-#define  ENABLE_INTERRUPTS()  cpsie()
+#define  DISABLE_INTERRUPTS() port_disableInterrupts()
+#define  ENABLE_INTERRUPTS()  port_enableInterrupts()
 
 #define STACK_GROWTH 1  // 1 if stack grows from High to Low memory
 
@@ -28,15 +28,16 @@ void cpsid(void);
  *         created task. Is must look as if it was just interrupted.
  */
 
-OSStackType *StkInit(OSStackType *tos, task function, void *args, OSStackType stack_size);
+OSStackType *port_stackInit(OSStackType *tos, task function, void *args, OSStackType stack_size);
 
 
-uint_32 OSTickConfig(void);
-void OSTickStart(void);
+uint_32 port_tickConfig(void);
+void port_tickStart(void);
+void port_tickStop(void);
 void port_sleep(void);
-void OSStartFirstTask();
+void port_startFirstTask();
 void HardFaultHndlr(void);
-void *portMemcpy(void *dest, const void *src, uint_32 n);
+void *port_memcpy(void *dest, const void *src, uint_32 n);
 #if HIGHEST_PRIO_ALT == 3
 #if MAX_PRIO > 32
 #error "Number of task priorities is too damn high for using port specific FindHighestPriorityTask.\
@@ -50,25 +51,19 @@ static unsigned char __clz( ulBitmap )
 	return ucReturn;
 }
 
-#define FindHighestPriorityTask()	{highestTCB = ReadyArray[31 - __clz(ReadyTaskBitmap)];}
+#define task_findHighestPriorityTask()	{highestTCB = ReadyArray[31 - __clz(ReadyTaskBitmap)];}
 #endif
 
 // system calls declarations here
 //compiler abstraction?
 
-void context_switch(void) __attribute__(( naked ));
-//void start_first_task(void);
-void hw_init(void);
+void port_contextSwitch(void) __attribute__(( naked ));
+void port_hwInit(void);
 
 #ifdef DEBUG
 void prvGetRegistersFromStack( uint32_t *pulFaultStackAddress );
 #endif
 
-#if STATS_ENABLED
-void port_stat_timer_init();
-uint_32 port_get_stat_timer_val(void);
-void port_reset_stat_timer_val();
-#endif
 
 #endif
 

@@ -34,20 +34,18 @@ extern TCB *highestTCB;
 /* ==========================================================*/
 /* -------------- Global Function Declarations -------------*/
 /* ========================================================*/
-void tasksInit(void);
+void task_initTasks(void);
 err_t task_create(uint_8 prio, task function, void *args, OSStackType stack_size, OSStackType *tos, TCB *handler);
 TCB *getTCBbyPrio(unsigned int prio);
 
-err_t prioEnable(uint_16 prio);
-err_t prioDisable(uint_16 prio);
-err_t taskEnable(TCB *tsk);
-err_t taskDisable(TCB *tsk);
-
-void idleTaskInit(void);
+err_t task_prioEnable(uint_16 prio);
+err_t task_prioDisable(uint_16 prio);
+err_t task_taskEnable(TCB *tsk);
+void task_idleTaskInit(void);
 
 
 #if HIGHEST_PRIO_ALT != 3
-void FindHighestPriorityTask(void);
+void task_findHighestPriorityTask(void);
 #endif
 
 #endif

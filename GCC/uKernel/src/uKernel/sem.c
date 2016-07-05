@@ -7,7 +7,7 @@
 /* give one for binary semaphore */
 sem *sem_init(uint_32 count)
 {
-     sem *tmp = (sem *)heapMalloc(sizeof(sem));
+     sem *tmp = (sem *)heap_malloc(sizeof(sem));
      tmp->cnt = count;
      INIT_LIST_HEAD(&(tmp->task_queue));
      return tmp;
@@ -15,7 +15,7 @@ sem *sem_init(uint_32 count)
 
 void sem_free(sem *sem)
 {
-     heapFree(sem);
+     heap_free(sem);
 }
 
 
@@ -31,14 +31,14 @@ err_t sem_get(sem *s, uint_32 timeout)
      }
      //TODO: do it NOW, currentTCB->estate = SEMAPHORE
      currentTCB->estate = SEMAPHORE;
-     addTaskToWaitQueue( &(s->task_queue) , currentTCB);
+     wait_queue_addTask( &(s->task_queue) , currentTCB);
      if(timeout){
-	  timeDelay(timeout);
+	  time_delay(timeout);
 	  EXIT_CRITICAL();
 	  /*context switch will hit here?*/
 	  /* exit point 2*/
 	  if (currentTCB->estate == TIMED_OUT){
-	       removeTaskFromWaitQueue(&(s->task_queue), currentTCB->prio);
+	       wait_queue_removeTask(&(s->task_queue), currentTCB->prio);
 
 	       return ERR_Q_TIMEOUT;
 	  }
@@ -63,11 +63,11 @@ void sem_release(sem *s)
      {
 	  (s->cnt)++;
      }else{
-	  tmp = removeHeadFromWaitQueue(&(s->task_queue));
+	  tmp = wait_queue_removeHead(&(s->task_queue));
 	  if (tmp->delay){
 	       tmp->delay = 0;
 	  }
-	  prioEnable(tmp->prio);
+	  task_prioEnable(tmp->prio);
      }
      EXIT_CRITICAL();
      return;

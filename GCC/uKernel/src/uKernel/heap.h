@@ -6,9 +6,9 @@
 #define HEAP_SIZE CONF_HEAP_SIZE
 #define HEAP_ALIGN CONF_HEAP_ALIGN
 
-void heapInit();
-void *heapMalloc(uint_32 sizeRequested);
-uint_32 heapGetHeapSize();
-void heapFree(void *ptr);
+void heap_init();
+void *heap_malloc(uint_32 sizeRequested);
+uint_32 heap_getHeapSize();
+void heap_free(void *ptr);
 
 #endif

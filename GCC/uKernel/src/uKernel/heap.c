@@ -8,7 +8,7 @@ uint_8 heap1[HEAP_SIZE + HEAP_ALIGN - 1];
 uint_8 *heap;
 
 /* to be called before OSTickStart();*/
-void heapInit()
+void heap_init()
 {
 	uint_32 i;
        if (HEAP_ALIGN % 2 != 0)
@@ -21,7 +21,7 @@ void heapInit()
 	}
 }
 
-void *heapMalloc(uint_32 sizeRequested)
+void *heap_malloc(uint_32 sizeRequested)
 {
 
 	void *ret;
@@ -47,7 +47,7 @@ void *heapMalloc(uint_32 sizeRequested)
 	return ret;
 }
 
-void heapFree(void *ptr)
+void heap_free(void *ptr)
 {
 	return;
 }
@@ -55,7 +55,7 @@ void heapFree(void *ptr)
 /**
  * @brief: Returns the size of free heap
  */
-uint_32 heapGetHeapSize(){
+uint_32 heap_getHeapSize(){
 	return (heap_end > heap_start) ? (heap_end - heap_start) : (heap_end + HEAP_SIZE - heap_start);
 }
 

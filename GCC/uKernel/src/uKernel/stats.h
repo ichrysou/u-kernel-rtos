@@ -11,8 +11,8 @@ extern volatile uint_8 stat_flag;
 
 #define STAT_TASK_STACK_SIZE 100
 
-void statsInit(void);
-float_32 getCpuUtilization(void);
+void stats_init(void);
+float_32 stats_getCpuUtilization(void);
 void stats_hook(void);
 
 #endif

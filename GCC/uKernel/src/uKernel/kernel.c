@@ -12,11 +12,11 @@ uint_8 kernel_running = 0;
 /* early initialization, must be the first thing to do in main*/
 void kernel_init(void)
 {
-	heapInit();
-	tasksInit();
-	hw_init();
+	heap_init();
+	task_initTasks();
+	port_hwInit();
 #if STATS_ENABLED == 1
-	statsInit();
+	stats_init();
 #endif
 }
 /*this is  always last call in main function. It should
@@ -26,16 +26,16 @@ void kernel_start(void){
      uint_32 i;
      
      /* Find first task to start*/
-     FindHighestPriorityTask();
+     task_findHighestPriorityTask();
      currentTCB = highestTCB;
      
-     OSTickConfig();
-     OSTickStart();
+     port_tickConfig();
+     port_tickStart();
      kernel_running = 1;
      highestTCB->state = RUNNING;
 
      /* provoke trap  */
-     OSStartFirstTask();
+     port_startFirstTask();
 }
 
 void kernel_schedule(void)
@@ -44,7 +44,7 @@ void kernel_schedule(void)
 	/* if we are in interrupt context, perform no Context Switch.
 	 * interruptExit() will handle it */
 	if(!interruptNesting){
-		FindHighestPriorityTask();
+		task_findHighestPriorityTask();
 		if (currentTCB == highestTCB){
 			EXIT_CRITICAL();
 			return;
@@ -53,7 +53,7 @@ void kernel_schedule(void)
 			EXIT_CRITICAL();
 			
 #if CONTEXT_SWITCH_HOOK_ENABLED
-			contextSwitchHook();
+			hooks_contextSwitchHook();
 #endif
 			
 			SWITCH_CONTEXT();

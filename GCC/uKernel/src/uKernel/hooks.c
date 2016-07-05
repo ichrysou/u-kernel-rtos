@@ -3,14 +3,14 @@
 #include "stats.h"
 #endif
 
-void idleTaskHook(void)
+void hooks_idleTaskHook(void)
 {
 	;;
 }
 
 
 
-void contextSwitchHook(void)
+void hooks_contextSwitchHook(void)
 {
 	;;
 }

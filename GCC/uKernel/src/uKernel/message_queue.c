@@ -6,11 +6,11 @@ static void queue_getMessage(void *buff, queue *q);
 
 queue *queue_create(unsigned int max_length, unsigned int elementSize)
 {
-     queue *q =(queue *) heapMalloc(sizeof(queue));
+     queue *q =(queue *) heap_malloc(sizeof(queue));
      if (q == NULL){
 	  return NULL;
      }
-     q->start =(uint_8 *) heapMalloc(elementSize * max_length);
+     q->start =(uint_8 *) heap_malloc(elementSize * max_length);
      if (q->start == NULL){
 	  return NULL;
      }
@@ -27,7 +27,7 @@ queue *queue_create(unsigned int max_length, unsigned int elementSize)
 
 void queue_delete(queue *q)
 {
-     heapFree(q);
+     heap_free(q);
 }
 
 err_t queue_sendToTail(queue *q, void *msg)
@@ -42,17 +42,17 @@ err_t queue_sendToTail(queue *q, void *msg)
      if (q->tail + q->elementSize >= q->end){
 	  q->tail = q->start;
      }
-     portMemcpy((void *)q->tail, msg, q->elementSize);
+     port_memcpy((void *)q->tail, msg, q->elementSize);
      q->tail = q->tail + q->elementSize;
      q->length++;
      if (!list_empty(&(q->tasksPend))){
-	  tmp = removeHeadFromWaitQueue(&(q->tasksPend));
+	  tmp = wait_queue_removeHead(&(q->tasksPend));
 	  if (tmp->delay){
 	       tmp->delay = 0;
 	       /* remove also from delayed list */
 	  }
 
-	  taskEnable(tmp);
+	  task_taskEnable(tmp);
      }
      EXIT_CRITICAL();
      return ERR_OK;
@@ -70,18 +70,18 @@ err_t queue_receive(queue *q, void *buff, int timeout)
 	  return ERR_OK;
      }else{
 	  /* if not then add self in waitqueue*/
-	  addTaskToWaitQueue(&(q->tasksPend), currentTCB);
+	  wait_queue_addTask(&(q->tasksPend), currentTCB);
 	  /* update task state*/
 	  currentTCB->estate = MESSAGE_QUEUE;
 	  /* timeout pend requested?*/
 	  if (timeout){
 	       /* if yes, add also delay*/
-	       timeDelay(timeout);
+	       time_delay(timeout);
 	       EXIT_CRITICAL();
 	       /*switch will hit here?*/
 	       if (currentTCB->estate == TIMED_OUT){
 		    /*remove self from waitqueue*/
-		    removeTaskFromWaitQueue(&(q->tasksPend), currentTCB->prio);
+		    wait_queue_removeTask(&(q->tasksPend), currentTCB->prio);
 		    return ERR_Q_TIMEOUT;
 	       }
 	  }else{
@@ -123,7 +123,7 @@ uint_32 queueGetNumberOfMessages(queue *q)
 
 static void queue_getMessage(void *buff, queue *q)
 {
-     portMemcpy(buff, q->head, q->elementSize);
+     port_memcpy(buff, q->head, q->elementSize);
      q->length--;
      if (q->head + q->elementSize >= q->end){
 	  q->head = q->start;

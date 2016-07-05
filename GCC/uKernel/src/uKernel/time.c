@@ -2,16 +2,10 @@
 #include "kernel.h"
 #include "task.h"
 
-static uint_32 new_var = 0;
+
 static volatile uint_32 OSTicks = 0;
-extern uint_8 stat_counter_not_ready;
-extern uint_8 stat_calibration;
-static float_32 cpuUtilization = 0;
-float_32 utilizations[100];
-uint_32  Ticks[100];
-extern uint_32 idleCounter_Max;
-uint_32 i = 0;
-void OSTick(void){
+
+void time_oSTick(void){
 	
 	TCB *tmp;
 	struct list_head *iter1;
@@ -37,7 +31,7 @@ void OSTick(void){
 					/* if so, change estate */
 					tmp->estate = TIMED_OUT;
 				}
-				taskEnable(tmp);
+				task_taskEnable(tmp);
 			}
 		}
 	}
@@ -47,7 +41,7 @@ void OSTick(void){
 }
 
 
-void timeDelay(uint_32 ticks){
+void time_delay(uint_32 ticks){
 	
 	ENTER_CRITICAL();
 	
@@ -66,7 +60,7 @@ void timeDelay(uint_32 ticks){
 #endif
 }
 
-uint_32 getTickCount(void)
+uint_32 time_getTickCount(void)
 {
 	return OSTicks;
 }

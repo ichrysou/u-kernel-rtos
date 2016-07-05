@@ -92,9 +92,9 @@ extern void SystemInit(void);    /*!< Setup the microcontroller system(CMSIS) */
 void Default_Reset_Handler(void);   /*!< Default reset handler                */
 static void Default_Handler(void);  /*!< Default exception handler            */
 /* rtos specific handlers */
-extern void start_first_task(void);
-extern void context_switch(void);
-extern void OSTick( void );
+extern void port_startFirstTaskHandler(void);
+extern void port_contextSwitch(void);
+extern void time_oSTick( void );
 /**
  *@brief The minimal vector table for a Cortex M3.  Note that the proper constructs
  *       must be placed on this to ensure that it ends up at physical address
@@ -112,11 +112,11 @@ void (* const g_pfnVectors[])(void) =
   BusFault_Handler,          /*!< Bus Fault Handler                           */
   UsageFault_Handler,        /*!< Usage Fault Handler                         */
   0,0,0,0,                   /*!< Reserved                                    */
-  start_first_task,               /*!< SVCall Handler                              */
+  port_startFirstTaskHandler,               /*!< SVCall Handler                              */
   DebugMon_Handler,          /*!< Debug Monitor Handler                       */
   0,                         /*!< Reserved                                    */
-  context_switch,            /*!< PendSV Handler                              */
-  OSTick,           /*!< SysTick Handler                             */
+  port_contextSwitch,            /*!< PendSV Handler                              */
+  time_oSTick,           /*!< SysTick Handler                             */
   
   /*----------External Exceptions---------------------------------------------*/
   WDT_IRQHandler,            /*!<  0: Watchdog Timer                          */

@@ -78,10 +78,10 @@ static __inline void interruptExit(void)
 	if(--interruptNesting == 0){
 
 		
-		FindHighestPriorityTask();
+		task_findHighestPriorityTask();
 		if (highestTCB != currentTCB){
 #if (HOOKS_ENABLED) && (CONTEXT_SWITCH_HOOK_ENABLED)
-		     contextSwitchHook();
+		     hooks_contextSwitchHook();
 #endif
 
 		     SWITCH_CONTEXT();

@@ -6,7 +6,7 @@
 /* ========================================================*/
 
 static void task_lTCBInit(TCB *newTCB, uint_8 prio, uint_32 stk_size);
-static void IdleTask(void *args);
+static void task_idleTask(void *args);
 /* ========================================*/
 /* ---------------- Globals ------------- */
 /* ========================================*/
@@ -41,7 +41,7 @@ TCB *highestTCB;
 /* ======================================*/
 
 /*to be called at kernel initialization phase, before any task creation*/
-void tasksInit(void)
+void task_initTasks(void)
 {
      int i;
 
@@ -62,7 +62,7 @@ void tasksInit(void)
      ReadyTaskBitmap = 0;
 #endif
      INIT_LIST_HEAD(&allTasksLinked);
-     idleTaskInit();
+     task_idleTaskInit();
 }
 // it seems more convenient to to it like this:
 /* uint_8 ReadyTaskBitmap[ (MAX_TASKS) >> 3 + 1];*/
@@ -90,11 +90,11 @@ err_t task_create(uint_8 prio, task function, void *args, uint_32 stk_size, uint
      /* there's always room for moar... */
 
      /* Initialize TCB and Stack */
-     newTCB = (TCB *)heapMalloc(sizeof(TCB));//TCBAlloc();
+     newTCB = (TCB *)heap_malloc(sizeof(TCB));//TCBAlloc();
      task_lTCBInit(newTCB, prio, stk_size);
 
      /* StkInit is in port */
-     newTCB->TopOfStkPtr = StkInit(tos, function, args, stk_size);
+     newTCB->TopOfStkPtr = port_stackInit(tos, function, args, stk_size);
 
      TaskArray[newTCB->prio] = newTCB;
 
@@ -137,7 +137,7 @@ TCB *getTCBbyPrio(unsigned int prio)
 
 #if HIGHEST_PRIO_ALT == 1
 
-void FindHighestPriorityTask()
+void task_findHighestPriorityTask()
 {
      uint_32 highestPrio = MAX_PRIO- 1;
      while(ReadyArray[highestPrio] == NULL){
@@ -176,7 +176,7 @@ uint_8 clz(uint_32 x)
      return n;
 }
 
-void FindHighestPriorityTask()
+void task_findHighestPriorityTask()
 {
      highestTCB = ReadyArray[31 - clz(ReadyTaskBitmap[31 - clz(ReadyTaskIndex)])];
 }
@@ -184,7 +184,7 @@ void FindHighestPriorityTask()
 #endif
 
 
-err_t prioEnable(uint_16 prio)
+err_t task_prioEnable(uint_16 prio)
 {
 	
      ENTER_CRITICAL();
@@ -208,7 +208,7 @@ err_t prioEnable(uint_16 prio)
      return ERR_OK;
 }
 
-err_t taskEnable(TCB *tsk)
+err_t task_taskEnable(TCB *tsk)
 {
      uint_16 prio = tsk->prio;
      ENTER_CRITICAL();
@@ -229,7 +229,7 @@ err_t taskEnable(TCB *tsk)
 
 
      EXIT_CRITICAL();
-     /* if taskEnable is not called from within an ISR then call kernel_schedule*/
+     /* ift askEnable is not called from within an ISR then call kernel_schedule*/
      if(interruptNesting == 0){
 	  kernel_schedule();
      }
@@ -237,7 +237,7 @@ err_t taskEnable(TCB *tsk)
      return ERR_OK;
 }
 
-err_t prioDisable(uint_16 prio)
+err_t task_prioDisable(uint_16 prio)
 {
 
   
@@ -261,17 +261,17 @@ err_t prioDisable(uint_16 prio)
      }
 }
 
-void idleTaskInit()
+void task_idleTaskInit()
 {
 #if STACK_GROWTH == 1
-     task_create(IDLE_TASK_PRIO, IdleTask, NULL, IDLE_STACK_SIZE, &IdleStack[IDLE_STACK_SIZE - 1], NULL);
+     task_create(IDLE_TASK_PRIO, task_idleTask, NULL, IDLE_STACK_SIZE, &IdleStack[IDLE_STACK_SIZE - 1], NULL);
 #else
-     task_create(IDLE_TASK_PRIO, IdleTask, NULL, IDLE_STACK_SIZE, &ildeStack[0], NULL);
+     task_create(IDLE_TASK_PRIO, task_idleTask, NULL, IDLE_STACK_SIZE, &ildeStack[0], NULL);
 #endif
 }
 
 uint_8 always_true;
-void IdleTask(void *args)
+void task_idleTask(void *args)
 {
      always_true = 1;
      while(always_true){
@@ -291,7 +291,7 @@ void IdleTask(void *args)
 #endif
 	  
 #if HOOKS_ENABLED && IDLE_TASK_HOOK_ENABLED
-	  idleTaskHook();
+	  hooks_idleTaskHook();
 #endif
 	  
      }

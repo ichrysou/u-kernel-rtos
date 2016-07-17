@@ -71,20 +71,6 @@ void stats_init()
      		 0);
 }
 
-void stats_calculate_idleMax(void)
-{
-    
-     port_tickStart();
-     ENABLE_INTERRUPTS();
-     while(stat_counter_not_ready){
-     DISABLE_INTERRUPTS();	/* this is just here to mimic the same code as the idle task */
-       idleCounter_Max++;
-     ENABLE_INTERRUPTS();       
-     }
-     stat_calibration = 1;
-     DISABLE_INTERRUPTS();
-}
-
 float_32 stats_getCpuUtilization()
 {
      return (float_32)cpuUtilization;

@@ -39,10 +39,10 @@ err_t queue_sendToTail(queue *q, void *msg)
 	  return ERR_Q_FULL;
      }
 
+     port_memcpy((void *)q->tail, msg, q->elementSize);
      if (q->tail + q->elementSize >= q->end){
 	  q->tail = q->start;
      }
-     port_memcpy((void *)q->tail, msg, q->elementSize);
      q->tail = q->tail + q->elementSize;
      q->length++;
      if (!list_empty(&(q->tasksPend))){

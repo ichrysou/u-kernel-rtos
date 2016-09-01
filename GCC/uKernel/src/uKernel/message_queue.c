@@ -40,10 +40,11 @@ err_t queue_sendToTail(queue *q, void *msg)
      }
 
      port_memcpy((void *)q->tail, msg, q->elementSize);
-     if (q->tail + q->elementSize >= q->end){
+     q->tail = q->tail + q->elementSize;
+     if (q->tail >= q->end){
 	  q->tail = q->start;
      }
-     q->tail = q->tail + q->elementSize;
+     
      q->length++;
      if (!list_empty(&(q->tasksPend))){
 	  tmp = wait_queue_removeHead(&(q->tasksPend));

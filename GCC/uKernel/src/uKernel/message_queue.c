@@ -10,6 +10,7 @@ queue *queue_create(unsigned int max_length, unsigned int elementSize)
      if (q == NULL){
 	  return NULL;
      }
+     
      q->start =(uint_8 *) heap_malloc(elementSize * max_length);
      if (q->start == NULL){
 	  return NULL;
@@ -20,6 +21,7 @@ queue *queue_create(unsigned int max_length, unsigned int elementSize)
      q->max_length = max_length;
      q->length = 0;
      q->elementSize = elementSize;
+     /* wait queue init */
      INIT_LIST_HEAD(&(q->tasksPost));
      INIT_LIST_HEAD(&(q->tasksPend));
      return q;
@@ -34,16 +36,22 @@ err_t queue_sendToTail(queue *q, void *msg)
 {
      TCB *tmp;
      ENTER_CRITICAL();
-     if (q->length == q->max_length){
+     if (q->length >= q->max_length){
 	  EXIT_CRITICAL();
 	  return ERR_Q_FULL;
      }
 
-     if (q->tail + q->elementSize >= q->end){
+     
+     
+     
+     port_memcpy((void *)q->tail, msg, q->elementSize);
+     
+     q->tail = q->tail + q->elementSize;
+
+     if (q->tail >= q->end){
 	  q->tail = q->start;
      }
-     port_memcpy((void *)q->tail, msg, q->elementSize);
-     q->tail = q->tail + q->elementSize;
+     
      q->length++;
      if (!list_empty(&(q->tasksPend))){
 	  tmp = wait_queue_removeHead(&(q->tasksPend));
@@ -58,13 +66,14 @@ err_t queue_sendToTail(queue *q, void *msg)
      return ERR_OK;
 }
 
+/* if timeout == 0 then wait foreva */
 err_t queue_receive(queue *q, void *buff, int timeout)
 {
      ENTER_CRITICAL();
      /* is there a message in the queue?*/
      if (q->length){
 	  /* if yes just get it and return */
-	  currentTCB->estate = NONE;
+	  currentTCB->estate = NONE; /* TODO: not needed, right? */
 	  queue_getMessage(buff, q);
 	  EXIT_CRITICAL();
 	  return ERR_OK;
@@ -123,6 +132,8 @@ uint_32 queueGetNumberOfMessages(queue *q)
 
 static void queue_getMessage(void *buff, queue *q)
 {
+
+     
      port_memcpy(buff, q->head, q->elementSize);
      q->length--;
      if (q->head + q->elementSize >= q->end){
@@ -130,5 +141,6 @@ static void queue_getMessage(void *buff, queue *q)
      }else{
 	  q->head += q->elementSize;
      }
+
 }
 

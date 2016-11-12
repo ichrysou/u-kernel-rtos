@@ -7,14 +7,14 @@ err_t wait_queue_addTask(struct list_head *list, TCB *task)
 	
 	struct list_head *tmp;
 	ENTER_CRITICAL();
-	if (list_empty(list)){
-		list_add(&(task->event_list), list);
-	}else{
+	/* if (list_empty(list)){ */
+	/* 	list_add(&(task->event_list), list); */
+	/* }else{ */
 		/* for(tmp = list; (list_entry(tmp->prev, TCB, event_list)->prio) <= (task->prio); tmp = tmp->prev){ */
 		/* 	;; */
 		/* } */
-		list_add_tail(&(task->event_list), list);
-	}
+	list_add_tail(&(task->event_list), list);
+	/* } */
 	EXIT_CRITICAL();	
 	
 	return ERR_OK;
@@ -59,7 +59,6 @@ TCB *wait_queue_removeHead(struct list_head *list)
 	list_del(list->next);
 	EXIT_CRITICAL();
 	return tmp;
-	
 }
 
 

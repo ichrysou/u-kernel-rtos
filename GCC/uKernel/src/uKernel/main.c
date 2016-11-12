@@ -1,5 +1,6 @@
 #include "LPC17xx.h"
 #include "lpc17xx_uart.h"
+#include "lpc17xx_spi.h"
 #include "lpc17xx_pinsel.h"
 #include "lpc17xx_gpio.h"
 #include "lpc17xx_clkpwr.h"
@@ -19,9 +20,11 @@
 #define TASK5_PRIO 6
 #define TASK6_PRIO 7
 #define TASK7_PRIO 8
+#define TASK8_PRIO 9
 
 
 queue *task6Q;
+queue *task8Q;
 sem *s;
 sem *task1_factorial;
 uint_32 fact_result;
@@ -37,12 +40,14 @@ OSStackType Stack4[STACK_SIZE];
 OSStackType Stack5[STACK_SIZE];
 OSStackType Stack6[STACK_SIZE];
 OSStackType Stack7[STACK_SIZE];
+OSStackType Stack8[STACK_SIZE];
 
 
 void PIN_Init(void);
 void UART3_Init(void);
 void init_uart(void);
 void UART3_IRQHandler(void);
+void SPI_IRQHandler(void);
 
 void Task1(void *args);
 void Task2(void *args);
@@ -51,12 +56,166 @@ void Task4(void *args);
 void Task5(void *args);
 void Task6(void *args);
 void Task7(void *args);
+void Task8(void *args);
 
 
+#define NORMAL              0x1
+#define GET                 0x2
+#define GET_CMD             0xFD
+#define CPU_UTIL            0x21
+#define GET_CPU_UTIL_CMD    0xFCU
+#define SET                 0x3
+#define SET_CMD             0xFEU
+#define DUMMY_CMD           0xFFU
 
+uint32_t state_machine = NORMAL;
+uint32_t cntr;
+
+SPI_DATA_SETUP_Type spi_data;
+uint_8 rx_data;
+uint_8 tx_data;
+uint_8 cpuLoadArr[4];
+uint_32 temp;
+uint_32 pre_val = 0;
+
+/* spi interrupt handler */
+void SPI_IRQHandler(void)
+{
+     interruptEnter();
+     /* read sospsr */
+     temp = LPC_SPI->SPSR;
+     /* check for errors */
+     
+     /* read rx_data register */
+     /* TODO: */
+     /* ENTER_CRITICAL(); */
+     temp = LPC_SPI->SPDR;
+     #ifndef TEST_MESSAGE_QUEUE_SPI
+     if (state_machine == NORMAL) {
+	  
+	  if(temp == SET_CMD) {
+	       state_machine = SET;
+	       tx_data = temp;
+	       spi_data.tx_data = (void *)&tx_data;
+	       
+	  }else if(temp == GET_CMD) {
+	       state_machine = GET;
+	       tx_data = temp;
+	       spi_data.tx_data = (void *)&tx_data;
+	  }
+     } else if (state_machine == SET) {
+	  LPC_GPIO1->FIOPIN &= ~(1 << 18);
+	  LPC_GPIO1->FIOPIN &= ~(1 << 20);
+	  LPC_GPIO1->FIOPIN &= ~(1 << 21);
+	  LPC_GPIO1->FIOPIN &= ~(1 << 23);
+	  
+	  if(temp & (1 << 0)) {
+	       LPC_GPIO1->FIOPIN |= 1 << 18;
+	  }
+	  if(temp & (1 << 1)) {
+	       LPC_GPIO1->FIOPIN |= 1 << 20;
+	  }
+	  if(temp & (1 << 2)) {
+	       LPC_GPIO1->FIOPIN |= 1 << 21;
+	  }
+	  if(temp & (1 << 3)) {
+	       LPC_GPIO1->FIOPIN |= 1 << 23;
+	  }
+	  state_machine = NORMAL;
+	  
+     } else if (state_machine == GET) {
+	  if(temp == GET_CPU_UTIL_CMD) {
+	       state_machine = CPU_UTIL;
+	       cntr = 4;
+	       tx_data = 4;
+	       spi_data.tx_data = (void *)&tx_data;
+	  }
+	  
+     } else if (state_machine == CPU_UTIL) {
+	  /* lock_cpu util array */
+	  
+	  if (temp == DUMMY_CMD) {
+	       if (cntr > 0) {
+		    cntr = cntr - 1;
+		    tx_data = cpuLoadArr[cntr];
+		    spi_data.tx_data = (void *)&tx_data;
+	       } else {
+		    state_machine = NORMAL;
+		    /* unlock cpu util array */
+	       }
+	  }
+     }
+     
+     #else
+
+     if((temp) != pre_val + 1) {
+	  LPC_GPIO1->FIOPIN |=  1 << 18;
+     } else {
+	  pre_val = (temp % 5);
+     }
+     
+     queue_sendToTail(task8Q, (void *)&temp);
+     #endif
+     /* TODO: */
+     /* EXIT_CRITICAL(); */
+     /* process the request:
+      *  if read your id then write back your id
+      *  if not read your id then process the command you read:
+      *     - send back data according to what you read
+      *     - perform an action according to what you read and write back E_OK/E_NOT_OK
+      */
+     /* call SPI_ReadWrite(LPC_SPI, , SPI_TRANSFER_INTERRUPT);*/
+     if(LPC_SPI->SPINT & SPI_SPINT_INTFLAG){
+	  LPC_SPI->SPINT = SPI_SPINT_INTFLAG;
+     }
+
+     SPI_ReadWrite(LPC_SPI, &spi_data, SPI_TRANSFER_INTERRUPT);
+     interruptExit();
+}
 
 int main()
 {
+     SPI_CFG_Type spi_conf;
+     PINSEL_CFG_Type PinCfg;
+     
+     /********** leds init **********/
+     LPC_GPIO1->FIODIR |= 1 << 18;
+     LPC_GPIO1->FIODIR |= 1 << 20;
+     LPC_GPIO1->FIODIR |= 1 << 21;
+     LPC_GPIO1->FIODIR |= 1 << 23;
+     /********** leds init **********/
+     
+
+     /********** initialize spi **********/
+     /* pin init */
+
+     
+     LPC_SC->PCONP |= 1 << 8;
+     LPC_GPIO0->FIODIR |= 1 << 31;
+
+     LPC_PINCON->PINSEL0 |= 0b11 << 30;
+     LPC_PINCON->PINSEL1 |= 0b111111 << 0;     
+     
+     /* LPC_PINCON->PINMODE0 |= 0b10 << 14; */
+     /* PINSEL_ConfigPin(&PinCfg); */
+     /* PinCfg.Pinnum    = UART3_RX; */
+     /* PINSEL_ConfigPin(&PinCfg); */
+     
+     /* clock init
+      * not relevant in slave mode
+      */
+     /* spi init */
+     SPI_ConfigStructInit(&spi_conf);
+     SPI_Init(LPC_SPI, &spi_conf);
+     NVIC_EnableIRQ(SPI_IRQn);
+     /* spi data setup */
+     tx_data = (uint_8)0xDE;
+     rx_data = (uint_8)0x00;
+     spi_data.tx_data = (void *)&tx_data;
+     spi_data.rx_data = (void *)&rx_data;
+     spi_data.length = 8;
+
+     /********** initialize spi **********/
 
      /* initalize rtOS */
      kernel_init();
@@ -69,9 +228,12 @@ int main()
      task_create(TASK5_PRIO, Task5, NULL, STACK_SIZE, &Stack5[STACK_SIZE - 1], NULL);
      task_create(TASK6_PRIO, Task6, NULL, STACK_SIZE, &Stack6[STACK_SIZE - 1], NULL);
      task_create(TASK7_PRIO, Task7, NULL, STACK_SIZE, &Stack7[STACK_SIZE - 1], NULL);
+     task_create(TASK8_PRIO, Task8, NULL, STACK_SIZE, &Stack8[STACK_SIZE - 1], NULL);
 
      /*init other OS services*/
      task6Q = queue_create(10, 16 * sizeof(uint_8));
+     task8Q = queue_create(10, sizeof(uint_8));
+     
      s = sem_init(1);
      task1_factorial = sem_init(1);
 
@@ -80,6 +242,69 @@ int main()
      
      /* We actually do not expect to ever reach here */
      return 0;
+}
+#ifdef TASK_CREATOR
+void TaskManager(void *args)
+{
+
+     while(1) {
+	  /* creation command shall be received by spi and sent to this queue */
+	  queue_receive(taskCreatorQ, creator_buff, 0);
+	  /* creation command shall be analyzed: priority of task, stack size,  */
+	  /** TODO: if you want to also send the code of the task to be executed, you need to fix the
+	   *       heap
+	   * If the code is not specified then you will have to find some default functions to execute.
+	   */
+	  task_prioEnable(creator_buff & 0xFF);
+
+	  
+     }
+}
+#endif
+/* Testing message_queue.c */
+void TaskTestCase1(void *args)
+{
+
+  while(1) {
+    ;;
+  }
+}
+void TaskQueueSender(void *args)
+{
+  
+}
+void TaskQueueReceiver(void *args)
+{
+  
+}
+void TaskTestCase2(void *args)
+{
+  while(1) {
+  }
+  
+}
+void TaskTestCase3(void *args)
+{
+  while(1) {
+  }
+  
+}
+void TaskTestCase4(void *args)
+{
+  while(1) {
+  }
+  
+}
+void TaskTestCase5(void *args)
+{
+  while(1) {
+  }
+}
+
+void TaskTestCase6(void *args)
+{
+  while(1) {
+  }
 }
 
 /*factorial of 100*/
@@ -143,6 +368,7 @@ void Task2(void *args)
 }
 
 /* fibonacci task */
+uint32_t del;
 void Task3(void *args)
 {
   
@@ -151,13 +377,15 @@ void Task3(void *args)
      uint_32 fibonacci[100];
      uint_32 cntr = 0;
      int i;
+     del = 500;
      while(1){
 	  fibonacci[0] = 0;
 	  fibonacci[1] = 1;
 	  for (i = 2; i < 1000; i++)
 	       fibonacci[i%100] = fibonacci[(i - 1)%100] + fibonacci[(i - 2)%100];
 	  
-	  time_delay(200);
+	  time_delay(del);
+	  LPC_GPIO1->FIOPIN ^= 1 << 23;
      }
 }
 
@@ -168,7 +396,7 @@ void Task4(void *args){
     
 	  semaphore = sem_get(s, 100);
     
-	  LPC_GPIO1->FIOPIN ^= 1 << 21;
+	  /* LPC_GPIO1->FIOPIN ^= 1 << 21; */
      }
 }
 
@@ -179,12 +407,19 @@ void Task5(void *args){
      while(1){
 
 	  time_delay(30);
+	  cpuLoad = stats_getCpuUtilization();
 
-	  for (i = 0; i < 100; i++){
+	  ENTER_CRITICAL();
+	  if(state_machine != CPU_UTIL) {
 
-	       cpuLoad = stats_getCpuUtilization();
-
+	       cpuLoadArr[0] = (uint_8)((*(uint_32 *)&cpuLoad & 0xFF000000) >> 24);
+	       cpuLoadArr[1] = (uint_8)((*(uint_32 *)&cpuLoad & 0x00FF0000) >> 16);
+	       cpuLoadArr[2] = (uint_8)((*(uint_32 *)&cpuLoad & 0x0000FF00) >> 8);
+	       cpuLoadArr[3] = (uint_8)((*(uint_32 *)&cpuLoad & 0x000000FF));
+	  
 	  }
+	  EXIT_CRITICAL();	       
+	  
      }
 }
 
@@ -199,7 +434,7 @@ void Task6(void *args){
 	  /* } */
 	  
 	  queue_receive(task6Q,(void *) buff, 0);
-	  LPC_GPIO1->FIOPIN ^= 1 << 20;
+	  /* LPC_GPIO1->FIOPIN ^= 1 << 20; */
 
 	  /* /\* limit of TX FIFO is 16 bytes *\/ */
 	  UART_Send(UARTx, (uint_8 *)&buff[1], ((uint_32)buff[0]) & 0xFF, NONE_BLOCKING);
@@ -217,26 +452,117 @@ void Task7(void *args)
      init_uart();
 
      while(1){
-	  /* if (rxFlag == TRUE) { */
-	  /*      rxFlag = FALSE; */
-	  /*      UART_Send(LPC_UART3, rxBuf, rxCnt, BLOCKING); */
-	  /* } else { */
+
 	  if (rxFlag == TRUE){
 	       UART_Send(LPC_UART3, (uint8_t *)"hello word\n", sizeof("hello word\n"), NONE_BLOCKING);
 	  }
-	  /* } */
+
  	  time_delay(100);
-	  LPC_GPIO1->FIOPIN ^= 1 << 23;	       
+
      }
 }
+/*
+ * the spi-slave task
+ * asynchronous server of SPI commands
+ */
+
+uint_8 array_spi[5];
+void Task8(void *args){
+     err_t queue_err;
+     uint_8 *buff = heap_malloc(sizeof(uint_8));
+     uint32_t loc_sr;
+     uint32_t state_machine = NORMAL;
+     uint32_t cntr;
+     uint32_t i;
+     /* from know on I can accept spi commands */
+
+     /* initiate slave-listen mode */
+     cntr = 0;
+     SPI_ReadWrite(LPC_SPI, &spi_data, SPI_TRANSFER_INTERRUPT);
+     while(1) {
+	  /* enter here for half bottom processing only */
+	  /* Message queue test/SPI Test case */
+	  queue_receive(task8Q, (void *)buff, 0);
+	  array_spi[cntr] = *buff;
+	  spi_data.tx_data = (void*)&cntr;
+	  if (cntr >= 4) {
+	       for (i = 0; i < 4; i++){
+		    if(array_spi[i + 1] != array_spi[i] + 1) {
+			 LPC_GPIO1->FIOPIN |= 1 << 20;
+		    } else if(array_spi[i] != i + 1) {
+			 LPC_GPIO1->FIOPIN |= 1 << 21;
+		    } else {
+			 array_spi[i] = 0;
+		    }
+	       }
+	       array_spi[i] = 0;
+	       cntr = 0;
+	  } else {
+	       cntr = cntr + 1;
+	  }
+	  
+	  /* if (state_machine == NORMAL) { */
+	       
+	  /*      if(*buff == 0xFEU) { */
+	  /* 	    state_machine = SET; */
+	  /* 	    tx_data = 0xFE; */
+	  /* 	    spi_data.tx_data = (void *)&tx_data; */
+
+	  /*      }else if(*buff == 0xFD) { */
+	  /* 	    state_machine = GET; */
+	  /* 	    tx_data = 0xFD; */
+	  /* 	    spi_data.tx_data = (void *)&tx_data; */
+
+	  /*      } */
+	       
+	  /* } else if (state_machine == SET) { */
+	  /*      LPC_GPIO1->FIOPIN &= ~(1 << 18); */
+	  /*      LPC_GPIO1->FIOPIN &= ~(1 << 20); */
+	  /*      LPC_GPIO1->FIOPIN &= ~(1 << 21); */
+	  /*      LPC_GPIO1->FIOPIN &= ~(1 << 23); */
+
+	  /*      if(*buff & (1 << 1)) { */
+	  /* 	    LPC_GPIO1->FIOPIN |= 1 << 18; */
+	  /*      } */
+	  /*      if(*buff & (1 << 2)) { */
+	  /* 	    LPC_GPIO1->FIOPIN |= 1 << 20; */
+	  /*      } */
+	  /*      if(*buff & (1 << 3)) { */
+	  /* 	    LPC_GPIO1->FIOPIN |= 1 << 21; */
+	  /*      } */
+	  /*      if(*buff & (1 << 4)) { */
+	  /* 	    LPC_GPIO1->FIOPIN |= 1 << 23; */
+	  /*      } */
+	  /*      state_machine = NORMAL; */
+	       
+	  /* } else if (state_machine == GET) { */
+	  /*      if(*buff == CPU_UTIL) { */
+	  /* 	    cntr = 4; */
+	  /* 	    tx_data = ((uint_32)stats_getCpuUtilization() >> (cntr * 8)) & 0xFF; */
+	  /* 	    spi_data.tx_data = (void *)&tx_data; */
+	  /*      } else if (*buff == 0xFF) { */
+
+	  /* 	    if (cntr > 0) { */
+	  /* 		 cntr--; */
+	  /* 		 tx_data = ((uint_32)stats_getCpuUtilization() >> (cntr * 8)) & 0xFF; */
+	  /* 		 spi_data.tx_data = (void *)&tx_data; */
+	  /* 	    } else { */
+	  /* 		 state_machine = NORMAL; */
+	  /* 	    } */
+	  /*      } */
+	  /* } */
+	  /* read sospsr */
+	  loc_sr = LPC_SPI->SPSR;
+	  if (loc_sr & (1 << 3) & (1 << 4) & (1 << 5) & (1 << 6)) {
+	       del = 100;
+	  }
+     }
+}
+
 
 void init_uart(void)
 {
   /** System init */
-     LPC_GPIO1->FIODIR |= 1 << 18;
-     LPC_GPIO1->FIODIR |= 1 << 20;
-     LPC_GPIO1->FIODIR |= 1 << 21;
-     LPC_GPIO1->FIODIR |= 1 << 23;
 
   unsigned int tmp, i;
 
@@ -315,8 +641,9 @@ void UART3_IRQHandler(void)
      uint8_t ReceiveValue;
      uint8_t i;
      uint32_t IIRValue;
-     uint32_t loc_rxCnt;     
-     
+     uint32_t loc_rxCnt;
+
+     interruptEnter();
      
      loc_rxCnt = 0;
      IIRValue = UART_GetIntId(LPC_UART3);
@@ -333,7 +660,7 @@ void UART3_IRQHandler(void)
 	       rxBuf[0] = loc_rxCnt;
 	       queue_sendToTail(task6Q, (void *)&rxBuf[0]);
 	       EXIT_CRITICAL();
-	       LPC_GPIO1->FIOPIN ^= 1 << 18;
+	       /* LPC_GPIO1->FIOPIN ^= 1 << 18; */
 	       break;
 	  case UART_IIR_INTID_CTI:
 	       /* rxFlag = TRUE; */
@@ -343,7 +670,7 @@ void UART3_IRQHandler(void)
 	       rxBuf[0] = loc_rxCnt;
 	       queue_sendToTail(task6Q, (void *)&rxBuf[0]);
 	       EXIT_CRITICAL();
-	       LPC_GPIO1->FIOPIN ^= 1 << 18;
+	       /* LPC_GPIO1->FIOPIN ^= 1 << 18; */
 	       break;
 	       
 	  default:
@@ -351,4 +678,5 @@ void UART3_IRQHandler(void)
 	  }
 	  IIRValue = UART_GetIntId(LPC_UART3);
      }  /* if have another interrupter hand on */
+     interruptExit();
 }

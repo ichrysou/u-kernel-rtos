@@ -49,6 +49,7 @@ $(ARM_SOURCE_DIR)/lpc17xx_libcfg_default.c \
 $(ARM_SOURCE_DIR)/lpc17xx_pinsel.c \
 $(ARM_SOURCE_DIR)/lpc17xx_gpio.c \
 $(ARM_SOURCE_DIR)/lpc17xx_uart.c \
+$(ARM_SOURCE_DIR)/lpc17xx_spi.c \
 
 ARM_INC = \
 $(ARM_SOURCE_DIR)/../include/lpc_types.h \
@@ -57,6 +58,7 @@ $(ARM_SOURCE_DIR)/../include/lpc17xx_pinsel.h \
 $(ARM_SOURCE_DIR)/../include/lpc17xx_clkpwr.h \
 $(ARM_SOURCE_DIR)/../include/lpc17xx_libcfg_default.h \
 $(ARM_SOURCE_DIR)/../include/lpc17xx_uart.h \
+$(ARM_SOURCE_DIR)/../include/lpc17xx_spi.h \
 
 
 

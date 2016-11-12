@@ -227,12 +227,10 @@ err_t task_taskEnable(TCB *tsk)
      ReadyTaskBitmap |= 1 << (prio & 0x1F);
 #endif
 
-
      EXIT_CRITICAL();
-     /* ift askEnable is not called from within an ISR then call kernel_schedule*/
-     if(interruptNesting == 0){
-	  kernel_schedule();
-     }
+
+     kernel_schedule();
+
 
      return ERR_OK;
 }

@@ -1,0 +1,174 @@
+;; Object cmsis/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "cmsis/"
+  :tables
+  (list
+    (semanticdb-table "core_cm3.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdint.h" include (:system-flag t) nil [981 1000])
+            ("__ASM" variable (:constant-flag t) nil [1640 1645])
+            ("__INLINE" variable (:constant-flag t) nil [1756 1764])
+            ("__get_PSP" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [9320 9325]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [9301 9353])
+            ("__get_PSP" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [9373 9378]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [9354 9551])
+            ("__set_PSP" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("topOfProcStack" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9777 9801]))                  
+                :type "void")
+                nil [9762 9829])
+            ("__set_PSP" function
+               (:arguments 
+                  ( ("topOfProcStack" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9845 9869]))                  
+                :type "void")
+                nil [9830 9973])
+            ("__get_MSP" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [10168 10173]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [10149 10201])
+            ("__get_MSP" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [10221 10226]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [10202 10399])
+            ("__set_MSP" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("topOfMainStack" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10613 10637]))                  
+                :type "void")
+                nil [10598 10665])
+            ("__set_MSP" function
+               (:arguments 
+                  ( ("topOfMainStack" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10681 10705]))                  
+                :type "void")
+                nil [10666 10809])
+            ("__get_BASEPRI" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [10966 10971]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [10943 11076])
+            ("__set_BASEPRI" function
+               (:arguments 
+                  ( ("value" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11217 11232]))                  
+                :type "void")
+                nil [11198 11291])
+            ("__get_PRIMASK" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [11464 11469]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [11441 11568])
+            ("__set_PRIMASK" function
+               (:arguments 
+                  ( ("priMask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11729 11746]))                  
+                :type "void")
+                nil [11710 11807])
+            ("__get_FAULTMASK" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [11957 11962]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [11932 12065])
+            ("__set_FAULTMASK" function
+               (:arguments 
+                  ( ("faultMask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12207 12226]))                  
+                :type "void")
+                nil [12186 12291])
+            ("__get_CONTROL" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [12446 12451]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [12423 12550])
+            ("__set_CONTROL" function
+               (:arguments 
+                  ( ("control" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12689 12706]))                  
+                :type "void")
+                nil [12670 12767])
+            ("__REV" function
+               (:arguments 
+                  ( ("value" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12953 12968]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [12938 13078])
+            ("__REV16" function
+               (:arguments 
+                  ( ("value" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13279 13294]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [13262 13406])
+            ("__REVSH" function
+               (:arguments 
+                  ( ("value" variable (:type ("int16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13664 13678]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [13648 13790])
+            ("__RBIT" function
+               (:arguments 
+                  ( ("value" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13958 13973]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [13942 14086])
+            ("__LDREXB" function
+               (:arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14265 14279]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [14248 14396])
+            ("__LDREXH" function
+               (:arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :type ("uint16_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14579 14594]))                  
+                :type ("uint16_t" type (:type "class") nil nil))
+                nil [14561 14712])
+            ("__LDREXW" function
+               (:arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14895 14910]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [14877 15027])
+            ("__STREXB" function
+               (:arguments 
+                  ( ("value" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15241 15255])
+                    ("addr" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15256 15270]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [15223 15405])
+            ("__STREXH" function
+               (:arguments 
+                  ( ("value" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15621 15636])
+                    ("addr" variable
+                       (:pointer 1
+                        :type ("uint16_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15637 15652]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [15603 15787])
+            ("__STREXW" function
+               (:arguments 
+                  ( ("value" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16003 16018])
+                    ("addr" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16019 16034]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [15985 16167]))          
+      :file "core_cm3.c"
+      :pointmax 16492
+      :fsize 17275
+      :lastmodtime '(22595 17400 732863 653000)
+      :unmatched-syntax nil))
+  :file "!home!elias!u-kernel-rtos!GCC!uKernel!src!cmsis!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

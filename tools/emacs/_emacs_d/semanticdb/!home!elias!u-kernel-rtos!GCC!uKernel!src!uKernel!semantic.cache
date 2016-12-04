@@ -1,0 +1,357 @@
+;; Object uKernel/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "uKernel/"
+  :tables
+  (list
+    (semanticdb-table "main.c"
+      :major-mode 'c-mode
+      :tags nil
+      :file "main.c"
+      :pointmax 8605
+      :fsize 8612
+      :lastmodtime '(22596 27808 595999 603000)
+      :unmatched-syntax nil)
+    (semanticdb-table "stats.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__STATS_H__" variable (:constant-flag t) nil [29 40])
+            ("port_types.h" include nil nil [41 64])
+            ("kern_conf.h" include nil nil [65 87])
+            ("stat_flag" variable
+               (:typemodifiers ("extern" "volatile")
+                :type ("uint_8" type (:type "class") nil nil))
+                nil [88 121])
+            ("STAT_TASK_STACK_SIZE" variable (:constant-flag t) nil [192 212])
+            ("stats_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [234 239]))                  
+                :type "void")
+                nil [218 240])
+            ("stats_getCpuUtilization" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [274 279]))                  
+                :type ("float_32" type (:type "class") nil nil))
+                nil [241 280])
+            ("stats_hook" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [297 302]))                  
+                :type "void")
+                nil [281 303]))          
+      :file "stats.h"
+      :pointmax 312
+      :fsize 329
+      :lastmodtime '(22595 17400 732863 653000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("STAT_TASK_STACK_SIZE" . ((number "100" 213 . 216)))
+          ("__STATS_H__")
+          )
+)
+    (semanticdb-table "task.h"
+      :file "task.h"
+      :fsize 1416
+      :lastmodtime '(22595 17400 732863 653000))
+    (semanticdb-table "kernel.h"
+      :file "kernel.h"
+      :fsize 1653
+      :lastmodtime '(22595 17400 732863 653000))
+    (semanticdb-table "heap.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__HEAP_H__" variable (:constant-flag t) nil [28 38])
+            ("kern_conf.h" include nil nil [39 61])
+            ("types.h" include nil nil [62 80])
+            ("HEAP_SIZE" variable (:constant-flag t) nil [90 99])
+            ("HEAP_ALIGN" variable (:constant-flag t) nil [123 133])
+            ("heap_init" function
+               (:prototype-flag t
+                :type "void")
+                nil [151 168])
+            ("heap_malloc" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("sizeRequested" variable (:type ("uint_32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [187 209]))                  
+                :type "void")
+                nil [169 210])
+            ("heap_getHeapSize" function
+               (:prototype-flag t
+                :type ("uint_32" type (:type "class") nil nil))
+                nil [211 238])
+            ("heap_free" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [254 264]))                  
+                :type "void")
+                nil [239 265]))          
+      :file "heap.h"
+      :pointmax 274
+      :fsize 287
+      :lastmodtime '(22595 17400 732863 653000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("HEAP_ALIGN" . ((symbol "CONF_HEAP_ALIGN" 134 . 149)))
+          ("HEAP_SIZE" . ((symbol "CONF_HEAP_SIZE" 100 . 114)))
+          ("__HEAP_H__")
+          )
+)
+    (semanticdb-table "message_queue.h"
+      :file "message_queue.h"
+      :fsize 648
+      :lastmodtime '(22595 17400 732863 653000))
+    (semanticdb-table "sem.h"
+      :file "sem.h"
+      :fsize 336
+      :lastmodtime '(22595 17400 732863 653000))
+    (semanticdb-table "time.h"
+      :file "time.h"
+      :fsize 164
+      :lastmodtime '(22595 17400 732863 653000))
+    (semanticdb-table "task.c"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("task.h" include nil nil [1 18])
+            ("kernel.h" include nil nil [19 38])
+            ("heap.h" include nil nil [39 56])
+            ("task_lTCBInit" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("newTCB" variable
+                       (:pointer 1
+                        :type ("TCB" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [274 286])
+                    ("prio" variable (:type ("uint_8" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [287 299])
+                    ("stk_size" variable (:type ("uint_32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [300 317]))                  
+                :type "void")
+                nil [248 318])
+            ("task_idleTask" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("args" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [345 356]))                  
+                :type "void")
+                nil [319 357])
+            ("IdleStack" variable
+               (:dereference 1
+                :type ("OSStackType" type (:type "class") nil nil))
+                nil [596 635])
+            ("idleCounter" variable
+               (:default-value "0"
+                :type ("uint_32" type (:type "class") nil nil))
+                nil [636 660])
+            ("TaskArray" variable
+               (:pointer 1
+                :dereference 1
+                :type ("TCB" type (:type "class") nil nil))
+                nil [716 742])
+            ("allTasksLinked" variable (:type ("list_head" type
+                 (:prototype t
+                  :type "struct")
+                  nil nil)) nil [797 829])
+            ("ReadyArray" variable
+               (:pointer 1
+                :dereference 1
+                :type ("TCB" type (:type "class") nil nil))
+                nil [901 928])
+            ("ReadyTaskBitmap" variable (:type ("uint_32" type (:type "class") nil nil)) nil [1117 1141])
+            ("number_of_tasks" variable
+               (:default-value "0"
+                :type ("uint_32" type (:type "class") nil nil))
+                nil [1150 1178])
+            ("currentTCB" variable
+               (:pointer 1
+                :type ("TCB" type (:type "class") nil nil))
+                nil [1181 1197])
+            ("highestTCB" variable
+               (:pointer 1
+                :type ("TCB" type (:type "class") nil nil))
+                nil [1198 1214])
+            ("task_initTasks" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1443 1448]))                  
+                :type "void")
+                nil [1423 1840])
+            ("task_create" function
+               (:arguments 
+                  ( ("prio" variable (:type ("uint_8" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2165 2177])
+                    ("function" variable (:type ("task" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2178 2192])
+                    ("args" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2193 2204])
+                    ("stk_size" variable (:type ("uint_32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2205 2222])
+                    ("tos" variable
+                       (:pointer 1
+                        :type ("uint_32" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2223 2236])
+                    ("handler" variable
+                       (:pointer 1
+                        :type ("TCB" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2237 2250]))                  
+                :type ("err_t" type (:type "class") nil nil))
+                nil [2147 3431])
+            ("task_lTCBInit" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("newTCB" variable
+                       (:pointer 1
+                        :type ("TCB" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3460 3472])
+                    ("prio" variable (:type ("uint_8" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3473 3485])
+                    ("stk_size" variable (:type ("uint_32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3486 3503]))                  
+                :type "void")
+                nil [3434 3702])
+            ("getTCBbyPrio" function
+               (:pointer 1
+                :arguments 
+                  ( ("prio" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3723 3741]))                  
+                :type ("TCB" type (:type "class") nil nil))
+                nil [3705 3826])
+            ("task_prioEnable" function
+               (:arguments 
+                  ( ("prio" variable (:type ("uint_16" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4726 4739]))                  
+                :type ("err_t" type (:type "class") nil nil))
+                nil [4704 5212])
+            ("task_taskEnable" function
+               (:arguments 
+                  ( ("tsk" variable
+                       (:pointer 1
+                        :type ("TCB" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5236 5245]))                  
+                :type ("err_t" type (:type "class") nil nil))
+                nil [5214 5817])
+            ("task_prioDisable" function
+               (:arguments 
+                  ( ("prio" variable (:type ("uint_16" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5842 5855]))                  
+                :type ("err_t" type (:type "class") nil nil))
+                nil [5819 6347])
+            ("task_idleTaskInit" function (:type "void") nil [6349 6616])
+            ("always_true" variable (:type ("uint_8" type (:type "class") nil nil)) nil [6618 6637])
+            ("task_idleTask" function
+               (:arguments 
+                  ( ("args" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6657 6668]))                  
+                :type "void")
+                nil [6638 6999]))          
+      :file "task.c"
+      :pointmax 7000
+      :fsize 6999
+      :lastmodtime '(22596 26261 579999 603000)
+      :unmatched-syntax nil)
+    (semanticdb-table "kern_conf.h"
+      :file "kern_conf.h"
+      :fsize 830
+      :lastmodtime '(22595 17400 732863 653000))
+    (semanticdb-table "types.h"
+      :file "types.h"
+      :fsize 460
+      :lastmodtime '(22595 17400 732863 653000))
+    (semanticdb-table "sem.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("sem.h" include nil nil [1 17])
+            ("kernel.h" include nil nil [18 37])
+            ("heap.h" include nil nil [38 55])
+            ("wait_queue.h" include nil nil [56 79])
+            ("time.h" include nil nil [80 97])
+            ("sem_init" function
+               (:pointer 1
+                :arguments 
+                  ( ("count" variable (:type ("uint_32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [149 163]))                  
+                :type ("sem" type (:type "class") nil nil))
+                nil [135 297])
+            ("sem_free" function
+               (:arguments 
+                  ( ("sem" variable
+                       (:pointer 1
+                        :type ("sem" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [313 322]))                  
+                :type "void")
+                nil [299 347])
+            ("sem_get" function
+               (:arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type ("sem" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [364 371])
+                    ("timeout" variable (:type ("uint_32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [372 388]))                  
+                :type ("err_t" type (:type "class") nil nil))
+                nil [350 1101])
+            ("sem_release" function
+               (:arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type ("sem" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1120 1127]))                  
+                :type "void")
+                nil [1103 1416]))          
+      :file "sem.c"
+      :pointmax 1417
+      :fsize 1490
+      :lastmodtime '(22595 17400 732863 653000)
+      :unmatched-syntax nil)
+    (semanticdb-table "wait_queue.h"
+      :file "wait_queue.h"
+      :fsize 269
+      :lastmodtime '(22595 17400 732863 653000))
+    (semanticdb-table "port_types.h"
+      :file "port_types.h"
+      :fsize 598
+      :lastmodtime '(22595 17400 732863 653000))
+    (semanticdb-table "heap.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("heap.h" include nil nil [1 18])
+            ("kernel.h" include nil nil [19 38])
+            ("heap_start" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [41 73])
+            ("heap_end" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [41 73])
+            ("heap1" variable
+               (:dereference 1
+                :type ("uint_8" type (:type "class") nil nil))
+                nil [75 116])
+            ("heap" variable
+               (:pointer 1
+                :type ("uint_8" type (:type "class") nil nil))
+                nil [117 130])
+            ("heap_init" function (:type "void") nil [172 495])
+            ("heap_malloc" function
+               (:pointer 1
+                :arguments 
+                  ( ("sizeRequested" variable (:type ("uint_32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [515 537]))                  
+                :type "void")
+                nil [497 955])
+            ("heap_free" function
+               (:arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [972 982]))                  
+                :type "void")
+                nil [957 995])
+            ("heap_getHeapSize" function (:type ("uint_32" type (:type "class") nil nil)) nil [1046 1172]))          
+      :file "heap.c"
+      :pointmax 1175
+      :fsize 1174
+      :lastmodtime '(22595 17400 732863 653000)
+      :unmatched-syntax nil))
+  :file "!home!elias!u-kernel-rtos!GCC!uKernel!src!uKernel!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

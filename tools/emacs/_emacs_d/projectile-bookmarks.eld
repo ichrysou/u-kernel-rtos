@@ -1,0 +1,1 @@
+("~/u-kernel-rtos/" "~/emacs_bu/emacs-c-ide-demo/")

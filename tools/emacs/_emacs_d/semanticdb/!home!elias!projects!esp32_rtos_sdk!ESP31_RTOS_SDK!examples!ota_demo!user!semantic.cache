@@ -1,0 +1,76 @@
+;; Object user/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "user/"
+  :tables
+  (list
+    (semanticdb-table "user_main.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("esp_common.h" include nil nil [1235 1258])
+            ("upgrade.h" include nil nil [1259 1279])
+            ("math.h" include nil nil [1280 1297])
+            ("freertos/FreeRTOS.h" include nil nil [1298 1328])
+            ("freertos/task.h" include nil nil [1329 1355])
+            ("lwip/sockets.h" include nil nil [1357 1382])
+            ("lwip/dns.h" include nil nil [1383 1404])
+            ("lwip/netdb.h" include nil nil [1405 1428])
+            ("SYMMETRY_STRUCTURE_MODE" variable (:constant-flag t) nil [1480 1503])
+            ("SSID" variable (:constant-flag t) nil [1514 1518])
+            ("PASSWORD" variable (:constant-flag t) nil [1537 1545])
+            ("SERVER_IP" variable (:constant-flag t) nil [1566 1575])
+            ("pheadbuffer" variable (:constant-flag t) nil [1600 1611])
+            ("user_esp_upgrade_rsp" function
+               (:arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2213 2223]))                  
+                :type "void")
+                nil [2187 3138])
+            ("update_firmware" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3465 3470]))                  
+                :type "void")
+                nil [3444 7153])
+            ("upgrade_task" function
+               (:arguments 
+                  ( ("pvParameters" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7459 7478]))                  
+                :type "void")
+                nil [7441 7528])
+            ("wifi_event_handler_cb" function
+               (:arguments 
+                  ( ("event" variable
+                       (:pointer 1
+                        :type ("System_Event_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7557 7579]))                  
+                :type "void")
+                nil [7530 7895])
+            ("user_init" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [8216 8221]))                  
+                :type "void")
+                nil [8201 8596]))          
+      :file "user_main.c"
+      :pointmax 8597
+      :fsize 8596
+      :lastmodtime '(22602 55291 943112 496000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("SERVER_IP" . ((string "\"192.168.1.11\"" 1576 . 1590)))
+          ("pheadbuffer" . ((string "\"Connection: keep-alive\\r\\n\\
+Cache-Control: no-cache\\r\\n\\
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36 \\r\\n\\
+Accept: */*\\r\\n\\
+Accept-Encoding: gzip,deflate,sdch\\r\\n\\
+Accept-Language: zh-CN,zh;q=0.8\\r\\n\\r\\n\"" 1612 . 1888)))
+          ("SYMMETRY_STRUCTURE_MODE" . ((number "1" 1504 . 1505)))
+          ("PASSWORD" . ((string "\"espressif\"" 1546 . 1557)))
+          ("SSID" . ((string "\"netgear\"" 1519 . 1528)))
+          )
+))
+  :file "!home!elias!projects!esp32_rtos_sdk!ESP31_RTOS_SDK!examples!ota_demo!user!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

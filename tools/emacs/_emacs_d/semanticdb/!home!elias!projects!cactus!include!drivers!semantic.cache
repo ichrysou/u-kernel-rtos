@@ -1,0 +1,156 @@
+;; Object drivers/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "drivers/"
+  :tables
+  (list
+    (semanticdb-table "igeneric_device_driver.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("driver_definitions.h" include nil nil [14 45])
+            ("IGenericDeviceDriver" type
+               (:members 
+                  ( ("open" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [79 103])
+                    ("close" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [107 132])
+                    ("read" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pData" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [154 166])
+                            ("size" variable (:type "int") (reparse-symbol arg-sub-list) [167 176]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [136 181])
+                    ("write" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pData" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [204 216])
+                            ("size" variable (:type "int") (reparse-symbol arg-sub-list) [217 226]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [185 231])
+                    ("ctl" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("parameter" variable (:type ("IOCTL_PARAMS" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [252 275])
+                            ("pParam" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [276 289]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [235 294])
+                    ("IGenericDeviceDriver" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [298 332]))                  
+                :type "struct")
+                nil [47 335]))          
+      :file "igeneric_device_driver.h"
+      :pointmax 337
+      :fsize 336
+      :lastmodtime '(22593 23469 785457 129000)
+      :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2)))
+    (semanticdb-table "driver_definitions.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdint.h" include (:system-flag t) nil [14 33])
+            ("MODBUS_SENSOR_CONFIG" type
+               (:members 
+                  ( ("id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [68 79])
+                    ("adr" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [84 97])
+                    ("hold" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [102 115]))                  
+                :type "struct")
+                nil [35 118])
+            ("MODBUS_CONFIG" type
+               (:members 
+                  ( ("Baudrate" variable (:type "int") (reparse-symbol classsubparts) [146 159])
+                    ("ByteFormat" variable (:type "int") (reparse-symbol classsubparts) [164 179])
+                    ("TxEnablePin" variable (:type "int") (reparse-symbol classsubparts) [184 200])
+                    ("PollInterval" variable (:type "int") (reparse-symbol classsubparts) [205 222]))                  
+                :type "struct")
+                nil [120 225])
+            ("IOMode" type
+               (:members 
+                  ( ("Read" variable
+                       (:constant-flag t
+                        :default-value (250 254)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [243 254])
+                    ("Write" variable
+                       (:constant-flag t
+                        :default-value (266 270)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [258 270])
+                    ("Interrupt" variable
+                       (:constant-flag t
+                        :default-value (286 290)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [274 290]))                  
+                :type "enum")
+                nil [227 293])
+            ("IOCTL_PARAMS" type
+               (:members 
+                  ( ("GPIO_EDGE_RISING" variable
+                       (:constant-flag t
+                        :default-value (336 340)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [317 340])
+                    ("GPIO_DISABLE_INTERRUPT" variable
+                       (:constant-flag t
+                        :default-value (369 373)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [344 373])
+                    ("GPIO_DIR_OUT" variable
+                       (:constant-flag t
+                        :default-value (392 396)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [377 396])
+                    ("GPIO_DIR_IN" variable
+                       (:constant-flag t
+                        :default-value (414 418)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [400 418])
+                    ("MODBUS_SENSOR_CFG" variable
+                       (:constant-flag t
+                        :default-value (442 446)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [422 446])
+                    ("MODBUS_CFG" variable
+                       (:constant-flag t
+                        :default-value (463 467)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [450 467])
+                    ("MODBUS_AVAIL" variable
+                       (:constant-flag t
+                        :default-value (486 490)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [471 490]))                  
+                :type "enum")
+                nil [295 493]))          
+      :file "driver_definitions.h"
+      :pointmax 494
+      :fsize 493
+      :lastmodtime '(22593 23469 785457 129000)
+      :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2))))
+  :file "!home!elias!projects!cactus!include!drivers!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

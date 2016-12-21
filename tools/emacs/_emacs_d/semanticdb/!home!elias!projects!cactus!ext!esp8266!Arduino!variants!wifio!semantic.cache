@@ -1,0 +1,125 @@
+;; Object wifio/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "wifio/"
+  :tables
+  (list
+    (semanticdb-table "WifioWiring.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("wiring_private.h" include nil nil [924 951])
+            ("WifioProtocol.h" include nil nil [952 978])
+            ("wifio" type
+               (:members 
+                  ( ("WIFIO_AVR_SLAVE_ADDR" variable
+                       (:constant-flag t
+                        :default-value "0x23"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1003 1039])
+                    ("pinMode" function
+                       (:arguments 
+                          ( ("avrPin" variable (:type "int") (reparse-symbol arg-sub-list) [1062 1073])
+                            ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [1074 1083]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1049 1248])
+                    ("digitalWrite" function
+                       (:arguments 
+                          ( ("avrPin" variable (:type "int") (reparse-symbol arg-sub-list) [1276 1287])
+                            ("value" variable (:type "int") (reparse-symbol arg-sub-list) [1288 1298]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1258 1474])
+                    ("digitalRead" function
+                       (:arguments 
+                          ( ("avrPin" variable (:type "int") (reparse-symbol arg-sub-list) [1500 1511]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1484 1777])
+                    ("analogWrite" function
+                       (:arguments 
+                          ( ("avrPin" variable (:type "int") (reparse-symbol arg-sub-list) [1804 1815])
+                            ("value" variable (:type "int") (reparse-symbol arg-sub-list) [1816 1826]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1787 2000])
+                    ("analogRead" function
+                       (:arguments 
+                          ( ("avrPin" variable (:type "int") (reparse-symbol arg-sub-list) [2025 2036]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2010 2323]))                  
+                :type "namespace")
+                nil [981 2330])
+            ("__pinMode" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("pin" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2377 2389])
+                    ("mode" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2390 2403]))                  
+                :type "void")
+                nil [2362 2404])
+            ("__digitalWrite" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("pin" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2436 2448])
+                    ("val" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2449 2461]))                  
+                :type "void")
+                nil [2416 2462])
+            ("__digitalRead" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("pin" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2493 2505]))                  
+                :type "int")
+                nil [2474 2506])
+            ("__analogWrite" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("pin" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2537 2549])
+                    ("val" variable (:type "int") (reparse-symbol arg-sub-list) [2550 2558]))                  
+                :type "void")
+                nil [2518 2559])
+            ("__initPins" function
+               (:prototype-flag t
+                :type "void")
+                nil [2704 2722])
+            ("__analogRead" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("pin" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2752 2764]))                  
+                :type "int")
+                nil [2734 2765])
+            ("pinMode" function
+               (:arguments 
+                  ( ("pin" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2792 2804])
+                    ("mode" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2805 2818]))                  
+                :type "void")
+                nil [2779 2971])
+            ("digitalWrite" function
+               (:arguments 
+                  ( ("pin" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3002 3014])
+                    ("value" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3015 3029]))                  
+                :type "void")
+                nil [2984 3195])
+            ("digitalRead" function
+               (:arguments 
+                  ( ("pin" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3224 3236]))                  
+                :type "int")
+                nil [3208 3374])
+            ("analogRead" function
+               (:arguments 
+                  ( ("pin" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3402 3414]))                  
+                :type "int")
+                nil [3387 3550])
+            ("analogWrite" function
+               (:arguments 
+                  ( ("pin" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3580 3592])
+                    ("value" variable (:type "int") (reparse-symbol arg-sub-list) [3593 3603]))                  
+                :type "void")
+                nil [3563 3741])
+            ("initVariant" function (:type "void") nil [3744 3813]))          
+      :file "WifioWiring.cpp"
+      :pointmax 3814
+      :fsize 3813
+      :lastmodtime '(22593 23513 100324 744000)
+      :unmatched-syntax nil)
+    (semanticdb-table "WifioProtocol.h"
+      :file "WifioProtocol.h"
+      :fsize 3363
+      :lastmodtime '(22593 23513 100324 744000)))
+  :file "!home!elias!projects!cactus!ext!esp8266!Arduino!variants!wifio!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

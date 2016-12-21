@@ -1,0 +1,41 @@
+;; Object spi/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "spi/"
+  :tables
+  (list
+    (semanticdb-table "spi_test_driver.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("drivers/spi_driver.h" include nil nil [27 58])
+            ("src/internal/gdbstub.h" include (:system-flag t) nil [59 92])
+            ("Arduino.h" include (:system-flag t) nil [93 113])
+            ("SPI.h" include (:system-flag t) nil [114 130])
+            ("utils/network.h" include (:system-flag t) nil [131 157])
+            ("logger/displaylogger.h" include (:system-flag t) nil [158 191])
+            ("driver" function
+               (:prototype-flag t
+                :type ("SpiDriver" type (:type "class") nil nil))
+                nil [193 227])
+            ("setup" function (:type "void") nil [229 381])
+            ("led_val" variable
+               (:default-value "1"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [383 403])
+            ("buff" variable
+               (:dereference 1
+                :default-value "\"Hello World\\n\""
+                :type "char")
+                nil [404 436])
+            ("rd_buff" variable
+               (:dereference 1
+                :type "char")
+                nil [437 454])
+            ("loop" function (:type "void") nil [457 796]))          
+      :file "spi_test_driver.cpp"
+      :pointmax 797
+      :fsize 796
+      :lastmodtime '(22609 25060 558386 888000)
+      :unmatched-syntax nil))
+  :file "!home!elias!projects!cactus_master_clean!cactus!test!esp!spi!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

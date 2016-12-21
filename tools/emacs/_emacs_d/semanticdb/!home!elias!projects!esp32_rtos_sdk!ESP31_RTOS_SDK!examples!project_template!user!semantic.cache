@@ -1,0 +1,22 @@
+;; Object user/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "user/"
+  :tables
+  (list
+    (semanticdb-table "user_main.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("esp_common.h" include nil nil [1237 1260])
+            ("user_init" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1581 1586]))                  
+                :type "void")
+                nil [1566 1648]))          
+      :file "user_main.c"
+      :pointmax 1650
+      :fsize 1686
+      :lastmodtime '(22602 55291 971111 799000)
+      :unmatched-syntax nil))
+  :file "!home!elias!projects!esp32_rtos_sdk!ESP31_RTOS_SDK!examples!project_template!user!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

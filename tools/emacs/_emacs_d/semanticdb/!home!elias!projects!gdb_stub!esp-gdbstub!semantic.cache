@@ -1,0 +1,38 @@
+;; Object esp-gdbstub/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "esp-gdbstub/"
+  :tables
+  (list
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-gmake-mode
+      :tags 
+        '( ("GEN_LIBS" variable (:default-value ("libgdbstub.a")) nil [533 557])
+            ("INCLUDES" variable (:default-value ("-I" "./")) nil [1373 1391])
+            ("INCLUDES" variable (:default-value ("-I" "../../include/ets")) nil [1391 1424])
+            ("PDIR" variable (:default-value ("../$(PDIR)")) nil [1424 1443]))          
+      :file "Makefile"
+      :pointmax 1469
+      :fsize 1468
+      :lastmodtime '(22602 54425 695 844000)
+      :unmatched-syntax '((symbol 1459 . 1467) (semantic-list 1453 . 1459) (punctuation 1452 . 1453) (symbol 1443 . 1451) (bol 1443 . 1443) (INCLUDE 1365 . 1372) (semantic-list 1359 . 1365) (punctuation 1358 . 1359) (symbol 1355 . 1357) (punctuation 1353 . 1354) (punctuation 1352 . 1353) (symbol 1343 . 1351) (bol 1343 . 1343)))
+    (semanticdb-table "gdbstub.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("GDBSTUB_H" variable (:constant-flag t) nil [27 36])
+            ("gdbstub_init" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [78 98]))          
+      :file "gdbstub.h"
+      :pointmax 135
+      :fsize 134
+      :lastmodtime '(22602 54425 695 844000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("GDBSTUB_H")
+          )
+))
+  :file "!home!elias!projects!gdb_stub!esp-gdbstub!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

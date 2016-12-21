@@ -1,0 +1,561 @@
+;; Object freertos/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "freertos/"
+  :tables
+  (list
+    (semanticdb-table "task.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("INC_TASK_H" variable (:constant-flag t) nil [3820 3830])
+            ("list.h" include nil nil [3942 3959])
+            ("pvTaskIncrementMutexHeldCount" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [80805 80811]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [80768 80812])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [80596 80616])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [79712 79732])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [79233 79253])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [79044 79064])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [78791 78811])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [78352 78372])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [78109 78129])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [77876 77896])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [77691 77711])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [77540 77560])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [77315 77335])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [77172 77192])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [77054 77074])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [76877 76897])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [76506 76526])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [76379 76399])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [75164 75184])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [74633 74653])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [74492 74512])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [73025 73045])
+            ("ulTaskNotifyTake" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("uint32_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("xClearCountOnExit" variable (:type ("BaseType_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [72010 72039])
+                    ("xTicksToWait" variable (:type ("TickType_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [72040 72065]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [71983 72066])
+            ("vTaskNotifyGiveFromISR" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("xTaskToNotify" variable (:type ("TaskHandle_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [68557 68584])
+                    ("pxHigherPriorityTaskWoken" variable
+                       (:pointer 1
+                        :type ("BaseType_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [68585 68624]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [68528 68625])
+            ("xTaskNotifyGive" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [65796 65811])
+            ("xTaskNotifyWait" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("BaseType_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("ulBitsToClearOnEntry" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [63588 63618])
+                    ("ulBitsToClearOnExit" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [63619 63648])
+                    ("pulNotificationValue" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [63649 63680])
+                    ("xTicksToWait" variable (:type ("TickType_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [63681 63706]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [63560 63707])
+            ("xTaskNotifyFromISR" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("BaseType_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("xTaskToNotify" variable (:type ("TaskHandle_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [59320 59347])
+                    ("ulValue" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [59348 59365])
+                    ("eAction" variable (:type ("eNotifyAction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [59366 59388])
+                    ("pxHigherPriorityTaskWoken" variable
+                       (:pointer 1
+                        :type ("BaseType_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [59389 59428]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [59289 59429])
+            ("xTaskNotify" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("BaseType_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("xTaskToNotify" variable (:type ("TaskHandle_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55045 55072])
+                    ("ulValue" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55073 55090])
+                    ("eAction" variable (:type ("eNotifyAction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55091 55114]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [55021 55115])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [51436 51456])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [48713 48733])
+            ("uxTaskGetSystemState" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("UBaseType_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("pxTaskStatusArray" variable
+                       (:pointer 1
+                        :type ("TaskStatus_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [46643 46682])
+                    ("uxArraySize" variable
+                       (:constant-flag t
+                        :type ("UBaseType_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [46683 46713])
+                    ("pulTotalRunTime" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [46714 46748]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [46609 46749])
+            ("xTaskGetIdleTaskHandle" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("TaskHandle_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [42464 42470]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [42427 42471])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [42139 42159])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [40319 40339])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [39302 39322])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [38752 38772])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [38282 38302])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [37735 37755])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [37316 37336])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [35750 35770])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [34246 34266])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [32477 32497])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [31539 31559])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [30338 30358])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [29104 29124])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [27715 27735])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [26440 26460])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [25787 25807])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [25544 25564])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [24283 24303])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [21816 21836])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [19874 19894])
+            ("PRIVILEGED_FUNCTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int")
+                (reparse-symbol extern-c-contents) [18486 18506])
+            ("xTaskCreateRestricted" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [16384 16405])
+            ("xTaskCreate" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [13512 13523])
+            ("taskSCHEDULER_RUNNING" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [10518 10539])
+            ("taskSCHEDULER_NOT_STARTED" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [10463 10488])
+            ("taskSCHEDULER_SUSPENDED" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [10409 10432])
+            ("taskENABLE_INTERRUPTS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [10156 10177])
+            ("taskDISABLE_INTERRUPTS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [9939 9961])
+            ("taskEXIT_CRITICAL" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [9730 9747])
+            ("taskENTER_CRITICAL" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [9341 9359])
+            ("taskYIELD" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [8963 8972])
+            ("tskIDLE_PRIORITY" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [8786 8802])
+            ("eSleepModeStatus" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("" type
+                     (:members 
+                        ( ("eAbortSleep" variable
+                             (:constant-flag t
+                              :default-value (8250 8251)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [8236 8251])
+                          ("eStandardSleep" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [8395 8410])
+                          ("eNoTasksWaitingTimeout" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [8498 8649]))                        
+                      :type "enum")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [8220 8667])
+            ("TaskStatus_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("xTASK_STATUS" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [6707 8154])
+            ("xTASK_STATUS" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("xHandle" variable (:type ("TaskHandle_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6738 6759])
+                    ("pcTaskName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [6855 6878])
+                    ("xTaskNumber" variable (:type ("UBaseType_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7096 7120])
+                    ("eCurrentState" variable (:type ("eTaskState" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7158 7183])
+                    ("uxCurrentPriority" variable (:type ("UBaseType_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7262 7292])
+                    ("uxBasePriority" variable (:type ("UBaseType_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7396 7423])
+                    ("ulRunTimeCounter" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7657 7683])
+                    ("usStackHighWaterMark" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7920 7950]))                  )
+                (reparse-symbol extern-c-contents) [6707 8154])
+            ("TaskParameters_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("xTASK_PARAMETERS" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [6247 6605])
+            ("xTASK_PARAMETERS" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("pvTaskCode" variable (:type ("TaskFunction_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6282 6308])
+                    ("pcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [6310 6336])
+                    ("usStackDepth" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6429 6451])
+                    ("pvParameters" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [6453 6472])
+                    ("uxPriority" variable (:type ("UBaseType_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6474 6497])
+                    ("puxStackBuffer" variable
+                       (:pointer 1
+                        :type ("StackType_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6499 6527])
+                    ("xRegions" variable
+                       (:dereference 1
+                        :type ("MemoryRegion_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6529 6585]))                  )
+                (reparse-symbol extern-c-contents) [6247 6605])
+            ("MemoryRegion_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("xMEMORY_REGION" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [6060 6182])
+            ("xMEMORY_REGION" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("pvBaseAddress" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [6093 6113])
+                    ("ulLengthInBytes" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6115 6140])
+                    ("ulParameters" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6142 6164]))                  )
+                (reparse-symbol extern-c-contents) [6060 6182])
+            ("TimeOut_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("xTIME_OUT" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [5883 5979])
+            ("xTIME_OUT" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("xOverflowCount" variable (:type ("BaseType_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5911 5937])
+                    ("xTimeOnEntering" variable (:type ("TickType_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5939 5966]))                  )
+                (reparse-symbol extern-c-contents) [5883 5979])
+            ("eNotifyAction" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("" type
+                     (:members 
+                        ( ("eNoAction" variable
+                             (:constant-flag t
+                              :default-value (5378 5379)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [5366 5379])
+                          ("eSetBits" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [5442 5451])
+                          ("eIncrement" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [5506 5517])
+                          ("eSetValueWithOverwrite" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [5570 5593])
+                          ("eSetValueWithoutOverwrite" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [5718 5834]))                        
+                      :type "enum")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [5350 5849])
+            ("eTaskState" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("" type
+                     (:members 
+                        ( ("eRunning" variable
+                             (:constant-flag t
+                              :default-value (4840 4841)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [4829 4841])
+                          ("eReady" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [4910 4917])
+                          ("eBlocked" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [4986 4995])
+                          ("eSuspended" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [5052 5063])
+                          ("eDeleted" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [5176 5270]))                        
+                      :type "enum")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [4813 5282])
+            ("TaskHookFunction_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("BaseType_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4757 4765]))                  
+                :function-pointer t
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4723 4766])
+            ("TaskHandle_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :pointer 1
+                :typedef ("void"))
+                (reparse-symbol extern-c-contents) [4592 4620])
+            ("tskKERNEL_VERSION_BUILD" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4271 4294])
+            ("tskKERNEL_VERSION_MINOR" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4237 4260])
+            ("tskKERNEL_VERSION_MAJOR" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4203 4226])
+            ("tskKERNEL_VERSION_NUMBER" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4161 4185]))          
+      :file "task.h"
+      :pointmax 80869
+      :fsize 80868
+      :lastmodtime '(22602 55292 11110 802000)
+      :unmatched-syntax '((semantic-list 80587 . 80595) (symbol 80560 . 80587) (symbol 80543 . 80559) (semantic-list 79678 . 79711) (symbol 79665 . 79678) (VOID 79660 . 79664) (semantic-list 79182 . 79232) (symbol 79164 . 79182) (VOID 79159 . 79163) (semantic-list 79021 . 79043) (symbol 79002 . 79021) (symbol 78990 . 79001) (semantic-list 78543 . 78790) (symbol 78525 . 78543) (symbol 78514 . 78524) (semantic-list 78315 . 78351) (symbol 78292 . 78315) (symbol 78281 . 78291) (semantic-list 78072 . 78108) (symbol 78052 . 78072) (VOID 78047 . 78051) (semantic-list 77867 . 77875) (symbol 77845 . 77867) (symbol 77834 . 77844) (semantic-list 77682 . 77690) (symbol 77666 . 77682) (VOID 77661 . 77665) (semantic-list 77474 . 77539) (symbol 77454 . 77474) (symbol 77443 . 77453) (semantic-list 77283 . 77314) (symbol 77263 . 77283) (VOID 77258 . 77262) (semantic-list 77163 . 77171) (symbol 77138 . 77163) (symbol 77125 . 77137) (semantic-list 77045 . 77053) (symbol 77020 . 77045) (symbol 77009 . 77019) (semantic-list 76868 . 76876) (symbol 76850 . 76868) (VOID 76845 . 76849) (semantic-list 76444 . 76505) (symbol 76411 . 76444) (symbol 76400 . 76410) (semantic-list 76342 . 76378) (symbol 76318 . 76342) (symbol 76307 . 76317) (semantic-list 75102 . 75163) (symbol 75071 . 75102) (VOID 75066 . 75070) (semantic-list 74548 . 74632) (symbol 74518 . 74548) (VOID 74513 . 74517) (semantic-list 74430 . 74491) (symbol 74409 . 74430) (VOID 74404 . 74408) (semantic-list 73016 . 73024) (symbol 72998 . 73016) (symbol 72987 . 72997) (semantic-list 51412 . 51435) (symbol 51392 . 51412) (VOID 51387 . 51391) (semantic-list 48688 . 48712) (symbol 48679 . 48688) (VOID 48674 . 48678) (semantic-list 42097 . 42138) (symbol 42069 . 42097) (symbol 42058 . 42068) (semantic-list 40296 . 40318) (symbol 40269 . 40296) (symbol 40257 . 40268) (semantic-list 39272 . 39301) (symbol 39255 . 39272) (punctuation 39254 . 39255) (CHAR 39249 . 39253) (semantic-list 38743 . 38751) (symbol 38721 . 38743) (symbol 38709 . 38720) (semantic-list 38273 . 38281) (symbol 38249 . 38273) (symbol 38238 . 38248) (semantic-list 37726 . 37734) (symbol 37709 . 37726) (symbol 37698 . 37708) (semantic-list 37307 . 37315) (symbol 37293 . 37307) (symbol 37282 . 37292) (semantic-list 35741 . 35749) (symbol 35726 . 35741) (VOID 35721 . 35725) (semantic-list 34237 . 34245) (symbol 34220 . 34237) (VOID 34215 . 34219) (semantic-list 32468 . 32476) (symbol 32449 . 32468) (VOID 32444 . 32448) (semantic-list 31508 . 31538) (symbol 31490 . 31508) (symbol 31479 . 31489) (semantic-list 30307 . 30337) (symbol 30296 . 30307) (VOID 30291 . 30295) (semantic-list 29072 . 29103) (symbol 29060 . 29072) (VOID 29055 . 29059) (semantic-list 27665 . 27714) (symbol 27649 . 27665) (VOID 27644 . 27648) (semantic-list 26417 . 26439) (symbol 26404 . 26417) (symbol 26393 . 26403) (semantic-list 25764 . 25786) (symbol 25740 . 25764) (symbol 25728 . 25739) (semantic-list 25521 . 25543) (symbol 25504 . 25521) (symbol 25492 . 25503) (semantic-list 24208 . 24282) (symbol 24193 . 24208) (VOID 24188 . 24192) (semantic-list 21781 . 21815) (symbol 21771 . 21781) (VOID 21766 . 21770) (semantic-list 19843 . 19873) (symbol 19832 . 19843) (VOID 19827 . 19831) (semantic-list 18423 . 18485) (symbol 18400 . 18423) (VOID 18395 . 18399) (TYPEDEF 4715 . 4722) (string 3863 . 3933) (symbol 3857 . 3862) (punctuation 3856 . 3857))
+      :lexical-table 
+        '(("taskDISABLE_INTERRUPTS" (spp-arg-list nil 9961 . 9963) . ((symbol "portDISABLE_INTERRUPTS" 9964 . 9986) (semantic-list "()" 9986 . 9988)))
+          ("taskSCHEDULER_RUNNING" . ((semantic-list "( ( BaseType_t ) 2 )" 10541 . 10561)))
+          ("tskKERNEL_VERSION_MINOR" . ((number "2" 4261 . 4262)))
+          ("tskIDLE_PRIORITY" . ((semantic-list "( ( UBaseType_t ) 0U )" 8805 . 8827)))
+          ("tskKERNEL_VERSION_BUILD" . ((number "0" 4295 . 4296)))
+          ("xTaskCreate" (spp-arg-list ("pvTaskCode" "pcName" "usStackDepth" "pvParameters" "uxPriority" "pxCreatedTask") 13523 . 13600) . ((symbol "xTaskGenericCreate" 13601 . 13619) (semantic-list "( ( pvTaskCode ), ( pcName ), ( usStackDepth ), ( pvParameters ), ( uxPriority ), ( pxCreatedTask ), ( NULL ), ( NULL ) )" 13619 . 13740)))
+          ("INC_TASK_H")
+          ("taskYIELD" (spp-arg-list nil 8972 . 8974) . ((symbol "portYIELD" 8979 . 8988) (semantic-list "()" 8988 . 8990)))
+          ("tskKERNEL_VERSION_NUMBER" . ((string "\"V8.2.0\"" 4186 . 4194)))
+          ("taskENABLE_INTERRUPTS" (spp-arg-list nil 10177 . 10179) . ((symbol "portENABLE_INTERRUPTS" 10181 . 10202) (semantic-list "()" 10202 . 10204)))
+          ("taskSCHEDULER_SUSPENDED" . ((semantic-list "( ( BaseType_t ) 0 )" 10434 . 10454)))
+          ("taskEXIT_CRITICAL" (spp-arg-list nil 9747 . 9749) . ((symbol "portEXIT_CRITICAL" 9752 . 9769) (semantic-list "()" 9769 . 9771)))
+          ("taskSCHEDULER_NOT_STARTED" . ((semantic-list "( ( BaseType_t ) 1 )" 10489 . 10509)))
+          ("xTaskNotifyGive" (spp-arg-list ("xTaskToNotify") 65811 . 65828) . 
+              ((symbol "xTaskNotify" 65829 . 65840) (semantic-list "( ( xTaskToNotify ), 0, eIncrement )" 65840 . 65876) (punctuation ";" 65876 . 65877)))
+          ("tskKERNEL_VERSION_MAJOR" . ((number "8" 4227 . 4228)))
+          ("taskENTER_CRITICAL" (spp-arg-list nil 9359 . 9361) . ((symbol "portENTER_CRITICAL" 9363 . 9381) (semantic-list "()" 9381 . 9383)))
+          ("xTaskCreateRestricted" (spp-arg-list ("x" "pxCreatedTask") 16405 . 16425) . ((symbol "xTaskGenericCreate" 16426 . 16444) (semantic-list "( ((x)->pvTaskCode), ((x)->pcName), ((x)->usStackDepth), ((x)->pvParameters), ((x)->uxPriority), (pxCreatedTask), ((x)->puxStackBuffer), ((x)->xRegions) )" 16444 . 16598)))
+          )
+)
+    (semanticdb-table "list.h"
+      :file "list.h"
+      :fsize 20580
+      :lastmodtime '(22602 55292 11110 802000))
+    (semanticdb-table "mpu_wrappers.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("MPU_WRAPPERS_H" variable (:constant-flag t) nil [3823 3837])
+            ("PRIVILEGED_FUNCTION" variable (:constant-flag t) nil [7373 7392])
+            ("PRIVILEGED_DATA" variable (:constant-flag t) nil [7402 7417])
+            ("portUSING_MPU_WRAPPERS" variable (:constant-flag t) nil [7427 7449]))          
+      :file "mpu_wrappers.h"
+      :pointmax 7520
+      :fsize 7519
+      :lastmodtime '(22602 55292 11110 802000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("portUSING_MPU_WRAPPERS" . ((number "0" 7450 . 7451)))
+          ("PRIVILEGED_DATA")
+          ("PRIVILEGED_FUNCTION")
+          ("MPU_WRAPPERS_H")
+          )
+))
+  :file "!home!elias!projects!esp32_rtos_sdk!ESP31_RTOS_SDK!third_party!include!freertos!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

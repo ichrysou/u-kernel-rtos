@@ -1,0 +1,52 @@
+;; Object time/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "time/"
+  :tables
+  (list
+    (semanticdb-table "test_time.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Arduino.h" include (:system-flag t) nil [14 34])
+            ("WiFiUdp.h" include (:system-flag t) nil [35 55])
+            ("logger/logger.h" include (:system-flag t) nil [56 82])
+            ("utils/network.h" include (:system-flag t) nil [83 109])
+            ("utils/ntp.h" include (:system-flag t) nil [110 132])
+            ("logger" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("LEVEL_INFO" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [148 159]))                  
+                :type ("Logger" type (:type "class") nil nil))
+                nil [134 160])
+            ("wifi_udp" variable (:type ("WiFiUDP" type (:type "class") nil nil)) nil [161 178])
+            ("ntp" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("wifi_udp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [197 206]))                  
+                :type ("Network::Ntp" type (:type "class") nil nil))
+                nil [179 207])
+            ("ssid" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "\"SDI\""
+                :type "char")
+                nil [209 241])
+            ("password" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "\"company flower fly seldom\""
+                :type "char")
+                nil [242 300])
+            ("setup_newtork" function (:type "bool") nil [302 383])
+            ("time_wrapper" function (:type ("time_t" type (:type "class") nil nil)) nil [385 438])
+            ("setup" function (:type "void") nil [440 542])
+            ("loop" function (:type "void") nil [544 667]))          
+      :file "test_time.cpp"
+      :pointmax 671
+      :fsize 670
+      :lastmodtime '(22611 46441 758662 86000)
+      :unmatched-syntax '((punctuation 196 . 197))))
+  :file "!home!ichrysou!projects!cactus_pristine!cactus!test!esp!time!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

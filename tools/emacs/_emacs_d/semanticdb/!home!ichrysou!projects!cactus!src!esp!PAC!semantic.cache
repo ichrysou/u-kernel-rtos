@@ -1,0 +1,209 @@
+;; Object PAC/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "PAC/"
+  :tables
+  (list
+    (semanticdb-table "ModbusSensor.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ModbusSensor.h" include nil nil [450 475])
+            ("MODBUS_SERIAL_BEGIN" variable (:constant-flag t) nil [770 789])
+            ("MODBUS_SERIAL_PRINT" variable (:constant-flag t) nil [803 822])
+            ("MODBUS_SERIAL_PRINTLN" variable (:constant-flag t) nil [836 857])
+            ("STOP" variable (:constant-flag t) nil [912 916])
+            ("SEND" variable (:constant-flag t) nil [942 946])
+            ("SENDING" variable (:constant-flag t) nil [972 979])
+            ("RECEIVING" variable (:constant-flag t) nil [1002 1011])
+            ("IDLE" variable (:constant-flag t) nil [1032 1036])
+            ("WAITING_NEXT_POLL" variable (:constant-flag t) nil [1062 1079])
+            ("READ_COIL_STATUS" variable (:constant-flag t) nil [1093 1109])
+            ("READ_INPUT_STATUS" variable (:constant-flag t) nil [1216 1233])
+            ("READ_HOLDING_REGISTERS" variable (:constant-flag t) nil [1331 1353])
+            ("READ_INPUT_REGISTERS" variable (:constant-flag t) nil [1450 1470])
+            ("FORCE_MULTIPLE_COILS" variable (:constant-flag t) nil [1581 1601])
+            ("PRESET_MULTIPLE_REGISTERS" variable (:constant-flag t) nil [1699 1724])
+            ("MB_VALID_DATA" variable (:constant-flag t) nil [1811 1824])
+            ("MB_INVALID_ID" variable (:constant-flag t) nil [1842 1855])
+            ("MB_INVALID_FC" variable (:constant-flag t) nil [1873 1886])
+            ("MB_TIMEOUT" variable (:constant-flag t) nil [1904 1914])
+            ("MB_INVALID_CRC" variable (:constant-flag t) nil [1935 1949])
+            ("MB_INVALID_BUFF" variable (:constant-flag t) nil [1966 1981])
+            ("MB_ILLEGAL_FC" variable (:constant-flag t) nil [1997 2010])
+            ("MB_ILLEGAL_ADR" variable (:constant-flag t) nil [2028 2042])
+            ("MB_ILLEGAL_DATA" variable (:constant-flag t) nil [2059 2074])
+            ("MB_SLAVE_FAIL" variable (:constant-flag t) nil [2090 2103])
+            ("MB_EXCEPTION" variable (:constant-flag t) nil [2121 2133])
+            ("calculateCRC" function
+               (:arguments 
+                  ( ("array" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2357 2372])
+                    ("num" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2373 2385]))                  
+                :type ("uint16_t" type (:type "class") nil nil))
+                nil [2335 2640])
+            ("modbusSensor" function
+               (:constructor-flag t
+                :parent "modbusSensor"
+                :type ("modbusSensor" type (:type "class") nil nil))
+                nil [2643 2674])
+            ("config" function
+               (:parent "modbusSensor"
+                :arguments 
+                  ( ("mbm" variable
+                       (:pointer 1
+                        :type ("modbusMaster" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2717 2736])
+                    ("id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2737 2748])
+                    ("adr" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2749 2762])
+                    ("hold" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2763 2776]))                  
+                :type "void")
+                nil [2691 3102])
+            ("config" function
+               (:parent "modbusSensor"
+                :arguments 
+                  ( ("id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3145 3156])
+                    ("adr" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3157 3170])
+                    ("hold" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3171 3184]))                  
+                :type "void")
+                nil [3119 3512])
+            ("modbusSensor" function
+               (:destructor-flag t
+                :parent "modbusSensor"
+                :type "void")
+                nil [3528 3590])
+            ("read" function
+               (:parent "modbusSensor"
+                :type "float")
+                nil [3623 3845])
+            ("read" function
+               (:parent "modbusSensor"
+                :arguments 
+                  ( ("factor" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3923 3939]))                  
+                :type ("uint16_t" type (:type "class") nil nil))
+                nil [3895 4200])
+            ("getStatus" function
+               (:parent "modbusSensor"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [4239 4294])
+            ("write" function
+               (:parent "modbusSensor"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("value" variable (:type "float") (reparse-symbol arg-sub-list) [4350 4362]))                  
+                :type "void")
+                nil [4318 4386])
+            ("putStatus" function
+               (:parent "modbusSensor"
+                :arguments 
+                  ( ("status" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4450 4465]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [4418 4507])
+            ("getFramePtr" function
+               (:pointer 1
+                :parent "modbusSensor"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [4550 4607])
+            ("config" function
+               (:parent "modbusMaster"
+                :arguments 
+                  ( ("hwSerial" variable
+                       (:pointer 1
+                        :type ("HardwareSerial" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4854 4880])
+                    ("TxEnPin" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4881 4897])
+                    ("pollInterval" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4898 4920]))                  
+                :type "void")
+                nil [4828 5151])
+            ("connect" function
+               (:parent "modbusMaster"
+                :arguments 
+                  ( ("mbSensor" variable
+                       (:pointer 1
+                        :type ("modbusSensor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5324 5348]))                  
+                :type "void")
+                nil [5297 5573])
+            ("disconnect" function
+               (:parent "modbusMaster"
+                :arguments 
+                  ( ("mbSensor" variable
+                       (:pointer 1
+                        :type ("modbusSensor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5752 5776]))                  
+                :type "void")
+                nil [5722 6057])
+            ("begin" function
+               (:parent "modbusMaster"
+                :arguments 
+                  ( ("baudrate" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6221 6239])
+                    ("byteFormat" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6240 6259]))                  
+                :type "void")
+                nil [6196 6861])
+            ("end" function
+               (:parent "modbusMaster"
+                :typemodifiers ("inline")
+                :type "void")
+                nil [6982 7091])
+            ("available" function
+               (:parent "modbusMaster"
+                :type ("boolean" type (:type "class") nil nil))
+                nil [7204 10215])
+            ("readBuffer" function
+               (:parent "modbusMaster"
+                :arguments 
+                  ( ("frameSize" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10338 10356]))                  
+                :type "void")
+                nil [10308 12195])
+            ("sendFrame" function
+               (:parent "modbusMaster"
+                :arguments 
+                  ( ("frameSize" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12320 12338]))                  
+                :type "void")
+                nil [12291 12741])
+            ("sendFrame" function
+               (:parent "modbusMaster"
+                :type "void")
+                nil [12837 13254])
+            ("MBSerial" variable (:type ("modbusMaster" type (:type "class") nil nil)) nil [13333 13355]))          
+      :file "ModbusSensor.cpp"
+      :pointmax 13358
+      :fsize 13358
+      :lastmodtime '(22611 59885 861806 297000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("PRESET_MULTIPLE_REGISTERS" . ((number "0x10" 1725 . 1729)))
+          ("RECEIVING" . ((number "3" 1022 . 1023)))
+          ("MB_ILLEGAL_DATA" . ((number "0x03" 2077 . 2081)))
+          ("MODBUS_SERIAL_PRINT" (spp-arg-list ("...") 822 . 827))
+          ("MODBUS_SERIAL_PRINTLN" (spp-arg-list ("...") 857 . 862))
+          ("MB_ILLEGAL_ADR" . ((number "0x02" 2046 . 2050)))
+          ("READ_COIL_STATUS" . ((number "0x01" 1119 . 1123)))
+          ("READ_INPUT_STATUS" . ((number "0x02" 1242 . 1246)))
+          ("WAITING_NEXT_POLL" . ((number "5" 1082 . 1083)))
+          ("READ_INPUT_REGISTERS" . ((number "0x04" 1476 . 1480)))
+          ("SEND" . ((number "1" 962 . 963)))
+          ("SENDING" . ((number "2" 992 . 993)))
+          ("MB_TIMEOUT" . ((number "0xE2" 1922 . 1926)))
+          ("IDLE" . ((number "4" 1052 . 1053)))
+          ("READ_HOLDING_REGISTERS" . ((number "0x03" 1357 . 1361)))
+          ("FORCE_MULTIPLE_COILS" . ((number "0x0F" 1607 . 1611)))
+          ("MB_INVALID_ID" . ((number "0xE0" 1860 . 1864)))
+          ("MB_EXCEPTION" . ((number "0x05" 2139 . 2143)))
+          ("MB_INVALID_BUFF" . ((number "0xE4" 1984 . 1988)))
+          ("MB_ILLEGAL_FC" . ((number "0x01" 2015 . 2019)))
+          ("MB_INVALID_FC" . ((number "0xE1" 1891 . 1895)))
+          ("MB_INVALID_CRC" . ((number "0xE3" 1953 . 1957)))
+          ("MODBUS_SERIAL_BEGIN" (spp-arg-list ("...") 789 . 794))
+          ("STOP" . ((number "0" 932 . 933)))
+          ("MB_VALID_DATA" . ((number "0x00" 1829 . 1833)))
+          ("MB_SLAVE_FAIL" . ((number "0x04" 2108 . 2112)))
+          )
+)
+    (semanticdb-table "ModbusSensor.h"
+      :file "ModbusSensor.h"
+      :fsize 4427
+      :lastmodtime '(22611 59885 861806 297000)))
+  :file "!home!ichrysou!projects!cactus!src!esp!PAC!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

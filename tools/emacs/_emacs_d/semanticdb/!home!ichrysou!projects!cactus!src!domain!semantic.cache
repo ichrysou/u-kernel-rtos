@@ -1,0 +1,239 @@
+;; Object domain/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "domain/"
+  :tables
+  (list
+    (semanticdb-table "deviceapp.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("functional" include (:system-flag t) nil [15 36])
+            ("string" include (:system-flag t) nil [37 54])
+            ("map" include (:system-flag t) nil [55 69])
+            ("tuple" include (:system-flag t) nil [70 86])
+            ("core/ideviceapp.h" include nil nil [88 116])
+            ("core/iappparameter.h" include nil nil [117 148])
+            ("tuplehelper.h" include nil nil [149 173])
+            ("parameteriterator.h" include nil nil [174 204])
+            ("DeviceApp" type (:type "struct") nil [228 248])
+            ("IDeviceApp" variable (:type "int") nil [373 4050]))          
+      :file "deviceapp.h"
+      :pointmax 4054
+      :fsize 4053
+      :lastmodtime '(22611 59885 861806 297000)
+      :unmatched-syntax '((PUBLIC 366 . 372) (punctuation 364 . 365) (punctuation 362 . 363) (punctuation 361 . 362) (punctuation 360 . 361) (punctuation 359 . 360) (punctuation 358 . 359) (symbol 351 . 358) (punctuation 350 . 351) (symbol 345 . 350) (punctuation 344 . 345) (punctuation 343 . 344) (symbol 340 . 343) (punctuation 338 . 339) (punctuation 337 . 338) (punctuation 336 . 337) (punctuation 335 . 336) (punctuation 334 . 335) (symbol 328 . 334) (punctuation 327 . 328) (symbol 322 . 327) (punctuation 321 . 322) (punctuation 320 . 321) (symbol 317 . 320) (punctuation 316 . 317) (symbol 307 . 316) (STRUCT 300 . 306) (punctuation 298 . 299) (symbol 291 . 298) (punctuation 289 . 290) (punctuation 288 . 289) (punctuation 287 . 288) (TYPENAME 279 . 287) (punctuation 277 . 278) (symbol 271 . 277) (punctuation 269 . 270) (punctuation 268 . 269) (punctuation 267 . 268) (TYPENAME 259 . 267) (punctuation 258 . 259) (TEMPLATE 250 . 258) (punctuation 226 . 227) (punctuation 225 . 226) (punctuation 224 . 225) (punctuation 223 . 224) (TYPENAME 215 . 223) (punctuation 214 . 215) (TEMPLATE 206 . 214) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2)))
+    (semanticdb-table "tuplehelper.h"
+      :file "tuplehelper.h"
+      :fsize 3056
+      :lastmodtime '(22611 59885 861806 297000))
+    (semanticdb-table "parameteriterator.h"
+      :file "parameteriterator.h"
+      :fsize 564
+      :lastmodtime '(22611 59885 861806 297000))
+    (semanticdb-table "appparameter.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("atomic" include (:system-flag t) nil [14 31])
+            ("string" include (:system-flag t) nil [32 49])
+            ("core/iappparameter.h" include nil nil [51 82])
+            ("core/iappparametervaluevisitor.h" include nil nil [83 126])
+            ("AppParameter" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "struct"
+                :members 
+                  ( ("set_full_name" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [218 235]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [191 266])
+                    ("get_name" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [270 333])
+                    ("get_full_name" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [337 410])
+                    ("get_description" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [414 491])
+                    ("get_unit" function
+                       (:typemodifiers ("virtual")
+                        :type ("Unit" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [495 543])
+                    ("get_type" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [547 578])
+                    ("get_generic_value" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [582 642])
+                    ("set_int_value" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [673 690]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [646 717])
+                    ("set_bool_value" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [749 767]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [721 794])
+                    ("set_float_value" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "float")
+                                (reparse-symbol arg-sub-list) [829 848]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [800 875])
+                    ("get_bool_value" function
+                       (:typemodifiers ("virtual")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [879 938])
+                    ("get_int_value" function
+                       (:typemodifiers ("virtual")
+                        :type "int")
+                        (reparse-symbol classsubparts) [944 1001])
+                    ("get_float_value" function
+                       (:typemodifiers ("virtual")
+                        :type "float")
+                        (reparse-symbol classsubparts) [1005 1066])
+                    ("get_value" function (:type ("T" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1070 1109])
+                    ("value_equal" function
+                       (:arguments 
+                          ( ("old_value" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1130 1142])
+                            ("new_value" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1143 1155]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1113 1197])
+                    ("set_value" function
+                       (:arguments 
+                          ( ("new_value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1215 1235]))                          
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1203 1399])
+                    ("is_dirty" function (:type "bool") (reparse-symbol classsubparts) [1403 1445])
+                    ("set_dirty" function
+                       (:arguments 
+                          ( ("dirty" variable (:type "bool") (reparse-symbol arg-sub-list) [1464 1475]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1449 1503])
+                    ("is_mqtt" function (:type "bool") (reparse-symbol classsubparts) [1507 1550])
+                    ("set_mqtt" function
+                       (:arguments 
+                          ( ("flag" variable (:type "bool") (reparse-symbol arg-sub-list) [1568 1578]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1554 1607])
+                    ("visit" function
+                       (:arguments 
+                          ( ("visitor" variable
+                               (:reference 1
+                                :type ("IAppParameterValueVisitor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1622 1657]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1611 1695])
+                    ("AppParameter" function
+                       (:template-specifier 
+                          ( ("T" type nil nil nil))                          
+                        :constructor-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1715 1732])
+                            ("description" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1733 1757])
+                            ("unit" variable (:type ("Unit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1758 1768])
+                            ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1769 1784]))                          
+                        :type ("AppParameter" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [1699 1937])
+                    ("AppParameter" function
+                       (:template-specifier 
+                          ( ("T" type nil nil nil))                          
+                        :constructor-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1957 1974])
+                            ("value" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1975 1983]))                          
+                        :type ("AppParameter" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [1941 2077])
+                    ("AppParameter" function
+                       (:template-specifier 
+                          ( ("T" type nil nil nil))                          
+                        :constructor-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2097 2114]))                          
+                        :type ("AppParameter" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [2081 2215])
+                    ("private" label nil (reparse-symbol classsubparts) [2218 2226])
+                    ("m_full_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2229 2253])
+                    ("m_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2257 2276])
+                    ("m_description" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2280 2306])
+                    ("m_unit" variable (:type ("Unit" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2310 2322])
+                    ("m_value" variable (:type ("std::atomic" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2326 2349])
+                    ("m_dirty" variable (:type "bool") (reparse-symbol classsubparts) [2353 2366])
+                    ("m_is_mqtt" variable (:type "bool") (reparse-symbol classsubparts) [2370 2385]))                  
+                :superclasses 
+                  ( ("IAppParameter" type
+                       (:protection "unspecified"
+                        :type "class")
+                        nil nil))                  )
+                nil [128 2388]))          
+      :file "appparameter.h"
+      :pointmax 2390
+      :fsize 2389
+      :lastmodtime '(22611 59885 861806 297000)
+      :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2))))
+  :file "!home!ichrysou!projects!cactus!src!domain!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

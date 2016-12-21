@@ -1,0 +1,16 @@
+;; Object esp8266/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "esp8266/"
+  :tables
+  (list
+    (semanticdb-table "core_esp8266_wiring_digital.c"
+      :major-mode 'c-mode
+      :tags nil
+      :file "core_esp8266_wiring_digital.c"
+      :pointmax 6669
+      :fsize 6668
+      :lastmodtime '(22609 18862 377591 706000)
+      :unmatched-syntax nil))
+  :file "!home!elias!projects!cactus_master_clean!cactus!ext!esp8266!Arduino!cores!esp8266!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

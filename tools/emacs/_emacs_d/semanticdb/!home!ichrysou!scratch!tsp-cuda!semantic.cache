@@ -1,0 +1,17 @@
+;; Object tsp-cuda/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tsp-cuda/"
+  :tables
+  (list
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-gmake-mode
+      :tags 
+        '( ("all" function (:arguments ("cudastyle.cu")) nil [1 56]))          
+      :file "Makefile"
+      :pointmax 56
+      :fsize 55
+      :lastmodtime '(22611 61967 807593 988000)
+      :unmatched-syntax nil))
+  :file "!home!ichrysou!scratch!tsp-cuda!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

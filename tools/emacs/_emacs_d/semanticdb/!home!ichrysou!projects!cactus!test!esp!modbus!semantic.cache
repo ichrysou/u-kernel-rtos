@@ -1,0 +1,73 @@
+;; Object modbus/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "modbus/"
+  :tables
+  (list
+    (semanticdb-table "testhelper.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("testhelper.h" include nil nil [1 24])
+            ("Adafruit_SSD1306.h" include (:system-flag t) nil [33 62])
+            ("Adafruit_GFX.h" include (:system-flag t) nil [128 153])
+            ("OLED_RESET" variable (:constant-flag t) nil [240 250])
+            ("modbus_defines.h" include nil nil [289 316])
+            ("core/ideviceapp.h" include (:system-flag t) nil [318 346])
+            ("utils/ilogger.h" include (:system-flag t) nil [347 373])
+            ("parameterdefines.h" include (:system-flag t) nil [374 403])
+            ("TestHelper" function
+               (:constructor-flag t
+                :parent "TestHelper"
+                :arguments 
+                  ( ("display" variable
+                       (:reference 1
+                        :type ("Adafruit_SSD1306" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [432 458])
+                    ("logger" variable
+                       (:reference 1
+                        :type ("ILogger" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [459 475]))                  
+                :type ("TestHelper" type (:type "class") nil nil))
+                nil [409 539])
+            ("setup_display" function
+               (:parent "TestHelper"
+                :type "void")
+                nil [541 899])
+            ("init_modbus" function
+               (:parent "TestHelper"
+                :arguments 
+                  ( ("pModbus" variable
+                       (:pointer 1
+                        :type ("IDeviceApp" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [931 951]))                  
+                :type "void")
+                nil [902 1525])
+            ("init_modbus_sensor" function
+               (:parent "TestHelper"
+                :arguments 
+                  ( ("pSensor" variable
+                       (:pointer 1
+                        :type ("IDeviceApp" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1563 1583])
+                    ("sensor_register" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1584 1609]))                  
+                :type "void")
+                nil [1527 1996]))          
+      :file "testhelper.cpp"
+      :pointmax 1997
+      :fsize 1996
+      :lastmodtime '(22611 59885 865806 283000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("OLED_RESET" . ((number "16" 252 . 254)))
+          )
+)
+    (semanticdb-table "testhelper.h"
+      :file "testhelper.h"
+      :fsize 440
+      :lastmodtime '(22611 59885 865806 283000))
+    (semanticdb-table "modbus_defines.h"
+      :file "modbus_defines.h"
+      :fsize 3770
+      :lastmodtime '(22611 59885 865806 283000)))
+  :file "!home!ichrysou!projects!cactus!test!esp!modbus!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

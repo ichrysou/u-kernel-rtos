@@ -1,0 +1,69 @@
+;; Object drivers/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "drivers/"
+  :tables
+  (list
+    (semanticdb-table "spi_driver.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("spi_driver.h" include nil nil [1 24])
+            ("devicedefines.h" include nil nil [187 213])
+            ("SpiDriver" function
+               (:constructor-flag t
+                :parent "SpiDriver"
+                :arguments 
+                  ( ("channel" variable (:type "int") (reparse-symbol arg-sub-list) [236 248])
+                    ("freq_hz" variable (:type "int") (reparse-symbol arg-sub-list) [249 261])
+                    ("transfer_size_bytes" variable (:type "int") (reparse-symbol arg-sub-list) [262 286]))                  
+                :type ("SpiDriver" type (:type "class") nil nil))
+                nil [215 433])
+            ("open" function
+               (:parent "SpiDriver"
+                :type "bool")
+                nil [435 1625])
+            ("close" function
+               (:parent "SpiDriver"
+                :type "bool")
+                nil [1627 1857])
+            ("read" function
+               (:parent "SpiDriver"
+                :arguments 
+                  ( ("pData" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1880 1892])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [1893 1902]))                  
+                :type "bool")
+                nil [1859 2121])
+            ("write" function
+               (:parent "SpiDriver"
+                :arguments 
+                  ( ("pData" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2145 2157])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [2158 2167]))                  
+                :type "bool")
+                nil [2123 2362])
+            ("ctl" function
+               (:parent "SpiDriver"
+                :arguments 
+                  ( ("parameter" variable (:type ("IOCTL_PARAMS" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2384 2407])
+                    ("pParam" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2408 2421]))                  
+                :type "bool")
+                nil [2364 2440]))          
+      :file "spi_driver.cpp"
+      :pointmax 2441
+      :fsize 2440
+      :lastmodtime '(22609 19224 830676 814000)
+      :unmatched-syntax nil)
+    (semanticdb-table "spi_driver.h"
+      :file "spi_driver.h"
+      :fsize 532
+      :lastmodtime '(22609 18804 779307 186000)))
+  :file "!home!elias!projects!cactus_master_clean!cactus!src!drivers!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

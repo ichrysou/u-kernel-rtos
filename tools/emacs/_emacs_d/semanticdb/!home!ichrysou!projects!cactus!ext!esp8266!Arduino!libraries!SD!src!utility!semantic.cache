@@ -1,0 +1,201 @@
+;; Object utility/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "utility/"
+  :tables
+  (list
+    (semanticdb-table "Sd2Card.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("USE_SPI_LIB" variable (:constant-flag t) nil [803 814])
+            ("Arduino.h" include (:system-flag t) nil [815 835])
+            ("Sd2Card.h" include nil nil [836 856])
+            ("SPI.h" include (:system-flag t) nil [978 994])
+            ("settings" variable
+               (:typemodifiers ("static")
+                :type ("SPISettings" type (:type "class") nil nil))
+                nil [995 1023])
+            ("spiSend" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("b" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1112 1122]))                  
+                :type "void")
+                nil [1092 1272])
+            ("spiRec" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1332 1337]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1309 1435])
+            ("cardCommand" function
+               (:parent "Sd2Card"
+                :arguments 
+                  ( ("cmd" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2894 2906])
+                    ("arg" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2907 2920]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [2865 3624])
+            ("cardSize" function
+               (:parent "Sd2Card"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3891 3896]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [3864 4577])
+            ("chip_select_asserted" variable
+               (:typemodifiers ("static")
+                :default-value "0"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [4659 4699])
+            ("chipSelectHigh" function
+               (:parent "Sd2Card"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4730 4735]))                  
+                :type "void")
+                nil [4701 4893])
+            ("chipSelectLow" function
+               (:parent "Sd2Card"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5003 5008]))                  
+                :type "void")
+                nil [4975 5176])
+            ("erase" function
+               (:parent "Sd2Card"
+                :arguments 
+                  ( ("firstBlock" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5804 5824])
+                    ("lastBlock" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5825 5844]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [5781 6369])
+            ("eraseSingleBlockEnable" function
+               (:parent "Sd2Card"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [6707 6712]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [6667 6779])
+            ("init" function
+               (:parent "Sd2Card"
+                :arguments 
+                  ( ("sckRateID" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7342 7360])
+                    ("chipSelectPin" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7361 7383]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [7320 9931])
+            ("partialBlockRead" function
+               (:parent "Sd2Card"
+                :arguments 
+                  ( ("value" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10538 10552]))                  
+                :type "void")
+                nil [10507 10598])
+            ("readBlock" function
+               (:parent "Sd2Card"
+                :arguments 
+                  ( ("block" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10996 11011])
+                    ("dst" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11012 11025]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [10969 11068])
+            ("readData" function
+               (:parent "Sd2Card"
+                :arguments 
+                  ( ("block" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11572 11587])
+                    ("offset" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11596 11612])
+                    ("count" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11613 11628])
+                    ("dst" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11629 11642]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [11546 13134])
+            ("readEnd" function
+               (:parent "Sd2Card"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [13309 13314]))                  
+                :type "void")
+                nil [13287 13841])
+            ("readRegister" function
+               (:parent "Sd2Card"
+                :arguments 
+                  ( ("cmd" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13985 13997])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [13998 14008]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [13955 14469])
+            ("setSckRate" function
+               (:parent "Sd2Card"
+                :arguments 
+                  ( ("sckRateID" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15059 15077]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [15031 16175])
+            ("waitNotBusy" function
+               (:parent "Sd2Card"
+                :arguments 
+                  ( ("timeoutMillis" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16318 16341]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [16289 16549])
+            ("waitStartBlock" function
+               (:parent "Sd2Card"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [16697 16702]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [16665 17101])
+            ("writeBlock" function
+               (:parent "Sd2Card"
+                :arguments 
+                  ( ("blockNumber" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17499 17520])
+                    ("src" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17521 17540]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [17471 18350])
+            ("writeData" function
+               (:parent "Sd2Card"
+                :arguments 
+                  ( ("src" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18522 18541]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [18495 18756])
+            ("writeData" function
+               (:parent "Sd2Card"
+                :arguments 
+                  ( ("token" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18932 18946])
+                    ("src" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18947 18966]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [18905 19842])
+            ("writeStart" function
+               (:parent "Sd2Card"
+                :arguments 
+                  ( ("blockNumber" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20350 20371])
+                    ("eraseCount" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20372 20392]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [20322 20936])
+            ("writeStop" function
+               (:parent "Sd2Card"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [21204 21209]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [21177 21452]))          
+      :file "Sd2Card.cpp"
+      :pointmax 21453
+      :fsize 22213
+      :lastmodtime '(22611 59910 365721 820000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("USE_SPI_LIB")
+          )
+)
+    (semanticdb-table "Sd2Card.h"
+      :file "Sd2Card.h"
+      :fsize 9906
+      :lastmodtime '(22611 59910 365721 820000)))
+  :file "!home!ichrysou!projects!cactus!ext!esp8266!Arduino!libraries!SD!src!utility!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

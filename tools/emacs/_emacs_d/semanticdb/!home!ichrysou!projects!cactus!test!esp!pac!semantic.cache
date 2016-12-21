@@ -1,0 +1,279 @@
+;; Object pac/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "pac/"
+  :tables
+  (list
+    (semanticdb-table "test_pac.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ESP8266WiFi.h" include (:system-flag t) nil [14 38])
+            ("ESP8266WiFiMulti.h" include (:system-flag t) nil [39 68])
+            ("ESP8266mDNS.h" include (:system-flag t) nil [93 117])
+            ("WiFiUdp.h" include (:system-flag t) nil [118 138])
+            ("ArduinoOTA.h" include (:system-flag t) nil [139 162])
+            ("ArduinoJson.h" include (:system-flag t) nil [163 187])
+            ("Arduino.h" include (:system-flag t) nil [188 208])
+            ("Stream.h" include (:system-flag t) nil [209 228])
+            ("user_interface.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [243 270])
+            ("sha256.h" include nil nil [281 300])
+            ("Utils.h" include nil nil [301 319])
+            ("AWSClient2.h" include nil nil [320 343])
+            ("Hash.h" include (:system-flag t) nil [358 375])
+            ("WebSocketsClient.h" include (:system-flag t) nil [376 405])
+            ("WebSockets.h" include (:system-flag t) nil [406 429])
+            ("SPI.h" include (:system-flag t) nil [443 459])
+            ("ESP8266Ping.h" include (:system-flag t) nil [460 484])
+            ("Client.h" include nil nil [507 526])
+            ("AWSWebSocketClient.h" include nil nil [527 558])
+            ("CircularByteBuffer.h" include nil nil [559 590])
+            ("Adafruit_SSD1306.h" include (:system-flag t) nil [600 629])
+            ("Adafruit_GFX.h" include (:system-flag t) nil [695 720])
+            ("SPI.h" include (:system-flag t) nil [799 815])
+            ("Wire.h" include (:system-flag t) nil [882 899])
+            ("OLED_RESET" variable (:constant-flag t) nil [976 986])
+            ("display" function
+               (:prototype-flag t
+                :type ("Adafruit_SSD1306" type (:type "class") nil nil))
+                nil [1024 1061])
+            ("SPI_CS" variable
+               (:default-value "16"
+                :type "int")
+                nil [1073 1089])
+            ("TimeLib.h" include (:system-flag t) nil [1098 1118])
+            ("localPort" variable
+               (:default-value "2390"
+                :type "unsigned int")
+                nil [1120 1150])
+            ("timeServer" function
+               (:prototype-flag t
+                :type ("IPAddress" type (:type "class") nil nil))
+                nil [1196 1234])
+            ("NTP_PACKET_SIZE" variable
+               (:constant-flag t
+                :default-value "48"
+                :type "int")
+                nil [1263 1294])
+            ("timeZone" variable
+               (:constant-flag t
+                :default-value "0"
+                :type "int")
+                nil [1353 1376])
+            ("packetBuffer" variable
+               (:dereference 1
+                :type ("byte" type (:type "class") nil nil))
+                nil [1406 1442])
+            ("Udp" variable (:type ("WiFiUDP" type (:type "class") nil nil)) nil [1490 1502])
+            ("MB_BAUDRATE" variable (:constant-flag t) nil [1664 1675])
+            ("MB_BYTEFORMAT" variable (:constant-flag t) nil [1715 1728])
+            ("TX_ENABLE_PIN" variable (:constant-flag t) nil [1766 1779])
+            ("ID_1" variable (:constant-flag t) nil [1796 1800])
+            ("REFRESH_INTERVAL" variable (:constant-flag t) nil [1877 1893])
+            ("DECIMALS" variable (:constant-flag t) nil [1942 1950])
+            ("last_sensor_value" variable
+               (:dereference 1
+                :default-value "{0.0}"
+                :type "float")
+                nil [1955 1991])
+            ("PROGMEM" variable
+               (:default-value "{\"V_L1\", \"V_L2\", \"V_L3\", \"V_L12\", \"V_L23\", \"V_L31\", \"I_L1\", \"I_L2\", \"I_L3\", \"VA_L1\", \"VA_L2\", \"VA_L3\", \"P_L1\", \"P_L2\", \"P_L3\", \"VARQN_L1\", \"VARQN_L2\", \"VARQN_L3\", \"PF_L1\", \"PF_L2\", \"PF_L3\", \"THDV_L12\", \"THDV_L23\", \"THDV_L31\", \"FREQ\", \"V_LN_AVG\", \"V_LL_AVG\", \"I_AVG\", \"VA_SUM\", \"P_SUM\", \"VARQN_SUM\", \"PF_SUM\", \"V_BAL\", \"I_BAL\", \"V_L1_MAX\", \"V_L2_MAX\", \"V_L3_MAX\", \"V_L12_MAX\", \"V_L23_MAX\", \"V_L31_MAX\", \"I_L1_MAX\", \"I_L2_MAX\", \"I_L3_MAX\", \"VA_L1_MAX\", \"VA_L2_MAX\", \"VA_L3_MAX\", \"P_L1_MAX\", \"P_L2_MAX\", \"P_L3_MAX\", \"VARQN_L1_MAX\", \"VARQN_L2_MAX\", \"VARQN_L3_MAX\", \"PF_L1_MAX\", \"PF_L2_MAX\", \"PF_L3_MAX\", \"THDV_L12_MAX\", \"THDV_L23_MAX\", \"THDV_L31_MAX\", \"FREQ_MAX\", \"V_LN_AVG_MAX\", \"V_LL_AVG_MAX\", \"I_AVG_MAX\", \"VA_SUM_MAX\", \"P_SUM_MAX\", \"VARQN_SUM_MAX\", \"PF_SUM_MAX\", \"V_L1_MIN\", \"V_L2_MIN\", \"V_L3_MIN\", \"V_L12_MIN\", \"V_L23_MIN\", \"V_L31_MIN\", \"I_L1_MIN\", \"I_L2_MIN\", \"I_L3_MIN\", \"VA_L1_MIN\", \"VA_L2_MIN\", \"VA_L3_MIN\", \"P_L1_MIN\", \"P_L2_MIN\", \"P_L3_MIN\", \"VARQN_L1_MIN\", \"VARQN_L2_MIN\", \"VARQN_L3_MIN\", \"PF_L1_MIN\", \"PF_L2_MIN\", \"PF_L3_MIN\", \"FREQ_MIN\", \"V_LN_AVG_MIN\", \"V_LL_AVG_MIN\", \"I_AVG_MIN\", \"VA_SUM_MIN\", \"P_SUM_MIN\", \"VARQN_SUM_MIN\", \"PF_SUM_MIN\", \"LIMITS_STATUS\", \"DEVICESTATUS\", \"OUTPUTS\", \"INPUTS\", \"TARIFF\", \"WORKHOUR_COUNTER\", \"COUNTER\", \"COUNTER_RELPARA_CHANGES\", \"COUNTER_PARA_CHANGES\", \"COUNTER_LIMIT_CHANGES\", \"COUNTER_EVENT_CHANGES\", \"COUNTER_ALARM_CHANGES\", \"COUNTER_LOADPROFILE\", \"COUNTER_OTHER\", \"OUTPUTS_SLOT1\", \"INPUTS_SLOT1\", \"OUTPUTS_SLOT2\", \"INPUTS_SLOT2\", \"OUTPUTS_SLOT3\", \"INPUTS_SLOT3\", \"COSPHI_L1\", \"COSPHI_L2\", \"COSPHI_L3\", \"PHI_L1\", \"PHI_L2\", \"PHI_L3\", \"SYSANGLE_L11\", \"SYSANGLE_L12\", \"SYSANGLE_L13\", \"THDV_L1\", \"THDV_L2\", \"THDV_L3\", \"THDI_L1\", \"THDI_L2\", \"THDI_L3\", \"I_D_L1\", \"I_D_L2\", \"I_D_L3\", \"VARQTOT_L1\", \"VARQTOT_L2\", \"VARQTOT_L3\", \"VARQ1_L1\", \"VARQ1_L2\", \"VARQ1_L3\", \"V_PHASE_BAL\", \"I_PHASE_BAL\", \"I_N\", \"VARQTOT_SUM\", \"VARQ1_SUM\", \"V_RA_L1\", \"V_RA_L2\", \"V_RA_L3\", \"V_RA_L12\", \"V_RA_L23\", \"V_RA_L31\", \"I_RA_L1\", \"I_RA_L2\", \"I_RA_L3\", \"VA_RA_L1\", \"VA_RA_L2\", \"VA_RA_L3\", \"P_RA_L1\", \"P_RA_L2\", \"P_RA_L3\", \"VARQN_RA_L1\", \"VARQN_RA_L2\", \"VARQN_RA_L3\", \"VARQTOT_RA_L1\", \"VARQTOT_RA_L2\", \"VARQTOT_RA_L3\", \"VARQ1_RA_L1\", \"VARQ1_RA_L2\", \"VARQ1_RA_L3\", \"PF_RA_L1\", \"PF_RA_L2\", \"PF_RA_L3\", \"VA_SUM_RA\", \"P_SUM_RA\", \"VARQN_SUM_RA\", \"VARQTOT_SUM_RA\", \"VARQ1_SUM_RA\", \"PF_SUM_RA\", \"I_N_RA\", \"PROC_WORKHOUR_COUNTER\", \"COUNTER2\"}"
+                :type "int")
+                nil [2022 4382])
+            ("sensor_regs" variable
+               (:dereference 1
+                :default-value "{1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 117, 119, 121, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 149, 151, 153, 155, 157, 159, 161, 163, 165, 167, 169, 171, 173, 175, 177, 179, 181, 183, 185, 187, 189, 191, 193, 195, 197, 199, 201, 203, 205, 207, 209, 211, 213, 215, 217, 219, 221, 223, 225, 227, 229, 231, 233, 235, 237, 239, 241, 243, 245, 247, 249, 251, 253, 255, 257, 259, 261, 263, 265, 267, 269, 271, 273, 275, 277, 279, 281, 283, 285, 287, 289, 291, 293, 295, 297, 299, 301, 303, 305, 307, 309, 311, 313, 315, 317, 319, 321, 323, 325, 327, 329, 331, 333, 335, 337, 339, 341, 343, 345, 347, 349, 351, 353, 355, 357, 359, 361, 363, 365, 367, 369, 371}"
+                :type ("uint16_t" type (:type "class") nil nil))
+                nil [4383 5258])
+            ("sensors_to_read" variable
+               (:dereference 1
+                :default-value "{0, 6, 12, 18, 24}"
+                :type ("uint16_t" type (:type "class") nil nil))
+                nil [5259 5307])
+            ("no_sensors" variable
+               (:default-value "0"
+                :type "int")
+                nil [5308 5327])
+            ("applibrary/appfactory.h" include (:system-flag t) nil [5336 5370])
+            ("core/ideviceapp.h" include (:system-flag t) nil [5371 5399])
+            ("drivers/driver_factory.h" include nil nil [5400 5435])
+            ("domain/parameterrepository.h" include (:system-flag t) nil [5436 5475])
+            ("parameterdefines.h" include (:system-flag t) nil [5476 5505])
+            ("application/mqttpublisher.h" include (:system-flag t) nil [5506 5544])
+            ("application/parameterpublisher.h" include (:system-flag t) nil [5545 5588])
+            ("application/iparametermanager.h" include (:system-flag t) nil [5589 5631])
+            ("application/parametermanager.h" include (:system-flag t) nil [5632 5673])
+            ("application/imqttclient.h" include (:system-flag t) nil [5674 5710])
+            ("application/mqttlistener.h" include (:system-flag t) nil [5711 5748])
+            ("application/applicationfactory.h" include (:system-flag t) nil [5749 5792])
+            ("devicedefines.h" include (:system-flag t) nil [5793 5819])
+            ("application/mqttdefines.h" include (:system-flag t) nil [5820 5856])
+            ("logger/logger.h" include (:system-flag t) nil [5857 5883])
+            ("utils/network.h" include (:system-flag t) nil [5884 5910])
+            ("repository" variable (:type ("ParameterRepository" type (:type "class") nil nil)) nil [5912 5943])
+            ("m_pModbus_Sensors" variable
+               (:pointer 1
+                :dereference 1
+                :type ("IDeviceApp" type (:type "class") nil nil))
+                nil [5944 5977])
+            ("pParameterManager" variable
+               (:pointer 1
+                :type ("ParameterManager" type (:type "class") nil nil))
+                nil [5978 6014])
+            ("pParameterListener" variable
+               (:pointer 1
+                :type ("IParameterListener" type (:type "class") nil nil))
+                nil [6015 6054])
+            ("publisher" variable
+               (:pointer 1
+                :type ("IParameterPublisher" type (:type "class") nil nil))
+                nil [6055 6086])
+            ("pMqttClient" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type ("IMqttClient" type (:type "class") nil nil))
+                nil [6087 6119])
+            ("pMqttListener" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type ("IMqttListener" type (:type "class") nil nil))
+                nil [6120 6156])
+            ("create_mqtt_client_internal" function
+               (:prototype-flag t
+                :pointer 1
+                :type ("IMqttClient" type (:type "class") nil nil))
+                nil [6157 6200])
+            ("logger" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type ("LEVEL_INFO" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6223 6234]))                  
+                :type ("Logger" type (:type "class") nil nil))
+                nil [6202 6235])
+            ("device_name" variable
+               (:pointer 1
+                :constant-flag t
+                :default-value "\"SDI_PAC_1\""
+                :type "char")
+                nil [6251 6289])
+            ("ssid" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "\"SDI\""
+                :type "char")
+                nil [6291 6323])
+            ("password" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "\"company flower fly seldom\""
+                :type "char")
+                nil [6324 6382])
+            ("aws_endpoint" variable
+               (:dereference 1
+                :default-value "\"10.11.10.182\""
+                :type "char")
+                nil [6416 6456])
+            ("aws_key" variable
+               (:dereference 1
+                :default-value "\"AKIAJND6LD6GXETW6WCQ\""
+                :type "char")
+                nil [6457 6505])
+            ("aws_secret" variable
+               (:dereference 1
+                :default-value "\"ZNxOv47ut2zlUfFhupAsZOXAEUMsyE0JJHQN5HG2\""
+                :type "char")
+                nil [6506 6574])
+            ("aws_region" variable
+               (:dereference 1
+                :default-value "\"us-east-1\""
+                :type "char")
+                nil [6575 6612])
+            ("aws_topic" variable
+               (:dereference 1
+                :type "char")
+                nil [6613 6633])
+            ("port" variable
+               (:default-value "5555"
+                :type "int")
+                nil [6735 6751])
+            ("MqttListener2" type
+               (:superclasses 
+                  ( ("IMqttListener" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("on_message_received" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("payload" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [6835 6849])
+                            ("payload_len" variable (:type "int") (reparse-symbol arg-sub-list) [6850 6866]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6802 8470]))                  
+                :type "struct")
+                nil [6753 8473])
+            ("mqttListener" variable (:type ("MqttListener2" type (:type "class") nil nil)) nil [8476 8503])
+            ("init_modbus" function (:type "void") nil [8533 9871])
+            ("connection" variable
+               (:default-value "0"
+                :type "long")
+                nil [9892 9912])
+            ("arrivedcount" variable
+               (:default-value "0"
+                :type "int")
+                nil [9939 9960])
+            ("DC_voltage_old" variable (:type "float") nil [9965 10021])
+            ("Temp_old" variable (:type "float") nil [9965 10021])
+            ("DC_current_old" variable (:type "float") nil [9965 10021])
+            ("Hum_old" variable (:type "float") nil [9965 10021])
+            ("sendNTPpacket" function
+               (:arguments 
+                  ( ("address" variable
+                       (:reference 1
+                        :type ("IPAddress" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10052 10071]))                  
+                :type "unsigned long")
+                nil [10024 10896])
+            ("getNtpTime" function (:type ("time_t" type (:type "class") nil nil)) nil [10898 11869])
+            ("connect" function (:type "bool") nil [11918 13086])
+            ("sendmessage" function (:type "void") nil [13122 13288])
+            ("subscribe" function (:type "void") nil [13318 13613])
+            ("startWIFI_Pac" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [13635 13640]))                  
+                :type "void")
+                nil [13616 15096])
+            ("setup" function (:type "void") nil [15098 16644])
+            ("new_values" variable
+               (:default-value "false"
+                :type "bool")
+                nil [16646 16670])
+            ("utils/memorywatch.h" include nil nil [16672 16702])
+            ("mem_watch" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("logger" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16726 16733]))                  
+                :type ("MemoryWatch" type (:type "class") nil nil))
+                nil [16704 16747])
+            ("loop" function (:type "void") nil [16749 18125]))          
+      :file "test_pac.cpp"
+      :pointmax 18129
+      :fsize 18682
+      :lastmodtime '(22611 59885 865806 283000)
+      :unmatched-syntax '((string 16734 . 16745) (semantic-list 2017 . 2021) (semantic-list 2015 . 2017) (symbol 2003 . 2015) (CHAR 1998 . 2002) (CONST 1992 . 1997) (number 1230 . 1232) (number 1226 . 1228) (number 1223 . 1224) (number 1218 . 1221) (number "16" 1049 . 1059))
+      :lexical-table 
+        '(("DECIMALS" . ((number "100" 1951 . 1954)))
+          ("MB_BAUDRATE" . ((number "19200" 1682 . 1687)))
+          ("ID_1" . ((number "1" 1802 . 1803)))
+          ("REFRESH_INTERVAL" . ((number "5000" 1895 . 1899)))
+          ("OLED_RESET" . ((number "16" 988 . 990)))
+          ("MB_BYTEFORMAT" . ((symbol "SERIAL_8N2" 1733 . 1743)))
+          ("TX_ENABLE_PIN" . ((number "2" 1786 . 1787)))
+          )
+))
+  :file "!home!ichrysou!projects!cactus!test!esp!pac!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,94 @@
+;; Object spi/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "spi/"
+  :tables
+  (list
+    (semanticdb-table "spi_test_driver.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("drivers/spi_driver.h" include nil nil [27 58])
+            ("Arduino.h" include (:system-flag t) nil [60 80])
+            ("SPI.h" include (:system-flag t) nil [81 97])
+            ("utils/network.h" include (:system-flag t) nil [98 124])
+            ("logger/displaylogger.h" include (:system-flag t) nil [125 158])
+            ("src/internal/gdbstub.h" include (:system-flag t) nil [159 192])
+            ("driver" function
+               (:prototype-flag t
+                :type ("SpiDriver" type (:type "class") nil nil))
+                nil [193 227])
+            ("setup" function (:type "void") nil [229 386])
+            ("led_val" variable
+               (:default-value "1"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [388 408])
+            ("buff" variable
+               (:dereference 1
+                :default-value "\"Hello World\\n\""
+                :type "char")
+                nil [409 441])
+            ("rd_buff" variable
+               (:dereference 1
+                :type "char")
+                nil [442 459])
+            ("loop" function (:type "void") nil [462 1057]))          
+      :file "spi_test_driver.cpp"
+      :pointmax 1058
+      :fsize 1057
+      :lastmodtime '(22615 39651 984849 122000)
+      :unmatched-syntax '((number 223 . 225) (number 213 . 221) (number 210 . 211)))
+    (semanticdb-table "spi_test_app.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("applibrary/appfactory.h" include nil nil [1 35])
+            ("core/ideviceapp.h" include nil nil [36 64])
+            ("drivers/driver_factory.h" include nil nil [65 100])
+            ("domain/parameterrepository.h" include nil nil [101 140])
+            ("domain/appparameter.h" include nil nil [141 173])
+            ("os/thread.h" include nil nil [174 196])
+            ("devicedefines.h" include nil nil [197 223])
+            ("Arduino.h" include nil nil [224 244])
+            ("src/internal/gdbstub.h" include (:system-flag t) nil [245 278])
+            ("spi_app" variable
+               (:pointer 1
+                :type ("IDeviceApp" type (:type "class") nil nil))
+                nil [280 300])
+            ("setup" function (:type "void") nil [301 737])
+            ("led_val" variable
+               (:default-value "1"
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [739 760])
+            ("loop" function (:type "void") nil [762 873]))          
+      :file "spi_test_app.cpp"
+      :pointmax 874
+      :fsize 873
+      :lastmodtime '(22618 16076 815933 869000)
+      :unmatched-syntax nil)
+    (semanticdb-table "spi_test_loopback.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Arduino.h" include (:system-flag t) nil [1 21])
+            ("SPI.h" include (:system-flag t) nil [22 38])
+            ("utils/network.h" include (:system-flag t) nil [39 65])
+            ("logger/displaylogger.h" include (:system-flag t) nil [66 99])
+            ("spi_settings" variable (:type ("SPISettings" type (:type "class") nil nil)) nil [101 126])
+            ("spi_class" variable (:type ("SPIClass" type (:type "class") nil nil)) nil [127 146])
+            ("setup" function (:type "void") nil [148 248])
+            ("val1" variable (:type ("uint8_t" type (:type "class") nil nil)) nil [250 276])
+            ("led_val" variable
+               (:default-value "1"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [250 276])
+            ("buff" variable
+               (:dereference 1
+                :default-value "\"Hello World\\n\""
+                :type "char")
+                nil [277 309])
+            ("loop" function (:type "void") nil [311 814]))          
+      :file "spi_test_loopback.cpp"
+      :pointmax 815
+      :fsize 814
+      :lastmodtime '(22611 61227 670240 767000)
+      :unmatched-syntax nil))
+  :file "!home!ichrysou!projects!cactus!test!esp!spi!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

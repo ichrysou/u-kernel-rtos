@@ -1,0 +1,16 @@
+;; Object .xmonad/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file ".xmonad/"
+  :tables
+  (list
+    (semanticdb-table "xmonad.hs"
+      :major-mode 'c-mode
+      :tags nil
+      :file "xmonad.hs"
+      :pointmax 14512
+      :fsize 14511
+      :lastmodtime '(22611 58369 246366 68000)
+      :unmatched-syntax nil))
+  :file "!home!ichrysou!.xmonad!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

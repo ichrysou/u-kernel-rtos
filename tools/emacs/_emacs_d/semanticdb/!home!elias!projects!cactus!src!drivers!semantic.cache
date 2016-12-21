@@ -1,0 +1,469 @@
+;; Object drivers/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "drivers/"
+  :tables
+  (list
+    (semanticdb-table "spi_driver.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("spi_driver.h" include nil nil [1 24])
+            ("devicedefines.h" include nil nil [187 213])
+            ("SpiDriver" function
+               (:constructor-flag t
+                :parent "SpiDriver"
+                :arguments 
+                  ( ("channel" variable (:type "int") (reparse-symbol arg-sub-list) [236 248])
+                    ("freq_hz" variable (:type "int") (reparse-symbol arg-sub-list) [249 261])
+                    ("transfer_size_bytes" variable (:type "int") (reparse-symbol arg-sub-list) [262 286]))                  
+                :type ("SpiDriver" type (:type "class") nil nil))
+                nil [215 432])
+            ("open" function
+               (:parent "SpiDriver"
+                :type "bool")
+                nil [434 1622])
+            ("close" function
+               (:parent "SpiDriver"
+                :type "bool")
+                nil [1624 1831])
+            ("read" function
+               (:parent "SpiDriver"
+                :arguments 
+                  ( ("pData" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1854 1866])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [1867 1876]))                  
+                :type "bool")
+                nil [1833 2053])
+            ("write" function
+               (:parent "SpiDriver"
+                :arguments 
+                  ( ("pData" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2077 2089])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [2090 2099]))                  
+                :type "bool")
+                nil [2055 2293])
+            ("ctl" function
+               (:parent "SpiDriver"
+                :arguments 
+                  ( ("parameter" variable (:type ("IOCTL_PARAMS" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2315 2338])
+                    ("pParam" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2339 2352]))                  
+                :type "bool")
+                nil [2295 2371]))          
+      :file "spi_driver.cpp"
+      :pointmax 2372
+      :fsize 2371
+      :lastmodtime '(22600 13705 235581 884000)
+      :unmatched-syntax nil)
+    (semanticdb-table "spi_driver.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("drivers/generic_device_driver.h" include nil nil [14 56])
+            ("SpiDriver" type
+               (:superclasses 
+                  ( ("IGenericDeviceDriver" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [107 115])
+                    ("m_Channel" variable (:type "int") (reparse-symbol classsubparts) [118 132])
+                    ("m_Freq_Hz" variable (:type "int") (reparse-symbol classsubparts) [135 149])
+                    ("m_fd" variable (:type "int") (reparse-symbol classsubparts) [152 161])
+                    ("m_pMem" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [164 177])
+                    ("m_pInput" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol classsubparts) [180 204])
+                    ("m_pOutput" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol classsubparts) [207 232])
+                    ("m_transfer_size_bytes" variable (:type "int") (reparse-symbol classsubparts) [235 261])
+                    ("public" label nil (reparse-symbol classsubparts) [283 290])
+                    ("SpiDriver" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("channel" variable (:type "int") (reparse-symbol arg-sub-list) [303 315])
+                            ("freq_hz" variable (:type "int") (reparse-symbol arg-sub-list) [316 328])
+                            ("transfer_size_bytes" variable (:type "int") (reparse-symbol arg-sub-list) [329 353]))                          
+                        :type ("SpiDriver" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [293 354])
+                    ("open" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [357 377])
+                    ("close" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [380 401])
+                    ("read" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pData" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [422 434])
+                            ("size" variable (:type "int") (reparse-symbol arg-sub-list) [435 444]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [404 445])
+                    ("write" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pData" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [467 479])
+                            ("size" variable (:type "int") (reparse-symbol arg-sub-list) [480 489]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [448 490])
+                    ("ctl" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("parameter" variable (:type ("IOCTL_PARAMS" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [510 533])
+                            ("pParam" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [534 547]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [493 548]))                  
+                :type "class")
+                nil [58 551]))          
+      :file "spi_driver.h"
+      :pointmax 552
+      :fsize 551
+      :lastmodtime '(22602 48073 3136 251000)
+      :unmatched-syntax nil)
+    (semanticdb-table "driver_factory.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("driver_factory.h" include nil nil [1 28])
+            ("generic_device_driver.h" include nil nil [29 63])
+            ("devicedefines.h" include nil nil [64 90])
+            ("WString.h" include (:system-flag t) nil [91 111])
+            ("MODBUS_DUMMY_FILE" variable (:constant-flag t) nil [121 138])
+            ("GPIO_DUMMY_FILE" variable (:constant-flag t) nil [167 182])
+            ("SPI_DUMMY_FILE" variable (:constant-flag t) nil [209 223])
+            ("spi_driver.h" include nil nil [241 264])
+            ("spi_driver.h" include nil nil [418 445])
+            ("create_gpio_driver" function
+               (:pointer 1
+                :parent "DriverFactory"
+                :arguments 
+                  ( ("gpio_pin_nr" variable (:type "int") (reparse-symbol arg-sub-list) [510 526])
+                    ("mode" variable (:type ("IOMode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [527 539]))                  
+                :type ("IGenericDeviceDriver" type (:type "class") nil nil))
+                nil [454 928])
+            ("create_modbus_driver" function
+               (:pointer 1
+                :parent "DriverFactory"
+                :type ("IGenericDeviceDriver" type (:type "class") nil nil))
+                nil [930 1141])
+            ("create_spi_driver" function
+               (:pointer 1
+                :parent "DriverFactory"
+                :arguments 
+                  ( ("speed_hz" variable (:type "int") (reparse-symbol arg-sub-list) [1198 1211])
+                    ("buffsize_bytes" variable (:type "int") (reparse-symbol arg-sub-list) [1212 1231]))                  
+                :type ("IGenericDeviceDriver" type (:type "class") nil nil))
+                nil [1143 1550]))          
+      :file "driver_factory.cpp"
+      :pointmax 1551
+      :fsize 1550
+      :lastmodtime '(22607 65493 211010 396000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MODBUS_DUMMY_FILE" . ((string "\"/tmp/ModbusDriver\"" 139 . 158)))
+          ("SPI_DUMMY_FILE" . ((string "\"/tmp/SpiDriver\"" 224 . 240)))
+          ("GPIO_DUMMY_FILE" . ((string "\"/tmp/GpioDriver\"" 183 . 200)))
+          )
+)
+    (semanticdb-table "driver_factory.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("drivers/igeneric_device_driver.h" include (:system-flag t) nil [15 58])
+            ("drivers/idriverfactory.h" include (:system-flag t) nil [59 94])
+            ("DriverFactory" type
+               (:superclasses 
+                  ( ("IDriverFactory" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [142 149])
+                    ("create_gpio_driver" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("gpio_pin_nr" variable (:type "int") (reparse-symbol arg-sub-list) [196 212])
+                            ("mode" variable (:type ("IOMode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [213 225]))                          
+                        :type ("IGenericDeviceDriver" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [155 226])
+                    ("create_modbus_driver" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type ("IGenericDeviceDriver" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [231 276])
+                    ("create_spi_driver" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("speed_hz" variable (:type "int") (reparse-symbol arg-sub-list) [321 334])
+                            ("buffsize_bytes" variable (:type "int") (reparse-symbol arg-sub-list) [335 354]))                          
+                        :type ("IGenericDeviceDriver" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [281 355]))                  
+                :type "class")
+                nil [96 358]))          
+      :file "driver_factory.h"
+      :pointmax 359
+      :fsize 358
+      :lastmodtime '(22593 23469 789457 24000)
+      :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2)))
+    (semanticdb-table "generic_device_driver.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("string" include (:system-flag t) nil [15 32])
+            ("drivers/igeneric_device_driver.h" include nil nil [33 76])
+            ("GenericDeviceDriver" type
+               (:superclasses 
+                  ( ("IGenericDeviceDriver" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [137 145])
+                    ("m_device_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [148 174])
+                    ("m_file_descriptor" variable (:type "int") (reparse-symbol classsubparts) [177 199])
+                    ("m_io_mode" variable (:type ("IOMode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [202 219])
+                    ("public" label nil (reparse-symbol classsubparts) [222 229])
+                    ("GenericDeviceDriver" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("device_name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [252 276])
+                            ("mode" variable (:type ("IOMode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [277 289]))                          
+                        :type ("GenericDeviceDriver" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [232 290])
+                    ("open" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [293 305])
+                    ("close" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [308 321])
+                    ("read" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pData" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [334 346])
+                            ("size" variable (:type "int") (reparse-symbol arg-sub-list) [347 356]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [324 357])
+                    ("write" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pData" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [371 383])
+                            ("size" variable (:type "int") (reparse-symbol arg-sub-list) [384 393]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [360 394])
+                    ("ctl" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("parameter" variable (:type ("IOCTL_PARAMS" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [406 429])
+                            ("pParam" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [430 443]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [397 444])
+                    ("GenericDeviceDriver" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [447 470]))                  
+                :type "class")
+                nil [78 473]))          
+      :file "generic_device_driver.h"
+      :pointmax 474
+      :fsize 473
+      :lastmodtime '(22593 23469 789457 24000)
+      :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2)))
+    (semanticdb-table "spi_driver_esp.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("spi_driver.h" include nil nil [1 24])
+            ("devicedefines.h" include nil nil [25 51])
+            ("SPI.h" include (:system-flag t) nil [52 68])
+            ("spi_settings" variable
+               (:typemodifiers ("static")
+                :type ("SPISettings" type (:type "class") nil nil))
+                nil [134 166])
+            ("spi_class" variable
+               (:typemodifiers ("static")
+                :type ("SPIClass" type (:type "class") nil nil))
+                nil [167 193])
+            ("SpiDriver" function
+               (:constructor-flag t
+                :parent "SpiDriver"
+                :arguments 
+                  ( ("channel" variable (:type "int") (reparse-symbol arg-sub-list) [216 228])
+                    ("freq_hz" variable (:type "int") (reparse-symbol arg-sub-list) [229 241])
+                    ("transfer_size_bytes" variable (:type "int") (reparse-symbol arg-sub-list) [242 266]))                  
+                :type ("SpiDriver" type (:type "class") nil nil))
+                nil [195 412])
+            ("open" function
+               (:parent "SpiDriver"
+                :type "bool")
+                nil [510 852])
+            ("close" function
+               (:parent "SpiDriver"
+                :type "bool")
+                nil [854 1068])
+            ("read" function
+               (:parent "SpiDriver"
+                :arguments 
+                  ( ("pData" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1091 1103])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [1104 1113]))                  
+                :type "bool")
+                nil [1070 1451])
+            ("write" function
+               (:parent "SpiDriver"
+                :arguments 
+                  ( ("pData" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1475 1487])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [1488 1497]))                  
+                :type "bool")
+                nil [1453 1872])
+            ("ctl" function
+               (:parent "SpiDriver"
+                :arguments 
+                  ( ("parameter" variable (:type ("IOCTL_PARAMS" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1894 1917])
+                    ("pParam" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1918 1931]))                  
+                :type "bool")
+                nil [1874 1952]))          
+      :file "spi_driver_esp.cpp"
+      :pointmax 1953
+      :fsize 1952
+      :lastmodtime '(22608 2598 67007 917000)
+      :unmatched-syntax nil)
+    (semanticdb-table "arduino_gpio_driver.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("drivers/igeneric_device_driver.h" include nil nil [1 44])
+            ("Arduino.h" include nil nil [45 65])
+            ("ArduinoGpioDriver" type
+               (:superclasses 
+                  ( ("IGenericDeviceDriver" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [124 132])
+                    ("m_pin_nr" variable (:type "int") (reparse-symbol classsubparts) [137 150])
+                    ("m_pin_mode" variable (:type "int") (reparse-symbol classsubparts) [155 170])
+                    ("public" label nil (reparse-symbol classsubparts) [172 179])
+                    ("ArduinoGpioDriver" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pin_nr" variable (:type "int") (reparse-symbol arg-sub-list) [202 213]))                          
+                        :type ("ArduinoGpioDriver" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [184 247])
+                    ("open" function
+                       (:typemodifiers ("virtual")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [253 300])
+                    ("close" function
+                       (:typemodifiers ("virtual")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [306 354])
+                    ("read" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pData" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [378 390])
+                            ("size" variable (:type "int") (reparse-symbol arg-sub-list) [391 400]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [360 504])
+                    ("write" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pData" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [529 541])
+                            ("size" variable (:type "int") (reparse-symbol arg-sub-list) [542 551]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [510 655])
+                    ("ctl" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("parameter" variable (:type ("IOCTL_PARAMS" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [678 701])
+                            ("pParam" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [702 715]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [661 991])
+                    ("ArduinoGpioDriver" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [997 1032]))                  
+                :type "class")
+                nil [67 1035])
+            ("create_arduino_gpio_driver" function
+               (:pointer 1
+                :arguments 
+                  ( ("pin_nr" variable (:type "int") (reparse-symbol arg-sub-list) [1086 1097]))                  
+                :type ("IGenericDeviceDriver" type (:type "class") nil nil))
+                nil [1037 1143]))          
+      :file "arduino_gpio_driver.cpp"
+      :pointmax 1144
+      :fsize 1143
+      :lastmodtime '(22593 23469 789457 24000)
+      :unmatched-syntax nil)
+    (semanticdb-table "spi_cfg.h"
+      :major-mode 'c-mode
+      :tags nil
+      :file "spi_cfg.h"
+      :pointmax 22
+      :fsize 154
+      :lastmodtime '(22606 46732 548774 318000)
+      :unmatched-syntax '((symbol 4 . 7) (number 1 . 3))))
+  :file "!home!elias!projects!cactus!src!drivers!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,23 @@
+;; Object demo/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "demo/"
+  :tables
+  (list
+    (semanticdb-table "spi.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("drivers/spi_driver.h" include nil nil [22 53])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [55 75])
+            ("demo_spi" function (:type "int") nil [77 543]))          
+      :file "spi.cpp"
+      :pointmax 544
+      :fsize 543
+      :lastmodtime '(22593 23469 789457 24000)
+      :unmatched-syntax nil))
+  :file "!home!elias!projects!cactus!test!demo!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

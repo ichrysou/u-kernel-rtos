@@ -1,0 +1,81 @@
+;; Object os/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "os/"
+  :tables
+  (list
+    (semanticdb-table "thread.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("pthread.h" include (:system-flag t) nil [1 21])
+            ("cstring" include (:system-flag t) nil [22 40])
+            ("execinfo.h" include (:system-flag t) nil [41 62])
+            ("iostream" include (:system-flag t) nil [63 82])
+            ("signal.h" include (:system-flag t) nil [83 102])
+            ("unistd.h" include (:system-flag t) nil [103 122])
+            ("thread.h" include nil nil [123 142])
+            ("RtThread" type
+               (:superclasses 
+                  ( ("IThread" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [1748 1756])
+                    ("m_ThreadHandle" variable (:type ("pthread_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1761 1786])
+                    ("m_Attribs" variable (:type ("pthread_attr_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1792 1817])
+                    ("m_SchedParams" variable (:type ("sched_param" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1823 1849])
+                    ("m_Function" variable (:type "int") (reparse-symbol classsubparts) [1881 1892])
+                    ("m_Prio" variable (:type "int") (reparse-symbol classsubparts) [1898 1909])
+                    ("public" label nil (reparse-symbol classsubparts) [1912 1919])
+                    ("RtThread" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("prio" variable (:type "int") (reparse-symbol arg-sub-list) [1933 1942]))                          
+                        :type ("RtThread" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [1924 1973])
+                    ("run" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("" variable (:type ("std::function" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1996 2010])
+                            ("" variable (:type "void") (reparse-symbol arg-sub-list) [2010 2020])
+                            ("" variable (:type ("function" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2022 2031]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1979 2088])
+                    ("join" function (:type "void") (reparse-symbol classsubparts) [2094 2157])
+                    ("start" function (:type "bool") (reparse-symbol classsubparts) [2163 2565])
+                    ("protected" label nil (reparse-symbol classsubparts) [2568 2578])
+                    ("run_helper" function
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("arg" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [2607 2617]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2583 2981])
+                    ("run" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [2987 3075])
+                    ("setup" function (:type "bool") (reparse-symbol classsubparts) [3081 4220]))                  
+                :type "struct")
+                nil [1712 4223])
+            ("create_thread" function
+               (:pointer 1
+                :arguments 
+                  ( ("prio" variable (:type "int") (reparse-symbol arg-sub-list) [4248 4257]))                  
+                :type ("IThread" type (:type "class") nil nil))
+                nil [4225 4292]))          
+      :file "thread.cpp"
+      :pointmax 4293
+      :fsize 4292
+      :lastmodtime '(22593 23469 789457 24000)
+      :unmatched-syntax '((punctuation 2020 . 2021) (semantic-list 2014 . 2020) (punctuation 2009 . 2010) (punctuation 1879 . 1880) (semantic-list 1873 . 1879) (VOID 1869 . 1873) (punctuation 1868 . 1869) (symbol 1860 . 1868) (punctuation 1859 . 1860) (punctuation 1858 . 1859) (symbol 1855 . 1858)))
+    (semanticdb-table "thread.h"
+      :file "thread.h"
+      :fsize 73
+      :lastmodtime '(22593 23469 789457 24000)))
+  :file "!home!elias!projects!cactus!src!os!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

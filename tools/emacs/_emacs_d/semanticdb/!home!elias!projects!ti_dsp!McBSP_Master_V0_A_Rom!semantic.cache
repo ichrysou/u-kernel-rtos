@@ -1,0 +1,228 @@
+;; Object McBSP_Master_V0_A_Rom/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "McBSP_Master_V0_A_Rom/"
+  :tables
+  (list
+    (semanticdb-table "McBSP_Master_V0_A_Rom.ino"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("SPI.h" include (:system-flag t) nil [647 663])
+            ("data" variable
+               (:default-value "0"
+                :type ("byte" type (:type "class") nil nil))
+                nil [665 679])
+            ("floatToBytes" function
+               (:arguments 
+                  ( ("input" variable (:type "float") (reparse-symbol arg-sub-list) [792 804])
+                    ("b1" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [824 836])
+                    ("b2" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [856 868])
+                    ("b3" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [887 899])
+                    ("b4" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [918 930]))                  
+                :type "void")
+                nil [774 1171])
+            ("BytesToFloat" function
+               (:arguments 
+                  ( ("b1" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1241 1252])
+                    ("b2" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1271 1282])
+                    ("b3" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1301 1312])
+                    ("b4" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1331 1342])
+                    ("erg" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [1361 1373]))                  
+                :type "void")
+                nil [1223 1617])
+            ("calcCRC" function
+               (:arguments 
+                  ( ("inp1" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1636 1649])
+                    ("inp2" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1667 1680])
+                    ("inp3" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1698 1711])
+                    ("inp4" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1729 1742])
+                    ("inp5" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1760 1773]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1619 1824])
+            ("SPI_Send" function
+               (:arguments 
+                  ( ("data" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1843 1856]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1826 2186])
+            ("SPI_Transfer16" function
+               (:arguments 
+                  ( ("data" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2212 2226]))                  
+                :type ("uint16_t" type (:type "class") nil nil))
+                nil [2188 2819])
+            ("SPI_Send16" function
+               (:arguments 
+                  ( ("data" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2841 2855]))                  
+                :type ("uint16_t" type (:type "class") nil nil))
+                nil [2821 3084])
+            ("SPI_Send_8x16" function
+               (:arguments 
+                  ( ("add" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3105 3118]))                  
+                :type "void")
+                nil [3086 4046])
+            ("Command" type
+               (:members 
+                  ( ("enableFU" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4253 4262])
+                    ("startID" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4263 4271])
+                    ("MotorSpeed" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4272 4283])
+                    ("MotorTorque" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4284 4297]))                  
+                :type "enum")
+                nil [4236 4298])
+            ("sendState" type
+               (:members 
+                  ( ("idle" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4319 4324])
+                    ("dataReady" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4325 4335])
+                    ("sendCmd" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4336 4344])
+                    ("sendByte1" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4345 4355])
+                    ("sendByte2" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4356 4366])
+                    ("sendByte3" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4367 4377])
+                    ("sendByte4" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4378 4388])
+                    ("sendCRC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4389 4397])
+                    ("checkResponse" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4398 4413]))                  
+                :type "enum")
+                nil [4300 4414])
+            ("pseudosender" function
+               (:arguments 
+                  ( ("data" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4452 4465])
+                    ("state" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4466 4480]))                  
+                :type "void")
+                nil [4434 5299])
+            ("senderStateMachine" function
+               (:arguments 
+                  ( ("cmd" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5408 5420])
+                    ("value" variable (:type "float") (reparse-symbol arg-sub-list) [5421 5433])
+                    ("flag" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5434 5447]))                  
+                :type "void")
+                nil [5384 7669])
+            ("setup" function (:type "void") nil [7853 8317])
+            ("FU_daten" type
+               (:members 
+                  ( ("cmd" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8338 8351])
+                    ("pi" variable (:type "float") (reparse-symbol classsubparts) [8354 8363])
+                    ("crc" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8366 8379])
+                    ("param1" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8382 8398])
+                    ("param2" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8401 8417])
+                    ("param3" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8420 8436])
+                    ("param4" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8439 8455])
+                    ("param5" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8458 8474]))                  
+                :type "struct")
+                nil [8319 8477])
+            ("FU_data" type
+               (:members 
+                  ( ("rohdaten" variable (:type ("FU_daten" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [8496 8521])
+                    ("sender" variable
+                       (:dereference 1
+                        :type ("uint16_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8525 8578]))                  
+                :type "union")
+                nil [8479 8581])
+            ("anstDaten" variable (:type ("FU_daten" type
+                 (:prototype t
+                  :type "struct")
+                  nil nil)) nil [8583 8609])
+            ("to_send" variable (:type ("FU_data" type (:type "union") nil nil)) nil [8611 8633])
+            ("testFloat" variable
+               (:default-value "3.14"
+                :type "float")
+                nil [8636 8659])
+            ("testData" variable
+               (:default-value "0"
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [8661 8683])
+            ("b1" variable
+               (:default-value "0"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [8686 8702])
+            ("b2" variable
+               (:default-value "0"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [8704 8720])
+            ("b3" variable
+               (:default-value "0"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [8721 8737])
+            ("b4" variable
+               (:default-value "0"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [8738 8754])
+            ("testDataBack" variable
+               (:default-value "0"
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [8756 8782])
+            ("testFloatBack" variable (:type "float") nil [8784 8804])
+            ("zaehler" variable
+               (:default-value "0"
+                :type ("uint16_t" type (:type "class") nil nil))
+                nil [8807 8828])
+            ("antwort" variable
+               (:dereference 1
+                :type ("uint16_t" type (:type "class") nil nil))
+                nil [8830 8884])
+            ("i" variable
+               (:default-value "0"
+                :type ("uint16_t" type (:type "class") nil nil))
+                nil [8886 8901])
+            ("loop" function (:type "void") nil [8959 13310]))          
+      :file "McBSP_Master_V0_A_Rom.ino"
+      :pointmax 13313
+      :fsize 13314
+      :lastmodtime '(22606 50070 473150 828000)
+      :unmatched-syntax nil))
+  :file "!home!elias!projects!ti_dsp!McBSP_Master_V0_A_Rom!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,35 @@
+;; Object spi/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "spi/"
+  :tables
+  (list
+    (semanticdb-table "appspi.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("BOOST_TEST_MODULE" variable (:constant-flag t) nil [9 26])
+            ("boost/test/unit_test.hpp" include (:system-flag t) nil [43 78])
+            ("applibrary/appfactory.h" include nil nil [80 114])
+            ("core/ideviceapp.h" include nil nil [115 143])
+            ("drivers/driver_factory.h" include nil nil [144 179])
+            ("domain/parameterrepository.h" include nil nil [180 219])
+            ("domain/appparameter.h" include nil nil [220 252])
+            ("os/thread.h" include nil nil [253 275])
+            ("devicedefines.h" include nil nil [276 302])
+            ("app_spi" function (:type "void") nil [304 691])
+            ("BOOST_AUTO_TEST_CASE" function
+               (:arguments 
+                  ( ("" variable (:type ("test_device_spi" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [714 730]))                  
+                :type "int")
+                nil [693 835]))          
+      :file "appspi.cpp"
+      :pointmax 836
+      :fsize 835
+      :lastmodtime '(22611 59885 865806 283000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BOOST_TEST_MODULE" . ((symbol "PerformanceTest" 27 . 42)))
+          )
+))
+  :file "!home!ichrysou!projects!cactus!test!performance!spi!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

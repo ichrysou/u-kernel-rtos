@@ -1,0 +1,470 @@
+;; Object SPI/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "SPI/"
+  :tables
+  (list
+    (semanticdb-table "SPI.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_SPI_H_INCLUDED" variable (:constant-flag t) nil [922 937])
+            ("Arduino.h" include (:system-flag t) nil [939 959])
+            ("stdlib.h" include (:system-flag t) nil [960 979])
+            ("SPI_HAS_TRANSACTION" variable (:constant-flag t) nil [989 1008])
+            ("SPI_CLOCK_DIV2" variable (:constant-flag t) nil [1160 1174])
+            ("SPI_CLOCK_DIV4" variable (:constant-flag t) nil [1204 1218])
+            ("SPI_CLOCK_DIV8" variable (:constant-flag t) nil [1248 1262])
+            ("SPI_CLOCK_DIV16" variable (:constant-flag t) nil [1292 1307])
+            ("SPI_CLOCK_DIV32" variable (:constant-flag t) nil [1336 1351])
+            ("SPI_CLOCK_DIV64" variable (:constant-flag t) nil [1382 1397])
+            ("SPI_CLOCK_DIV128" variable (:constant-flag t) nil [1428 1444])
+            ("SPI_MODE0" variable
+               (:constant-flag t
+                :default-value "0x00"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1468 1499])
+            ("SPI_MODE1" variable
+               (:constant-flag t
+                :default-value "0x01"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1523 1554])
+            ("SPI_MODE2" variable
+               (:constant-flag t
+                :default-value "0x10"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1578 1609])
+            ("SPI_MODE3" variable
+               (:constant-flag t
+                :default-value "0x11"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1633 1664])
+            ("SPISettings" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1709 1716])
+                    ("SPISettings" function
+                       (:constructor-flag t
+                        :type ("SPISettings" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1719 1794])
+                    ("SPISettings" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("clock" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1809 1824])
+                            ("bitOrder" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1825 1842])
+                            ("dataMode" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1843 1860]))                          
+                        :type ("SPISettings" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1797 1919])
+                    ("_clock" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1922 1938])
+                    ("_bitOrder" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1941 1960])
+                    ("_dataMode" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1963 1982]))                  
+                :type "class")
+                nil [1689 1985])
+            ("SPIClass" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2004 2011])
+                    ("SPIClass" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("SPIClass" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2014 2025])
+                    ("begin" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2028 2041])
+                    ("end" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2044 2055])
+                    ("setHwCs" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("use" variable (:type "bool") (reparse-symbol arg-sub-list) [2071 2080]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2058 2081])
+                    ("setBitOrder" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("bitOrder" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2101 2118]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2084 2119])
+                    ("setDataMode" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("dataMode" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2141 2158]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2124 2159])
+                    ("setFrequency" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("freq" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2180 2194]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2162 2195])
+                    ("setClockDivider" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("clockDiv" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2219 2237]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2198 2238])
+                    ("beginTransaction" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("settings" variable (:type ("SPISettings" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2263 2284]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2241 2285])
+                    ("transfer" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("data" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2305 2318]))                          
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2288 2319])
+                    ("transfer16" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("data" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2342 2356]))                          
+                        :type ("uint16_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2322 2357])
+                    ("write" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("data" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2371 2384]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2360 2385])
+                    ("write16" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("data" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2401 2415]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2388 2416])
+                    ("write16" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("data" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2432 2446])
+                            ("msb" variable (:type "bool") (reparse-symbol arg-sub-list) [2447 2456]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2419 2457])
+                    ("write32" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("data" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2473 2487]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2460 2488])
+                    ("write32" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("data" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2504 2518])
+                            ("msb" variable (:type "bool") (reparse-symbol arg-sub-list) [2519 2528]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2491 2529])
+                    ("writeBytes" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2548 2563])
+                            ("size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2564 2578]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2532 2579])
+                    ("writePattern" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2600 2615])
+                            ("size" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2616 2629])
+                            ("repeat" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2630 2646]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2582 2647])
+                    ("transferBytes" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("out" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2669 2683])
+                            ("in" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2684 2697])
+                            ("size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2698 2712]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2650 2713])
+                    ("endTransaction" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2736 2741]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2716 2742])
+                    ("private" label nil (reparse-symbol classsubparts) [2743 2751])
+                    ("useHwCs" variable (:type "bool") (reparse-symbol classsubparts) [2754 2767])
+                    ("writeBytes_" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2787 2802])
+                            ("size" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2803 2816]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2770 2817])
+                    ("transferBytes_" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("out" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2840 2854])
+                            ("in" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2855 2868])
+                            ("size" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2869 2882]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2820 2883])
+                    ("setDataBits" function
+                       (:prototype-flag t
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("bits" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2910 2924]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2886 2925]))                  
+                :type "class")
+                nil [1987 2928])
+            ("SPI" variable
+               (:typemodifiers ("extern")
+                :type ("SPIClass" type (:type "class") nil nil))
+                nil [2930 2950]))          
+      :file "SPI.h"
+      :pointmax 2959
+      :fsize 2958
+      :lastmodtime '(22593 23513 20326 833000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("SPI_CLOCK_DIV2" . ((number "0x00101001" 1177 . 1187)))
+          ("_SPI_H_INCLUDED")
+          ("SPI_CLOCK_DIV4" . ((number "0x00241001" 1221 . 1231)))
+          ("SPI_CLOCK_DIV128" . ((number "0x04fc1001" 1446 . 1456)))
+          ("SPI_CLOCK_DIV16" . ((number "0x009c1001" 1309 . 1319)))
+          ("SPI_CLOCK_DIV64" . ((number "0x027c1001" 1399 . 1409)))
+          ("SPI_HAS_TRANSACTION")
+          ("SPI_CLOCK_DIV8" . ((number "0x004c1001" 1265 . 1275)))
+          ("SPI_CLOCK_DIV32" . ((number "0x013c1001" 1353 . 1363)))
+          )
+)
+    (semanticdb-table "SPI.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("SPI.h" include nil nil [880 896])
+            ("HardwareSerial.h" include nil nil [897 924])
+            ("spiClk_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("regValue" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [950 968])
+                          ("" type
+                             (:members 
+                                ( ("regL" variable
+                                     (:suffix ":6"
+                                      :type "unsigned int")
+                                      (reparse-symbol classsubparts) [1002 1019])
+                                  ("regH" variable
+                                     (:suffix ":6"
+                                      :type "unsigned int")
+                                      (reparse-symbol classsubparts) [1036 1053])
+                                  ("regN" variable
+                                     (:suffix ":6"
+                                      :type "unsigned int")
+                                      (reparse-symbol classsubparts) [1070 1087])
+                                  ("regPre" variable
+                                     (:suffix ":13"
+                                      :type "unsigned int")
+                                      (reparse-symbol classsubparts) [1104 1124])
+                                  ("regEQU" variable
+                                     (:suffix ":1"
+                                      :type "unsigned int")
+                                      (reparse-symbol classsubparts) [1141 1160]))                                
+                              :type "struct")
+                              (reparse-symbol classsubparts) [977 1171]))                        
+                      :type "union")
+                      nil nil)
+                :type "typedef")
+                nil [926 1183])
+            ("SPI" variable (:type ("SPIClass" type (:type "class") nil nil)) nil [1185 1198])
+            ("SPIClass" function
+               (:constructor-flag t
+                :parent "SPIClass"
+                :type ("SPIClass" type (:type "class") nil nil))
+                nil [1199 1244])
+            ("begin" function
+               (:parent "SPIClass"
+                :type "void")
+                nil [1246 1554])
+            ("end" function
+               (:parent "SPIClass"
+                :type "void")
+                nil [1556 1709])
+            ("setHwCs" function
+               (:parent "SPIClass"
+                :arguments 
+                  ( ("use" variable (:type "bool") (reparse-symbol arg-sub-list) [1734 1743]))                  
+                :type "void")
+                nil [1711 2000])
+            ("beginTransaction" function
+               (:parent "SPIClass"
+                :arguments 
+                  ( ("settings" variable (:type ("SPISettings" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2034 2055]))                  
+                :type "void")
+                nil [2002 2200])
+            ("endTransaction" function
+               (:parent "SPIClass"
+                :type "void")
+                nil [2202 2237])
+            ("setDataMode" function
+               (:parent "SPIClass"
+                :arguments 
+                  ( ("dataMode" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2266 2283]))                  
+                :type "void")
+                nil [2239 2826])
+            ("setBitOrder" function
+               (:parent "SPIClass"
+                :arguments 
+                  ( ("bitOrder" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2855 2872]))                  
+                :type "void")
+                nil [2828 3003])
+            ("ClkRegToFreq" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("reg" variable
+                       (:pointer 1
+                        :type ("spiClk_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3122 3137]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [3093 3209])
+            ("setFrequency" function
+               (:parent "SPIClass"
+                :arguments 
+                  ( ("freq" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3239 3253]))                  
+                :type "void")
+                nil [3211 5911])
+            ("setClockDivider" function
+               (:parent "SPIClass"
+                :arguments 
+                  ( ("clockDiv" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5944 5962]))                  
+                :type "void")
+                nil [5913 6131])
+            ("setDataBits" function
+               (:parent "SPIClass"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("bits" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6167 6181]))                  
+                :type "void")
+                nil [6133 6351])
+            ("transfer" function
+               (:parent "SPIClass"
+                :arguments 
+                  ( ("data" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6380 6393]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [6353 6588])
+            ("transfer16" function
+               (:parent "SPIClass"
+                :arguments 
+                  ( ("data" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6620 6634]))                  
+                :type ("uint16_t" type (:type "class") nil nil))
+                nil [6590 7074])
+            ("write" function
+               (:parent "SPIClass"
+                :arguments 
+                  ( ("data" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7097 7110]))                  
+                :type "void")
+                nil [7076 7267])
+            ("write16" function
+               (:parent "SPIClass"
+                :arguments 
+                  ( ("data" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7292 7306]))                  
+                :type "void")
+                nil [7269 7361])
+            ("write16" function
+               (:parent "SPIClass"
+                :arguments 
+                  ( ("data" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7386 7400])
+                    ("msb" variable (:type "bool") (reparse-symbol arg-sub-list) [7401 7410]))                  
+                :type "void")
+                nil [7363 7747])
+            ("write32" function
+               (:parent "SPIClass"
+                :arguments 
+                  ( ("data" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7772 7786]))                  
+                :type "void")
+                nil [7749 7841])
+            ("write32" function
+               (:parent "SPIClass"
+                :arguments 
+                  ( ("data" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7866 7880])
+                    ("msb" variable (:type "bool") (reparse-symbol arg-sub-list) [7881 7890]))                  
+                :type "void")
+                nil [7843 8391])
+            ("writeBytes" function
+               (:parent "SPIClass"
+                :arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8560 8575])
+                    ("size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8576 8590]))                  
+                :type "void")
+                nil [8534 8811])
+            ("writeBytes_" function
+               (:parent "SPIClass"
+                :arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8840 8855])
+                    ("size" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8856 8869]))                  
+                :type "void")
+                nil [8813 9243])
+            ("writePattern" function
+               (:parent "SPIClass"
+                :arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9379 9394])
+                    ("size" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9395 9408])
+                    ("repeat" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9409 9425]))                  
+                :type "void")
+                nil [9351 11011])
+            ("transferBytes" function
+               (:parent "SPIClass"
+                :arguments 
+                  ( ("out" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11212 11226])
+                    ("in" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11227 11240])
+                    ("size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11241 11255]))                  
+                :type "void")
+                nil [11183 11524])
+            ("transferBytes_" function
+               (:parent "SPIClass"
+                :arguments 
+                  ( ("out" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11556 11570])
+                    ("in" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11571 11584])
+                    ("size" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11585 11598]))                  
+                :type "void")
+                nil [11526 12409]))          
+      :file "SPI.cpp"
+      :pointmax 12411
+      :fsize 12410
+      :lastmodtime '(22597 23480 209237 587000)
+      :unmatched-syntax nil))
+  :file "!home!elias!projects!cactus!ext!esp8266!Arduino!libraries!SPI!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

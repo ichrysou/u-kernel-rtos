@@ -1,0 +1,75 @@
+;; Object mqtt/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "mqtt/"
+  :tables
+  (list
+    (semanticdb-table "test_mqtt.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Arduino.h" include (:system-flag t) nil [14 34])
+            ("application/bootstrap.h" include (:system-flag t) nil [36 70])
+            ("application/iparametermanager.h" include (:system-flag t) nil [71 113])
+            ("application/imqttclient.h" include (:system-flag t) nil [114 150])
+            ("application/imqttlistener.h" include (:system-flag t) nil [151 189])
+            ("core/iparameterlistener.h" include (:system-flag t) nil [190 226])
+            ("core/iparameterrepository.h" include (:system-flag t) nil [227 265])
+            ("domain/appparameter.h" include (:system-flag t) nil [266 298])
+            ("logger/logger.h" include (:system-flag t) nil [299 325])
+            ("utils/network.h" include (:system-flag t) nil [326 352])
+            ("logger" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("LEVEL_INFO" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [368 379]))                  
+                :type ("Logger" type (:type "class") nil nil))
+                nil [354 380])
+            ("bootstrapper" variable (:type ("Bootstrap" type (:type "class") nil nil)) nil [381 404])
+            ("testParamInt" function
+               (:prototype-flag t
+                :type ("AppParameter" type
+                     (:template-specifier 
+                        ( ("int" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [406 448])
+            ("testParamFloat" function
+               (:prototype-flag t
+                :type ("AppParameter" type
+                     (:template-specifier 
+                        ( ("float" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [449 496])
+            ("mqtt_endpoint" variable
+               (:dereference 1
+                :default-value "\"10.11.25.2\""
+                :type "char")
+                nil [498 537])
+            ("mqtt_port" variable
+               (:default-value "5555"
+                :type "int")
+                nil [538 559])
+            ("ssid" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "\"SDI\""
+                :type "char")
+                nil [560 592])
+            ("password" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "\"company flower fly seldom\""
+                :type "char")
+                nil [593 651])
+            ("setup_newtork" function (:type "bool") nil [653 1207])
+            ("setup" function (:type "void") nil [1209 1632])
+            ("loop" function (:type "void") nil [1634 2046]))          
+      :file "test_mqtt.cpp"
+      :pointmax 2050
+      :fsize 2049
+      :lastmodtime '(22593 33564 79353 695000)
+      :unmatched-syntax '((string 483 . 494) (string 437 . 446))))
+  :file "!home!elias!projects!cactus!test!esp!mqtt!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

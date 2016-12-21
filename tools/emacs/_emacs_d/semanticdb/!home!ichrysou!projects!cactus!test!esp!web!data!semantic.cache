@@ -1,0 +1,16 @@
+;; Object data/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "data/"
+  :tables
+  (list
+    (semanticdb-table "device_config.json"
+      :major-mode 'js-mode
+      :tags nil
+      :file "device_config.json"
+      :pointmax 708
+      :fsize 732
+      :lastmodtime '(22611 59885 865806 283000)
+      :unmatched-syntax nil))
+  :file "!home!ichrysou!projects!cactus!test!esp!web!data!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

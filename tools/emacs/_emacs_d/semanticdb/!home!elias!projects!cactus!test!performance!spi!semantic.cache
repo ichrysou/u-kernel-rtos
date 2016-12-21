@@ -1,0 +1,53 @@
+;; Object spi/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "spi/"
+  :tables
+  (list
+    (semanticdb-table "driverspi.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("BOOST_TEST_MODULE" variable (:constant-flag t) nil [9 26])
+            ("boost/test/unit_test.hpp" include (:system-flag t) nil [43 78])
+            ("os/thread.h" include nil nil [80 102])
+            ("drivers/spi_driver.h" include nil nil [103 134])
+            ("driver_spi" function (:type "void") nil [136 633])
+            ("BOOST_AUTO_TEST_CASE" function
+               (:arguments 
+                  ( ("" variable (:type ("test_driver_spi" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [656 672]))                  
+                :type "int")
+                nil [635 780]))          
+      :file "driverspi.cpp"
+      :pointmax 781
+      :fsize 780
+      :lastmodtime '(22593 23469 789457 24000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BOOST_TEST_MODULE" . ((symbol "PerformanceTest" 27 . 42)))
+          )
+)
+    (semanticdb-table "nativespi.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("BOOST_TEST_MODULE" variable (:constant-flag t) nil [9 26])
+            ("sys/timerfd.h" include (:system-flag t) nil [43 67])
+            ("linux/spi/spidev.h" include (:system-flag t) nil [68 97])
+            ("os/thread.h" include (:system-flag t) nil [98 120])
+            ("boost/test/unit_test.hpp" include (:system-flag t) nil [121 156])
+            ("native_spi" function (:type "void") nil [2446 2467])
+            ("BOOST_AUTO_TEST_CASE" function
+               (:arguments 
+                  ( ("" variable (:type ("test_native_spi" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2497 2513]))                  
+                :type "int")
+                nil [2476 2618]))          
+      :file "nativespi.cpp"
+      :pointmax 2619
+      :fsize 2618
+      :lastmodtime '(22593 23469 789457 24000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BOOST_TEST_MODULE" . ((symbol "PerformanceTest" 27 . 42)))
+          )
+))
+  :file "!home!elias!projects!cactus!test!performance!spi!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

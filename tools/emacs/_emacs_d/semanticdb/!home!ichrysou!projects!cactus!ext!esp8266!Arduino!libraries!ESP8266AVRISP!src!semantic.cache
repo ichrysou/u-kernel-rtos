@@ -1,0 +1,226 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "ESP8266AVRISP.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Arduino.h" include (:system-flag t) nil [286 306])
+            ("SPI.h" include (:system-flag t) nil [307 323])
+            ("pgmspace.h" include (:system-flag t) nil [324 345])
+            ("ESP8266WiFi.h" include (:system-flag t) nil [346 370])
+            ("ESP8266AVRISP.h" include nil nil [372 398])
+            ("command.h" include nil nil [399 419])
+            ("mem.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [466 486])
+            ("user_interface.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [434 465])
+            ("malloc" variable (:constant-flag t) nil [498 504])
+            ("free" variable (:constant-flag t) nil [528 532])
+            ("AVRISP_DEBUG" variable (:constant-flag t) nil [643 655])
+            ("AVRISP_HWVER" variable (:constant-flag t) nil [670 682])
+            ("AVRISP_SWMAJ" variable (:constant-flag t) nil [693 705])
+            ("AVRISP_SWMIN" variable (:constant-flag t) nil [716 728])
+            ("AVRISP_PTIME" variable (:constant-flag t) nil [740 752])
+            ("EECHUNK" variable (:constant-flag t) nil [765 772])
+            ("beget16" variable (:constant-flag t) nil [787 794])
+            ("ESP8266AVRISP" function
+               (:constructor-flag t
+                :parent "ESP8266AVRISP"
+                :arguments 
+                  ( ("port" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [857 871])
+                    ("reset_pin" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [872 890])
+                    ("spi_freq" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [891 909])
+                    ("reset_state" variable (:type "bool") (reparse-symbol arg-sub-list) [910 927])
+                    ("reset_activehigh" variable (:type "bool") (reparse-symbol arg-sub-list) [928 950]))                  
+                :type ("ESP8266AVRISP" type (:type "class") nil nil))
+                nil [828 1185])
+            ("begin" function
+               (:parent "ESP8266AVRISP"
+                :type "void")
+                nil [1187 1239])
+            ("setSpiFrequency" function
+               (:parent "ESP8266AVRISP"
+                :arguments 
+                  ( ("freq" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1277 1291]))                  
+                :type "void")
+                nil [1241 1396])
+            ("setReset" function
+               (:parent "ESP8266AVRISP"
+                :arguments 
+                  ( ("rst" variable (:type "bool") (reparse-symbol arg-sub-list) [1427 1436]))                  
+                :type "void")
+                nil [1398 1521])
+            ("update" function
+               (:parent "ESP8266AVRISP"
+                :type ("AVRISPState_t" type (:type "class") nil nil))
+                nil [1523 2652])
+            ("serve" function
+               (:parent "ESP8266AVRISP"
+                :type ("AVRISPState_t" type (:type "class") nil nil))
+                nil [2654 3117])
+            ("_reject_incoming" function
+               (:parent "ESP8266AVRISP"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3163 3168]))                  
+                :type "void")
+                nil [3119 3232])
+            ("getch" function
+               (:parent "ESP8266AVRISP"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [3234 3399])
+            ("fill" function
+               (:parent "ESP8266AVRISP"
+                :arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [3426 3432]))                  
+                :type "void")
+                nil [3401 3539])
+            ("spi_transaction" function
+               (:parent "ESP8266AVRISP"
+                :arguments 
+                  ( ("a" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3580 3590])
+                    ("b" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3591 3601])
+                    ("c" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3602 3612])
+                    ("d" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3613 3623]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [3541 3741])
+            ("empty_reply" function
+               (:parent "ESP8266AVRISP"
+                :type "void")
+                nil [3743 3985])
+            ("breply" function
+               (:parent "ESP8266AVRISP"
+                :arguments 
+                  ( ("b" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4014 4024]))                  
+                :type "void")
+                nil [3987 4315])
+            ("get_parameter" function
+               (:parent "ESP8266AVRISP"
+                :arguments 
+                  ( ("c" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4351 4361]))                  
+                :type "void")
+                nil [4317 4672])
+            ("set_parameters" function
+               (:parent "ESP8266AVRISP"
+                :type "void")
+                nil [4674 5469])
+            ("start_pmode" function
+               (:parent "ESP8266AVRISP"
+                :type "void")
+                nil [5471 5836])
+            ("end_pmode" function
+               (:parent "ESP8266AVRISP"
+                :type "void")
+                nil [5838 5931])
+            ("universal" function
+               (:parent "ESP8266AVRISP"
+                :type "void")
+                nil [5933 6087])
+            ("flash" function
+               (:parent "ESP8266AVRISP"
+                :arguments 
+                  ( ("hilo" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6115 6128])
+                    ("addr" variable (:type "int") (reparse-symbol arg-sub-list) [6129 6138])
+                    ("data" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6139 6152]))                  
+                :type "void")
+                nil [6089 6291])
+            ("commit" function
+               (:parent "ESP8266AVRISP"
+                :arguments 
+                  ( ("addr" variable (:type "int") (reparse-symbol arg-sub-list) [6320 6329]))                  
+                :type "void")
+                nil [6293 6421])
+            ("addr_page" function
+               (:parent "ESP8266AVRISP"
+                :arguments 
+                  ( ("addr" variable (:type "int") (reparse-symbol arg-sub-list) [6494 6503]))                  
+                :type "int")
+                nil [6465 6811])
+            ("write_flash" function
+               (:parent "ESP8266AVRISP"
+                :arguments 
+                  ( ("length" variable (:type "int") (reparse-symbol arg-sub-list) [6846 6857]))                  
+                :type "void")
+                nil [6814 7132])
+            ("write_flash_pages" function
+               (:parent "ESP8266AVRISP"
+                :arguments 
+                  ( ("length" variable (:type "int") (reparse-symbol arg-sub-list) [7175 7186]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [7134 7529])
+            ("write_eeprom" function
+               (:parent "ESP8266AVRISP"
+                :arguments 
+                  ( ("length" variable (:type "int") (reparse-symbol arg-sub-list) [7567 7578]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [7531 7986])
+            ("write_eeprom_chunk" function
+               (:parent "ESP8266AVRISP"
+                :arguments 
+                  ( ("start" variable (:type "int") (reparse-symbol arg-sub-list) [8080 8090])
+                    ("length" variable (:type "int") (reparse-symbol arg-sub-list) [8091 8102]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [8038 8449])
+            ("program_page" function
+               (:parent "ESP8266AVRISP"
+                :type "void")
+                nil [8451 9123])
+            ("flash_read" function
+               (:parent "ESP8266AVRISP"
+                :arguments 
+                  ( ("hilo" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9159 9172])
+                    ("addr" variable (:type "int") (reparse-symbol arg-sub-list) [9173 9182]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [9125 9348])
+            ("flash_read_page" function
+               (:parent "ESP8266AVRISP"
+                :arguments 
+                  ( ("length" variable (:type "int") (reparse-symbol arg-sub-list) [9386 9397]))                  
+                :type "void")
+                nil [9350 9740])
+            ("eeprom_read_page" function
+               (:parent "ESP8266AVRISP"
+                :arguments 
+                  ( ("length" variable (:type "int") (reparse-symbol arg-sub-list) [9779 9790]))                  
+                :type "void")
+                nil [9742 10225])
+            ("read_page" function
+               (:parent "ESP8266AVRISP"
+                :type "void")
+                nil [10227 10661])
+            ("read_signature" function
+               (:parent "ESP8266AVRISP"
+                :type "void")
+                nil [10663 11185])
+            ("avrisp" function
+               (:parent "ESP8266AVRISP"
+                :type "int")
+                nil [11300 13638]))          
+      :file "ESP8266AVRISP.cpp"
+      :pointmax 13639
+      :fsize 13638
+      :lastmodtime '(22611 59910 357721 848000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("malloc" . ((symbol "os_malloc" 510 . 519)))
+          ("AVRISP_PTIME" . ((number "10" 753 . 755)))
+          ("AVRISP_DEBUG" (spp-arg-list ("...") 655 . 660))
+          ("AVRISP_SWMAJ" . ((number "1" 706 . 707)))
+          ("EECHUNK" . ((semantic-list "(32)" 773 . 777)))
+          ("AVRISP_SWMIN" . ((number "18" 729 . 731)))
+          ("beget16" (spp-arg-list ("addr") 794 . 800) . ((semantic-list "(*addr * 256 + *(addr+1))" 801 . 826)))
+          ("free" . ((symbol "os_free" 540 . 547)))
+          ("AVRISP_HWVER" . ((number "2" 683 . 684)))
+          )
+)
+    (semanticdb-table "ESP8266AVRISP.h"
+      :file "ESP8266AVRISP.h"
+      :fsize 3384
+      :lastmodtime '(22611 59910 357721 848000))
+    (semanticdb-table "command.h"
+      :file "command.h"
+      :fsize 4777
+      :lastmodtime '(22611 59910 357721 848000)))
+  :file "!home!ichrysou!projects!cactus!ext!esp8266!Arduino!libraries!ESP8266AVRISP!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,112 @@
+;; Object nodemcu/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "nodemcu/"
+  :tables
+  (list
+    (semanticdb-table "pins_arduino.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("Pins_Arduino_h" variable (:constant-flag t) nil [1014 1028])
+            ("../generic/common.h" include nil nil [1030 1060])
+            ("SDA" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "4"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1062 1091])
+            ("SCL" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "5"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1092 1121])
+            ("LED_BUILTIN" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "16"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1123 1161])
+            ("BUILTIN_LED" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "16"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1162 1200])
+            ("D0" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "16"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1202 1233])
+            ("D1" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "5"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1234 1264])
+            ("D2" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "4"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1265 1295])
+            ("D3" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "0"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1296 1326])
+            ("D4" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "2"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1327 1357])
+            ("D5" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "14"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1358 1389])
+            ("D6" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "12"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1390 1421])
+            ("D7" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "13"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1422 1453])
+            ("D8" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "15"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1454 1485])
+            ("D9" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "3"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1486 1516])
+            ("D10" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "1"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1517 1547]))          
+      :file "pins_arduino.h"
+      :pointmax 1577
+      :fsize 1576
+      :lastmodtime '(22593 23513 100324 744000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("Pins_Arduino_h")
+          )
+))
+  :file "!home!elias!projects!cactus!ext!esp8266!Arduino!variants!nodemcu!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

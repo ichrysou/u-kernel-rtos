@@ -1,0 +1,717 @@
+;; Object 6/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "6/"
+  :tables
+  (list
+    (semanticdb-table "string"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_GLIBCXX_STRING" variable (:constant-flag t) nil [1259 1274])
+            ("bits/c++config.h" include (:system-flag t) nil [1305 1332])
+            ("bits/stringfwd.h" include (:system-flag t) nil [1333 1360])
+            ("bits/char_traits.h" include (:system-flag t) nil [1361 1390])
+            ("bits/allocator.h" include (:system-flag t) nil [1431 1458])
+            ("bits/cpp_type_traits.h" include (:system-flag t) nil [1459 1492])
+            ("bits/localefwd.h" include (:system-flag t) nil [1493 1520])
+            ("bits/ostream_insert.h" include (:system-flag t) nil [1562 1594])
+            ("bits/stl_iterator_base_types.h" include (:system-flag t) nil [1595 1636])
+            ("bits/stl_iterator_base_funcs.h" include (:system-flag t) nil [1637 1678])
+            ("bits/stl_iterator.h" include (:system-flag t) nil [1679 1709])
+            ("bits/stl_function.h" include (:system-flag t) nil [1710 1740])
+            ("ext/numeric_traits.h" include (:system-flag t) nil [1753 1784])
+            ("bits/stl_algobase.h" include (:system-flag t) nil [1786 1816])
+            ("bits/range_access.h" include (:system-flag t) nil [1818 1848])
+            ("bits/basic_string.h" include (:system-flag t) nil [1849 1879])
+            ("bits/basic_string.tcc" include (:system-flag t) nil [1880 1912]))          
+      :file "string"
+      :pointmax 1944
+      :fsize 1943
+      :lastmodtime '(22516 42340 0 0)
+      :unmatched-syntax '((symbol 1290 . 1303) (symbol 1286 . 1289) (symbol 1279 . 1285) (punctuation 1278 . 1279))
+      :lexical-table 
+        '(("_GLIBCXX_STRING" . ((number "1" 1275 . 1276)))
+          )
+)
+    (semanticdb-table "cwchar"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("bits/c++config.h" include (:system-flag t) nil [1555 1582])
+            ("wchar.h" include (:system-flag t) nil [1610 1628])
+            ("_GLIBCXX_CWCHAR" variable (:constant-flag t) nil [1669 1684])
+            ("std" type
+               (:members 
+                  ( ("mbstate_t" variable (:type "int") (reparse-symbol namespacesubparts) [1959 1969]))                  
+                :type "namespace")
+                nil [1933 1971])
+            ("std" type
+               (:members 
+                  ( ("wint_t" variable (:type "int") (reparse-symbol namespacesubparts) [3148 3155])
+                    ("btowc" variable (:type "int") (reparse-symbol namespacesubparts) [3167 3173])
+                    ("fgetwc" variable (:type "int") (reparse-symbol namespacesubparts) [3184 3191])
+                    ("fgetws" variable (:type "int") (reparse-symbol namespacesubparts) [3202 3209])
+                    ("fputwc" variable (:type "int") (reparse-symbol namespacesubparts) [3220 3227])
+                    ("fputws" variable (:type "int") (reparse-symbol namespacesubparts) [3238 3245])
+                    ("fwide" variable (:type "int") (reparse-symbol namespacesubparts) [3256 3262])
+                    ("fwprintf" variable (:type "int") (reparse-symbol namespacesubparts) [3273 3282])
+                    ("fwscanf" variable (:type "int") (reparse-symbol namespacesubparts) [3293 3301])
+                    ("getwc" variable (:type "int") (reparse-symbol namespacesubparts) [3312 3318])
+                    ("getwchar" variable (:type "int") (reparse-symbol namespacesubparts) [3329 3338])
+                    ("mbrlen" variable (:type "int") (reparse-symbol namespacesubparts) [3349 3356])
+                    ("mbrtowc" variable (:type "int") (reparse-symbol namespacesubparts) [3367 3375])
+                    ("mbsinit" variable (:type "int") (reparse-symbol namespacesubparts) [3386 3394])
+                    ("mbsrtowcs" variable (:type "int") (reparse-symbol namespacesubparts) [3405 3415])
+                    ("putwc" variable (:type "int") (reparse-symbol namespacesubparts) [3426 3432])
+                    ("putwchar" variable (:type "int") (reparse-symbol namespacesubparts) [3443 3452])
+                    ("swprintf" variable (:type "int") (reparse-symbol namespacesubparts) [3502 3511])
+                    ("swscanf" variable (:type "int") (reparse-symbol namespacesubparts) [3529 3537])
+                    ("ungetwc" variable (:type "int") (reparse-symbol namespacesubparts) [3548 3556])
+                    ("vfwprintf" variable (:type "int") (reparse-symbol namespacesubparts) [3567 3577])
+                    ("vfwscanf" variable (:type "int") (reparse-symbol namespacesubparts) [3615 3624])
+                    ("vswprintf" variable (:type "int") (reparse-symbol namespacesubparts) [3681 3691])
+                    ("vswscanf" variable (:type "int") (reparse-symbol namespacesubparts) [3736 3745])
+                    ("vwprintf" variable (:type "int") (reparse-symbol namespacesubparts) [3763 3772])
+                    ("vwscanf" variable (:type "int") (reparse-symbol namespacesubparts) [3809 3817])
+                    ("wcrtomb" variable (:type "int") (reparse-symbol namespacesubparts) [3835 3843])
+                    ("wcscat" variable (:type "int") (reparse-symbol namespacesubparts) [3854 3861])
+                    ("wcscmp" variable (:type "int") (reparse-symbol namespacesubparts) [3872 3879])
+                    ("wcscoll" variable (:type "int") (reparse-symbol namespacesubparts) [3890 3898])
+                    ("wcscpy" variable (:type "int") (reparse-symbol namespacesubparts) [3909 3916])
+                    ("wcscspn" variable (:type "int") (reparse-symbol namespacesubparts) [3927 3935])
+                    ("wcsftime" variable (:type "int") (reparse-symbol namespacesubparts) [3946 3955])
+                    ("wcslen" variable (:type "int") (reparse-symbol namespacesubparts) [3966 3973])
+                    ("wcsncat" variable (:type "int") (reparse-symbol namespacesubparts) [3984 3992])
+                    ("wcsncmp" variable (:type "int") (reparse-symbol namespacesubparts) [4003 4011])
+                    ("wcsncpy" variable (:type "int") (reparse-symbol namespacesubparts) [4022 4030])
+                    ("wcsrtombs" variable (:type "int") (reparse-symbol namespacesubparts) [4041 4051])
+                    ("wcsspn" variable (:type "int") (reparse-symbol namespacesubparts) [4062 4069])
+                    ("wcstod" variable (:type "int") (reparse-symbol namespacesubparts) [4080 4087])
+                    ("wcstof" variable (:type "int") (reparse-symbol namespacesubparts) [4123 4130])
+                    ("wcstok" variable (:type "int") (reparse-symbol namespacesubparts) [4148 4155])
+                    ("wcstol" variable (:type "int") (reparse-symbol namespacesubparts) [4166 4173])
+                    ("wcstoul" variable (:type "int") (reparse-symbol namespacesubparts) [4184 4192])
+                    ("wcsxfrm" variable (:type "int") (reparse-symbol namespacesubparts) [4203 4211])
+                    ("wctob" variable (:type "int") (reparse-symbol namespacesubparts) [4222 4228])
+                    ("wmemcmp" variable (:type "int") (reparse-symbol namespacesubparts) [4239 4247])
+                    ("wmemcpy" variable (:type "int") (reparse-symbol namespacesubparts) [4258 4266])
+                    ("wmemmove" variable (:type "int") (reparse-symbol namespacesubparts) [4277 4286])
+                    ("wmemset" variable (:type "int") (reparse-symbol namespacesubparts) [4297 4305])
+                    ("wprintf" variable (:type "int") (reparse-symbol namespacesubparts) [4316 4324])
+                    ("wscanf" variable (:type "int") (reparse-symbol namespacesubparts) [4335 4342])
+                    ("wcschr" variable (:type "int") (reparse-symbol namespacesubparts) [4353 4360])
+                    ("wcspbrk" variable (:type "int") (reparse-symbol namespacesubparts) [4371 4379])
+                    ("wcsrchr" variable (:type "int") (reparse-symbol namespacesubparts) [4390 4398])
+                    ("wcsstr" variable (:type "int") (reparse-symbol namespacesubparts) [4409 4416])
+                    ("wmemchr" variable (:type "int") (reparse-symbol namespacesubparts) [4427 4435])
+                    ("wcschr" function
+                       (:pointer 1
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("__p" variable
+                               (:pointer 1
+                                :type "wchar_t")
+                                (reparse-symbol arg-sub-list) [4504 4517])
+                            ("__c" variable (:type "wchar_t") (reparse-symbol arg-sub-list) [4518 4530]))                          
+                        :type "wchar_t")
+                        (reparse-symbol namespacesubparts) [4479 4589])
+                    ("wcspbrk" function
+                       (:pointer 1
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("__s1" variable
+                               (:pointer 1
+                                :type "wchar_t")
+                                (reparse-symbol arg-sub-list) [4619 4633])
+                            ("__s2" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "wchar_t")
+                                (reparse-symbol arg-sub-list) [4634 4654]))                          
+                        :type "wchar_t")
+                        (reparse-symbol namespacesubparts) [4593 4716])
+                    ("wcsrchr" function
+                       (:pointer 1
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("__p" variable
+                               (:pointer 1
+                                :type "wchar_t")
+                                (reparse-symbol arg-sub-list) [4746 4759])
+                            ("__c" variable (:type "wchar_t") (reparse-symbol arg-sub-list) [4760 4772]))                          
+                        :type "wchar_t")
+                        (reparse-symbol namespacesubparts) [4720 4832])
+                    ("wcsstr" function
+                       (:pointer 1
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("__s1" variable
+                               (:pointer 1
+                                :type "wchar_t")
+                                (reparse-symbol arg-sub-list) [4861 4875])
+                            ("__s2" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "wchar_t")
+                                (reparse-symbol arg-sub-list) [4876 4896]))                          
+                        :type "wchar_t")
+                        (reparse-symbol namespacesubparts) [4836 4957])
+                    ("wmemchr" function
+                       (:pointer 1
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("__p" variable
+                               (:pointer 1
+                                :type "wchar_t")
+                                (reparse-symbol arg-sub-list) [4987 5000])
+                            ("__c" variable (:type "wchar_t") (reparse-symbol arg-sub-list) [5001 5013])
+                            ("__n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5014 5025]))                          
+                        :type "wchar_t")
+                        (reparse-symbol namespacesubparts) [4961 5090]))                  
+                :type "namespace")
+                nil [3059 5131])
+            ("__gnu_cxx" type
+               (:members 
+                  ( ("wcstold" variable (:type "int") (reparse-symbol namespacesubparts) [5445 5453])
+                    ("wcstoll" variable (:type "int") (reparse-symbol namespacesubparts) [5817 5825])
+                    ("wcstoull" variable (:type "int") (reparse-symbol namespacesubparts) [5836 5845]))                  
+                :type "namespace")
+                nil [5221 5854])
+            ("std" type
+               (:members 
+                  ( ("__gnu_cxx::wcstold" variable (:type "int") (reparse-symbol namespacesubparts) [5905 5924])
+                    ("__gnu_cxx::wcstoll" variable (:type "int") (reparse-symbol namespacesubparts) [5935 5954])
+                    ("__gnu_cxx::wcstoull" variable (:type "int") (reparse-symbol namespacesubparts) [5965 5985]))                  
+                :type "namespace")
+                nil [5879 5987]))          
+      :file "cwchar"
+      :pointmax 6510
+      :fsize 6509
+      :lastmodtime '(22516 42340 0 0)
+      :unmatched-syntax '((punctuation 5964 . 5965) (punctuation 5963 . 5964) (USING 5957 . 5962) (punctuation 5934 . 5935) (punctuation 5933 . 5934) (USING 5927 . 5932) (punctuation 5904 . 5905) (punctuation 5903 . 5904) (USING 5897 . 5902) (punctuation 5835 . 5836) (punctuation 5834 . 5835) (USING 5828 . 5833) (punctuation 5816 . 5817) (punctuation 5815 . 5816) (USING 5809 . 5814) (punctuation 5444 . 5445) (punctuation 5443 . 5444) (USING 5437 . 5442) (symbol 5121 . 5129) (punctuation 4426 . 4427) (punctuation 4425 . 4426) (USING 4419 . 4424) (punctuation 4408 . 4409) (punctuation 4407 . 4408) (USING 4401 . 4406) (punctuation 4389 . 4390) (punctuation 4388 . 4389) (USING 4382 . 4387) (punctuation 4370 . 4371) (punctuation 4369 . 4370) (USING 4363 . 4368) (punctuation 4352 . 4353) (punctuation 4351 . 4352) (USING 4345 . 4350) (punctuation 4334 . 4335) (punctuation 4333 . 4334) (USING 4327 . 4332) (punctuation 4315 . 4316) (punctuation 4314 . 4315) (USING 4308 . 4313) (punctuation 4296 . 4297) (punctuation 4295 . 4296) (USING 4289 . 4294) (punctuation 4276 . 4277) (punctuation 4275 . 4276) (USING 4269 . 4274) (punctuation 4257 . 4258) (punctuation 4256 . 4257) (USING 4250 . 4255) (punctuation 4238 . 4239) (punctuation 4237 . 4238) (USING 4231 . 4236) (punctuation 4221 . 4222) (punctuation 4220 . 4221) (USING 4214 . 4219) (punctuation 4202 . 4203) (punctuation 4201 . 4202) (USING 4195 . 4200) (punctuation 4183 . 4184) (punctuation 4182 . 4183) (USING 4176 . 4181) (punctuation 4165 . 4166) (punctuation 4164 . 4165) (USING 4158 . 4163) (punctuation 4147 . 4148) (punctuation 4146 . 4147) (USING 4140 . 4145) (punctuation 4122 . 4123) (punctuation 4121 . 4122) (USING 4115 . 4120) (punctuation 4079 . 4080) (punctuation 4078 . 4079) (USING 4072 . 4077) (punctuation 4061 . 4062) (punctuation 4060 . 4061) (USING 4054 . 4059) (punctuation 4040 . 4041) (punctuation 4039 . 4040) (USING 4033 . 4038) (punctuation 4021 . 4022) (punctuation 4020 . 4021) (USING 4014 . 4019) (punctuation 4002 . 4003) (punctuation 4001 . 4002) (USING 3995 . 4000) (punctuation 3983 . 3984) (punctuation 3982 . 3983) (USING 3976 . 3981) (punctuation 3965 . 3966) (punctuation 3964 . 3965) (USING 3958 . 3963) (punctuation 3945 . 3946) (punctuation 3944 . 3945) (USING 3938 . 3943) (punctuation 3926 . 3927) (punctuation 3925 . 3926) (USING 3919 . 3924) (punctuation 3908 . 3909) (punctuation 3907 . 3908) (USING 3901 . 3906) (punctuation 3889 . 3890) (punctuation 3888 . 3889) (USING 3882 . 3887) (punctuation 3871 . 3872) (punctuation 3870 . 3871) (USING 3864 . 3869) (punctuation 3853 . 3854) (punctuation 3852 . 3853) (USING 3846 . 3851) (punctuation 3834 . 3835) (punctuation 3833 . 3834) (USING 3827 . 3832) (punctuation 3808 . 3809) (punctuation 3807 . 3808) (USING 3801 . 3806) (punctuation 3762 . 3763) (punctuation 3761 . 3762) (USING 3755 . 3760) (punctuation 3735 . 3736) (punctuation 3734 . 3735) (USING 3728 . 3733) (punctuation 3680 . 3681) (punctuation 3679 . 3680) (USING 3673 . 3678) (punctuation 3614 . 3615) (punctuation 3613 . 3614) (USING 3607 . 3612) (punctuation 3566 . 3567) (punctuation 3565 . 3566) (USING 3559 . 3564) (punctuation 3547 . 3548) (punctuation 3546 . 3547) (USING 3540 . 3545) (punctuation 3528 . 3529) (punctuation 3527 . 3528) (USING 3521 . 3526) (punctuation 3501 . 3502) (punctuation 3500 . 3501) (USING 3494 . 3499) (punctuation 3442 . 3443) (punctuation 3441 . 3442) (USING 3435 . 3440) (punctuation 3425 . 3426) (punctuation 3424 . 3425) (USING 3418 . 3423) (punctuation 3404 . 3405) (punctuation 3403 . 3404) (USING 3397 . 3402) (punctuation 3385 . 3386) (punctuation 3384 . 3385) (USING 3378 . 3383) (punctuation 3366 . 3367) (punctuation 3365 . 3366) (USING 3359 . 3364) (punctuation 3348 . 3349) (punctuation 3347 . 3348) (USING 3341 . 3346) (punctuation 3328 . 3329) (punctuation 3327 . 3328) (USING 3321 . 3326) (punctuation 3311 . 3312) (punctuation 3310 . 3311) (USING 3304 . 3309) (punctuation 3292 . 3293) (punctuation 3291 . 3292) (USING 3285 . 3290) (punctuation 3272 . 3273) (punctuation 3271 . 3272) (USING 3265 . 3270) (punctuation 3255 . 3256) (punctuation 3254 . 3255) (USING 3248 . 3253) (punctuation 3237 . 3238) (punctuation 3236 . 3237) (USING 3230 . 3235) (punctuation 3219 . 3220) (punctuation 3218 . 3219) (USING 3212 . 3217) (punctuation 3201 . 3202) (punctuation 3200 . 3201) (USING 3194 . 3199) (punctuation 3183 . 3184) (punctuation 3182 . 3183) (USING 3176 . 3181) (punctuation 3166 . 3167) (punctuation 3165 . 3166) (USING 3159 . 3164) (punctuation 3147 . 3148) (punctuation 3146 . 3147) (USING 3140 . 3145) (punctuation 1958 . 1959) (punctuation 1957 . 1958) (USING 1951 . 1956) (symbol 1540 . 1553) (symbol 1536 . 1539) (symbol 1529 . 1535) (punctuation 1528 . 1529))
+      :lexical-table 
+        '(("_GLIBCXX_CWCHAR" . ((number "1" 1685 . 1686)))
+          )
+)
+    (semanticdb-table "iosfwd"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_GLIBCXX_IOSFWD" variable (:constant-flag t) nil [1244 1259])
+            ("bits/c++config.h" include (:system-flag t) nil [1290 1317])
+            ("bits/stringfwd.h" include (:system-flag t) nil [1318 1345])
+            ("bits/postypes.h" include (:system-flag t) nil [1383 1409])
+            ("std" type
+               (:members 
+                  ( ("ios_base" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2626 2641])
+                    ("basic_ios" type
+                       (:template 
+                          ( ("_CharT" type (:type "class") nil nil)
+                            ("_Traits" type (:type "class") nil nil))                          
+                        :type "class"
+                        :prototype t)
+                        (reparse-symbol namespacesubparts) [2645 2732])
+                    ("basic_streambuf" type
+                       (:template 
+                          ( ("_CharT" type (:type "class") nil nil)
+                            ("_Traits" type (:type "class") nil nil))                          
+                        :type "class"
+                        :prototype t)
+                        (reparse-symbol namespacesubparts) [2736 2829])
+                    ("basic_istream" type
+                       (:template 
+                          ( ("_CharT" type (:type "class") nil nil)
+                            ("_Traits" type (:type "class") nil nil))                          
+                        :type "class"
+                        :prototype t)
+                        (reparse-symbol namespacesubparts) [2833 2924])
+                    ("basic_ostream" type
+                       (:template 
+                          ( ("_CharT" type (:type "class") nil nil)
+                            ("_Traits" type (:type "class") nil nil))                          
+                        :type "class"
+                        :prototype t)
+                        (reparse-symbol namespacesubparts) [2928 3019])
+                    ("basic_iostream" type
+                       (:template 
+                          ( ("_CharT" type (:type "class") nil nil)
+                            ("_Traits" type (:type "class") nil nil))                          
+                        :type "class"
+                        :prototype t)
+                        (reparse-symbol namespacesubparts) [3023 3115])
+                    ("__cxx11" type
+                       (:members 
+                          ( ("basic_stringbuf" type
+                               (:template 
+                                  ( ("_CharT" type (:type "class") nil nil)
+                                    ("_Traits" type (:type "class") nil nil)
+                                    ("_Alloc" type (:type "class") nil nil))                                  
+                                :type "class"
+                                :prototype t)
+                                (reparse-symbol namespacesubparts) [3152 3287])
+                            ("basic_istringstream" type
+                               (:template 
+                                  ( ("_CharT" type (:type "class") nil nil)
+                                    ("_Traits" type (:type "class") nil nil)
+                                    ("_Alloc" type (:type "class") nil nil))                                  
+                                :type "class"
+                                :prototype t)
+                                (reparse-symbol namespacesubparts) [3291 3429])
+                            ("basic_ostringstream" type
+                               (:template 
+                                  ( ("_CharT" type (:type "class") nil nil)
+                                    ("_Traits" type (:type "class") nil nil)
+                                    ("_Alloc" type (:type "class") nil nil))                                  
+                                :type "class"
+                                :prototype t)
+                                (reparse-symbol namespacesubparts) [3433 3571])
+                            ("basic_stringstream" type
+                               (:template 
+                                  ( ("_CharT" type (:type "class") nil nil)
+                                    ("_Traits" type (:type "class") nil nil)
+                                    ("_Alloc" type (:type "class") nil nil))                                  
+                                :type "class"
+                                :prototype t)
+                                (reparse-symbol namespacesubparts) [3575 3712]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [3118 3743])
+                    ("basic_filebuf" type
+                       (:template 
+                          ( ("_CharT" type (:type "class") nil nil)
+                            ("_Traits" type (:type "class") nil nil))                          
+                        :type "class"
+                        :prototype t)
+                        (reparse-symbol namespacesubparts) [3746 3837])
+                    ("basic_ifstream" type
+                       (:template 
+                          ( ("_CharT" type (:type "class") nil nil)
+                            ("_Traits" type (:type "class") nil nil))                          
+                        :type "class"
+                        :prototype t)
+                        (reparse-symbol namespacesubparts) [3841 3933])
+                    ("basic_ofstream" type
+                       (:template 
+                          ( ("_CharT" type (:type "class") nil nil)
+                            ("_Traits" type (:type "class") nil nil))                          
+                        :type "class"
+                        :prototype t)
+                        (reparse-symbol namespacesubparts) [3937 4029])
+                    ("basic_fstream" type
+                       (:template 
+                          ( ("_CharT" type (:type "class") nil nil)
+                            ("_Traits" type (:type "class") nil nil))                          
+                        :type "class"
+                        :prototype t)
+                        (reparse-symbol namespacesubparts) [4033 4124])
+                    ("istreambuf_iterator" type
+                       (:template 
+                          ( ("_CharT" type (:type "class") nil nil)
+                            ("_Traits" type (:type "class") nil nil))                          
+                        :type "class"
+                        :prototype t)
+                        (reparse-symbol namespacesubparts) [4128 4225])
+                    ("ostreambuf_iterator" type
+                       (:template 
+                          ( ("_CharT" type (:type "class") nil nil)
+                            ("_Traits" type (:type "class") nil nil))                          
+                        :type "class"
+                        :prototype t)
+                        (reparse-symbol namespacesubparts) [4229 4326])
+                    ("ios" type
+                       (:typedef ("basic_ios" type
+                             (:template-specifier 
+                                ( ("char" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [4369 4399])
+                    ("streambuf" type
+                       (:typedef ("basic_streambuf" type
+                             (:template-specifier 
+                                ( ("char" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [4442 4483])
+                    ("istream" type
+                       (:typedef ("basic_istream" type
+                             (:template-specifier 
+                                ( ("char" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [4531 4569])
+                    ("ostream" type
+                       (:typedef ("basic_ostream" type
+                             (:template-specifier 
+                                ( ("char" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [4618 4656])
+                    ("iostream" type
+                       (:typedef ("basic_iostream" type
+                             (:template-specifier 
+                                ( ("char" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [4721 4761])
+                    ("stringbuf" type
+                       (:typedef ("basic_stringbuf" type
+                             (:template-specifier 
+                                ( ("char" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [4805 4846])
+                    ("istringstream" type
+                       (:typedef ("basic_istringstream" type
+                             (:template-specifier 
+                                ( ("char" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [4896 4945])
+                    ("ostringstream" type
+                       (:typedef ("basic_ostringstream" type
+                             (:template-specifier 
+                                ( ("char" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [4996 5045])
+                    ("stringstream" type
+                       (:typedef ("basic_stringstream" type
+                             (:template-specifier 
+                                ( ("char" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [5112 5159])
+                    ("filebuf" type
+                       (:typedef ("basic_filebuf" type
+                             (:template-specifier 
+                                ( ("char" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [5201 5239])
+                    ("ifstream" type
+                       (:typedef ("basic_ifstream" type
+                             (:template-specifier 
+                                ( ("char" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [5287 5327])
+                    ("ofstream" type
+                       (:typedef ("basic_ofstream" type
+                             (:template-specifier 
+                                ( ("char" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [5376 5416])
+                    ("fstream" type
+                       (:typedef ("basic_fstream" type
+                             (:template-specifier 
+                                ( ("char" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [5481 5519])
+                    ("wios" type
+                       (:typedef ("basic_ios" type
+                             (:template-specifier 
+                                ( ("wchar_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [5592 5626])
+                    ("wstreambuf" type
+                       (:typedef ("basic_streambuf" type
+                             (:template-specifier 
+                                ( ("wchar_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [5671 5716])
+                    ("wistream" type
+                       (:typedef ("basic_istream" type
+                             (:template-specifier 
+                                ( ("wchar_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [5767 5808])
+                    ("wostream" type
+                       (:typedef ("basic_ostream" type
+                             (:template-specifier 
+                                ( ("wchar_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [5860 5901])
+                    ("wiostream" type
+                       (:typedef ("basic_iostream" type
+                             (:template-specifier 
+                                ( ("wchar_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [5969 6012])
+                    ("wstringbuf" type
+                       (:typedef ("basic_stringbuf" type
+                             (:template-specifier 
+                                ( ("wchar_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [6059 6104])
+                    ("wistringstream" type
+                       (:typedef ("basic_istringstream" type
+                             (:template-specifier 
+                                ( ("wchar_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [6157 6210])
+                    ("wostringstream" type
+                       (:typedef ("basic_ostringstream" type
+                             (:template-specifier 
+                                ( ("wchar_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [6264 6317])
+                    ("wstringstream" type
+                       (:typedef ("basic_stringstream" type
+                             (:template-specifier 
+                                ( ("wchar_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [6387 6438])
+                    ("wfilebuf" type
+                       (:typedef ("basic_filebuf" type
+                             (:template-specifier 
+                                ( ("wchar_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [6483 6524])
+                    ("wifstream" type
+                       (:typedef ("basic_ifstream" type
+                             (:template-specifier 
+                                ( ("wchar_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [6575 6618])
+                    ("wofstream" type
+                       (:typedef ("basic_ofstream" type
+                             (:template-specifier 
+                                ( ("wchar_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [6670 6713])
+                    ("wfstream" type
+                       (:typedef ("basic_fstream" type
+                             (:template-specifier 
+                                ( ("wchar_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [6781 6822]))                  
+                :type "namespace")
+                nil [1411 6876]))          
+      :file "iosfwd"
+      :pointmax 6920
+      :fsize 6919
+      :lastmodtime '(22516 42340 0 0)
+      :unmatched-syntax '((symbol 6866 . 6874) (symbol 3736 . 3742) (symbol 1275 . 1288) (symbol 1271 . 1274) (symbol 1264 . 1270) (punctuation 1263 . 1264))
+      :lexical-table 
+        '(("_GLIBCXX_IOSFWD" . ((number "1" 1260 . 1261)))
+          )
+)
+    (semanticdb-table "cctype"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("bits/c++config.h" include (:system-flag t) nil [1559 1586])
+            ("ctype.h" include (:system-flag t) nil [1587 1605])
+            ("_GLIBCXX_CCTYPE" variable (:constant-flag t) nil [1639 1654])
+            ("std" type
+               (:members 
+                  ( ("isalnum" variable (:type "int") (reparse-symbol namespacesubparts) [1956 1964])
+                    ("isalpha" variable (:type "int") (reparse-symbol namespacesubparts) [1975 1983])
+                    ("iscntrl" variable (:type "int") (reparse-symbol namespacesubparts) [1994 2002])
+                    ("isdigit" variable (:type "int") (reparse-symbol namespacesubparts) [2013 2021])
+                    ("isgraph" variable (:type "int") (reparse-symbol namespacesubparts) [2032 2040])
+                    ("islower" variable (:type "int") (reparse-symbol namespacesubparts) [2051 2059])
+                    ("isprint" variable (:type "int") (reparse-symbol namespacesubparts) [2070 2078])
+                    ("ispunct" variable (:type "int") (reparse-symbol namespacesubparts) [2089 2097])
+                    ("isspace" variable (:type "int") (reparse-symbol namespacesubparts) [2108 2116])
+                    ("isupper" variable (:type "int") (reparse-symbol namespacesubparts) [2127 2135])
+                    ("isxdigit" variable (:type "int") (reparse-symbol namespacesubparts) [2146 2155])
+                    ("tolower" variable (:type "int") (reparse-symbol namespacesubparts) [2166 2174])
+                    ("toupper" variable (:type "int") (reparse-symbol namespacesubparts) [2185 2193]))                  
+                :type "namespace")
+                nil [1930 2195]))          
+      :file "cctype"
+      :pointmax 2410
+      :fsize 2409
+      :lastmodtime '(22516 42340 0 0)
+      :unmatched-syntax '((punctuation 2184 . 2185) (punctuation 2183 . 2184) (USING 2177 . 2182) (punctuation 2165 . 2166) (punctuation 2164 . 2165) (USING 2158 . 2163) (punctuation 2145 . 2146) (punctuation 2144 . 2145) (USING 2138 . 2143) (punctuation 2126 . 2127) (punctuation 2125 . 2126) (USING 2119 . 2124) (punctuation 2107 . 2108) (punctuation 2106 . 2107) (USING 2100 . 2105) (punctuation 2088 . 2089) (punctuation 2087 . 2088) (USING 2081 . 2086) (punctuation 2069 . 2070) (punctuation 2068 . 2069) (USING 2062 . 2067) (punctuation 2050 . 2051) (punctuation 2049 . 2050) (USING 2043 . 2048) (punctuation 2031 . 2032) (punctuation 2030 . 2031) (USING 2024 . 2029) (punctuation 2012 . 2013) (punctuation 2011 . 2012) (USING 2005 . 2010) (punctuation 1993 . 1994) (punctuation 1992 . 1993) (USING 1986 . 1991) (punctuation 1974 . 1975) (punctuation 1973 . 1974) (USING 1967 . 1972) (punctuation 1955 . 1956) (punctuation 1954 . 1955) (USING 1948 . 1953) (symbol 1544 . 1557) (symbol 1540 . 1543) (symbol 1533 . 1539) (punctuation 1532 . 1533))
+      :lexical-table 
+        '(("_GLIBCXX_CCTYPE" . ((number "1" 1655 . 1656)))
+          )
+)
+    (semanticdb-table "clocale"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("bits/c++config.h" include (:system-flag t) nil [1589 1616])
+            ("locale.h" include (:system-flag t) nil [1617 1636])
+            ("_GLIBCXX_CLOCALE" variable (:constant-flag t) nil [1671 1687])
+            ("std" type
+               (:members 
+                  ( ("lconv" variable (:type "int") (reparse-symbol namespacesubparts) [1829 1835])
+                    ("setlocale" variable (:type "int") (reparse-symbol namespacesubparts) [1846 1856])
+                    ("localeconv" variable (:type "int") (reparse-symbol namespacesubparts) [1867 1878]))                  
+                :type "namespace")
+                nil [1803 1880]))          
+      :file "clocale"
+      :pointmax 1906
+      :fsize 1905
+      :lastmodtime '(22516 42340 0 0)
+      :unmatched-syntax '((punctuation 1866 . 1867) (punctuation 1865 . 1866) (USING 1859 . 1864) (punctuation 1845 . 1846) (punctuation 1844 . 1845) (USING 1838 . 1843) (punctuation 1828 . 1829) (punctuation 1827 . 1828) (USING 1821 . 1826) (symbol 1574 . 1587) (symbol 1570 . 1573) (symbol 1563 . 1569) (punctuation 1562 . 1563))
+      :lexical-table 
+        '(("_GLIBCXX_CLOCALE" . ((number "1" 1688 . 1689)))
+          )
+)
+    (semanticdb-table "new"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_NEW" variable (:constant-flag t) nil [1347 1351])
+            ("bits/c++config.h" include (:system-flag t) nil [1380 1407])
+            ("exception" include (:system-flag t) nil [1408 1428])
+            ("std" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "namespace"
+                :members 
+                  ( ("bad_alloc" type
+                       (:superclasses 
+                          ( ("exception" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1762 1769])
+                            ("bad_alloc" function
+                               (:constructor-flag t
+                                :type ("bad_alloc" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1774 1797])
+                            ("bad_alloc" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1908 1937])
+                            ("what" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol classsubparts) [1982 2023]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1720 2028])
+                    ("nothrow_t" type (:type "struct") (reparse-symbol namespacesubparts) [2411 2506])
+                    ("nothrow" variable
+                       (:typemodifiers ("extern")
+                        :constant-flag t
+                        :type ("nothrow_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2510 2541])
+                    ("new_handler" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2654 2676])
+                    ("set_new_handler" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("new_handler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2795 2807]))                          
+                        :type ("new_handler" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2767 2816]))                  )
+                (reparse-symbol extern-c-contents) [1484 2933]))          
+      :file "new"
+      :pointmax 5299
+      :fsize 5298
+      :lastmodtime '(22516 42340 0 0)
+      :unmatched-syntax '((symbol 5287 . 5290) (symbol 5276 . 5286) (symbol 5272 . 5275) (symbol 5265 . 5271) (punctuation 5264 . 5265) (semantic-list 5236 . 5239) (semantic-list "()" 5214 . 5235) (THROW "throw" 5214 . 5235) (semantic-list 5199 . 5213) (semantic-list 5197 . 5199) (DELETE 5191 . 5197) (OPERATOR 5182 . 5190) (VOID 5177 . 5181) (INLINE 5170 . 5176) (semantic-list 5166 . 5169) (semantic-list "()" 5144 . 5165) (THROW "throw" 5144 . 5165) (semantic-list 5129 . 5143) (DELETE 5121 . 5127) (OPERATOR 5112 . 5120) (VOID 5107 . 5111) (INLINE 5100 . 5106) (semantic-list 5033 . 5048) (semantic-list "()" 5011 . 5032) (THROW "throw" 5011 . 5032) (semantic-list 4986 . 5010) (semantic-list 4984 . 4986) (NEW 4981 . 4984) (OPERATOR 4972 . 4980) (punctuation 4970 . 4971) (VOID 4966 . 4970) (INLINE 4959 . 4965) (semantic-list 4943 . 4958) (semantic-list "()" 4921 . 4942) (THROW "throw" 4921 . 4942) (semantic-list 4896 . 4920) (NEW 4893 . 4896) (OPERATOR 4884 . 4892) (punctuation 4882 . 4883) (VOID 4878 . 4882) (INLINE 4871 . 4877) (punctuation 4814 . 4815) (semantic-list "()" 4751 . 4772) (THROW "throw" 4751 . 4772) (semantic-list 4707 . 4750) (semantic-list 4705 . 4707) (DELETE 4699 . 4705) (OPERATOR 4690 . 4698) (VOID 4685 . 4689) (punctuation 4683 . 4684) (semantic-list "()" 4620 . 4641) (THROW "throw" 4620 . 4641) (semantic-list 4576 . 4619) (DELETE 4570 . 4576) (OPERATOR 4561 . 4569) (VOID 4556 . 4560) (punctuation 4525 . 4526) (semantic-list "()" 4462 . 4483) (THROW "throw" 4462 . 4483) (semantic-list 4431 . 4461) (semantic-list 4429 . 4431) (DELETE 4423 . 4429) (OPERATOR 4414 . 4422) (VOID 4409 . 4413) (punctuation 4407 . 4408) (semantic-list "()" 4344 . 4365) (THROW "throw" 4344 . 4365) (semantic-list 4313 . 4343) (DELETE 4307 . 4313) (OPERATOR 4298 . 4306) (VOID 4293 . 4297) (punctuation 4291 . 4292) (semantic-list "()" 4228 . 4249) (THROW "throw" 4228 . 4249) (semantic-list 4191 . 4227) (semantic-list 4189 . 4191) (NEW 4186 . 4189) (OPERATOR 4177 . 4185) (punctuation 4175 . 4176) (VOID 4171 . 4175) (punctuation 4169 . 4170) (semantic-list "()" 4106 . 4127) (THROW "throw" 4106 . 4127) (semantic-list 4069 . 4105) (NEW 4066 . 4069) (OPERATOR 4057 . 4065) (punctuation 4055 . 4056) (VOID 4051 . 4055) (punctuation 4042 . 4043) (semantic-list "()" 3979 . 4000) (THROW "throw" 3979 . 4000) (semantic-list 3958 . 3978) (semantic-list 3956 . 3958) (DELETE 3950 . 3956) (OPERATOR 3941 . 3949) (VOID 3936 . 3940) (punctuation 3934 . 3935) (semantic-list "()" 3871 . 3892) (THROW "throw" 3871 . 3892) (semantic-list 3850 . 3870) (DELETE 3844 . 3850) (OPERATOR 3835 . 3843) (VOID 3830 . 3834) (punctuation 3799 . 3800) (semantic-list "()" 3736 . 3757) (THROW "throw" 3736 . 3757) (semantic-list 3728 . 3735) (semantic-list 3726 . 3728) (DELETE 3720 . 3726) (OPERATOR 3711 . 3719) (VOID 3706 . 3710) (punctuation 3704 . 3705) (semantic-list "()" 3641 . 3662) (THROW "throw" 3641 . 3662) (semantic-list 3633 . 3640) (DELETE 3627 . 3633) (OPERATOR 3618 . 3626) (VOID 3613 . 3617) (punctuation 3611 . 3612) (semantic-list #("(_EXC)" 0 1 (macros (("_EXC" symbol "std" 3554 . 3557)))) 3538 . 3569) (THROW "throw" 3538 . 3569) (semantic-list 3524 . 3537) (semantic-list 3522 . 3524) (NEW 3519 . 3522) (OPERATOR 3510 . 3518) (punctuation 3508 . 3509) (VOID 3504 . 3508) (punctuation 3502 . 3503) (semantic-list #("(_EXC)" 0 1 (macros (("_EXC" symbol "std" 3445 . 3448)))) 3429 . 3460) (THROW "throw" 3429 . 3460) (semantic-list 3415 . 3428) (NEW 3412 . 3415) (OPERATOR 3403 . 3411) (punctuation 3401 . 3402) (VOID 3397 . 3401) (TYPEDEF 2646 . 2653) (semantic-list 1457 . 1466) (symbol 1453 . 1457) (DEFAULT 1458 . 1465) (symbol 1442 . 1452) (DEFAULT 1458 . 1465) (symbol 1438 . 1441) (symbol 1431 . 1437) (punctuation 1430 . 1431) (symbol 1365 . 1378) (symbol 1361 . 1364) (symbol 1354 . 1360) (punctuation 1353 . 1354))
+      :lexical-table 
+        '(("_NEW")
+          )
+)
+    (semanticdb-table "exception"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("__EXCEPTION__" variable (:constant-flag t) nil [1161 1174])
+            ("bits/c++config.h" include (:system-flag t) nil [1241 1268])
+            ("bits/atomic_lockfree_defines.h" include (:system-flag t) nil [1269 1310])
+            ("__gnu_cxx" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "namespace"
+                :members 
+                  ( ("__verbose_terminate_handler" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5394 5429]))                  )
+                (reparse-symbol extern-c-contents) [4864 5463])
+            ("std" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "namespace"
+                :members 
+                  ( ("exception" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1869 1876]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1847 2186])
+                    ("bad_exception" type
+                       (:superclasses 
+                          ( ("exception" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2368 2375]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2323 2732])
+                    ("terminate_handler" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2822 2851])
+                    ("unexpected_handler" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2942 2972])
+                    ("unexpected" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3894 3943]))                  )
+                (reparse-symbol extern-c-contents) [1328 4845]))          
+      :file "exception"
+      :pointmax 5666
+      :fsize 5665
+      :lastmodtime '(22516 42340 0 0)
+      :unmatched-syntax '((symbol 5520 . 5523) (symbol 5509 . 5519) (symbol 5505 . 5508) (symbol 5498 . 5504) (punctuation 5497 . 5498) (symbol 5453 . 5461) (punctuation 4569 . 4570) (semantic-list "()" 4521 . 4542) (THROW "throw" 4521 . 4542) (semantic-list 4518 . 4520) (symbol 4500 . 4518) (BOOL 4495 . 4499) (punctuation 3626 . 3627) (semantic-list "()" 3605 . 3626) (THROW "throw" 3605 . 3626) (semantic-list 3584 . 3604) (symbol 3570 . 3584) (symbol 3551 . 3569) (punctuation 3469 . 3470) (semantic-list "()" 3417 . 3438) (THROW "throw" 3417 . 3438) (semantic-list 3414 . 3416) (symbol 3405 . 3414) (VOID 3400 . 3404) (punctuation 3125 . 3126) (semantic-list "()" 3104 . 3125) (THROW "throw" 3104 . 3125) (semantic-list 3084 . 3103) (symbol 3071 . 3084) (symbol 3053 . 3070) (TYPEDEF 2934 . 2941) (TYPEDEF 2814 . 2821) (punctuation 2726 . 2727) (semantic-list "()" 2705 . 2726) (THROW "throw" 2705 . 2726) (CONST 2677 . 2682) (semantic-list 2674 . 2676) (symbol 2670 . 2674) (punctuation 2664 . 2665) (CHAR 2660 . 2664) (CONST 2654 . 2659) (VIRTUAL 2646 . 2653) (punctuation 2600 . 2601) (semantic-list "()" 2579 . 2600) (THROW "throw" 2579 . 2600) (semantic-list 2554 . 2556) (symbol 2541 . 2554) (punctuation 2540 . 2541) (VIRTUAL 2532 . 2539) (semantic-list 2418 . 2421) (semantic-list "()" 2396 . 2417) (THROW "throw" 2396 . 2417) (semantic-list 2393 . 2395) (symbol 2380 . 2393) (punctuation 2180 . 2181) (semantic-list "()" 2159 . 2180) (THROW "throw" 2159 . 2180) (CONST 2131 . 2136) (semantic-list 2128 . 2130) (symbol 2124 . 2128) (punctuation 2118 . 2119) (CHAR 2114 . 2118) (CONST 2108 . 2113) (VIRTUAL 2100 . 2107) (punctuation 1987 . 1988) (semantic-list "()" 1966 . 1987) (THROW "throw" 1966 . 1987) (semantic-list 1941 . 1943) (symbol 1932 . 1941) (punctuation 1931 . 1932) (VIRTUAL 1923 . 1930) (semantic-list 1915 . 1918) (semantic-list "()" 1893 . 1914) (THROW "throw" 1893 . 1914) (semantic-list 1890 . 1892) (symbol 1881 . 1890) (semantic-list 1230 . 1239) (symbol 1226 . 1230) (DEFAULT 1231 . 1238) (symbol 1215 . 1225) (DEFAULT 1231 . 1238) (symbol 1211 . 1214) (symbol 1204 . 1210) (punctuation 1203 . 1204) (symbol 1188 . 1201) (symbol 1184 . 1187) (symbol 1177 . 1183) (punctuation 1176 . 1177))
+      :lexical-table 
+        '(("__EXCEPTION__")
+          )
+))
+  :file "!usr!include!c++!6!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

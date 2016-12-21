@@ -1,0 +1,131 @@
+;; Object gpio/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "gpio/"
+  :tables
+  (list
+    (semanticdb-table "test_gpio.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Arduino.h" include (:system-flag t) nil [1 21])
+            ("logger/logger.h" include (:system-flag t) nil [23 49])
+            ("utils/memorywatch.h" include (:system-flag t) nil [50 80])
+            ("utils/network.h" include (:system-flag t) nil [81 107])
+            ("application/bootstrap.h" include (:system-flag t) nil [109 143])
+            ("applibrary/iappfactory.h" include (:system-flag t) nil [144 179])
+            ("application/imqttclient.h" include (:system-flag t) nil [180 216])
+            ("core/ideviceapp.h" include (:system-flag t) nil [217 245])
+            ("core/iparameterrepository.h" include (:system-flag t) nil [246 284])
+            ("core/iparameteriterator.h" include (:system-flag t) nil [285 321])
+            ("ssid" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "\"SDI\""
+                :type "char")
+                nil [323 355])
+            ("password" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "\"company flower fly seldom\""
+                :type "char")
+                nil [356 414])
+            ("device_name" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "\"SDI_PAC_1\""
+                :type "char")
+                nil [416 461])
+            ("aws_endpoint" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "\"10.11.10.182\""
+                :type "char")
+                nil [494 541])
+            ("aws_key" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "\"AKIAJND6LD6GXETW6WCQ\""
+                :type "char")
+                nil [542 597])
+            ("aws_secret" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "\"ZNxOv47ut2zlUfFhupAsZOXAEUMsyE0JJHQN5HG2\""
+                :type "char")
+                nil [598 673])
+            ("aws_region" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "\"us-east-1\""
+                :type "char")
+                nil [674 718])
+            ("aws_topic" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [719 746])
+            ("port" variable
+               (:typemodifiers ("static")
+                :default-value "5555"
+                :type "int")
+                nil [748 771])
+            ("bootstrapper" variable (:type ("Bootstrap" type (:type "class") nil nil)) nil [774 797])
+            ("pApp" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("IDeviceApp" type (:type "class") nil nil))
+                nil [799 823])
+            ("pFactory" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("IAppFactory" type (:type "class") nil nil))
+                nil [824 853])
+            ("pMqttListener" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("IMqttListener" type (:type "class") nil nil))
+                nil [854 890])
+            ("pMqttClient" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("IMqttClient" type (:type "class") nil nil))
+                nil [891 923])
+            ("logger" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type ("LEVEL_INFO" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [946 957]))                  
+                :type ("Logger" type (:type "class") nil nil))
+                nil [925 958])
+            ("memWatch" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type ("logger" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [988 995]))                  
+                :type ("MemoryWatch" type (:type "class") nil nil))
+                nil [960 1004])
+            ("create_mqtt_client_internal" function
+               (:prototype-flag t
+                :pointer 1
+                :type ("IMqttClient" type (:type "class") nil nil))
+                nil [1005 1048])
+            ("create_objects" function (:type "void") nil [1050 1282])
+            ("dump_parameters" function (:type "void") nil [1284 1528])
+            ("with_display" variable
+               (:default-value "false"
+                :type "bool")
+                nil [1530 1556])
+            ("subscribe_mqtt" function (:type "void") nil [1586 1803])
+            ("connect_network" function (:type "bool") nil [1850 2692])
+            ("setup" function (:type "void") nil [2694 3051])
+            ("loop" function (:type "void") nil [3053 3316]))          
+      :file "test_gpio.cpp"
+      :pointmax 3317
+      :fsize 3316
+      :lastmodtime '(22593 33564 75353 800000)
+      :unmatched-syntax '((string 996 . 1002))))
+  :file "!home!elias!projects!cactus!test!esp!gpio!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

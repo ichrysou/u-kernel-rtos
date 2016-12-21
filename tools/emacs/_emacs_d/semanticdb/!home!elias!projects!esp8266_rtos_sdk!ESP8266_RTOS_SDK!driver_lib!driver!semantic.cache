@@ -1,0 +1,154 @@
+;; Object driver/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "driver/"
+  :tables
+  (list
+    (semanticdb-table "spi_interface.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("spi_interface.h" include nil nil [594 620])
+            ("esp8266/eagle_soc.h" include nil nil [621 651])
+            ("esp8266/ets_sys.h" include nil nil [652 680])
+            ("esp_libc.h" include nil nil [681 702])
+            ("SPIIntClear" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("ICACHE_FLASH_ATTR" type (:type "class") nil nil)
+                :arguments 
+                  ( ("spiNum" variable (:type ("SpiNum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16610 16624]))                  )
+                (reparse-symbol extern-c-contents) [16580 16941])
+            ("SPIIntDisable" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("ICACHE_FLASH_ATTR" type (:type "class") nil nil)
+                :arguments 
+                  ( ("spiNum" variable (:type ("SpiNum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16375 16389])
+                    ("intSrc" variable (:type ("SpiIntSrc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16390 16407]))                  )
+                (reparse-symbol extern-c-contents) [16343 16517])
+            ("SPIIntEnable" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("ICACHE_FLASH_ATTR" type (:type "class") nil nil)
+                :arguments 
+                  ( ("spiNum" variable (:type ("SpiNum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16145 16159])
+                    ("intSrc" variable (:type ("SpiIntSrc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16160 16177]))                  )
+                (reparse-symbol extern-c-contents) [16114 16285])
+            ("SPICsPinSelect" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("ICACHE_FLASH_ATTR" type (:type "class") nil nil)
+                :arguments 
+                  ( ("spiNum" variable (:type ("SpiNum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15853 15867])
+                    ("pinCs" variable (:type ("SpiPinCS" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15868 15883]))                  )
+                (reparse-symbol extern-c-contents) [15820 16057])
+            ("SPIMasterRecvStatus" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("ICACHE_FLASH_ATTR" type (:type "class") nil nil)
+                :arguments 
+                  ( ("spiNum" variable (:type ("SpiNum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14833 14847]))                  )
+                (reparse-symbol extern-c-contents) [14795 15773])
+            ("SPIMasterSendStatus" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("ICACHE_FLASH_ATTR" type (:type "class") nil nil)
+                :arguments 
+                  ( ("spiNum" variable (:type ("SpiNum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13888 13902])
+                    ("data" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13903 13916]))                  )
+                (reparse-symbol extern-c-contents) [13850 14723])
+            ("SPISlaveRecvData" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("ICACHE_FLASH_ATTR" type (:type "class") nil nil)
+                :arguments 
+                  ( ("spiNum" variable (:type ("SpiNum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13187 13201])
+                    ("isrFunc" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [13217 13223]))                          
+                        :type "void")
+                        nil nil))                  )
+                (reparse-symbol extern-c-contents) [13152 13758])
+            ("SPISlaveSendData" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("ICACHE_FLASH_ATTR" type (:type "class") nil nil)
+                :arguments 
+                  ( ("spiNum" variable (:type ("SpiNum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12844 12858])
+                    ("pInData" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12859 12877])
+                    ("outLen" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12878 12893]))                  )
+                (reparse-symbol extern-c-contents) [12809 13081])
+            ("SPIMasterRecvData" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("ICACHE_FLASH_ATTR" type (:type "class") nil nil)
+                :arguments 
+                  ( ("spiNum" variable (:type ("SpiNum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10202 10216])
+                    ("pOutData" variable
+                       (:pointer 1
+                        :type ("SpiData" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10217 10235]))                  )
+                (reparse-symbol extern-c-contents) [10166 12742])
+            ("SPIMasterSendData" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("ICACHE_FLASH_ATTR" type (:type "class") nil nil)
+                :arguments 
+                  ( ("spiNum" variable (:type ("SpiNum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7684 7698])
+                    ("pInData" variable
+                       (:pointer 1
+                        :type ("SpiData" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7699 7716]))                  )
+                (reparse-symbol extern-c-contents) [7648 10114])
+            ("SPIMasterCfgCmd" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("ICACHE_FLASH_ATTR" type (:type "class") nil nil)
+                :arguments 
+                  ( ("spiNum" variable (:type ("SpiNum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7318 7332])
+                    ("cmd" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7333 7346]))                  )
+                (reparse-symbol extern-c-contents) [7284 7601])
+            ("SPIMasterCfgAddr" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("ICACHE_FLASH_ATTR" type (:type "class") nil nil)
+                :arguments 
+                  ( ("spiNum" variable (:type ("SpiNum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7072 7086])
+                    ("addr" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7087 7101]))                  )
+                (reparse-symbol extern-c-contents) [7037 7222])
+            ("SPIInit" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("ICACHE_FLASH_ATTR" type (:type "class") nil nil)
+                :arguments 
+                  ( ("spiNum" variable (:type ("SpiNum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2734 2748])
+                    ("pAttr" variable
+                       (:pointer 1
+                        :type ("SpiAttr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2749 2764]))                  )
+                (reparse-symbol extern-c-contents) [2708 6975])
+            ("ETS_SPI_INTR_ENABLE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [2586 2605])
+            ("__ShowRegValue" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("func" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1044 1062])
+                    ("line" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1063 1077]))                  )
+                (reparse-symbol extern-c-contents) [1024 2539])
+            ("SHOWDEBUG" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1013 1022]))          
+      :file "spi_interface.c"
+      :pointmax 16971
+      :fsize 17478
+      :lastmodtime '(22597 15044 175672 604000)
+      :unmatched-syntax '((VOID 16575 . 16579) (VOID 16338 . 16342) (VOID 16109 . 16113) (VOID 15815 . 15819) (INT 14791 . 14794) (VOID 13845 . 13849) (INT 13148 . 13151) (INT 12805 . 12808) (INT 10162 . 10165) (INT 7644 . 7647) (VOID 7279 . 7283) (VOID 7032 . 7036) (VOID 2703 . 2707))
+      :lexical-table 
+        '(("SHOWDEBUG")
+          ("ETS_SPI_INTR_ENABLE" (spp-arg-list nil 2605 . 2607) . ((symbol "_xt_isr_unmask" 2609 . 2623) (semantic-list "(1 << ETS_SPI_INUM)" 2623 . 2642)))
+          )
+))
+  :file "!home!elias!projects!esp8266_rtos_sdk!ESP8266_RTOS_SDK!driver_lib!driver!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

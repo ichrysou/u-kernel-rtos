@@ -1,0 +1,90 @@
+;; Object mqtt/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "mqtt/"
+  :tables
+  (list
+    (semanticdb-table "test_aws_mqtt.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Arduino.h" include (:system-flag t) nil [14 34])
+            ("application/bootstrap.h" include (:system-flag t) nil [36 70])
+            ("application/iparametermanager.h" include (:system-flag t) nil [71 113])
+            ("application/imqttclient.h" include (:system-flag t) nil [114 150])
+            ("application/imqttlistener.h" include (:system-flag t) nil [151 189])
+            ("core/iparameterlistener.h" include (:system-flag t) nil [190 226])
+            ("core/iparameterrepository.h" include (:system-flag t) nil [227 265])
+            ("domain/appparameter.h" include (:system-flag t) nil [266 298])
+            ("logger/logger.h" include (:system-flag t) nil [299 325])
+            ("utils/network.h" include (:system-flag t) nil [326 352])
+            ("aws_endpoint" variable
+               (:dereference 1
+                :default-value "\"A1V2EBE1FOIBLQ.iot.us-east-1.amazonaws.com\""
+                :type "char")
+                nil [354 424])
+            ("aws_key" variable
+               (:dereference 1
+                :default-value "\"AKIAJND6LD6GXETW6WCQ\""
+                :type "char")
+                nil [425 473])
+            ("aws_secret" variable
+               (:dereference 1
+                :default-value "\"ZNxOv47ut2zlUfFhupAsZOXAEUMsyE0JJHQN5HG2\""
+                :type "char")
+                nil [474 542])
+            ("aws_region" variable
+               (:dereference 1
+                :default-value "\"us-east-1\""
+                :type "char")
+                nil [543 580])
+            ("mqtt_port" variable
+               (:default-value "443"
+                :type "int")
+                nil [581 601])
+            ("logger" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("LEVEL_INFO" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [617 628]))                  
+                :type ("Logger" type (:type "class") nil nil))
+                nil [603 629])
+            ("bootstrapper" variable (:type ("Bootstrap" type (:type "class") nil nil)) nil [630 653])
+            ("testParamInt" function
+               (:prototype-flag t
+                :type ("AppParameter" type
+                     (:template-specifier 
+                        ( ("int" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [655 697])
+            ("testParamFloat" function
+               (:prototype-flag t
+                :type ("AppParameter" type
+                     (:template-specifier 
+                        ( ("float" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [698 745])
+            ("ssid" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "\"SDI\""
+                :type "char")
+                nil [747 779])
+            ("password" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "\"company flower fly seldom\""
+                :type "char")
+                nil [780 838])
+            ("setup_newtork" function (:type "bool") nil [840 1393])
+            ("setup" function (:type "void") nil [1395 1927])
+            ("loop" function (:type "void") nil [1929 2341]))          
+      :file "test_aws_mqtt.cpp"
+      :pointmax 2345
+      :fsize 2344
+      :lastmodtime '(22611 46441 746662 132000)
+      :unmatched-syntax '((string 732 . 743) (string 686 . 695))))
+  :file "!home!ichrysou!projects!cactus_pristine!cactus!test!esp!mqtt!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -6,7 +6,7 @@ Portable (to be proven in action), preemptive, priority based, Real Time Operati
 - Time Management
 - Intertask Communication (mailboxes, message-queues)
 - Synchronization (semaphores)
-- Memory Management (Dummy implementation)
+- Dynamic Memory Management (Dummy heap implementation)
 - Interrupt Handling
 
 ## How to cross-compile and run the example application:

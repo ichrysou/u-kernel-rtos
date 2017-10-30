@@ -3,6 +3,7 @@ OBJCOPY=arm-none-eabi-objcopy
 LDSCRIPT=arm-gcc-link.ld
 OBJ_DIR = obj
 BIN_DIR = bin
+MAIN_SOURCE_DIR=../../src/
 RTOS_SOURCE_DIR=../../src/uKernel
 ARM_SOURCE_DIR=../../src/lpc17xx_lib/source
 CORTEX_SOURCE_DIR=../../src
@@ -13,8 +14,10 @@ CFLAGS=$(WARNINGS) -mcpu=cortex-m3 -mthumb -DLPC1768 -I../../src/lpc17xx_lib/inc
 
 LINKER_FLAGS=-mcpu=cortex-m3 -mthumb -g -nostartfiles -Wl,-Map=$(BIN_DIR)/uKernel.map -O0  -Wl,--gc-sections -L../uKernel -Wl,-T$(LDSCRIPT) -g -o $(BIN_DIR)/uKernel.elf -lc
 
+MAIN_SRC = \
+$(MAIN_SOURCE_DIR)/main.c
+
 RTOS_SRC = \
-$(RTOS_SOURCE_DIR)/main.c \
 $(RTOS_SOURCE_DIR)/heap.c \
 $(RTOS_SOURCE_DIR)/hooks.c \
 $(RTOS_SOURCE_DIR)/kernel.c \
@@ -24,7 +27,7 @@ $(RTOS_SOURCE_DIR)/sem.c \
 $(RTOS_SOURCE_DIR)/stats.c \
 $(RTOS_SOURCE_DIR)/task.c \
 $(RTOS_SOURCE_DIR)/time.c \
-$(RTOS_SOURCE_DIR)/wait_queue.c 
+$(RTOS_SOURCE_DIR)/wait_queue.c
 
 RTOS_INC = $(RTOS_SOURCE_DIR)/heap.h \
 $(RTOS_SOURCE_DIR)/hooks.h \
@@ -69,9 +72,10 @@ $(CORTEX_SOURCE_DIR)/cmsis/core_cm3.c
 CORTEX_INC = \
 $(CORTEX_SOURCE_DIR)/cmsis/core_cm3.h \
 $(CORTEX_SOURCE_DIR)/cmsis_boot/LPC17xx.h \
-$(CORTEX_SOURCE_DIR)/cmsis_boot/system_LPC17xx.h 
+$(CORTEX_SOURCE_DIR)/cmsis_boot/system_LPC17xx.h
 
-
+MAIN_OBJ := $(patsubst %.c,%.o, $(notdir $(MAIN_SRC)))
+MAIN_OBJ := $(addprefix $(OBJ_DIR)/,$(MAIN_OBJ))
 
 ARM_OBJ := $(patsubst %.c,%.o,$(notdir $(ARM_SRC)))
 ARM_OBJ := $(addprefix $(OBJ_DIR)/,$(ARM_OBJ))
@@ -87,8 +91,11 @@ CORTEX_OBJ := $(addprefix $(OBJ_DIR)/,$(CORTEX_OBJ))
 uKernel.hex : uKernel.elf
 	$(OBJCOPY) $(BIN_DIR)/uKernel.elf -O ihex $(BIN_DIR)/uKernel.hex
 
-uKernel.elf : $(CORTEX_OBJ) $(ARM_OBJ) $(RTOS_OBJ)
-	$(CC) $(CFLAGS)  $(CORTEX_OBJ) $(ARM_OBJ) $(RTOS_OBJ) -nostartfiles $(LINKER_FLAGS)
+uKernel.elf : $(CORTEX_OBJ) $(ARM_OBJ) $(RTOS_OBJ) $(MAIN_OBJ)
+	$(CC) $(CFLAGS) $(CORTEX_OBJ) $(ARM_OBJ) $(RTOS_OBJ) $(MAIN_OBJ) -nostartfiles $(LINKER_FLAGS)
+
+$(MAIN_OBJ) : $(OBJ_DIR)/%.o : $(MAIN_SOURCE_DIR)/%.c Makefile #(INCLUDE DIRS), linker script etc
+	$(CC) -c $(CFLAGS) $< -o $@ 
 
 $(RTOS_OBJ) : $(OBJ_DIR)/%.o : $(RTOS_SOURCE_DIR)/%.c $(RTOS_INC) Makefile #(INCLUDE DIRS), linker script etc
 	$(CC) -c $(CFLAGS) $< -o $@ 

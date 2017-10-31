@@ -1,0 +1,9 @@
+1. Get rid of recursive make files. They are harmfull:
+   http://aegis.sourceforge.net/auug97.pdf 
+   use Single make file instead.
+
+2. Cleanup warnings in uKernel. There are like 100 or so.
+
+3. Cleanup unnecessary files for all the STM32 family of micros.
+
+
